@@ -1,0 +1,174 @@
+﻿[
+  {
+    "name": "None",
+    "perkClasses": [],
+    "keywords": []
+  },
+  {
+    "name": "Rutherford",
+    "perkClasses": [
+      "Badass",
+      "Military"
+    ],
+    "keywords": [
+      "Military hardware",
+      "Well stocked",
+      "Might is right",
+      "Televised carnage"
+    ]
+  },
+  {
+    "name": "Miyazaki",
+    "perkClasses": [
+      "Daring",
+      "Precision"
+    ],
+    "keywords": [
+      "Virtuoso",
+      "Elegance",
+      "Showing off"
+    ]
+  },
+  {
+    "name": "Mishkin",
+    "perkClasses": [
+      "Military",
+      "Technology"
+    ],
+    "keywords": [
+      "Thumpermonkey",
+      "Dynamo",
+      "All the toys"
+    ]
+  },
+  {
+    "name": "Idris",
+    "perkClasses": [
+      "Precision",
+      "Speed"
+    ],
+    "keywords": [
+      "N2O addict",
+      "Speed demon",
+      "Cult of speed",
+      "Kiss my asphalt"
+    ]
+  },
+  {
+    "name": "Slime",
+    "perkClasses": [
+      "Tuning",
+      "Reckless"
+    ],
+    "keywords": [
+      "Live fast",
+      "Pinball",
+      "Spiked Fist"
+    ]
+  },
+  {
+    "name": "Warden",
+    "perkClasses": [
+      "Aggression",
+      "Badass"
+    ],
+    "keywords": [
+      "Prison cars",
+      "Fireworks"
+    ]
+  },
+  {
+    "name": "Scarlett Annie",
+    "perkClasses": [
+      "Aggression",
+      "Tuning"
+    ],
+    "keywords": [
+      "Crew Quarters",
+      "Raiders",
+      "Raise the Sails",
+      "Press Gang"
+    ]
+  },
+  {
+    "name": "Highway Patrol",
+    "perkClasses": [
+      "Speed",
+      "Pursuit"
+    ],
+    "keywords": [
+      "Hot Pursuit",
+      "Bogey at 12 O'Clock",
+      "The Job Is Never Done",
+      "Siren",
+      "Steel Justice"
+    ]
+  },
+  {
+    "name": "Verney",
+    "perkClasses": [
+      "Technology",
+      "Built"
+    ],
+    "keywords": [
+      "MicroPlate Armour",
+      "Trunk of Junk",
+      "Tombstone",
+      "That's Entertainment"
+    ]
+  },
+  {
+    "name": "Maxxine",
+    "perkClasses": [
+      "Tuning",
+      "Pursuit"
+    ],
+    "keywords": [
+      "Dizzy",
+      "Maxximum Drift",
+      "Meshuggah"
+    ]
+  },
+  {
+    "name": "The Flame Cult",
+    "perkClasses": [
+      "Horror",
+      "Speed"
+    ],
+    "keywords": [
+      "Fire Walk With Me",
+      "Burning Man",
+      "Cult Of Flame"
+    ]
+  },
+  {
+    "name": "Beverly",
+    "perkClasses": [
+      "Horror",
+      "Built"
+    ],
+    "keywords": [
+      "Graveyard Shift",
+      "Ghost Rider",
+      "Soul Anchor",
+      "At The Crossroads",
+      "Inexorable",
+      "Soul Harvest"
+    ]
+  },
+  {
+    "name": "Rusty's Bootleggers",
+    "perkClasses": [
+      "Reckless",
+      "Built"
+    ],
+    "keywords": [
+      "Party Hard",
+      "Dutch courage",
+      "As Straight As I'm Able",
+      "Over The Limit",
+      "Trailer Trash",
+      "Haulage"
+    ]
+  }
+]

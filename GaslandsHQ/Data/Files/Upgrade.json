@@ -1,0 +1,79 @@
+﻿[
+  {
+    "upgrade": "Armour Plating",
+    "slots": 1,
+    "ammo": 0,
+    "rules": "+2 Hull",
+    "cost": 4
+  },
+  {
+    "upgrade": "Experimental Nuclear Engine",
+    "slots": 0,
+    "ammo": 0,
+    "rules": "See rulebook",
+    "cost": 5
+  },
+  {
+    "upgrade": "Experimental Teleporter",
+    "slots": 0,
+    "ammo": 0,
+    "rules": "See rulebook",
+    "cost": 7
+  },
+  {
+    "upgrade": "Extra Crewmember",
+    "slots": 0,
+    "ammo": 0,
+    "rules": "+1 Crew, up to double starting crew",
+    "cost": 4
+  },
+  {
+    "upgrade": "Improvised Sludge Thrower",
+    "slots": 1,
+    "ammo": 0,
+    "rules": "This vehicle may place the burst templates for its dropped weapons anywhere within a 360 arc of fire that is at least partially within medium range of this vehicle.",
+    "cost": 2
+  },
+  {
+    "upgrade": "Nitro Booster",
+    "slots": 0,
+    "ammo": 1,
+    "rules": "See rulebook",
+    "cost": 6
+  },
+  {
+    "upgrade": "Roll Cage",
+    "slots": 1,
+    "ammo": 0,
+    "rules": "ignore hits received from Flips.",
+    "cost": 4
+  },
+  {
+    "upgrade": "Tank tracks",
+    "slots": 1,
+    "ammo": 0,
+    "rules": "+1 Handing, -1 Max Gear, All terrain",
+    "cost": 4
+  },
+  {
+    "upgrade": "Prison Vehicle",
+    "slots": 0,
+    "ammo": 0,
+    "rules": "",
+    "cost": -4
+  },
+  {
+    "upgrade": "Louder Siren",
+    "slots": 0,
+    "ammo": 0,
+    "rules": "Replace 'Bogey' with 'any enemy vehicle' for the purposes of the Siren special rules.",
+    "cost": 2
+  },
+  {
+    "upgrade": "MicroPlate Armour",
+    "slots": 0,
+    "ammo": 0,
+    "rules": "+2 hull",
+    "cost": 6
+  }
+]

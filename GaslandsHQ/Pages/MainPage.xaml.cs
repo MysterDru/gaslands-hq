@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace GaslandsHQ
+namespace GaslandsHQ.Pages
 {
     // Learn more about making custom code visible in the Xamarin.Forms previewer
     // by visiting https://aka.ms/xamarinforms-previewer
@@ -16,6 +16,11 @@ namespace GaslandsHQ
         public MainPage()
         {
             InitializeComponent();
+        }
+
+        void ToolbarItem_Clicked(System.Object sender, System.EventArgs e)
+        {
+            this.Navigation.PushAsync(new AddTeamPage());
         }
     }
 }

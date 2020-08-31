@@ -1,0 +1,208 @@
+﻿[
+  {
+    "type": "Car",
+    "weight": "Middle",
+    "hull": "10",
+    "handling": 3,
+    "maxGear": 5,
+    "slots": 2,
+    "crew": 2,
+    "keywords": [
+      ""
+    ],
+    "cost": 12
+  },
+  {
+    "type": "Performance Car",
+    "weight": "Middle",
+    "hull": "8",
+    "handling": 4,
+    "maxGear": 6,
+    "slots": 2,
+    "crew": 1,
+    "keywords": [
+      "Slip away"
+    ],
+    "cost": 15
+  },
+  {
+    "type": "Truck",
+    "weight": "Middle",
+    "hull": "12",
+    "handling": 2,
+    "maxGear": 4,
+    "slots": 3,
+    "crew": 3,
+    "keywords": [
+      ""
+    ],
+    "cost": 15
+  },
+  {
+    "type": "Heavy Truck",
+    "weight": "Heavy",
+    "hull": "14",
+    "handling": 2,
+    "maxGear": 3,
+    "slots": 5,
+    "crew": 4,
+    "keywords": [
+      ""
+    ],
+    "cost": 25
+  },
+  {
+    "type": "Bus",
+    "weight": "Heavy",
+    "hull": "16",
+    "handling": 2,
+    "maxGear": 3,
+    "slots": 3,
+    "crew": 8,
+    "keywords": [
+      ""
+    ],
+    "cost": 30
+  },
+  {
+    "type": "Drag Racer",
+    "weight": "Light",
+    "hull": "4",
+    "handling": 4,
+    "maxGear": 6,
+    "slots": 2,
+    "crew": 1,
+    "keywords": [
+      "Jet Engine"
+    ],
+    "cost": 5
+  },
+  {
+    "type": "Ice Cream Truck",
+    "weight": "Middle",
+    "hull": "10",
+    "handling": 2,
+    "maxGear": 4,
+    "slots": 2,
+    "crew": 2,
+    "keywords": [
+      "Infuriating Jingle"
+    ],
+    "cost": 8
+  },
+  {
+    "type": "Bike",
+    "weight": "Light",
+    "hull": "4",
+    "handling": 5,
+    "maxGear": 6,
+    "slots": 1,
+    "crew": 1,
+    "keywords": [
+      "Full throttle",
+      "Pivot"
+    ],
+    "cost": 5
+  },
+  {
+    "type": "Bike with Sidecar",
+    "weight": "Light",
+    "hull": "4",
+    "handling": 5,
+    "maxGear": 6,
+    "slots": 2,
+    "crew": 2,
+    "keywords": [
+      "Full throttle",
+      "Pivot"
+    ],
+    "cost": 8
+  },
+  {
+    "type": "Gyrocopter",
+    "weight": "Middle",
+    "hull": "4",
+    "handling": 4,
+    "maxGear": 6,
+    "slots": 0,
+    "crew": 1,
+    "keywords": [
+      "Airwolf",
+      "Airborne",
+      "Bombs away"
+    ],
+    "cost": 10
+  },
+  {
+    "type": "Ambulance",
+    "weight": "Middle",
+    "hull": "12",
+    "handling": 2,
+    "maxGear": 5,
+    "slots": 3,
+    "crew": 3,
+    "keywords": [
+      "Uppers",
+      "Downers"
+    ],
+    "cost": 20
+  },
+  {
+    "type": "Monster Truck",
+    "weight": "Heavy",
+    "hull": "10",
+    "handling": 3,
+    "maxGear": 4,
+    "slots": 2,
+    "crew": 2,
+    "keywords": [
+      "Big tires",
+      "Crush attack"
+    ],
+    "cost": 25
+  },
+  {
+    "type": "Helicopter",
+    "weight": "Heavy",
+    "hull": "8",
+    "handling": 3,
+    "maxGear": 4,
+    "slots": 4,
+    "crew": 2,
+    "keywords": [
+      "Airwolf",
+      "Airborne",
+      "Bombs away"
+    ],
+    "cost": 30
+  },
+  {
+    "type": "Tank",
+    "weight": "Heavy",
+    "hull": "20",
+    "handling": 4,
+    "maxGear": 3,
+    "slots": 4,
+    "crew": 3,
+    "keywords": [
+      "All terrain",
+      "Crush attack",
+      "Pivot",
+      "Turret"
+    ],
+    "cost": 40
+  },
+  {
+    "type": "War Rig",
+    "weight": "Heavy",
+    "hull": "25",
+    "handling": 2,
+    "maxGear": 4,
+    "slots": 5,
+    "crew": 5,
+    "keywords": [
+      ""
+    ],
+    "cost": 40
+  }
+]

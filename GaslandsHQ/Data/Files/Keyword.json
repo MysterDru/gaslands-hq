@@ -1,0 +1,157 @@
+﻿[
+  {
+    "name": "Buggy",
+    "description": "Light",
+    "type": "Vehicle"
+  },
+  {
+    "name": "Car",
+    "description": "Middle",
+    "type": "Vehicle"
+  },
+  {
+    "name": "Performance Car",
+    "description": "Middle",
+    "type": "Vehicle"
+  },
+  {
+    "name": "Truck",
+    "description": "Middle",
+    "type": "Vehicle"
+  },
+  {
+    "name": "Heavy Truck",
+    "description": "Heavy",
+    "type": "Vehicle"
+  },
+  {
+    "name": "Bus",
+    "description": "Heavy",
+    "type": "Vehicle"
+  },
+  {
+    "name": "Drag Racer",
+    "description": "Light",
+    "type": "Vehicle"
+  },
+  {
+    "name": "Ice Cream Truck",
+    "description": "Middle",
+    "type": "Vehicle"
+  },
+  {
+    "name": "Bike",
+    "description": "Light",
+    "type": "Vehicle"
+  },
+  {
+    "name": "Bike with Sidecar",
+    "description": "Light",
+    "type": "Vehicle"
+  },
+  {
+    "name": "Gyrocopter",
+    "description": "Middle",
+    "type": "Vehicle"
+  },
+  {
+    "name": "Ambulance",
+    "description": "Middle",
+    "type": "Vehicle"
+  },
+  {
+    "name": "Monster Truck",
+    "description": "Heavy",
+    "type": "Vehicle"
+  },
+  {
+    "name": "Helicopter",
+    "description": "Heavy",
+    "type": "Vehicle"
+  },
+  {
+    "name": "Tank",
+    "description": "Heavy",
+    "type": "Vehicle"
+  },
+  {
+    "name": "War Rig",
+    "description": "Heavy",
+    "type": "Vehicle"
+  },
+  {
+    "name": "Full throttle",
+    "description": "This vehicle considers the long straight maneuver template to be permitted in any gear. The long straight is not considered either hazardous or trivial in any gear",
+    "type": "Sponsor"
+  },
+  {
+    "name": "Pivot",
+    "description": "At the start of this vehicle's activation, if this vehicle's current gear is 1, this vehicle may make a pivot about its centre to face any direction This pivot cannot cause a collision, and cannot leave this vehicle touching an obstruction.",
+    "type": "Sponsor"
+  },
+  {
+    "name": "Roll cage",
+    "description": "When this vehicle suffers a flip, this vehicle may choose to ignore the 2 hits received from the Flip.",
+    "type": "Sponsor"
+  },
+  {
+    "name": "Slip away",
+    "description": "If this vehicle is targeted with a tailgate, T-bone or sideswipe smash attack, and this vehicle declares evade as its reaction, this vehicle may perform a free activation immediately after the active vehicle completes its activation. This free activation does not count as the vehicle's activation this gear phase.",
+    "type": "Sponsor"
+  },
+  {
+    "name": "Big tires",
+    "description": "This vehicle may ignore the penalty for being on a rough surface, and considers a treacherous surface to be a rough surface",
+    "type": "Sponsor"
+  },
+  {
+    "name": "Crush attack",
+    "description": "After resolving a collision with an obstruction of a lower weight class during movement step 1.7, this vehicle may declare a CRUSH ATTACK to ignore the obstruction for the remainder of its movement step, as it drives right over the top of it. This vehicle cannot declare a crush attack against another vehicle with the crush attack special rule.",
+    "type": "Sponsor"
+  },
+  {
+    "name": "Turret",
+    "description": "This vehicle may count one weapon as turret-mounted without paying for the upgrade.",
+    "type": "Sponsor"
+  },
+  {
+    "name": "Airwolf",
+    "description": "At the start of this vehicle's activation, this vehicle may make a single pivot about its centre point, up to 90 degrees",
+    "type": "Sponsor"
+  },
+  {
+    "name": "Airborne",
+    "description": "This Vehicle ignores obstructions, dropped weapons and terrain at all times; except that this vehicle may target other vehicles in its attack step. Other vehicles ignore this vehicle at all times, except that other vehicles may target this vehicle during their attack steps. This vehicle cannot be involved in collisions.",
+    "type": "Sponsor"
+  },
+  {
+    "name": "Bombs away",
+    "description": "When purchasing weapons, this vehicle may count dropped weapons as requiring 0 build slots.",
+    "type": "Sponsor"
+  },
+  {
+    "name": "All terrain",
+    "description": "This vehicle may ignore the penalties for rough and treacherous surfaces.",
+    "type": "Sponsor"
+  },
+  {
+    "name": "Jet Engine",
+    "description": "A vehicle with a jet engine counts as having a Nitro Booster with infinite ammo tokens. This vehicle automatically explodes when it is wrecked. A vehicle with a jet engine must use the Nitro Booster every time it activates.",
+    "type": "Sponsor"
+  },
+  {
+    "name": "Infuriating Jingle",
+    "description": "Vehicles that target this vehicle with a SMASH ATTACK during a collision receive no hazard tokens during step 6 of the collision resolution.",
+    "type": "Sponsor"
+  },
+  {
+    "name": "Uppers",
+    "description": "If this vehicle is involved in a collision in which both vehicles declare an evade, both vehicles must declare a single stick-shift up immediately after the collision is resolved (gaining a hazard token as per the normal stick-shift rules). If either vehicle is already at its max gear, the stick-shift does not affect that vehicle's current gear, but that vehicle does gain a hazard token.",
+    "type": "Sponsor"
+  },
+  {
+    "name": "Downers",
+    "description": "When this vehicle declares a SMASH ATTACK during its activation remove 2 hazard tokens from the target vehicle, and then reduce the target vehicle's crew value by 1 until the end of the phase.",
+    "type": "Sponsor"
+  }
+]

@@ -5,12 +5,18 @@
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    x:Class="GaslandsHQ.MainPage">
+    x:Class="GaslandsHQ.Pages.MainPage"
+    Visual="Material">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Text="Add Team"
+            Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
     <StackLayout>
         <!-- Place new controls here -->
-        <Label
+        <!--<Label
             Text="Welcome to Xamarin.Forms!"
             HorizontalOptions="Center"
-            VerticalOptions="CenterAndExpand" />
+            VerticalOptions="CenterAndExpand" />-->
     </StackLayout>
 </ContentPage>
