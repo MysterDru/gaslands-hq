@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:help="clr-namespace:GaslandsHQ.Helpers"
+	xmlns:seg="clr-namespace:Plugin.Segmented.Control;assembly=Plugin.Segmented"
+	x:Class="GaslandsHQ.Pages.VehicleCardView"
+	x:Name="Self">
+	<ContentView.Resources>
+		<Style
+			TargetType="ContentView"
+			x:Key="tag">
+			<Setter
+				Property="HeightRequest"
+				Value="35" />
+			<Setter
+				Property="BackgroundColor"
+				Value="SandyBrown" />
+			<Setter
+				Property="Padding"
+				Value="10, 5" />
+		</Style>
+	</ContentView.Resources>
+	<ContentView.Content>
+		<Frame
+			Visual="Material"
+			BorderColor="Black"
+			Padding="1"
+			CornerRadius="15">
+			<StackLayout
+				Spacing="5">
+				<Grid
+					BackgroundColor="Khaki">
+					<Picker
+						HorizontalOptions="StartAndExpand"
+						Title="Vehicle Type"
+						ItemsSource="{Binding Source={x:Reference Self}, Path=Page.VehicleTypes}"
+						SelectedItem="{Binding Type}"
+						ItemDisplayBinding="{Binding Type}"
+						Grid.Column="0" />
+
+					<Entry
+						HorizontalOptions="EndAndExpand"
+						Placeholder="Name"
+						Text="{Binding Name}"
+						Grid.Column="1" />
+				</Grid>	
+				<FlexLayout
+					JustifyContent="SpaceAround"
+					Wrap="Wrap">
+					<ContentView
+						Style="{x:StaticResource tag}">
+						<Label
+							Text="{Binding TotalCost, StringFormat='Cost: {0}'}"
+							HorizontalTextAlignment="Center"
+							VerticalTextAlignment="Center" />
+					</ContentView>
+					<ContentView
+						Style="{x:StaticResource tag}">
+						<Label
+							HorizontalTextAlignment="Center"
+							VerticalTextAlignment="Center">
+							<Label.Text>
+								<MultiBinding
+									StringFormat="Build Slots: {0}/{1}">
+									<Binding
+										Path="UsedSlots" />
+									<Binding
+										Path="AvailableSlots" />
+								</MultiBinding>
+							</Label.Text>
+						</Label>
+					</ContentView>
+					<ContentView
+						Style="{x:StaticResource tag}">
+						<Label
+							Text="{Binding Hull, StringFormat='Hull: {0}'}"
+							HorizontalTextAlignment="Center"
+							VerticalTextAlignment="Center" />
+					</ContentView>
+					<ContentView
+						Style="{x:StaticResource tag}">
+						<Label
+							Text="{Binding Crew, StringFormat='Handling: {0}'}"
+							HorizontalTextAlignment="Center"
+							VerticalTextAlignment="Center" />
+					</ContentView>
+					<ContentView
+						Style="{x:StaticResource tag}">
+						<Label
+							Text="{Binding MaxGear, StringFormat='Max Gear:{0}'}"
+							HorizontalTextAlignment="Center"
+							VerticalTextAlignment="Center" />
+					</ContentView>
+					<ContentView
+						Style="{x:StaticResource tag}">
+						<Label
+							Text="{Binding Crew, StringFormat='Crew: {0}'}"
+							HorizontalTextAlignment="Center"
+							VerticalTextAlignment="Center" />
+					</ContentView>
+					<ContentView
+						Style="{x:StaticResource tag}">
+						<Label
+							Text="{Binding WeightClass}"
+							HorizontalTextAlignment="Center"
+							VerticalTextAlignment="Center" />
+					</ContentView>
+
+				</FlexLayout>
+
+				<seg:SegmentedControl
+					x:Name="addOnsSegments">
+					<seg:SegmentedControl.Children>
+						<seg:SegmentedControlOption
+							Text="Weapons" />
+						<seg:SegmentedControlOption
+							Text="Upgrades" />
+						<seg:SegmentedControlOption
+							Text="Perks" />
+					</seg:SegmentedControl.Children>
+				</seg:SegmentedControl>
+				<ContentView x:Name="weaponsView">
+					<Label
+						Text="Weapons" />
+				</ContentView>
+				<ContentView x:Name="upgradesView">
+					<Label
+						Text="Upgrades" />
+				</ContentView>
+				<ContentView x:Name="perksView">
+					<Label
+						Text="Perks" />
+				</ContentView>
+
+				<!--<FlexLayout
+									JustifyContent="SpaceAround">
+
+									<Button
+										Text="+ Weapon"
+										Command="{Binding Source={x:Reference Page}, Path=AddWeapon}"
+										CommandParameter="{Binding .}" />
+									<Button
+										Text="+ Upgrade"
+										Command="{Binding Source={x:Reference Page}, Path=AddUpgrade}"
+										CommandParameter="{Binding .}" />
+									<Button
+										Text="+ Perk"
+										Command="{Binding Source={x:Reference Page}, Path=AddPerk}"
+										CommandParameter="{Binding .}" />
+
+								</FlexLayout>-->
+
+				
+
+				
+
+
+			</StackLayout>
+		</Frame>
+	</ContentView.Content>
+</ContentView>
+

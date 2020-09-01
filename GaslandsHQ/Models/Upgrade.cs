@@ -10,5 +10,13 @@ namespace GaslandsHQ.Models
         public int Ammo { get; set; }
 
         public string Rules { get; set; }
+
+        public int  Hull { get; set; }
+
+        public int Crew { get; set; }
+
+        public int Handling { get; set; }
+
+        public int Gear { get; set; }
     }
 }

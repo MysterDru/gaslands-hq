@@ -1,283 +1,63 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage
-    xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="GaslandsHQ.Pages.AddTeamPage"
-    Visual="Material"
-    Title="Add Team"
-    x:Name="Page">
-    <ContentPage.Content>
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:help="clr-namespace:GaslandsHQ.Helpers"
+	xmlns:local="clr-namespace:GaslandsHQ.Pages"
+	xmlns:seg="clr-namespace:Plugin.Segmented.Control;assembly=Plugin.Segmented"
+	x:Class="GaslandsHQ.Pages.AddTeamPage"
+	Visual="Material"
+	Title="Add Team"
+	x:Name="Page"
+	BackgroundColor="LightGray">
+	<ContentPage.Content>
 
-        <StackLayout
-            Spacing="0">
+		<StackLayout
+			Spacing="0">
 
-            <Entry
-                Placeholder="Team Name"
-                Text="{Binding Team.Name}" />
+			<Entry
+				Placeholder="Team Name"
+				Text="{Binding Team.Name}" />
 
-            <Picker
-                    WidthRequest="180"
-                   Title="Sponsor"
-                    ItemsSource="{Binding Sponsors}"
-                    SelectedItem="{Binding Team.Sponsor}"
-                    ItemDisplayBinding="{Binding Name}" />
+			<Picker
+				WidthRequest="180"
+				Title="Sponsor"
+				ItemsSource="{Binding Sponsors}"
+				SelectedItem="{Binding Team.Sponsor}"
+				ItemDisplayBinding="{Binding Name}" />
 
-            <StackLayout
-                Orientation="Horizontal"
-                Spacing="0">
-                <Entry
-                    Placeholder="Total Cans"
-                    Keyboard="Numeric"
-                    Text="{Binding Team.Cans, Converter={StaticResource NullableInt}}"
-                    HorizontalOptions="FillAndExpand"/>
+			<StackLayout
+				Orientation="Horizontal"
+				Spacing="0">
+				<Entry
+					Placeholder="Total Cans"
+					Keyboard="Numeric"
+					Text="{Binding Team.Cans, Converter={StaticResource NullableInt}}"
+					HorizontalOptions="FillAndExpand" />
 
-                <Entry
-                    Placeholder="Current Cans"
-                    Keyboard="Numeric"
-                    IsEnabled="False"
-                    Text="{Binding Team.TotalCost, Converter={StaticResource NullableInt}}"
-                    HorizontalOptions="FillAndExpand"/>
-            </StackLayout>
+				<Entry
+					Placeholder="Current Cans"
+					Keyboard="Numeric"
+					IsEnabled="False"
+					Text="{Binding Team.TotalCost, Converter={StaticResource NullableInt}}"
+					HorizontalOptions="FillAndExpand" />
+			</StackLayout>
 
-            <Button
-                Margin="0, 10"
-                Text="Add Vehicle"
-                    HorizontalOptions="Center"
-                    Command="{Binding AddVehicle}"/>
+			<Button
+				Margin="0, 10"
+				Text="Add Vehicle"
+				HorizontalOptions="Center"
+				Command="{Binding AddVehicle}" />
 
-            <CarouselView
-                ItemsSource="{Binding Team.Vehicles}">
-                <CarouselView.ItemTemplate>
-                    <DataTemplate>
-                        <Frame
-                            WidthRequest="320"
-                            Visual="Material"
-                            Padding="1"
-                            BackgroundColor="SaddleBrown">
-                            <StackLayout
-                                Spacing="5">
-                                <Grid
-                                    BackgroundColor="Khaki">
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="auto" />
-                                        <RowDefinition Height="auto" />
-                                    </Grid.RowDefinitions>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*" />
-                                        <ColumnDefinition Width="80"/>
-                                    </Grid.ColumnDefinitions>
-                                    <Picker
-                                    Title="Vehicle Type"
-                                    ItemsSource="{Binding Source={x:Reference Page}, Path=VehicleTypes}"
-                                    SelectedItem="{Binding Type}"
-                                        ItemDisplayBinding="{Binding Type}"
-                                        HorizontalOptions="FillAndExpand"
-                                    Grid.Row="0" />
+			<CollectionView
+				ItemsSource="{Binding Team.Vehicles}">
+				<CollectionView.ItemTemplate>
+					<DataTemplate>
+						<local:VehicleCardView Page="{x:Reference Page}" />
 
-                                    <Entry
-                                        Placeholder="Name"
-                                        Text="{Binding Name}"
-                                        Grid.Row="1"/>
-
-                                    <Label
-                                    Grid.Row="0"
-                                    Grid.Column="1"
-                                    Text="{Binding TotalCost, StringFormat='Cans: {0}'}"
-                                           HorizontalOptions="Center"
-                                           HorizontalTextAlignment="Center"
-                                           VerticalOptions="Center"
-                                        Grid.RowSpan="2"/>
-                                </Grid>
-
-                                <FlexLayout
-                                    JustifyContent="SpaceAround">
-                                    <ContentView
-                                        BackgroundColor="SandyBrown"
-                                        WidthRequest="70"
-                                        HeightRequest="35">
-                                        <Label Text="{Binding Type.Hull, StringFormat='HUL:{0}'}"
-                                               HorizontalTextAlignment="Center"
-                                               VerticalTextAlignment="Center"/>
-                                    </ContentView>
-                                    <ContentView
-                                        BackgroundColor="SandyBrown"
-                                        WidthRequest="70"
-                                        HeightRequest="35">
-                                        <Label Text="{Binding Type.Crew, StringFormat='CRW:{0}'}"
-                                               HorizontalTextAlignment="Center"
-                                               VerticalTextAlignment="Center"/>
-                                    </ContentView>
-                                    <ContentView
-                                        BackgroundColor="SandyBrown"
-                                        WidthRequest="70"
-                                        HeightRequest="35">
-                                        <Label Text="{Binding Type.Handling, StringFormat='HND:{0}'}"
-                                               HorizontalTextAlignment="Center"
-                                               VerticalTextAlignment="Center"/>
-                                    </ContentView>
-                                    <ContentView
-                                        BackgroundColor="SandyBrown"
-                                        WidthRequest="70"
-                                        HeightRequest="35">
-                                        <Label Text="{Binding Type.MaxGear, StringFormat='G:{0}'}"
-                                               HorizontalTextAlignment="Center"
-                                               VerticalTextAlignment="Center"/>
-                                    </ContentView>
-                                </FlexLayout>
-
-                                <FlexLayout
-                                    JustifyContent="SpaceAround">
-
-                                    <Button Text="+ Weapon" Command="{Binding Source={x:Reference Page}, Path=AddWeapon}" CommandParameter="{Binding .}" />
-                                    <Button Text="+ Upgrade" Command="{Binding Source={x:Reference Page}, Path=AddUpgrade}" CommandParameter="{Binding .}" />
-                                    <Button Text="+ Perk" Command="{Binding Source={x:Reference Page}, Path=AddPerk}" CommandParameter="{Binding .}"/>
-
-                                </FlexLayout>
-
-                                <Label Text="Weapons" FontAttributes="Bold" />
-
-                                <StackLayout
-                                    BindableLayout.ItemsSource="{Binding Weapons}">
-                                    <BindableLayout.ItemTemplate>
-                                        <DataTemplate>
-                                            <Grid>
-                                                <Picker x:Name="weaponPicker" ItemsSource="{Binding Source={x:Reference Page}, Path=Weapons}" SelectedItem="{Binding Weapon}"
-                                                        ItemDisplayBinding="{Binding Name}" IsVisible="false"/>
-                                                <BoxView Color="SaddleBrown" />
-
-                                                <Label Text="{Binding Weapon.Name}">
-                                                    <Label.GestureRecognizers>
-                                                        <TapGestureRecognizer Tapped="WeaponLabel_Tapped" />
-                                                    </Label.GestureRecognizers>
-                                                </Label>
-
-                                            </Grid>
-                                        </DataTemplate>
-                                    </BindableLayout.ItemTemplate>
-
-                                </StackLayout>
-
-
-                                <Label Text="Upgrades" FontAttributes="Bold" />
-
-                                <Label Text="Perks" FontAttributes="Bold" />
-
-
-                            </StackLayout>
-
-                            <StackLayout
-                                Spacing="0">
-                                <StackLayout Orientation="Horizontal"
-                                             Spacing="0">
-                                    <Entry Placeholder="Name" Text="{Binding Name}" HorizontalOptions="FillAndExpand"/>
-
-                                </StackLayout>
-
-                                <FlexLayout
-                                    Margin="0, 5"
-                                    JustifyContent="SpaceAround"
-                                    Wrap="Wrap">
-                                    <Label Text="{Binding TotalCost, StringFormat='Cost&#10;{0}'}"
-                                           HorizontalOptions="Center"
-                                           HorizontalTextAlignment="Center"
-                                           VerticalOptions="Center"/>
-                                    <Label Text="{Binding TotalCost, StringFormat='Hull&#10;{0}'}"
-                                           HorizontalOptions="Center"
-                                           HorizontalTextAlignment="Center"
-                                           VerticalOptions="Center"/>
-                                    <Label Text="{Binding TotalCost, StringFormat='Handling&#10;{0}'}"
-                                           HorizontalOptions="Center"
-                                           HorizontalTextAlignment="Center"
-                                           VerticalOptions="Center"/>
-                                    <Label Text="{Binding TotalCost, StringFormat='Max Gear&#10;{0}'}"
-                                           HorizontalOptions="Center"
-                                           HorizontalTextAlignment="Center"
-                                           VerticalOptions="Center"/>
-                                    <Label Text="{Binding TotalCost, StringFormat='Crew&#10;{0}'}"
-                                           HorizontalOptions="Center"
-                                           HorizontalTextAlignment="Center"
-                                           VerticalOptions="Center"/>
-                                    <Label Text="{Binding TotalCost, StringFormat='Free Slots&#10;{0}'}"
-                                           HorizontalOptions="Center"
-                                           HorizontalTextAlignment="Center"
-                                           VerticalOptions="Center"/>
-                                </FlexLayout>
-
-                                <Label Text="Weapons" Margin="0, 5" FontAttributes="Bold"/>
-
-                                <Grid>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*" />
-                                        <ColumnDefinition Width="*" />
-                                        <ColumnDefinition Width="*" />
-                                        <ColumnDefinition Width="*" />
-                                        <ColumnDefinition Width="*" />
-                                        <ColumnDefinition Width="*" />
-                                        <ColumnDefinition Width="2*" />
-                                    </Grid.ColumnDefinitions>
-
-                                    <Label Text="Weapon" FontAttributes="Bold" FontSize="Small" Grid.Column="0"/>
-                                    <Label Text="FAC" FontAttributes="Bold" FontSize="Small" Grid.Column="1"/>
-                                    <Label Text="RNG" FontAttributes="Bold" FontSize="Small" Grid.Column="2"/>
-                                    <Label Text="ATK" FontAttributes="Bold" FontSize="Small" Grid.Column="3"/>
-                                    <Label Text="AMO" FontAttributes="Bold" FontSize="Small" Grid.Column="4"/>
-                                    <Label Text="CST" FontAttributes="Bold" FontSize="Small" Grid.Column="5"/>
-                                    <Label Text="" FontAttributes="Bold" FontSize="Small" Grid.Column="6"/>
-
-                                    <StackLayout
-                                        Grid.ColumnSpan="6"
-                                        Grid.Row="1"
-                                        BindableLayout.ItemsSource="{Binding Weapons}"
-                                        BindableLayout.EmptyView="Add Weapons">
-                                        <BindableLayout.ItemTemplate>
-                                            <DataTemplate>
-                                                <Grid>
-                                                    <Grid.ColumnDefinitions>
-                                                        <ColumnDefinition Width="*" />
-                                                        <ColumnDefinition Width="*" />
-                                                        <ColumnDefinition Width="*" />
-                                                        <ColumnDefinition Width="*" />
-                                                        <ColumnDefinition Width="*" />
-                                                        <ColumnDefinition Width="*" />
-                                                        <ColumnDefinition Width="2*" />
-                                                    </Grid.ColumnDefinitions>
-
-                                                    <Picker
-                                                        ItemsSource="{Binding Source={x:Reference Page}, Path=Weapons}"
-                                                        SelectedItem="{Binding Weapon}"
-                                                        FontSize="Small"
-                                                        Grid.Column="0"/>
-                                                    <Picker
-                                                        SelectedItem="{Binding Weapon}"
-                                                        FontSize="Small"
-                                                        Grid.Column="1">
-                                                        <Picker.ItemsSource>
-                                                            <x:Array Type="{x:Type x:String}">
-                                                                <x:String>Front</x:String>
-                                                                <x:String>Sides</x:String>
-                                                                <x:String>Rear</x:String>
-                                                                <x:String>360</x:String>
-                                                            </x:Array>
-                                                        </Picker.ItemsSource>
-                                                    </Picker>
-                                                    <Label Text="{Binding Weapon.Range}" FontAttributes="Bold" FontSize="Small" Grid.Column="2"/>
-                                                    <Label Text="{Binding Weapon.Attack}" FontAttributes="Bold" FontSize="Small" Grid.Column="3"/>
-                                                    <Label Text="{Binding Weapon.Ammo}" FontAttributes="Bold" FontSize="Small" Grid.Column="4"/>
-                                                    <Label Text="{Binding Weapon.Cost}" FontAttributes="Bold" FontSize="Small" Grid.Column="5"/>
-                                                    <Label Text="{Binding Weapon.SpecialRules}" FontAttributes="Bold" FontSize="Small" Grid.Column="6"/>
-                                                </Grid>
-                                            </DataTemplate>
-                                        </BindableLayout.ItemTemplate>
-                                    </StackLayout>
-
-                                </Grid>
-                            </StackLayout>
-                        </Frame>
-                    </DataTemplate>
-                </CarouselView.ItemTemplate>
-            </CarouselView>
-
-
-        </StackLayout>
-    </ContentPage.Content>
+					</DataTemplate>
+				</CollectionView.ItemTemplate>
+			</CollectionView>
+		</StackLayout>
+	</ContentPage.Content>
 </ContentPage>

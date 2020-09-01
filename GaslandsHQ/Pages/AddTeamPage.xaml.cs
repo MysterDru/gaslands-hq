@@ -31,6 +31,8 @@ namespace GaslandsHQ.Pages
 
         public Command AddWeapon => new Command<Vehicle>(ExecuteAddWeapon);
 
+        public Command RemoveWeapon => new Command<VehicleWeapon>(ExecuteRemoveWeapon);
+
         public Command AddUpgrade => new Command<Vehicle>(ExecuteAddUpgrade);
         
         public Command AddPerk => new Command<Vehicle>(ExecuteAddPerk);        
@@ -79,9 +81,25 @@ namespace GaslandsHQ.Pages
             //obj.Weapons.Add(new VehicleWeapon { Facing = "Front" });
             obj.Weapons.Add(new VehicleWeapon
             {
-                Weapon = this.Weapons.First(x => x.Name == "Handgun"),
-                Facing = "360"
+                Weapon = this.Weapons.First(x => x.Name == "Heavy Machine Gun"),
+                Facing = "Font"
             });
+        }
+
+        void ExecuteRemoveWeapon(VehicleWeapon obj)
+        {
+            Vehicle mathingV = null;
+            foreach(var vehicles in Team.Vehicles)
+			{
+                if (vehicles.Weapons.Contains(obj))
+                {
+                    mathingV = vehicles;
+                    break;
+                }
+			}
+
+            if (mathingV != null)
+                mathingV.Weapons.Remove(obj);
         }
 
         void ExecuteAddUpgrade(Vehicle obj)

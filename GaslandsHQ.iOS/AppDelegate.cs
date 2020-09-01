@@ -24,6 +24,8 @@ namespace GaslandsHQ.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             global::Xamarin.Forms.FormsMaterial.Init();
+            Plugin.Segmented.Control.iOS.SegmentedControlRenderer.Initialize();
+
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);
