@@ -44,7 +44,7 @@
 						Placeholder="Name"
 						Text="{Binding Name}"
 						Grid.Column="1" />
-				</Grid>	
+				</Grid>
 				<FlexLayout
 					JustifyContent="SpaceAround"
 					Wrap="Wrap">
@@ -110,7 +110,11 @@
 				</FlexLayout>
 
 				<seg:SegmentedControl
-					x:Name="addOnsSegments">
+					x:Name="addOnsSegments"
+					DisabledColor="Transparent"
+					SelectedTextColor="White"
+					TintColor="Blue"
+					TextColor="Blue">
 					<seg:SegmentedControl.Children>
 						<seg:SegmentedControlOption
 							Text="Weapons" />
@@ -120,18 +124,181 @@
 							Text="Perks" />
 					</seg:SegmentedControl.Children>
 				</seg:SegmentedControl>
-				<ContentView x:Name="weaponsView">
-					<Label
-						Text="Weapons" />
-				</ContentView>
-				<ContentView x:Name="upgradesView">
+
+					<Grid  x:Name="weaponsView">
+						<Grid.RowDefinitions>
+							<RowDefinition
+								Height="30" />
+							<RowDefinition
+								Height="auto" />
+							<RowDefinition
+								Height="auto" />
+						</Grid.RowDefinitions>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition
+								Width="1*" />
+							<ColumnDefinition
+								Width="1*" />
+							<ColumnDefinition
+								Width="1*" />
+							<ColumnDefinition
+								Width="0.5*" />
+							<ColumnDefinition
+								Width="0.5*" />
+							<ColumnDefinition
+								Width="0.5*" />
+							<ColumnDefinition
+								Width="2*" />
+						</Grid.ColumnDefinitions>
+
+						<Label
+							Text="NAME"
+							FontAttributes="Bold"
+							FontSize="Small"
+							Grid.Column="0" />
+						<Label
+							Text="FACE"
+							FontAttributes="Bold"
+							FontSize="Small"
+							Grid.Column="1" />
+						<Label
+							Text="RNG"
+							FontAttributes="Bold"
+							FontSize="Small"
+							Grid.Column="2" />
+						<Label
+							Text="ATK"
+							FontAttributes="Bold"
+							FontSize="Small"
+							Grid.Column="3" />
+						<Label
+							Text="AMO"
+							FontAttributes="Bold"
+							FontSize="Small"
+							Grid.Column="4" />
+						<Label
+							Text="CST"
+							FontAttributes="Bold"
+							FontSize="Small"
+							Grid.Column="5" />
+						<Label
+							Text="RULES"
+							FontAttributes="Bold"
+							FontSize="Small"
+							Grid.Column="6" />
+
+						<StackLayout
+							Grid.ColumnSpan="7"
+							Grid.Row="1"
+							BindableLayout.ItemsSource="{Binding Weapons}"
+							BindableLayout.EmptyView="Add Weapons">
+							<BindableLayout.ItemTemplate>
+								<DataTemplate>
+									<Grid>
+										<Grid.RowDefinitions>
+											<RowDefinition
+												Height="50" />
+										</Grid.RowDefinitions>
+										<Grid.ColumnDefinitions>
+											<ColumnDefinition
+												Width="1*" />
+											<ColumnDefinition
+												Width="1*" />
+											<ColumnDefinition
+												Width="1*" />
+											<ColumnDefinition
+												Width="0.5*" />
+											<ColumnDefinition
+												Width="0.5*" />
+											<ColumnDefinition
+												Width="0.5*" />
+											<ColumnDefinition
+												Width="2*" />
+										</Grid.ColumnDefinitions>
+
+										<Picker
+											ItemsSource="{Binding Source={x:Reference Self}, Path=Page.Weapons}"
+											SelectedItem="{Binding Weapon}"
+											ItemDisplayBinding="{Binding Name}"
+											FontSize="Small"
+											Grid.Column="0" />
+										<Picker
+											SelectedItem="{Binding Facing}"
+											FontSize="Small"
+											Grid.Column="1">
+											<Picker.ItemsSource>
+												<x:Array
+													Type="{x:Type x:String}">
+													<x:String>Front</x:String>
+													<x:String>Sides</x:String>
+													<x:String>Rear</x:String>
+													<x:String>360</x:String>
+												</x:Array>
+											</Picker.ItemsSource>
+										</Picker>
+										<Label
+											Text="{Binding Weapon.Range}"
+											FontAttributes="Bold"
+											FontSize="Small"
+											Grid.Column="2" />
+										<Label
+											Text="{Binding Weapon.Attack}"
+											FontAttributes="Bold"
+											FontSize="Small"
+											Grid.Column="3" />
+										<Label
+											Text="{Binding Weapon.Ammo}"
+											FontAttributes="Bold"
+											FontSize="Small"
+											Grid.Column="4" />
+										<Label
+											Text="{Binding Cost}"
+											FontAttributes="Bold"
+											FontSize="Small"
+											Grid.Column="5" />
+										<Label
+											Text="{Binding Weapon.SpecialRules}"
+											FontAttributes="Bold"
+											FontSize="Small"
+											Grid.Column="6" />
+									</Grid>
+								</DataTemplate>
+							</BindableLayout.ItemTemplate>
+						</StackLayout>
+
+						<ContentView Grid.Row="2">
+
+						<Button
+							Text="+ Weapon"
+							WidthRequest="100"
+							Command="{Binding Source={x:Reference Self}, Path=Page.AddWeapon}"
+							CommandParameter="{Binding .}" />
+					</ContentView>
+					</Grid>
+				<StackLayout
+					x:Name="upgradesView">
 					<Label
 						Text="Upgrades" />
-				</ContentView>
-				<ContentView x:Name="perksView">
+					<ContentView>
+						<Button
+							Text="+ Upgrade"
+							WidthRequest="100"
+							Command="{Binding Source={x:Reference Self}, Path=Page.AddUpgrade}"
+							CommandParameter="{Binding .}" />
+					</ContentView>
+				</StackLayout>
+				<StackLayout
+					x:Name="perksView">
 					<Label
 						Text="Perks" />
-				</ContentView>
+					<ContentView>
+						<Button
+							Text="+ Perk"
+							WidthRequest="100"
+							Command="{Binding Source={x:Reference Self}, Path=Page.AddPerk}"
+							CommandParameter="{Binding .}" />
+					</ContentView>
+				</StackLayout>
 
 				<!--<FlexLayout
 									JustifyContent="SpaceAround">
@@ -151,9 +318,9 @@
 
 								</FlexLayout>-->
 
-				
 
-				
+
+
 
 
 			</StackLayout>

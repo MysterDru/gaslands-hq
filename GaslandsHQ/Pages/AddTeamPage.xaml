@@ -44,20 +44,24 @@
 			</StackLayout>
 
 			<Button
+				WidthRequest="200"
 				Margin="0, 10"
 				Text="Add Vehicle"
 				HorizontalOptions="Center"
 				Command="{Binding AddVehicle}" />
 
-			<CollectionView
-				ItemsSource="{Binding Team.Vehicles}">
-				<CollectionView.ItemTemplate>
-					<DataTemplate>
-						<local:VehicleCardView Page="{x:Reference Page}" />
+			<ScrollView>
+				<StackLayout
+					BindableLayout.ItemsSource="{Binding Team.Vehicles}">
+					<BindableLayout.ItemTemplate>
+						<DataTemplate>
+							<local:VehicleCardView
+								Page="{x:Reference Page}" />
+						</DataTemplate>
 
-					</DataTemplate>
-				</CollectionView.ItemTemplate>
-			</CollectionView>
+					</BindableLayout.ItemTemplate>
+				</StackLayout>
+			</ScrollView>
 		</StackLayout>
 	</ContentPage.Content>
 </ContentPage>

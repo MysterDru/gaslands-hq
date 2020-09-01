@@ -30,7 +30,7 @@ namespace GaslandsHQ.Models
 			get
 			{
 				return (Type?.Cost ?? 0) +
-					(this.Weapons?.Sum(x => x.Weapon?.Cost ?? 0) ?? 0) +
+					(this.Weapons?.Sum(x => x.Cost) ?? 0) +
 					(this.Perks?.Sum(x => x.Cost) ?? 0) +
 					(this.Upgrades?.Sum(x => x.Cost) ?? 0);
 			}
