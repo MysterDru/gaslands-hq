@@ -1,174 +1,87 @@
 ﻿[
   {
     "name": "None",
+    "keywords": [],
     "perkClasses": [],
-    "keywords": []
+    "ruleset": "BASE"
   },
   {
     "name": "Rutherford",
-    "perkClasses": [
-      "Badass",
-      "Military"
-    ],
-    "keywords": [
-      "Military hardware",
-      "Well stocked",
-      "Might is right",
-      "Televised carnage"
-    ]
+    "keywords": [ "Military hardware", "Well stocked", "Might is right", "Televised carnage" ],
+    "perkClasses": [ "Badass", "Military" ],
+    "ruleset": "BASE"
   },
   {
     "name": "Miyazaki",
-    "perkClasses": [
-      "Daring",
-      "Precision"
-    ],
-    "keywords": [
-      "Virtuoso",
-      "Elegance",
-      "Showing off"
-    ]
+    "keywords": [ "Virtuoso", "Elegance", "Showing off" ],
+    "perkClasses": [ "Daring", "Precision" ],
+    "ruleset": "BASE"
   },
   {
     "name": "Mishkin",
-    "perkClasses": [
-      "Military",
-      "Technology"
-    ],
-    "keywords": [
-      "Thumpermonkey",
-      "Dynamo",
-      "All the toys"
-    ]
+    "keywords": [ "Thumpermonkey", "Dynamo", "All the toys" ],
+    "perkClasses": [ "Military", "Technology" ],
+    "ruleset": "BASE"
   },
   {
     "name": "Idris",
-    "perkClasses": [
-      "Precision",
-      "Speed"
-    ],
-    "keywords": [
-      "N2O addict",
-      "Speed demon",
-      "Cult of speed",
-      "Kiss my asphalt"
-    ]
+    "keywords": [ "N2O addict", "Speed demon", "Cult of speed", "Kiss my asphalt" ],
+    "perkClasses": [ "Precision", "Speed" ],
+    "ruleset": "BASE"
   },
   {
     "name": "Slime",
-    "perkClasses": [
-      "Tuning",
-      "Reckless"
-    ],
-    "keywords": [
-      "Live fast",
-      "Pinball",
-      "Spiked Fist"
-    ]
+    "keywords": [ "Live fast", "Pinball", "Spiked Fist" ],
+    "perkClasses": [ "Tuning", "Reckless" ],
+    "ruleset": "BASE"
   },
   {
     "name": "Warden",
-    "perkClasses": [
-      "Aggression",
-      "Badass"
-    ],
-    "keywords": [
-      "Prison cars",
-      "Fireworks"
-    ]
+    "keywords": [ "Prison cars", "Fireworks" ],
+    "perkClasses": [ "Aggression", "Badass" ],
+    "ruleset": "BASE"
   },
   {
     "name": "Scarlett Annie",
-    "perkClasses": [
-      "Aggression",
-      "Tuning"
-    ],
-    "keywords": [
-      "Crew Quarters",
-      "Raiders",
-      "Raise the Sails",
-      "Press Gang"
-    ]
+    "keywords": [ "Crew Quarters", "Raiders", "Raise the Sails", "Press Gang" ],
+    "perkClasses": [ "Aggression", "Tuning" ],
+    "ruleset": "BASE"
   },
   {
     "name": "Highway Patrol",
-    "perkClasses": [
-      "Speed",
-      "Pursuit"
-    ],
-    "keywords": [
-      "Hot Pursuit",
-      "Bogey at 12 O'Clock",
-      "The Job Is Never Done",
-      "Siren",
-      "Steel Justice"
-    ]
+    "keywords": [ "Hot Pursuit", "Bogey at 12 O'Clock", "The Job Is Never Done", "Siren", "Steel Justice" ],
+    "perkClasses": [ "Speed", "Pursuit" ],
+    "ruleset": "BASE"
   },
+
   {
     "name": "Verney",
-    "perkClasses": [
-      "Technology",
-      "Built"
-    ],
-    "keywords": [
-      "MicroPlate Armour",
-      "Trunk of Junk",
-      "Tombstone",
-      "That's Entertainment"
-    ]
+    "keywords": [ "MicroPlate Armour", "Trunk of Junk", "Tombstone", "That's Entertainment" ],
+    "perkClasses": [ "Technology", "Built" ],
+    "ruleset": "BASE"
   },
   {
     "name": "Maxxine",
-    "perkClasses": [
-      "Tuning",
-      "Pursuit"
-    ],
-    "keywords": [
-      "Dizzy",
-      "Maxximum Drift",
-      "Meshuggah"
-    ]
+    "keywords": [ "Dizzy", "Maxximum Drift", "Meshuggah" ],
+    "perkClasses": [ "Tuning", "Pursuit" ],
+    "ruleset": "BASE"
   },
   {
     "name": "The Flame Cult",
-    "perkClasses": [
-      "Horror",
-      "Speed"
-    ],
-    "keywords": [
-      "Fire Walk With Me",
-      "Burning Man",
-      "Cult Of Flame"
-    ]
+    "keywords": [ "Fire Walk With Me", "Burning Man", "Cult Of Flame" ],
+    "perkClasses": [ "Horror", "Speed" ],
+    "ruleset": "BASE"
   },
   {
     "name": "Beverly",
-    "perkClasses": [
-      "Horror",
-      "Built"
-    ],
-    "keywords": [
-      "Graveyard Shift",
-      "Ghost Rider",
-      "Soul Anchor",
-      "At The Crossroads",
-      "Inexorable",
-      "Soul Harvest"
-    ]
+    "keywords": [ "Graveyard Shift", "Ghost Rider", "Soul Anchor", "At The Crossroads", "Inexorable", "Soul Harvest" ],
+    "perkClasses": [ "Horror", "Built" ],
+    "ruleset": "BASE"
   },
   {
     "name": "Rusty's Bootleggers",
-    "perkClasses": [
-      "Reckless",
-      "Built"
-    ],
-    "keywords": [
-      "Party Hard",
-      "Dutch courage",
-      "As Straight As I'm Able",
-      "Over The Limit",
-      "Trailer Trash",
-      "Haulage"
-    ]
+    "keywords": [ "Party Hard", "Dutch courage", "As Straight As I'm Able", "Over The Limit", "Trailer Trash", "Haulage" ],
+    "perkClasses": [ "Reckless", "Built" ],
+    "ruleset": "BASE"
   }
 ]

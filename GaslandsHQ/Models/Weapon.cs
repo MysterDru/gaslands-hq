@@ -1,22 +1,34 @@
 ﻿using System;
 namespace GaslandsHQ.Models
 {
-    public class Weapon : BaseCostModel
+    public class Weapon
     {
-        public string Name { get; set; }
+        public string wtype { get; set; }
 
-        public string Type { get; set; }
+        public string attackType { get; set; }
 
-        public string Attack { get; set; }
+        public string attack { get; set; }
 
-        public string Range { get; set; }
+        public string range { get; set; }
 
-        public int Ammo { get; set; }
+        public int slots { get; set; }
 
-        public int Slots { get; set; }
+        public int ammo { get; set; }
 
-        public bool CrewFired { get; set; }
+        public bool crewFired { get; set; }
 
-        public string SpecialRules { get; set; }    
+        public int  cost { get; set; }
+
+        public string[] allowedSponsors { get; set; }
+
+        public string ruleset { get; set; }
+
+        public int? limit { get; set; }
+
+        public string specialRules { get; set; }
+
+        public string optionText => wtype + (ruleset != "BASE" ? ("(" + ruleset + ")") : string.Empty);
+
+        public bool always { get; set; }
     }
 }

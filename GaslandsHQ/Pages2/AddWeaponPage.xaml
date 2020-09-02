@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="GaslandsHQ.Pages2.AddWeaponPage"
+             Visual="Material">
+    <ContentPage.Content>
+        <StackLayout
+				Spacing="5">
+            <Grid
+				ColumnSpacing="0"
+                RowSpacing="0">
+                <Picker
+						HorizontalOptions="StartAndExpand"
+						Title="Weapon Type"
+						ItemsSource="{Binding Weapons}"
+						SelectedItem="{Binding SelectedWeapon}"
+						ItemDisplayBinding="{Binding wtype}"
+                    IsEnabled="{Binding CanSelect}"
+						Grid.Column="0"
+                    Grid.Row="0"/>
+
+                <Picker
+                    Title="Facing"
+					SelectedItem="{Binding Facing}"
+                    IsEnabled="{Binding CanSelect}"
+					Grid.Column="1"
+                    Grid.Row="0">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Front</x:String>
+                            <x:String>Sides</x:String>
+                            <x:String>Rear</x:String>
+                            <x:String>360</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+
+                <Entry
+                    Grid.Row="1"
+                    Placeholder="Cost"
+                    IsEnabled="False"
+                    Text="{Binding Cost}"
+                    Grid.ColumnSpan="2"/>
+            </Grid>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

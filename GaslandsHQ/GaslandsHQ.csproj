@@ -25,6 +25,7 @@
     <None Remove="Data\Files\Vehicle.json" />
     <None Remove="Data\Files\Weapon.json" />
     <None Remove="Data\Files\Cargo.json" />
+    <None Remove="Data\Files\Trailer.json" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Data\Files\Keyword.json">
@@ -48,12 +49,23 @@
     <EmbeddedResource Include="Data\Files\Cargo.json">
       <LogicalName>Cargo.json</LogicalName>
     </EmbeddedResource>
+    <EmbeddedResource Include="Data\Files\Trailer.json">
+      <IncludeInPackage>true</IncludeInPackage>
+      <LogicalName>Trailer.json</LogicalName>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\" />
     <Folder Include="Models\" />
     <Folder Include="Data\Files\" />
-    <Folder Include="Pages\" />
     <Folder Include="Helpers\" />
+    <Folder Include="ViewModels2\" />
+    <Folder Include="Pages2\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Data\Files\Trailer.json">
+      <LogicalName>Trailer.json</LogicalName>
+      <IncludeInPackage>true</IncludeInPackage>
+    </None>
   </ItemGroup>
 </Project>

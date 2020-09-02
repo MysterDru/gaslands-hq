@@ -1,22 +1,38 @@
 ﻿[
   {
-    "name": "Peach Moonshine",
-    "description": "This vehicle's molotov cocktail count as having an infinite number of ammo tokens"
+    "ctype": "None",
+    "specialRules": null,
+    "keywords": [],
+    "ruleset": "BASE"
   },
   {
-    "name": "Sourmash Jet Booster",
-    "description": "At the end of this vehicle's movement step, if this vehicle has 5 or more hazard tokens, it must immediately make a long straight maneuver forward."
+    "ctype": "Peach Moonshine",
+    "specialRules": "This vehicle’s molotov cocktail count as having an infinite number of ammo tokens",
+    "keywords": [],
+    "ruleset": "BASE"
   },
   {
-    "name": "Siphon Pump",
-    "description": "At the start of this vehicle's attack step, regardless of whether it is distracted, this vehicle may take up to one hazard token from each car within short range of it and place it on this vehicle."
+    "ctype": "Sourmash Jet Booster",
+    "specialRules": "At the end of this vehicle's movement step, if this vehicle has 5 or more hazard tokens, it must immediately make a long straight maneuver forward.",
+    "keywords": [],
+    "ruleset": "BASE"
   },
   {
-    "name": "Old Fashioned Corn Liquor",
-    "description": "Whenever a vehicle within medium range of this vehicle gains one or more hazard tokens, it gains one additional hazard token.",
+    "ctype": "Siphon Pump",
+    "specialRules": "At the start of this vehicle's attack step, regardless of whether it is distracted, this vehicle may take up to one hazard token from each car within short range of it and place it on this vehicle.",
+    "keywords": [],
+    "ruleset": "BASE"
   },
   {
-    "name": "Cattle-Hammer",
-    "description": "This vehicle may consider its current gear to be any value, up to this vehicle's max gear, during the wipe-out step, including during any collisions resolved during the wipe-out step"
+    "ctype": "Old Fashioned Corn Liquor",
+    "specialRules": "Whenever a vehicle within medium range of this vehicle gains one or more hazard tokens, it gains one additional hazard token.",
+    "keywords": [],
+    "ruleset": "BASE"
+  },
+  {
+    "ctype": "Cattle-Hammer",
+    "specialRules": "This vehicle may consider its current gear to be any value, up to this vehicle’s max gear, during the wipe-out step, including during any collisions resolved during the wipe-out step",
+    "keywords": [],
+    "ruleset": "BASE"
   }
 ]

@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:seg="clr-namespace:Plugin.Segmented.Control;assembly=Plugin.Segmented"
+             x:Class="GaslandsHQ.Pages2.ManageVehiclePage"
+			 Visual="Material">
+    <ContentPage.Content>
+        <Grid
+            ColumnSpacing="0"
+            RowSpacing="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="70" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Picker
+						HorizontalOptions="StartAndExpand"
+						Title="Vehicle Type"
+						ItemsSource="{Binding VehicleTypes}"
+						SelectedItem="{Binding SelectedVehicleType}"
+						ItemDisplayBinding="{Binding vtype}"
+						Grid.Column="0"
+				Grid.Row="0"/>
+
+            <Entry
+						HorizontalOptions="EndAndExpand"
+						Placeholder="Name"
+						Text="{Binding Name}"
+						Grid.Column="1"
+					Grid.Row="0"/>
+            <ContentView
+                Grid.Row="1"
+				Grid.ColumnSpan="2">
+            <FlexLayout
+					JustifyContent="SpaceAround"
+					Wrap="Wrap"
+				
+                VerticalOptions="Center">
+                <ContentView
+						Style="{x:StaticResource tag}">
+                    <Label
+							Text="{Binding TotalCost, StringFormat='Cost: {0}'}"
+							HorizontalTextAlignment="Center"
+							VerticalTextAlignment="Center" />
+                </ContentView>
+                <ContentView
+						Style="{x:StaticResource tag}">
+                    <Label
+							HorizontalTextAlignment="Center"
+							VerticalTextAlignment="Center">
+                        <Label.Text>
+                            <MultiBinding
+									StringFormat="Build Slots: {0}/{1}">
+                                <Binding
+										Path="UsedSlots" />
+                                <Binding
+										Path="AvailableSlots" />
+                            </MultiBinding>
+                        </Label.Text>
+                    </Label>
+                </ContentView>
+                <ContentView
+						Style="{x:StaticResource tag}">
+                    <Label
+							Text="{Binding Hull, StringFormat='Hull: {0}'}"
+							HorizontalTextAlignment="Center"
+							VerticalTextAlignment="Center" />
+                </ContentView>
+                <ContentView
+						Style="{x:StaticResource tag}">
+                    <Label
+							Text="{Binding Handling, StringFormat='Handling: {0}'}"
+							HorizontalTextAlignment="Center"
+							VerticalTextAlignment="Center" />
+                </ContentView>
+                <ContentView
+						Style="{x:StaticResource tag}">
+                    <Label
+							Text="{Binding MaxGear, StringFormat='Max Gear:{0}'}"
+							HorizontalTextAlignment="Center"
+							VerticalTextAlignment="Center" />
+                </ContentView>
+                <ContentView
+						Style="{x:StaticResource tag}">
+                    <Label
+							Text="{Binding Crew, StringFormat='Crew: {0}'}"
+							HorizontalTextAlignment="Center"
+							VerticalTextAlignment="Center" />
+                </ContentView>
+                <ContentView
+						Style="{x:StaticResource tag}">
+                    <Label
+							Text="{Binding WeightClass}"
+							HorizontalTextAlignment="Center"
+							VerticalTextAlignment="Center" />
+                </ContentView>
+
+            </FlexLayout>
+                </ContentView>
+
+            <ContentView
+                IsVisible="{Binding CanAddAddons}"
+				Grid.Row="2"
+                        Grid.ColumnSpan="2">
+
+                <seg:SegmentedControl
+					x:Name="addOnsSegments"
+					DisabledColor="Transparent"
+					SelectedTextColor="White"
+					TintColor="Blue"
+					TextColor="Blue">
+                    <seg:SegmentedControl.Children>
+                        <seg:SegmentedControlOption
+							Text="Weapons" />
+                        <seg:SegmentedControlOption
+							Text="Upgrades" />
+                        <seg:SegmentedControlOption
+							Text="Perks" />
+                    </seg:SegmentedControl.Children>
+                </seg:SegmentedControl>
+            </ContentView>
+
+            <ListView
+                x:Name="weaponsList"
+                IsVisible="{Binding CanAddAddons}"
+				ItemsSource="{Binding Weapons}"
+                Grid.Row="3"
+                Grid.ColumnSpan="2"
+                HasUnevenRows="True"
+               ItemSelected="ListView_ItemSelected">
+                <ListView.Triggers>
+                    
+                </ListView.Triggers>
+                <ListView.Header>
+                    <ContentView
+                        Visual="Material">
+                        <Button
+				WidthRequest="200"
+				Margin="0, 10"
+				Text="Add Weapon"
+				HorizontalOptions="Center"
+				Command="{Binding AddWeapon}"/>
+                    </ContentView>
+                </ListView.Header>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding SelectedWeapon.wtype}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -8,6 +8,15 @@ namespace GaslandsHQ.Core.Data
 {
     public class LookupRepository
     {
+        public T GetData<T>()
+        {
+            var name = typeof(T).Name;
+
+            var json = GetJson(name);
+
+            return JsonConvert.DeserializeObject<T>(json);
+        }
+
         public IEnumerable<T> GetValues<T>()
         {
             var name = typeof(T).Name;

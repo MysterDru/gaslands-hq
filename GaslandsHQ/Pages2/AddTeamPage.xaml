@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="GaslandsHQ.Pages2.AddTeamPage"
+			 Visual="Material">
+    <ContentPage.Content>
+
+        <Grid
+			RowSpacing="0"
+            ColumnSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Entry
+				Placeholder="Team Name"
+				Text="{Binding TeamName}"
+                Grid.Row="0"
+                Grid.ColumnSpan="2"/>
+
+            <Picker
+				Title="Sponsor"
+				ItemsSource="{Binding Sponsors}"
+				SelectedItem="{Binding SelectedSponsor}"
+				ItemDisplayBinding="{Binding name}"
+                Grid.Row="1"
+                Grid.ColumnSpan="2"/>
+
+            <Entry
+					Placeholder="Total Cans"
+					Keyboard="Numeric"
+					Text="{Binding TotalCans, Converter={StaticResource NullableInt}}"
+					HorizontalOptions="FillAndExpand"
+                    Grid.Row="2"
+                Grid.Column="0"/>
+
+            <Entry
+					Placeholder="Current Cans"
+					Keyboard="Numeric"
+					IsEnabled="False"
+					Text="{Binding CurrentCans, Converter={StaticResource NullableInt}}"
+					HorizontalOptions="FillAndExpand"
+                        Grid.Row="2"
+                Grid.Column="1"/>
+
+
+            <ListView
+                x:Name="VehicleList"
+				ItemsSource="{Binding Vehicles}"
+                Grid.Row="3"
+                Grid.ColumnSpan="2"
+                HasUnevenRows="True"
+                ItemSelected="ListView_ItemSelected">
+                <ListView.Header>
+                    <ContentView
+                        Visual="Material">
+
+                        <Button
+				WidthRequest="200"
+				Margin="0, 10"
+				Text="Add Vehicle"
+				HorizontalOptions="Center"
+				Command="{Binding AddVehicle}"/>
+                    </ContentView>
+                </ListView.Header>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid
+                                Padding="15">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto" />
+                                    <RowDefinition Height="auto" />
+                                    <RowDefinition Height="auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="auto"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Label FontSize="Medium" FontAttributes="Bold"
+                                       Grid.Column="0">
+                                    <Label.Text>
+                                        <MultiBinding StringFormat="{}{0} | {1}">
+                                            <Binding Path="Name" />
+                                            <Binding Path="SelectedVehicleType.vtype"/>
+                                        </MultiBinding>
+                                    </Label.Text>
+                                </Label>
+
+                                <Label Text="{Binding TotalCost, StringFormat='{0} Cans'}"
+                                       FontSize="Medium"
+                                       Grid.Column="1" />
+
+                                <Label FontSize="Small"  TextColor="DarkGray" Grid.Row="1"
+                                       Grid.Column="0"
+                                       Grid.ColumnSpan="2">
+                                    <Label.Text>
+                                        <MultiBinding StringFormat="{}Slots: {0}/{1} | Hull: {2} | Handling: {3} | Max Gear {4} | Crew: {5}">
+                                            <Binding Path="UsedSlots" />
+                                            <Binding Path="AvailableSlots" />
+                                            <Binding Path="Hull" />
+                                            <Binding Path="Handling" />
+                                            <Binding Path="MaxGear" />
+                                            <Binding Path="Crew" />
+                                        </MultiBinding>
+                                    </Label.Text>
+                                </Label>
+                                <Label FontSize="Small"  TextColor="DarkGray" Grid.Row="2" Text="{Binding WeaponsDisplayText, StringFormat='Weapons: {0}'}"
+                                       Grid.Column="0"
+                                       Grid.ColumnSpan="2"/>
+                            </Grid>
+
+                        </ViewCell>
+                        <!--<TextCell>
+                            <TextCell.Text>
+                                
+                            </TextCell.Text>
+                            <TextCell.Detail>
+                                <MultiBinding>
+                                    <MultiBinding StringFormat="{}Slots: {0}/{1} | Hull: {2} | Handling: {3} | Max Gear {4} | Crew: {5}">
+                                        <Binding Path="UsedSlots" />
+                                        <Binding Path="AvailableSlots" />
+                                        <Binding Path="Hull" />
+                                        <Binding Path="Handling" />
+                                        <Binding Path="MaxGear" />
+                                        <Binding Path="Crew" />
+                                    </MultiBinding>
+                                </MultiBinding>
+                            </TextCell.Detail>
+                        </TextCell>-->
+
+                        <!--<ViewCell>
+                            <Text
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Label Text="{Binding Name}" Grid.Column="0"/>
+                                <Label Text="{Binding SelectedVehicleType.vtype}" Grid.Column="1"/>
+                            </Grid>
+                        </ViewCell>-->
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

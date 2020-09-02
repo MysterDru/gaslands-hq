@@ -1,208 +1,195 @@
 ﻿[
   {
-    "type": "Car",
+    "vtype": "Buggy",
+    "weight": "Light",
+    "hull": 6,
+    "handling": 4,
+    "maxGear": 6,
+    "slots": 2,
+    "crew": 2,
+    "cost": 6,
+    "keywords": [ "Roll cage" ],
+    "ruleset": "BASE"
+  },
+  {
+    "vtype": "Car",
     "weight": "Middle",
-    "hull": "10",
+    "hull": 10,
     "handling": 3,
     "maxGear": 5,
     "slots": 2,
     "crew": 2,
-    "keywords": [
-      ""
-    ],
-    "cost": 12
+    "cost": 12,
+    "keywords": [],
+    "ruleset": "BASE"
   },
   {
-    "type": "Performance Car",
+    "vtype": "Performance Car",
     "weight": "Middle",
-    "hull": "8",
+    "hull": 8,
     "handling": 4,
     "maxGear": 6,
     "slots": 2,
     "crew": 1,
-    "keywords": [
-      "Slip away"
-    ],
-    "cost": 15
+    "cost": 15,
+    "keywords": [ "Slip away" ],
+    "ruleset": "BASE"
   },
   {
-    "type": "Truck",
+    "vtype": "Truck",
     "weight": "Middle",
-    "hull": "12",
+    "hull": 12,
     "handling": 2,
     "maxGear": 4,
     "slots": 3,
     "crew": 3,
-    "keywords": [
-      ""
-    ],
-    "cost": 15
+    "cost": 15,
+    "keywords": [],
+    "ruleset": "BASE"
   },
   {
-    "type": "Heavy Truck",
+    "vtype": "Heavy Truck",
     "weight": "Heavy",
-    "hull": "14",
+    "hull": 14,
     "handling": 2,
     "maxGear": 3,
     "slots": 5,
     "crew": 4,
-    "keywords": [
-      ""
-    ],
-    "cost": 25
+    "cost": 25,
+    "keywords": [],
+    "ruleset": "BASE"
   },
   {
-    "type": "Bus",
+    "vtype": "Bus",
     "weight": "Heavy",
-    "hull": "16",
+    "hull": 16,
     "handling": 2,
     "maxGear": 3,
     "slots": 3,
     "crew": 8,
-    "keywords": [
-      ""
-    ],
-    "cost": 30
+    "cost": 30,
+    "keywords": [],
+    "ruleset": "BASE"
   },
+
   {
-    "type": "Drag Racer",
+    "vtype": "Drag Racer",
     "weight": "Light",
-    "hull": "4",
+    "hull": 4,
     "handling": 4,
     "maxGear": 6,
     "slots": 2,
     "crew": 1,
-    "keywords": [
-      "Jet Engine"
-    ],
-    "cost": 5
+    "cost": 5,
+    "keywords": [ "Jet Engine" ],
+    "ruleset": "BASE"
   },
   {
-    "type": "Ice Cream Truck",
+    "vtype": "Ice Cream Truck",
     "weight": "Middle",
-    "hull": "10",
+    "hull": 10,
     "handling": 2,
     "maxGear": 4,
     "slots": 2,
     "crew": 2,
-    "keywords": [
-      "Infuriating Jingle"
-    ],
-    "cost": 8
+    "cost": 8,
+    "keywords": [ "Infuriating Jingle" ],
+    "ruleset": "BASE"
   },
   {
-    "type": "Bike",
+    "vtype": "Bike",
     "weight": "Light",
-    "hull": "4",
+    "hull": 4,
     "handling": 5,
     "maxGear": 6,
     "slots": 1,
     "crew": 1,
-    "keywords": [
-      "Full throttle",
-      "Pivot"
-    ],
-    "cost": 5
+    "cost": 5,
+    "keywords": [ "Full throttle", "Pivot" ],
+    "ruleset": "BASE"
   },
   {
-    "type": "Bike with Sidecar",
+    "vtype": "Bike with Sidecar",
     "weight": "Light",
-    "hull": "4",
+    "hull": 4,
     "handling": 5,
     "maxGear": 6,
     "slots": 2,
     "crew": 2,
-    "keywords": [
-      "Full throttle",
-      "Pivot"
-    ],
-    "cost": 8
+    "cost": 8,
+    "keywords": [ "Full throttle", "Pivot" ],
+    "ruleset": "BASE"
   },
   {
-    "type": "Gyrocopter",
+    "vtype": "Gyrocopter",
     "weight": "Middle",
-    "hull": "4",
+    "hull": 4,
     "handling": 4,
     "maxGear": 6,
     "slots": 0,
     "crew": 1,
-    "keywords": [
-      "Airwolf",
-      "Airborne",
-      "Bombs away"
-    ],
-    "cost": 10
+    "cost": 10,
+    "keywords": [ "Airwolf", "Airborne", "Bombs away" ],
+    "ruleset": "BASE"
   },
   {
-    "type": "Ambulance",
+    "vtype": "Ambulance",
     "weight": "Middle",
-    "hull": "12",
+    "hull": 12,
     "handling": 2,
     "maxGear": 5,
     "slots": 3,
     "crew": 3,
-    "keywords": [
-      "Uppers",
-      "Downers"
-    ],
-    "cost": 20
+    "cost": 20,
+    "keywords": [ "Uppers", "Downers" ],
+    "ruleset": "BASE"
   },
   {
-    "type": "Monster Truck",
+    "vtype": "Monster Truck",
     "weight": "Heavy",
-    "hull": "10",
+    "hull": 10,
     "handling": 3,
     "maxGear": 4,
     "slots": 2,
     "crew": 2,
-    "keywords": [
-      "Big tires",
-      "Crush attack"
-    ],
-    "cost": 25
+    "cost": 25,
+    "keywords": [ "Big tires", "Crush attack" ],
+    "ruleset": "BASE"
   },
   {
-    "type": "Helicopter",
+    "vtype": "Helicopter",
     "weight": "Heavy",
-    "hull": "8",
+    "hull": 8,
     "handling": 3,
     "maxGear": 4,
     "slots": 4,
     "crew": 2,
-    "keywords": [
-      "Airwolf",
-      "Airborne",
-      "Bombs away"
-    ],
-    "cost": 30
+    "cost": 30,
+    "keywords": [ "Airwolf", "Airborne", "Bombs away" ],
+    "ruleset": "BASE"
   },
   {
-    "type": "Tank",
+    "vtype": "Tank",
     "weight": "Heavy",
-    "hull": "20",
+    "hull": 20,
     "handling": 4,
     "maxGear": 3,
     "slots": 4,
     "crew": 3,
-    "keywords": [
-      "All terrain",
-      "Crush attack",
-      "Pivot",
-      "Turret"
-    ],
-    "cost": 40
+    "cost": 40,
+    "keywords": [ "All terrain", "Crush attack", "Pivot", "Turret" ],
+    "ruleset": "BASE"
   },
   {
-    "type": "War Rig",
+    "vtype": "War Rig",
     "weight": "Heavy",
-    "hull": "25",
+    "hull": 25,
     "handling": 2,
     "maxGear": 4,
     "slots": 5,
     "crew": 5,
-    "keywords": [
-      ""
-    ],
-    "cost": 40
+    "cost": 40,
+    "keywords": [],
+    "ruleset": "BASE"
   }
 ]

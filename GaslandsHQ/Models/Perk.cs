@@ -1,12 +1,21 @@
 ﻿using System;
+using Newtonsoft.Json;
+
 namespace GaslandsHQ.Models
 {
-    public class Perk : BaseCostModel
+    public class Perk
     {
-        public string Category { get; set; }
+        [JsonProperty("class")]
+        public string @class {  get;set;}
 
-        public string Name { get; set; }
+        public string ptype { get; set; }
 
-        public string Description { get; set; }
+        public int  cost { get; set; }
+
+        public string rules { get; set; }
+
+        public string shortRules { get; set; }
+
+        public string ruleset { get; set; }
     }
 }
