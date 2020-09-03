@@ -8,7 +8,6 @@
 				ColumnSpacing="0"
                 RowSpacing="0">
                 <Picker
-						HorizontalOptions="StartAndExpand"
 						Title="Weapon Type"
 						ItemsSource="{Binding Weapons}"
 						SelectedItem="{Binding SelectedWeapon}"
@@ -20,7 +19,7 @@
                 <Picker
                     Title="Facing"
 					SelectedItem="{Binding Facing}"
-                    IsEnabled="{Binding CanSelect}"
+                    IsEnabled="{Binding CanEditFacing}"
 					Grid.Column="1"
                     Grid.Row="0">
                     <Picker.ItemsSource>
@@ -41,6 +40,43 @@
                     Grid.ColumnSpan="2"/>
             </Grid>
 
+            <ContentView>
+                <FlexLayout
+					JustifyContent="SpaceAround"
+					Wrap="Wrap"
+                    VerticalOptions="Center">
+                    <ContentView
+						Style="{x:StaticResource tag}">
+                        <Label
+							Text="{Binding Range, StringFormat='Range: {0}'}"
+							HorizontalTextAlignment="Center"
+							VerticalTextAlignment="Center" />
+                    </ContentView>
+                    <ContentView
+						Style="{x:StaticResource tag}">
+                        <Label
+							Text="{Binding Attack, StringFormat='Attack: {0}'}"
+							HorizontalTextAlignment="Center"
+							VerticalTextAlignment="Center" />
+                    </ContentView>
+                    <ContentView
+						Style="{x:StaticResource tag}">
+                        <Label
+							Text="{Binding Ammo, StringFormat='Ammo: {0}'}"
+							HorizontalTextAlignment="Center"
+							VerticalTextAlignment="Center" />
+                    </ContentView>
+                    <ContentView
+						Style="{x:StaticResource tag}">
+                        <Label
+							Text="{Binding Slots, StringFormat='Slots: {0}'}"
+							HorizontalTextAlignment="Center"
+							VerticalTextAlignment="Center" />
+                    </ContentView>
+                </FlexLayout>
+            </ContentView>
+
+            <Label Text="{Binding SpecialRules}" Padding="10"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

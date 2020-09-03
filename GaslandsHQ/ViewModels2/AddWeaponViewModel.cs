@@ -18,6 +18,8 @@ namespace GaslandsHQ.ViewModels2
 
         public string Facing { get; set; } = "Front";
 
+        public bool CanEditFacing => CanSelect && SelectedWeapon?.crewFired == false;
+
         public int Cost
         {
             get
@@ -51,6 +53,8 @@ namespace GaslandsHQ.ViewModels2
 
         public int Slots => SelectedWeapon?.slots ?? 0;
 
+        public string Rules => SelectedWeapon?.specialRules;
+
         public AddWeaponViewModel(ManageVehicleViewModel vehicle, Weapon defaultWeapon = null)
         {
             this.vehicle = vehicle;
@@ -81,6 +85,12 @@ namespace GaslandsHQ.ViewModels2
 
             if (defaultWeapon != null)
                 this.SelectedWeapon = this.Weapons.FirstOrDefault(x => x.wtype == defaultWeapon.wtype);
+        }
+
+        void OnSelectedWeaponChanged()
+        {
+            if (SelectedWeapon?.crewFired == true)
+                this.Facing = "360";
         }
     }
 }

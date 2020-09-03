@@ -8,7 +8,8 @@
     "keywords": [],
     "limit": null,
     "allowedSponsors": [],
-    "ruleset": "BASE"
+    "ruleset": "BASE",
+    "hull":  2
   },
   {
     "utype": "Experimental Nuclear Engine",
@@ -41,7 +42,8 @@
     "keywords": [],
     "allowedSponsors": [],
     "limit": null,
-    "ruleset": "BASE"
+    "ruleset": "BASE",
+    "crew":  1
   },
   {
     "utype": "Improvised Sludge Thrower",
@@ -85,7 +87,9 @@
     "keywords": [ "All terrain" ],
     "limit": 1,
     "allowedSponsors": [],
-    "ruleset": "BASE"
+    "ruleset": "BASE",
+    "handling": 1,
+    "maxGear":  -1
   },
   {
     "utype": "Prison Vehicle",
@@ -118,6 +122,7 @@
     "keywords": [],
     "limit": null,
     "allowedSponsors": [ "Verney" ],
-    "ruleset": "BASE"
+    "ruleset": "BASE",
+    "hull":  2
   }
 ]

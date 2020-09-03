@@ -22,5 +22,14 @@ namespace GaslandsHQ.Pages2
             weaponsList.SelectedItem = null;
         }
 
+        void ListView_ItemSelected_1(System.Object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
+        {
+            if (e.SelectedItem != null)
+            {
+                (this.BindingContext as ManageVehicleViewModel).EditUpgrade.Execute(e.SelectedItem);
+            }
+
+            weaponsList.SelectedItem = null;
+        }
     }
 }

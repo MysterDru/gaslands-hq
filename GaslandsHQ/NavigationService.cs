@@ -17,15 +17,6 @@ namespace GaslandsHQ
 
     public class NavigationService : INavigationService
     {
-        public enum View
-        {
-            AddTeam,
-            AddEditVehicle,
-            AddEditWeapon,
-            AddEditUpgrade,
-            AddEditPerk
-        }
-
         public async Task Navigate<TViewModel>(object parameter = null)
         {
             TViewModel viewModel = Activator.CreateInstance<TViewModel>();
@@ -45,12 +36,13 @@ namespace GaslandsHQ
                 page = new ManageVehiclePage();
             else if (typeof(TViewModel) == typeof(AddWeaponViewModel))
                 page = new AddWeaponPage();
+            else if (typeof(TViewModel) == typeof(AddUpgradeViewModel))
+                page = new AddUpgradePage();
 
             else
                 return;
 
             page.BindingContext = viewModel;
-
 
             var nav = Xamarin.Forms.Application.Current.MainPage as NavigationPage;
             var current = nav?.CurrentPage;

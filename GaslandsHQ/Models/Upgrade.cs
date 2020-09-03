@@ -19,13 +19,13 @@ namespace GaslandsHQ.Models
 
         public string ruleset { get; set; }
 
-        //public int Hull { get; set; }
+        public int hull { get; set; }
 
-        //public int Crew { get; set; }
+        public int crew { get; set; }
 
-        //public int Handling { get; set; }
+        public int handling { get; set; }
 
-        //public int Gear { get; set; }
+        public int maxGear { get; set; }
 
         public string optionText => utype + (ruleset != "BASE" ? ("(" + ruleset + ")") : string.Empty);
     }

@@ -15,7 +15,6 @@
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <Picker
-						HorizontalOptions="StartAndExpand"
 						Title="Vehicle Type"
 						ItemsSource="{Binding VehicleTypes}"
 						SelectedItem="{Binding SelectedVehicleType}"
@@ -24,7 +23,6 @@
 				Grid.Row="0"/>
 
             <Entry
-						HorizontalOptions="EndAndExpand"
 						Placeholder="Name"
 						Text="{Binding Name}"
 						Grid.Column="1"
@@ -32,72 +30,72 @@
             <ContentView
                 Grid.Row="1"
 				Grid.ColumnSpan="2">
-            <FlexLayout
+                <FlexLayout
 					JustifyContent="SpaceAround"
 					Wrap="Wrap"
 				
                 VerticalOptions="Center">
-                <ContentView
+                    <ContentView
 						Style="{x:StaticResource tag}">
-                    <Label
+                        <Label
 							Text="{Binding TotalCost, StringFormat='Cost: {0}'}"
 							HorizontalTextAlignment="Center"
 							VerticalTextAlignment="Center" />
-                </ContentView>
-                <ContentView
+                    </ContentView>
+                    <ContentView
 						Style="{x:StaticResource tag}">
-                    <Label
+                        <Label
 							HorizontalTextAlignment="Center"
 							VerticalTextAlignment="Center">
-                        <Label.Text>
-                            <MultiBinding
+                            <Label.Text>
+                                <MultiBinding
 									StringFormat="Build Slots: {0}/{1}">
-                                <Binding
+                                    <Binding
 										Path="UsedSlots" />
-                                <Binding
+                                    <Binding
 										Path="AvailableSlots" />
-                            </MultiBinding>
-                        </Label.Text>
-                    </Label>
-                </ContentView>
-                <ContentView
+                                </MultiBinding>
+                            </Label.Text>
+                        </Label>
+                    </ContentView>
+                    <ContentView
 						Style="{x:StaticResource tag}">
-                    <Label
+                        <Label
 							Text="{Binding Hull, StringFormat='Hull: {0}'}"
 							HorizontalTextAlignment="Center"
 							VerticalTextAlignment="Center" />
-                </ContentView>
-                <ContentView
+                    </ContentView>
+                    <ContentView
 						Style="{x:StaticResource tag}">
-                    <Label
+                        <Label
 							Text="{Binding Handling, StringFormat='Handling: {0}'}"
 							HorizontalTextAlignment="Center"
 							VerticalTextAlignment="Center" />
-                </ContentView>
-                <ContentView
+                    </ContentView>
+                    <ContentView
 						Style="{x:StaticResource tag}">
-                    <Label
+                        <Label
 							Text="{Binding MaxGear, StringFormat='Max Gear:{0}'}"
 							HorizontalTextAlignment="Center"
 							VerticalTextAlignment="Center" />
-                </ContentView>
-                <ContentView
+                    </ContentView>
+                    <ContentView
 						Style="{x:StaticResource tag}">
-                    <Label
+                        <Label
 							Text="{Binding Crew, StringFormat='Crew: {0}'}"
 							HorizontalTextAlignment="Center"
 							VerticalTextAlignment="Center" />
-                </ContentView>
-                <ContentView
+                    </ContentView>
+                    <ContentView
 						Style="{x:StaticResource tag}">
-                    <Label
-							Text="{Binding WeightClass}"
+                        <Label
+							Text="{Binding WeightClass, StringFormat='{0} Weight'}"
 							HorizontalTextAlignment="Center"
 							VerticalTextAlignment="Center" />
-                </ContentView>
+                    </ContentView>
 
-            </FlexLayout>
-                </ContentView>
+                </FlexLayout>
+            </ContentView>
 
             <ContentView
                 IsVisible="{Binding CanAddAddons}"
@@ -106,32 +104,22 @@
 
                 <seg:SegmentedControl
 					x:Name="addOnsSegments"
+                    ItemsSource="{Binding AllowedAddons}"
+                    SelectedSegment="{Binding SelectedAddonIndex, Mode=TwoWay}"
 					DisabledColor="Transparent"
 					SelectedTextColor="White"
 					TintColor="Blue"
-					TextColor="Blue">
-                    <seg:SegmentedControl.Children>
-                        <seg:SegmentedControlOption
-							Text="Weapons" />
-                        <seg:SegmentedControlOption
-							Text="Upgrades" />
-                        <seg:SegmentedControlOption
-							Text="Perks" />
-                    </seg:SegmentedControl.Children>
-                </seg:SegmentedControl>
+					TextColor="Blue" />
             </ContentView>
 
             <ListView
                 x:Name="weaponsList"
-                IsVisible="{Binding CanAddAddons}"
+                IsVisible="{Binding ShowWeapons}"
 				ItemsSource="{Binding Weapons}"
                 Grid.Row="3"
                 Grid.ColumnSpan="2"
                 HasUnevenRows="True"
                ItemSelected="ListView_ItemSelected">
-                <ListView.Triggers>
-                    
-                </ListView.Triggers>
                 <ListView.Header>
                     <ContentView
                         Visual="Material">
@@ -145,11 +133,137 @@
                 </ListView.Header>
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <TextCell Text="{Binding SelectedWeapon.wtype}"/>
+                        <ViewCell>
+                            <Grid
+                                Padding="15">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto" />
+                                    <RowDefinition Height="auto" />
+                                    <RowDefinition Height="auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="auto"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Label FontSize="Medium"
+                                       FontAttributes="Bold"
+                                       Grid.Column="0">
+                                    <Label.Text>
+                                        <MultiBinding StringFormat="{}{0} - {1}">
+                                            <Binding Path="SelectedWeapon.wtype" />
+                                            <Binding Path="Facing" />
+                                        </MultiBinding>
+                                    </Label.Text>
+                                </Label>
+
+                                <Label Text="{Binding Cost, StringFormat='{0} Cans'}"
+                                       FontSize="Medium"
+                                       Grid.Column="1" />
+
+                                <Label FontSize="Small"                       TextColor="DarkGray"
+                                       Grid.Row="1"
+                                       Grid.Column="0"
+                                       Grid.ColumnSpan="2">
+                                    <Label.Text>
+                                        <MultiBinding StringFormat="{}Slots: {0} | Range: {1} | Attack: {2} | Ammo {3}">
+                                            <Binding Path="Slots" />
+                                            <Binding Path="Range" />
+                                            <Binding Path="Attack" />
+                                            <Binding Path="Ammo" />
+                                        </MultiBinding>
+                                    </Label.Text>
+                                </Label>
+                            </Grid>
+                        </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
 
+            <ListView
+                IsVisible="{Binding ShowUpgrades}"
+                ItemsSource="{Binding Upgrades}"
+                Grid.Row="3"
+                Grid.ColumnSpan="2"
+                HasUnevenRows="true"
+                ItemSelected="ListView_ItemSelected_1">
+                <ListView.Header>
+                    <ContentView
+                        Visual="Material">
+                        <Button
+				WidthRequest="200"
+				Margin="0, 10"
+				Text="Add Upgrade"
+				HorizontalOptions="Center"
+				Command="{Binding AddUpgrade}"/>
+                    </ContentView>
+                </ListView.Header>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid
+                                Padding="15">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto" />
+                                    <RowDefinition Height="auto" />
+                                    <RowDefinition Height="auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="auto"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Label FontSize="Medium"
+                                       FontAttributes="Bold"
+                                       Grid.Column="0"
+                                       Text="{Binding SelectedUpgrade.utype}"/>
+
+                                <Label Text="{Binding Cost, StringFormat='{0} Cans'}"
+                                       FontSize="Medium"
+                                       Grid.Column="1" />
+
+                                <Label FontSize="Small"
+                                       TextColor="DarkGray"
+                                       Grid.Row="1"
+                                       Grid.Column="0"
+                                       Grid.ColumnSpan="2">
+                                    <Label.Text>
+                                        <MultiBinding StringFormat="{}Slots: {0} | Ammo: {1}">
+                                            <Binding Path="Slots" />
+                                            <Binding Path="Ammo" />
+                                        </MultiBinding>
+                                    </Label.Text>
+                                </Label>
+
+                                <Label FontSize="Small"
+                                       TextColor="DarkGray"
+                                       Grid.Row="2"
+                                       Grid.Column="0"
+                                       Grid.ColumnSpan="2"
+                                       Text="{Binding SpecialRules}"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <ListView
+                IsVisible="{Binding ShowPerks}"
+                Grid.Row="3"
+                Grid.ColumnSpan="2">
+                <ListView.Header>
+                    <ContentView
+                        Visual="Material">
+                        <Button
+				WidthRequest="200"
+				Margin="0, 10"
+				Text="Add Perk"
+				HorizontalOptions="Center"
+				Command="{Binding AddWeapon}"/>
+                    </ContentView>
+                </ListView.Header>
+            </ListView>
         </Grid>
     </ContentPage.Content>
 </ContentPage>
