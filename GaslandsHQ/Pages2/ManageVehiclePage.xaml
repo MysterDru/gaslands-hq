@@ -3,7 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:seg="clr-namespace:Plugin.Segmented.Control;assembly=Plugin.Segmented"
              x:Class="GaslandsHQ.Pages2.ManageVehiclePage"
-			 Visual="Material">
+			 Visual="Material"
+             Title="{Binding Title}"
+             x:Name="Page">
     <ContentPage.Content>
         <Grid
             ColumnSpacing="0"
@@ -111,7 +113,9 @@
 					TintColor="Blue"
 					TextColor="Blue" />
             </ContentView>
-
+            <!-- ===========
+                Weapons
+            ============= -->
             <ListView
                 x:Name="weaponsList"
                 IsVisible="{Binding ShowWeapons}"
@@ -134,6 +138,13 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
+                            <ViewCell.ContextActions>
+                                <MenuItem IsDestructive="true"
+                                          Text="Delete"
+                                          Command="{Binding Source={x:Reference Page}, Path=BindingContext.DeleteUpgrade}"
+                                          CommandParameter="{Binding .}"
+                                          IsEnabled="{Binding CanSelect}"/>
+                            </ViewCell.ContextActions>
                             <Grid
                                 Padding="15">
                                 <Grid.RowDefinitions>
@@ -179,8 +190,11 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-
+            <!-- ===========
+                Upgrades
+            ============= -->
             <ListView
+                x:Name="upgradesList"
                 IsVisible="{Binding ShowUpgrades}"
                 ItemsSource="{Binding Upgrades}"
                 Grid.Row="3"
@@ -201,6 +215,12 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
+                            <ViewCell.ContextActions>
+                                <MenuItem IsDestructive="true"
+                                          Text="Delete"
+                                          Command="{Binding Source={x:Reference Page}, Path=BindingContext.DeleteUpgrade}"
+                                          CommandParameter="{Binding .}"/>
+                            </ViewCell.ContextActions>
                             <Grid
                                 Padding="15">
                                 <Grid.RowDefinitions>
@@ -247,11 +267,17 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-
+            <!-- ===========
+                Perks
+            ============= -->
             <ListView
+                x:Name="perksList"
                 IsVisible="{Binding ShowPerks}"
+                ItemsSource="{Binding Perks}"
+                HasUnevenRows="true"
                 Grid.Row="3"
-                Grid.ColumnSpan="2">
+                Grid.ColumnSpan="2"
+                ItemSelected="ListView_ItemSelected_2">
                 <ListView.Header>
                     <ContentView
                         Visual="Material">
@@ -260,9 +286,48 @@
 				Margin="0, 10"
 				Text="Add Perk"
 				HorizontalOptions="Center"
-				Command="{Binding AddWeapon}"/>
+				Command="{Binding AddPerk}"/>
                     </ContentView>
                 </ListView.Header>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.ContextActions>
+                                <MenuItem IsDestructive="true"
+                                          Text="Delete"
+                                          Command="{Binding Source={x:Reference Page}, Path=BindingContext.DeletePerk}"
+                                          CommandParameter="{Binding .}"/>
+                            </ViewCell.ContextActions>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="auto" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="auto"/>
+                                </Grid.RowDefinitions>
+                                <Label FontSize="Medium"
+                                       FontAttributes="Bold"
+                                       Grid.Column="0"
+                                       Text="{Binding SelectedPerk.ptype}"/>
+
+                                <Label Text="{Binding Cost, StringFormat='{0} Cans'}"
+                                       FontSize="Medium"
+                                       Grid.Column="1" />
+
+                                <Label Text="{Binding ShortRules}"
+                                       FontSize="Small"
+                                       TextColor="DarkGray"
+                                       Grid.Row="1"
+                                       Grid.ColumnSpan="2"
+                                       />
+                            </Grid>
+                        </ViewCell>
+
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
             </ListView>
         </Grid>
     </ContentPage.Content>

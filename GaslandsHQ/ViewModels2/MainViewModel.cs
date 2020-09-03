@@ -7,6 +7,8 @@ namespace GaslandsHQ.ViewModels2
 {
     public class MainViewModel : BaseViewModel
     {
+        public string Title => "Gaslands HQ";
+
         public ICommand AddTeam => new Command(ExecuteAddTeamAsync);
 
         public ObservableCollection<AddTeamViewModel> Teams { get; }

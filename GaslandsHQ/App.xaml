@@ -15,6 +15,8 @@
                     Value="LightBlue"/>
             <Setter Property="Padding"
                     Value="5"/>
+            <Setter Property="Padding"
+                    Value="5"/>
             <Setter Property="HeightRequest"
                     Value="30"/>
         </Style>

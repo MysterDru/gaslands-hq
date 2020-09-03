@@ -7,6 +7,8 @@ namespace GaslandsHQ.ViewModels2
 {
     public class AddUpgradeViewModel : BaseViewModel
     {
+        public string Title => "Upgrade";
+
         private ManageVehicleViewModel vehicle;
 
         public List<Upgrade> Upgrades { get; }

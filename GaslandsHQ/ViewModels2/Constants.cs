@@ -14,6 +14,7 @@ namespace GaslandsHQ.ViewModels2
         public static List<Upgrade> AllUpgrades{ get; }
         public static List<Trailer> AllTrailers { get; }
         public static List<Cargo> AllCargo { get; }
+        public static List<KeywordData> AllKeywords { get; }
 
         static Constants()
         {
@@ -26,6 +27,12 @@ namespace GaslandsHQ.ViewModels2
             AllUpgrades = data.GetValues<Upgrade>().ToList();
             AllTrailers = data.GetValues<Trailer>().ToList();
             AllCargo = data.GetValues<Cargo>().ToList();
+
+            var k = data.GetData<Keyword>();
+
+            AllKeywords = new List<KeywordData>();
+            AllKeywords.AddRange(k.vehicle);
+            AllKeywords.AddRange(k.sponsor);
         }
     }
 }

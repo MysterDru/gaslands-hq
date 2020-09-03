@@ -38,6 +38,8 @@ namespace GaslandsHQ
                 page = new AddWeaponPage();
             else if (typeof(TViewModel) == typeof(AddUpgradeViewModel))
                 page = new AddUpgradePage();
+            else if (typeof(TViewModel) == typeof(AddPerkViewModel))
+                page = new AddPerkPage();
 
             else
                 return;

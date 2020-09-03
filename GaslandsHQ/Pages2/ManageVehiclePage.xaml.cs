@@ -29,7 +29,17 @@ namespace GaslandsHQ.Pages2
                 (this.BindingContext as ManageVehicleViewModel).EditUpgrade.Execute(e.SelectedItem);
             }
 
-            weaponsList.SelectedItem = null;
+            this.upgradesList.SelectedItem = null;
+        }
+
+        void ListView_ItemSelected_2(System.Object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
+        {
+            if (e.SelectedItem != null)
+            {
+                (this.BindingContext as ManageVehicleViewModel).EditPerk.Execute(e.SelectedItem);
+            }
+
+            perksList.SelectedItem = null;
         }
     }
 }

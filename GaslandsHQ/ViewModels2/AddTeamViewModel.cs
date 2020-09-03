@@ -10,6 +10,8 @@ namespace GaslandsHQ.ViewModels2
 {
     public class AddTeamViewModel : BaseViewModel
     {
+        public string Title => "Team";
+
         public string TeamName { get; set; }
 
         public List<Sponsor> Sponsors { get; }
@@ -31,6 +33,8 @@ namespace GaslandsHQ.ViewModels2
 
         public AddTeamViewModel()
         {
+            this.TeamName = "New Team";
+
             this.Sponsors = Constants.AllSponsors;
             this.Vehicles = new ObservableCollection<ManageVehicleViewModel>();
 

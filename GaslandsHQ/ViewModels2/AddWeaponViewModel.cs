@@ -8,9 +8,11 @@ namespace GaslandsHQ.ViewModels2
 {
     public class AddWeaponViewModel : BaseViewModel
     {
+        public string Title => "Weapon";
+
         private ManageVehicleViewModel vehicle;
 
-        public List<Weapon> Weapons { get; }
+        public List<Weapon> Weapons { get; private set; }
 
         public Weapon SelectedWeapon { get; set; }
 
@@ -59,7 +61,24 @@ namespace GaslandsHQ.ViewModels2
         {
             this.vehicle = vehicle;
 
+            vehicle.PropertyChanged += Vehicle_PropertyChanged;
+
             CanSelect = defaultWeapon != null && defaultWeapon.always ? false : true;
+
+            this.RefreshOptions(defaultWeapon);
+        }
+
+        private void Vehicle_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName == nameof(ManageVehicleViewModel.SelectedVehicleType))
+            {
+                this.RefreshOptions(this.SelectedWeapon);
+            }
+        }
+
+        void RefreshOptions(Weapon defaultWeapon)
+        {
+            var currentWeaponType = this.SelectedWeapon?.wtype;
 
             this.Weapons = Constants.AllWeapons.Where(w =>
             {

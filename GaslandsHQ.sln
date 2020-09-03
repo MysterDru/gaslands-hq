@@ -12,6 +12,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		resources\Gaslands Refulled BETA Team Builder.htm = resources\Gaslands Refulled BETA Team Builder.htm
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GaslandsHQ.Wasm", "GaslandsHQ.Wasm\GaslandsHQ.Wasm.csproj", "{046A666F-E9D3-40DE-85BC-E6198FA22B2F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -58,5 +60,17 @@ Global
 		{00239170-9FE8-4604-98B1-27E5840A6B20}.Debug|iPhone.Build.0 = Debug|Any CPU
 		{00239170-9FE8-4604-98B1-27E5840A6B20}.Release|iPhone.ActiveCfg = Release|Any CPU
 		{00239170-9FE8-4604-98B1-27E5840A6B20}.Release|iPhone.Build.0 = Release|Any CPU
+		{046A666F-E9D3-40DE-85BC-E6198FA22B2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{046A666F-E9D3-40DE-85BC-E6198FA22B2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{046A666F-E9D3-40DE-85BC-E6198FA22B2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{046A666F-E9D3-40DE-85BC-E6198FA22B2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{046A666F-E9D3-40DE-85BC-E6198FA22B2F}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{046A666F-E9D3-40DE-85BC-E6198FA22B2F}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{046A666F-E9D3-40DE-85BC-E6198FA22B2F}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{046A666F-E9D3-40DE-85BC-E6198FA22B2F}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{046A666F-E9D3-40DE-85BC-E6198FA22B2F}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{046A666F-E9D3-40DE-85BC-E6198FA22B2F}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{046A666F-E9D3-40DE-85BC-E6198FA22B2F}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{046A666F-E9D3-40DE-85BC-E6198FA22B2F}.Release|iPhone.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

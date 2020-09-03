@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="GaslandsHQ.Pages2.AddWeaponPage"
-             Visual="Material">
+             Visual="Material"
+             Title="{Binding Title}">
     <ContentPage.Content>
         <StackLayout
 				Spacing="5">
@@ -31,20 +32,21 @@
                         </x:Array>
                     </Picker.ItemsSource>
                 </Picker>
-
-                <Entry
-                    Grid.Row="1"
-                    Placeholder="Cost"
-                    IsEnabled="False"
-                    Text="{Binding Cost}"
-                    Grid.ColumnSpan="2"/>
             </Grid>
 
             <ContentView>
                 <FlexLayout
-					JustifyContent="SpaceAround"
+					JustifyContent="Start"
 					Wrap="Wrap"
-                    VerticalOptions="Center">
+                    VerticalOptions="Center"
+                        Padding="10">
+                    <ContentView
+						Style="{x:StaticResource tag}">
+                        <Label
+							Text="{Binding Cost, StringFormat='Cost: {0}'}"
+							HorizontalTextAlignment="Center"
+							VerticalTextAlignment="Center" />
+                    </ContentView>
                     <ContentView
 						Style="{x:StaticResource tag}">
                         <Label
