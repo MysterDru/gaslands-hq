@@ -34,9 +34,9 @@
 				Grid.ColumnSpan="2">
                 <FlexLayout
 					JustifyContent="SpaceAround"
-					Wrap="Wrap"
-				
-                VerticalOptions="Center">
+				    Wrap="Wrap"
+                    VerticalOptions="Center"
+                    Padding="10">
                     <ContentView
 						Style="{x:StaticResource tag}">
                         <Label
@@ -146,7 +146,7 @@
                                           IsEnabled="{Binding CanSelect}"/>
                             </ViewCell.ContextActions>
                             <Grid
-                                Padding="15">
+                                Padding="20, 15, 15, 15">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="auto" />
                                     <RowDefinition Height="auto" />
@@ -222,7 +222,7 @@
                                           CommandParameter="{Binding .}"/>
                             </ViewCell.ContextActions>
                             <Grid
-                                Padding="15">
+                                Padding="20, 15, 15, 15">
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="auto" />
                                     <RowDefinition Height="auto" />
@@ -274,9 +274,9 @@
                 x:Name="perksList"
                 IsVisible="{Binding ShowPerks}"
                 ItemsSource="{Binding Perks}"
-                HasUnevenRows="true"
                 Grid.Row="3"
                 Grid.ColumnSpan="2"
+                RowHeight="55"
                 ItemSelected="ListView_ItemSelected_2">
                 <ListView.Header>
                     <ContentView
@@ -298,7 +298,8 @@
                                           Command="{Binding Source={x:Reference Page}, Path=BindingContext.DeletePerk}"
                                           CommandParameter="{Binding .}"/>
                             </ViewCell.ContextActions>
-                            <Grid>
+                            <Grid
+                                Padding="20, 15, 15, 15">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="auto" />
@@ -328,6 +329,72 @@
 
                     </DataTemplate>
                 </ListView.ItemTemplate>
+            </ListView>
+            <!-- =========
+                Trailers
+            =============-->
+            <ListView
+                x:Name="trailerList"
+                IsVisible="{Binding ShowTrailers}"
+                ItemsSource="{Binding Trailers}"
+                HasUnevenRows="true"
+                Grid.Row="3"
+                Grid.ColumnSpan="2"
+                ItemSelected="trailerList_ItemSelected">
+                <ListView.Header>
+                    <ContentView
+                        Visual="Material">
+                        <Button
+				            WidthRequest="200"
+				            Margin="0, 10"
+				            Text="Add Trailer"
+				            HorizontalOptions="Center"
+				            Command="{Binding AddTrailer}"/>
+                    </ContentView>
+                </ListView.Header>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.ContextActions>
+                                <MenuItem IsDestructive="true"
+                                          Text="Delete"
+                                          Command="{Binding Source={x:Reference Page}, Path=BindingContext.DeleteTrailer}"
+                                          CommandParameter="{Binding .}"/>
+                            </ViewCell.ContextActions>
+                                <Grid
+                                Padding="20, 15, 15, 15">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="auto" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="auto"/>
+                                    <RowDefinition Height="auto"/>
+                                </Grid.RowDefinitions>
+                                <Label FontSize="Medium"
+                                       FontAttributes="Bold"
+                                       Grid.Column="0"
+                                       Text="{Binding SelectedTrailer.ttype}"/>
+
+                                <Label Text="{Binding Cost, StringFormat='{0} Cans'}"
+                                       FontSize="Medium"
+                                       Grid.Column="1" />
+
+                                <Label FontSize="Small"
+                                       TextColor="DarkGray"
+                                       Grid.Row="1"
+                                       Grid.ColumnSpan="2">
+                                    <Label.Text>
+                                        <MultiBinding StringFormat="{}Slots: {0} | Cargo: {1}">
+                                            <Binding Path="Slots" />
+                                            <Binding Path="SelectedCargo.ctype" />
+                                        </MultiBinding>
+                                    </Label.Text>
+                                    </Label>
+                            </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
             </ListView>
         </Grid>
     </ContentPage.Content>

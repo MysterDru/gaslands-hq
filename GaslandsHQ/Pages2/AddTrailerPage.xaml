@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="GaslandsHQ.Pages2.AddTrailerPage"
+    Visual="Material"
+    Title="{Binding Title}">
+    <ContentPage.Content>
+        <StackLayout
+				Spacing="5">
+            <Grid
+				ColumnSpacing="0"
+                RowSpacing="0">
+                <Picker
+					Title="Trailer Type"
+					ItemsSource="{Binding Trailers}"
+					SelectedItem="{Binding SelectedTrailer}"
+					ItemDisplayBinding="{Binding ttype}"
+                    IsEnabled="{Binding CanSelectTrailer}"
+					Grid.Column="0"
+                    Grid.Row="0"/>
+
+                <Picker
+                    Title="Cargo"
+                    ItemsSource="{Binding Cargos}"
+					SelectedItem="{Binding SelectedCargo}"
+                    ItemDisplayBinding="{Binding ctype}"
+                    IsEnabled="{Binding CanEditFacing}"
+					Grid.Column="1"
+                    Grid.Row="0"/>
+
+                <ContentView
+                    Grid.Row="1">
+                    <FlexLayout
+					JustifyContent="SpaceAround"
+					Wrap="Wrap"
+                    VerticalOptions="Center"
+                        Padding="10">
+                        <ContentView
+						Style="{x:StaticResource tag}">
+                            <Label
+							Text="{Binding Cost, StringFormat='Cost: {0}'}"
+							HorizontalTextAlignment="Center"
+							VerticalTextAlignment="Center" />
+                        </ContentView>
+                        <ContentView
+						Style="{x:StaticResource tag}">
+                            <Label
+							Text="{Binding Slots, StringFormat='Slots: {0}'}"
+							HorizontalTextAlignment="Center"
+							VerticalTextAlignment="Center" />
+                        </ContentView>
+                    </FlexLayout>
+                </ContentView>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GaslandsHQ.Pages2.AddTeamPage"
 			 Visual="Material"
-             Title="{Binding Title}">
+             Title="{Binding Title}"
+             x:Name="Page">
     <ContentPage.Content>
 
         <Grid
@@ -30,6 +31,7 @@
 				Title="Sponsor"
 				ItemsSource="{Binding Sponsors}"
 				SelectedItem="{Binding SelectedSponsor}"
+                IsEnabled="{Binding CanSelectSponsor}"
 				ItemDisplayBinding="{Binding name}"
                 Grid.Row="1"
                 Grid.ColumnSpan="2"/>
@@ -74,6 +76,12 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
+                            <ViewCell.ContextActions>
+                                <MenuItem IsDestructive="true"
+                                          Text="Delete"
+                                          Command="{Binding Source={x:Reference Page}, Path=BindingContext.DeleteVehicle}"
+                                          CommandParameter="{Binding .}"/>
+                            </ViewCell.ContextActions>
                             <Grid
                                 Padding="15">
                                 <Grid.RowDefinitions>

@@ -27,7 +27,7 @@
                 <ContentView
                     Grid.Row="1">
                     <FlexLayout
-					JustifyContent="Start"
+					JustifyContent="SpaceAround"
 					Wrap="Wrap"
                     VerticalOptions="Center"
                         Padding="10">

@@ -20,14 +20,18 @@ namespace GaslandsHQ.ViewModels2
 
         public Sponsor SelectedSponsor { get; set; }
 
+        public bool CanSelectSponsor => SelectedSponsor == null || this.Vehicles.Count == 0;
+
         public int TotalCans { get; set; }
 
         // todo: build summation logic
         public int CurrentCans => this.Vehicles?.Sum(x => x.TotalCost) ?? 0;
 
-        public ICommand AddVehicle => new Command(ExecuteAddVehicleAsync);
+        public ICommand AddVehicle => new Command(ExecuteAddVehicleAsync, (v) => SelectedSponsor != null);
 
         public ICommand EditVehicle => new Command(ExecuteEditVehicleAsync);
+
+        public ICommand DeleteVehicle => new Command(ExecuteDeleteVehicleAsync);
 
         public ObservableCollection<ManageVehicleViewModel> Vehicles { get; }
 
@@ -40,7 +44,7 @@ namespace GaslandsHQ.ViewModels2
 
             this.TotalCans = 50;
 
-            this.SelectedSponsor = Sponsors.First(x => x.name == "None");
+            //this.SelectedSponsor = Sponsors.First(x => x.name == "None");
         }
 
         async void ExecuteAddVehicleAsync(object obj)
@@ -54,6 +58,8 @@ namespace GaslandsHQ.ViewModels2
             await nav.Navigate(vm);
 
             this.Vehicles.Add(vm);
+
+            RaisePropertyChanged(nameof(CanSelectSponsor));
         }
 
         async void ExecuteEditVehicleAsync(object obj)
@@ -67,10 +73,24 @@ namespace GaslandsHQ.ViewModels2
             await nav.Navigate(vm);
         }
 
+        void ExecuteDeleteVehicleAsync(object obj)
+        {
+            var nav = DependencyService.Get<INavigationService>();
+
+            var vm = obj as ManageVehicleViewModel;
+            this.Vehicles.Remove(vm);
+            vm.PropertyChanged -= OnVehiclePropertyChanged;
+
+            RaisePropertyChanged(nameof(CanSelectSponsor));
+        }
+
         private void OnVehiclePropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
             if (e.PropertyName == nameof(ManageVehicleViewModel.TotalCost))
                 this.RaisePropertyChanged(nameof(CurrentCans));
         }
+
+        void OnSelectedSponsorChanged()
+            => (this.AddVehicle as Command).ChangeCanExecute();
     }
 }

@@ -27,6 +27,7 @@ namespace GaslandsHQ
         public async Task Navigate<TViewModel>(TViewModel viewModel)
         {
             Page page = null;
+            bool modal = false;
 
             if (typeof(TViewModel) == typeof(AddTeamViewModel))
                 page = new AddTeamPage();
@@ -35,11 +36,25 @@ namespace GaslandsHQ
             else if (typeof(TViewModel) == typeof(ManageVehicleViewModel))
                 page = new ManageVehiclePage();
             else if (typeof(TViewModel) == typeof(AddWeaponViewModel))
+            {
                 page = new AddWeaponPage();
+                modal = true;
+            }
             else if (typeof(TViewModel) == typeof(AddUpgradeViewModel))
+            {
                 page = new AddUpgradePage();
+                modal = true;
+            }
             else if (typeof(TViewModel) == typeof(AddPerkViewModel))
+            {
                 page = new AddPerkPage();
+                modal = true;
+            }
+            else if (typeof(TViewModel) == typeof(AddTrailerViewModel))
+            {
+                page = new AddTrailerPage();
+                modal = true;
+            }
 
             else
                 return;

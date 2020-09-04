@@ -41,5 +41,15 @@ namespace GaslandsHQ.Pages2
 
             perksList.SelectedItem = null;
         }
+
+        void trailerList_ItemSelected(System.Object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
+        {
+            if (e.SelectedItem != null)
+            {
+                (this.BindingContext as ManageVehicleViewModel).EditTrailer.Execute(e.SelectedItem);
+            }
+
+            trailerList.SelectedItem = null;
+        }
     }
 }

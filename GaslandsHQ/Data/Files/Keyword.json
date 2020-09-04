@@ -123,7 +123,12 @@
       "rules": "The first time each vehicle in this team uses push it in an activation they may push it without gaining a hazard token.",
       "ruleset": "BASE"
     },
-    //{ktype: "Evasive maneuvers", phase: "Play", rules: "Before making an evade roll, vehicles in this team may gain any number of hazard tokens to add +1 to each of their evade dice for each hazard token gained. A roll of a 1 on an evade dice always counts as a failure.", ruleset: "BASE"},
+    {
+      ktype: "Evasive maneuvers",
+      phase: "Play ",
+      rules: "Before making an evade roll, vehicles in this team may gain any number of hazard tokens to add +1 to each of their evade dice for each hazard token gained. A roll of a 1 on an evade dice always counts as a failure.",
+      ruleset: "BASE"
+    },
     {
       "ktype": "Elegance",
       "phase": "Build",

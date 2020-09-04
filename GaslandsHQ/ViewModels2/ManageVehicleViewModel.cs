@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Input;
 using GaslandsHQ.Models;
+using PropertyChanged;
 using Xamarin.Forms;
 
 namespace GaslandsHQ.ViewModels2
@@ -20,13 +21,14 @@ namespace GaslandsHQ.ViewModels2
 
         public VehicleType SelectedVehicleType { get; set; }
 
-        public List<string> AllowedAddons { get; }
+        public List<string> AllowedAddons { get; private set; }
 
         public int SelectedAddonIndex { get; set; }
 
         public bool ShowWeapons => CanAddAddons && SelectedAddonIndex == 0;
         public bool ShowUpgrades => CanAddAddons && SelectedAddonIndex == 1;
         public bool ShowPerks => CanAddAddons && SelectedAddonIndex == 2;
+        public bool ShowTrailers => CanAddAddons && ((!AllowedAddons.Contains("Perks") && SelectedAddonIndex == 2) || (!AllowedAddons.Contains("Perks") && SelectedAddonIndex == 3));
 
         public string Name { get; set; }
 
@@ -41,7 +43,8 @@ namespace GaslandsHQ.ViewModels2
                 return SelectedVehicleType.cost
                      + (this.Weapons?.Sum(x => x.Cost) ?? 0)
                      + (this.Upgrades?.Sum(x => x.Cost) ?? 0)
-                     + (this.Perks?.Sum(x => x.Cost) ?? 0);
+                     + (this.Perks?.Sum(x => x.Cost) ?? 0)
+                     + (this.Trailers?.Sum(x => x.Cost) ?? 0);
             }
         }
 
@@ -49,12 +52,12 @@ namespace GaslandsHQ.ViewModels2
         {
             get
             {
-                if(this.SelectedVehicleType?.Keywords != null && this.SelectedVehicleType.Keywords.Length > 0)
+                if (this.SelectedVehicleType?.Keywords != null && this.SelectedVehicleType.Keywords.Length > 0)
                 {
                     var matchingKeywords = Constants.AllKeywords.Where(x => SelectedVehicleType.Keywords.Contains(x.ktype));
 
                     var sb = new StringBuilder();
-                    foreach(var k in matchingKeywords)
+                    foreach (var k in matchingKeywords)
                     {
                         sb.AppendLine($"{k.ktype}: {k.rules}");
                     }
@@ -67,7 +70,8 @@ namespace GaslandsHQ.ViewModels2
         }
 
         public int UsedSlots => (this.Weapons?.Sum(x => x.Slots) ?? 0)
-            + (this.Upgrades?.Sum(x => x.Slots) ?? 0);
+            + (this.Upgrades?.Sum(x => x.Slots) ?? 0)
+            + (this.Trailers?.Sum(x => x.Slots) ?? 0);
 
         public int AvailableSlots => SelectedVehicleType?.slots ?? 0;
 
@@ -125,11 +129,40 @@ namespace GaslandsHQ.ViewModels2
 
         #endregion
 
+        #region Trailer
+
+        [DependsOn(nameof(SelectedVehicleType))]
+        public bool TrailersSupported
+        {
+            get
+            {
+                if (this.Team.SponsorMode && this.Team.SelectedSponsor.keywords.Contains("Trailer Trash"))
+                    return true;
+                else if (this.SelectedVehicleType?.vtype == "War Rig")
+                    return true;
+
+                return false;
+            }
+        }
+
+        public ObservableCollection<AddTrailerViewModel> Trailers { get; }
+
+        public ICommand AddTrailer => new Command(ExecuteAddTrailer, (v) => CanAddAdditionalTrailers);
+
+        public ICommand EditTrailer => new Command(ExecuteEditTrailer);
+
+        public ICommand DeleteTrailer => new Command(ExecuteDeleteTrailer, (v) => (v as AddTrailerViewModel)?.SelectedTrailer?.ttype != "War Rig Trailer");
+
+        public bool CanAddAdditionalTrailers { get; private set; }
+
+        #endregion
+
         public ManageVehicleViewModel(AddTeamViewModel team)
         {
             this.Weapons = new ObservableCollection<AddWeaponViewModel>();
             this.Upgrades = new ObservableCollection<AddUpgradeViewModel>();
             this.Perks = new ObservableCollection<AddPerkViewModel>();
+            this.Trailers = new ObservableCollection<AddTrailerViewModel>();
 
             this.Team = team;
 
@@ -159,8 +192,64 @@ namespace GaslandsHQ.ViewModels2
                 "Weapons",
                 "Upgrades"
             };
+
             if (team.SponsorMode)
+            {
                 AllowedAddons.Add("Perks");
+            }
+        }
+
+        void OnSelectedVehicleTypeChanged()
+        {
+            // need  to add or remoe free roll  cage based on being a buggy
+            var rollCage = this.Upgrades.FirstOrDefault(x => x.SelectedUpgrade?.utype == "Roll Cage");
+            var rcModel = Constants.AllUpgrades.First(x => x.utype == "Roll Cage");
+
+            if (this.SelectedVehicleType?.vtype == "Buggy")
+            {
+                if (rollCage == null)
+                {
+                    this.Upgrades.Add(new AddUpgradeViewModel(this, rcModel));
+                }
+            }
+
+            // if not  buggy, and roll cage is free, remove it
+            else if (rollCage != null)
+                this.Upgrades.Remove(rollCage);
+        }
+
+
+        void AddTrailerSupport()
+        {
+            this.CanAddAdditionalTrailers = true;
+
+            if (!AllowedAddons.Contains("Trailers"))
+            {
+                var addons = this.AllowedAddons.ToList();
+                addons.Add("Trailers");
+
+                this.AllowedAddons = addons;
+
+                if(this.SelectedVehicleType?.vtype == "War Rig")
+                {
+                    // default add a trailer. user can customize
+                    this.Trailers.Add(new AddTrailerViewModel(this));
+                    CanAddAdditionalTrailers = false;
+                }
+            }
+        }
+
+        void RemoveTrailerSupport()
+        {
+            CanAddAdditionalTrailers = false;
+            if (AllowedAddons.Contains("Trailers"))
+            {
+                var addons = this.AllowedAddons.ToList();
+                addons.Remove("Trailers");
+
+                this.AllowedAddons = addons;
+            }
+            this.Trailers.Clear();
         }
 
         #region Weapons
@@ -255,26 +344,6 @@ namespace GaslandsHQ.ViewModels2
 
         #endregion
 
-        void OnSelectedVehicleTypeChanged()
-        {
-            // need  to add or remoe free roll  cage based on being a buggy
-            var rollCage = this.Upgrades.FirstOrDefault(x => x.SelectedUpgrade?.utype == "Roll Cage");
-
-            var rcModel = Constants.AllUpgrades.First(x => x.utype == "Roll Cage");
-
-            if (this.SelectedVehicleType?.vtype == "Buggy")
-            {
-                if (rollCage == null)
-                {
-                    this.Upgrades.Add(new AddUpgradeViewModel(this, rcModel));
-                }
-            }
-
-            // if not  buggy, and roll cage is free, remove it
-            else if (rollCage != null)
-                this.Upgrades.Remove(rollCage);
-        }
-
         #region Perks
 
         async void ExecuteAddPerkAsync(object obj)
@@ -320,5 +389,65 @@ namespace GaslandsHQ.ViewModels2
         }
 
         #endregion
+
+        #region Trailer
+
+        void ExecuteAddTrailer(object obj)
+        {
+            var vm = new AddTrailerViewModel(this);
+            vm.PropertyChanged += TrailerPropertyChanged;
+            this.Trailers.Add(vm);
+
+            this.CanAddAdditionalTrailers = false;
+            ExecuteEditTrailer(this.Trailers[0]);
+        }
+            
+        async void ExecuteEditTrailer(object obj)
+        {
+            var vm = obj as AddTrailerViewModel;
+
+            if (vm != null)
+            {
+                var nav = DependencyService.Get<INavigationService>();
+                await nav.Navigate(vm);
+            }
+        }
+
+        void ExecuteDeleteTrailer(object obj)
+        {
+            var vm = obj as AddTrailerViewModel;
+            this.Trailers.Remove(vm);
+
+            vm.PropertyChanged -= TrailerPropertyChanged;
+
+            this.CanAddAdditionalTrailers = true;
+        }
+
+        private void TrailerPropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            this.RaiseAllPropertiesChanged();
+
+            (this.AddTrailer as Command).ChangeCanExecute();
+            (this.DeleteTrailer as Command).ChangeCanExecute();
+        }
+
+        #endregion
+
+        public override void RaisePropertyChanged(PropertyChangedEventArgs changedArgs)
+        {
+            base.RaisePropertyChanged(changedArgs);
+
+            if (changedArgs.PropertyName == nameof(CanAddAdditionalTrailers))
+                (this.AddTrailer as Command).ChangeCanExecute();
+
+            if(changedArgs.PropertyName == nameof(SelectedVehicleType))
+            {
+                if (TrailersSupported == true)
+                    AddTrailerSupport();
+                else
+                    RemoveTrailerSupport();
+            }
+        }
     }
+
 }
