@@ -5,9 +5,6 @@
     <ContentPage.Content>
         <StackLayout
 				Spacing="5">
-            <Grid
-				ColumnSpacing="0"
-                RowSpacing="0">
                 <Picker
 						Title="Weapon Type"
 						ItemsSource="{Binding Weapons}"
@@ -32,7 +29,12 @@
                         </x:Array>
                     </Picker.ItemsSource>
                 </Picker>
-            </Grid>
+
+             <Picker
+						Title="Location"
+						ItemsSource="{Binding Locations}"
+						SelectedItem="{Binding Location}"
+                    IsVisible="{Binding ShowLocation}"/>
 
             <ContentView>
                 <FlexLayout

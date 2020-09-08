@@ -10,6 +10,9 @@ namespace GaslandsHQ.Pages2
         public AddTeamPage()
         {
             InitializeComponent();
+
+            if (Device.RuntimePlatform != "iOS")
+                this.ToolbarItems.Remove(this.cancelItem);
         }
 
         void ListView_ItemSelected(System.Object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)

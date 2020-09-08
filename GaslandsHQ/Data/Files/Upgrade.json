@@ -9,7 +9,7 @@
     "limit": null,
     "allowedSponsors": [],
     "ruleset": "BASE",
-    "hull":  2
+    "hull": 2
   },
   {
     "utype": "Experimental Nuclear Engine",
@@ -43,7 +43,7 @@
     "allowedSponsors": [],
     "limit": null,
     "ruleset": "BASE",
-    "crew":  1
+    "crew": 1
   },
   {
     "utype": "Improvised Sludge Thrower",
@@ -89,7 +89,7 @@
     "allowedSponsors": [],
     "ruleset": "BASE",
     "handling": 1,
-    "maxGear":  -1
+    "maxGear": -1
   },
   {
     "utype": "Prison Vehicle",
@@ -100,7 +100,9 @@
     "keywords": [],
     "limit": 1,
     "allowedSponsors": [ "Warden" ],
-    "ruleset": "BASE"
+    "allowedVehicles": [ "Car", "Performance Car", "Truck", "Ice Cream Truck", "Gyrocopter", "Ambulance" ],
+    "ruleset": "BASE",
+    "hull":  2
   },
   {
     "utype": "Louder Siren",

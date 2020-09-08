@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GaslandsHQ.Pages2.MainPage"
-             Title="{Binding Title}">
+             Title="{Binding Title}"
+             x:Name="Page">
     <ContentPage.ToolbarItems>
         <ToolbarItem
             Text="Add Team"
@@ -10,25 +11,43 @@
     </ContentPage.ToolbarItems>
     <ListView
         x:Name="TeamList"
-
         HasUnevenRows="true"
         ItemsSource="{Binding Teams}"
         ItemSelected="TeamList_ItemSelected">
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
+                    <ViewCell.ContextActions>
+                        <MenuItem IsDestructive="true"
+                                          Text="Delete"
+                                          Command="{Binding Source={x:Reference Page}, Path=BindingContext.DeleteTeam}"
+                                          CommandParameter="{Binding .}"
+                                          IsEnabled="{Binding CanSelect}"/>
+                    </ViewCell.ContextActions>
                     <Grid
                         Padding="15">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" />
                             <ColumnDefinition Width="auto" />
                         </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                        </Grid.RowDefinitions>
 
                         <Label Grid.Column="0" Text="{Binding TeamName}"
                                VerticalTextAlignment="Center"
                                 FontAttributes="Bold"/>
                         <Label Grid.Column="1" Text="{Binding TotalCans, StringFormat='{0} Cans'}"
                                VerticalTextAlignment="Center"/>
+
+                        <Label Text="{Binding SelectedSponsor.name, StringFormat='Sponsor: {0}'}"
+                               FontSize="Small"
+                               TextColor="DarkGray"
+                               Grid.Column="0"
+                               Grid.ColumnSpan="2"
+                               Grid.Row="1"/>
+
                     </Grid>
                 </ViewCell>
             </DataTemplate>

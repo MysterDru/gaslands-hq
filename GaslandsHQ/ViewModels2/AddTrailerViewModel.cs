@@ -13,7 +13,7 @@ namespace GaslandsHQ.ViewModels2
 
         public bool CanSelectTrailer { get; }
 
-        public  List<Trailer> Trailers { get; }
+        public List<Trailer> Trailers { get; }
 
         public Trailer SelectedTrailer { get; set; }
 
@@ -25,7 +25,7 @@ namespace GaslandsHQ.ViewModels2
 
         public int Slots => SelectedTrailer?.slots ?? 0;
 
-        public AddTrailerViewModel(ManageVehicleViewModel vehicle)
+        public AddTrailerViewModel(ManageVehicleViewModel vehicle, Trailer defaultTrailer = null, Cargo defaultCargo = null)
         {
             this.vehicle = vehicle;
 
@@ -38,7 +38,7 @@ namespace GaslandsHQ.ViewModels2
             {
                 this.Trailers.Add(new Trailer
                 {
-                    ttype = "War Rig Trailer",
+                    ttype = "War Rig",
                     cost = 0,
                     slots = 0
                 });
@@ -47,14 +47,13 @@ namespace GaslandsHQ.ViewModels2
             }
             else
             {
-                // default to none
-                this.SelectedTrailer = Trailers[0];
+                this.SelectedTrailer = this.Trailers.FirstOrDefault(x => x.ttype == defaultTrailer?.ttype) ?? Trailers[0];
             }
 
             // default to none
-            this.SelectedCargo = Cargos[0];
+            this.SelectedCargo = this.Cargos.FirstOrDefault(x => x.ctype == defaultCargo?.ctype) ?? Cargos[0];
 
-            this.CanSelectTrailer = this.SelectedTrailer?.ttype != "War Rig Trailer";
+            this.CanSelectTrailer = this.SelectedTrailer?.ttype != "War Rig";
         }
     }
 }

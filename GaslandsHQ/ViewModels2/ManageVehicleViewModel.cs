@@ -21,6 +21,21 @@ namespace GaslandsHQ.ViewModels2
 
         public VehicleType SelectedVehicleType { get; set; }
 
+        public bool ScanSelectVehicleType
+        {
+            get
+            {
+                if (SelectedVehicleType == null) return true;
+
+                if(this.Weapons.Count > 1) return true;
+
+                if (Weapons.Count > 1 || Upgrades.Count > 0 || Perks.Count > 0 || Trailers.Count > 0)
+                    return false;
+
+                return true;
+            }
+        }
+
         public List<string> AllowedAddons { get; private set; }
 
         public int SelectedAddonIndex { get; set; }
@@ -76,7 +91,8 @@ namespace GaslandsHQ.ViewModels2
         public int AvailableSlots => SelectedVehicleType?.slots ?? 0;
 
         public int Handling => (SelectedVehicleType?.handling ?? 0)
-             + (this.Upgrades?.Sum(x => x.Handling) ?? 0);
+             + (this.Upgrades?.Sum(x => x.Handling) ?? 0)
+            + (this.Perks?.Sum(x => x.Handling) ?? 0);
 
         public int Hull => (SelectedVehicleType?.hull ?? 0)
             + (this.Upgrades?.Sum(x => x.Hull) ?? 0);// todo: calculate
@@ -87,7 +103,7 @@ namespace GaslandsHQ.ViewModels2
         public int MaxGear => (SelectedVehicleType?.maxGear ?? 0)
              + (this.Upgrades?.Sum(x => x.MaxGear) ?? 0); // todo: calculate
 
-        public string WeightClass => SelectedVehicleType?.weight ?? "Empty";
+        public string WeightClass => SelectedVehicleType?.weight ?? "N/A";
 
         #region Weapons
 
@@ -127,6 +143,8 @@ namespace GaslandsHQ.ViewModels2
 
         public ICommand DeletePerk => new Command(ExecuteDeletePerk);
 
+        public string PerksDisplayText => string.Join(", ", this.Perks?.Select(x => x.SelectedPerk?.ptype)?.ToArray() ?? new string[0]);
+
         #endregion
 
         #region Trailer
@@ -151,9 +169,20 @@ namespace GaslandsHQ.ViewModels2
 
         public ICommand EditTrailer => new Command(ExecuteEditTrailer);
 
-        public ICommand DeleteTrailer => new Command(ExecuteDeleteTrailer, (v) => (v as AddTrailerViewModel)?.SelectedTrailer?.ttype != "War Rig Trailer");
+        public ICommand DeleteTrailer => new Command(ExecuteDeleteTrailer, (v) => (v as AddTrailerViewModel)?.SelectedTrailer?.ttype != "War Rig");
 
         public bool CanAddAdditionalTrailers { get; private set; }
+
+        public string TrailerDisplayText
+        {
+            get
+            {
+                if (this.Trailers?.Count == 1)
+                    return $"{this.Trailers[0].SelectedTrailer.ttype} Trailer, {this.Trailers[0].SelectedCargo.ctype}";
+
+                return null;
+            }
+        }
 
         #endregion
 
@@ -180,8 +209,18 @@ namespace GaslandsHQ.ViewModels2
                     return v.handling > 2;
                 else if (team.SelectedSponsor.name == "Idris")
                     return !new string[] { "Gryrocopter" }.Contains(v.vtype);
+
+                //// only 1 tank or helicopter allowed in sponsor mode
+                //else if (v.vtype == "Tank" && team.Vehicles.Count(x => x.SelectedVehicleType?.vtype == "Tank") == 0)
+                //    return true;
+                //// only 1 tank or helicopter allowed in sponsor mode
+                //else if (v.vtype == "Helicopter" && team.Vehicles.Count(x => x.SelectedVehicleType?.vtype == "Helicopter") == 0)
+                //    return true;
+
                 else
                     return !new string[] { "Tank", "Helicopter" }.Contains(v.vtype);
+
+                //
             }).ToList();
 
             // add default handgun
@@ -197,6 +236,50 @@ namespace GaslandsHQ.ViewModels2
             {
                 AllowedAddons.Add("Perks");
             }
+        }
+
+        // restore data
+        public ManageVehicleViewModel(AddTeamViewModel team, UserVehicle userVehicle) : this(team)
+        {
+            this.Name = userVehicle.VehicleName;
+            this.SelectedVehicleType = this.VehicleTypes.FirstOrDefault(x => x.vtype == userVehicle.VehicleType?.vtype);
+
+            this.Weapons.Clear();
+            foreach(var w in userVehicle.Weaposn)
+            {
+                var vm = new AddWeaponViewModel(this, w);
+                vm.PropertyChanged += OnWeaponPropertyChanged;
+                this.Weapons.Add(vm);
+            }
+
+            this.Perks.Clear();
+            foreach (var p in userVehicle.Perks)
+            {
+                var vm = new AddPerkViewModel(this, p);
+                vm.PropertyChanged += OnPerkPropertyChanged;
+                this.Perks.Add(vm);
+            }
+
+            this.Upgrades.Clear();
+            foreach (var u in userVehicle.Upgrades)
+            {
+                var vm = new AddUpgradeViewModel(this, u);
+                vm.PropertyChanged += OnUpgradePropertyChanged;
+                this.Upgrades.Add(vm);
+            }
+
+            this.Trailers.Clear();
+            foreach(var t in userVehicle.Trailers)
+            {
+                var vm = new AddTrailerViewModel(this, t.Trailer, t.Cargo);
+                vm.PropertyChanged += TrailerPropertyChanged;
+                this.Trailers.Add(vm);
+
+                // run trailer support logic
+                this.AddTrailerSupport();
+            }
+
+            // todo: restore
         }
 
         void OnSelectedVehicleTypeChanged()

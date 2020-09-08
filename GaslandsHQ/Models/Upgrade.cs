@@ -17,6 +17,8 @@ namespace GaslandsHQ.Models
 
         public string[] allowedSponsors { get; set; }
 
+        public string[] allowedVehicles { get; set; }
+
         public string ruleset { get; set; }
 
         public int hull { get; set; }

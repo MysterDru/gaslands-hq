@@ -21,6 +21,8 @@ namespace GaslandsHQ.ViewModels2
 
         public string ShortRules => SelectedPerk?.shortRules;
 
+        public int Handling => this.SelectedPerk?.ptype == "Expertise" ? 1 : 0;
+
         public AddPerkViewModel(ManageVehicleViewModel vehicle, Perk defaultPerk = null)
         {
             this.vehicle = vehicle;

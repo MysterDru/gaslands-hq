@@ -5,6 +5,19 @@
 			 Visual="Material"
              Title="{Binding Title}"
              x:Name="Page">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Text="Save"
+            Command="{Binding SaveTeam}"
+            Priority="0"
+            Order="Primary"/>
+        <ToolbarItem
+            x:Name="cancelItem"
+            Text="Cancel"
+            Command="{Binding Dismiss}"
+            Priority="1"
+            Order="Primary"/>
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
 
         <Grid
@@ -88,6 +101,9 @@
                                     <RowDefinition Height="auto" />
                                     <RowDefinition Height="auto" />
                                     <RowDefinition Height="auto" />
+                                    <RowDefinition Height="auto" />
+                                    <RowDefinition Height="auto" />
+                                    <RowDefinition Height="auto" />
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*"/>
@@ -122,41 +138,25 @@
                                         </MultiBinding>
                                     </Label.Text>
                                 </Label>
+
                                 <Label FontSize="Small"  TextColor="DarkGray" Grid.Row="2" Text="{Binding WeaponsDisplayText, StringFormat='Weapons: {0}'}"
+                                       Grid.Column="0"
+                                       Grid.ColumnSpan="2"/>
+
+                                <Label FontSize="Small"  TextColor="DarkGray" Grid.Row="3" Text="{Binding UpgradesDisplayText, StringFormat='Upgrades: {0}'}"
+                                       Grid.Column="0"
+                                       Grid.ColumnSpan="2"/>
+
+                                <Label FontSize="Small"  TextColor="DarkGray" Grid.Row="4" Text="{Binding PerksDisplayText, StringFormat='Perks: {0}'}"
+                                       Grid.Column="0"
+                                       Grid.ColumnSpan="2"/>
+
+                                <Label FontSize="Small"  TextColor="DarkGray" Grid.Row="5" Text="{Binding TrailerDisplayText}"
                                        Grid.Column="0"
                                        Grid.ColumnSpan="2"/>
                             </Grid>
 
                         </ViewCell>
-                        <!--<TextCell>
-                            <TextCell.Text>
-                                
-                            </TextCell.Text>
-                            <TextCell.Detail>
-                                <MultiBinding>
-                                    <MultiBinding StringFormat="{}Slots: {0}/{1} | Hull: {2} | Handling: {3} | Max Gear {4} | Crew: {5}">
-                                        <Binding Path="UsedSlots" />
-                                        <Binding Path="AvailableSlots" />
-                                        <Binding Path="Hull" />
-                                        <Binding Path="Handling" />
-                                        <Binding Path="MaxGear" />
-                                        <Binding Path="Crew" />
-                                    </MultiBinding>
-                                </MultiBinding>
-                            </TextCell.Detail>
-                        </TextCell>-->
-
-                        <!--<ViewCell>
-                            <Text
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*" />
-                                    <ColumnDefinition Width="*" />
-                                </Grid.ColumnDefinitions>
-                                <Label Text="{Binding Name}" Grid.Column="0"/>
-                                <Label Text="{Binding SelectedVehicleType.vtype}" Grid.Column="1"/>
-                            </Grid>
-                        </ViewCell>-->
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>

@@ -20,7 +20,46 @@ namespace GaslandsHQ.ViewModels2
 
         public string Facing { get; set; } = "Front";
 
-        public bool CanEditFacing => CanSelect && SelectedWeapon?.crewFired == false;
+        public List<string> Facings
+        {
+            get
+            {
+                var type = this.SelectedWeapon?.wtype;
+                if (this.SelectedWeapon?.crewFired == true || type == "Thumper" || type == "Wall Of Amplifiers" || type == "Handgun")
+                    return new List<string> { "360" };
+                else if (this.SelectedWeapon?.attackType == "Dropped")
+                {
+                    if (this.vehicle.Upgrades.Any(x => x.SelectedUpgrade?.utype == "Improvised Sludge Thrower"))
+                        return new List<string> { "360" };
+                    else
+                        return new List<string> { "Rear", "Sides" };
+                }
+                else if (type == "BFG")
+                    return new List<string> { "Front" };
+                else if (this.SelectedWeapon?.attackType == "Shooting")
+                    return new List<string> { "Front", "Rear", "Sides", "Turret/360" };
+                else // smash
+                    return new List<string> { "Front", "Rear", "Sides" };
+            }
+
+        }
+
+        public List<string> Locations => new List<string> { "Cab", "Trailer" };
+
+        public bool ShowLocation { get; set; }
+
+        public string Location { get; set; }
+
+        public bool CanEditFacing
+        {
+            get
+            {
+                if (this.SelectedWeapon?.wtype == "BFG")
+                    return false;
+
+                return CanSelect && SelectedWeapon?.crewFired == false;
+            }
+        }
 
         public int Cost
         {
@@ -28,16 +67,39 @@ namespace GaslandsHQ.ViewModels2
             {
                 if (SelectedWeapon == null) return 0;
 
-                if (Facing == "360")
-                    return SelectedWeapon.cost * 3;
+                int multiplier = 1;
 
-                return SelectedWeapon.cost;
+                var cost = SelectedWeapon.cost;
+
+                if (this.Facing == "Turret/360" && (!this.vehicle.SelectedVehicleType.Keywords.Any(k => k == "Turret")
+                    || this.FindMostExpensiveTurret() != this))
+                    multiplier = 3;
+
+                return SelectedWeapon.cost * multiplier;
             }
         }
 
-        public string Range => SelectedWeapon?.range;
+        public string Range {
+            get
+            {
+                if (this.AttackType == "Dropped" && this.vehicle.Upgrades.Any(x => x.SelectedUpgrade?.utype == "Improvised Sludge Thrower"))
+                    return "Medium/" + SelectedWeapon?.range;
+                else
+                    return SelectedWeapon?.range;
 
-        public string Attack => SelectedWeapon?.attack;
+            }
+        }
+
+        public string Attack
+        {
+            get
+            {
+                if (SelectedWeapon?.wtype == "Mortar" && this.vehicle.Upgrades.Any(x => x.SelectedUpgrade?.utype == "Cluster Bombs"))
+                    return SelectedWeapon?.attack + "/2D6";
+                else
+                    return SelectedWeapon?.attack;
+            }
+        }
 
         public string AttackType => SelectedWeapon?.attackType;
 
@@ -53,9 +115,33 @@ namespace GaslandsHQ.ViewModels2
             }
         }
 
-        public int Slots => SelectedWeapon?.slots ?? 0;
+        public int Slots
+        {
+            get
+            {
+                if(this.vehicle.SelectedVehicleType?.Keywords?.Contains("Bombs Away") ==  true &&  this.AttackType ==  "Dropped")
+                    return 0;
+
+                if (this.SelectedWeapon?.wtype == "Ram" && this.vehicle.Team.SelectedSponsor?.keywords?.Contains("Spiked Fist") == true)
+                    return 0;
+
+                return SelectedWeapon?.slots ?? 0;
+            }
+        }
 
         public string Rules => SelectedWeapon?.specialRules;
+
+        public string DisplayText
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(Location))
+                    return $"{SelectedWeapon?.wtype} - {Facing}";
+                else
+                    return $"{SelectedWeapon?.wtype} - {Facing} - {Location}";
+
+            }
+        }
 
         public AddWeaponViewModel(ManageVehicleViewModel vehicle, Weapon defaultWeapon = null)
         {
@@ -68,11 +154,23 @@ namespace GaslandsHQ.ViewModels2
             this.RefreshOptions(defaultWeapon);
         }
 
+        public AddWeaponViewModel(ManageVehicleViewModel vehicle, UserWeapon userWeapon)
+            : this(vehicle, userWeapon?.Weapon)
+        {
+            this.Facing = userWeapon?.Facing;
+            this.Location = userWeapon?.Location;
+        }
+
         private void Vehicle_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
-            if (e.PropertyName == nameof(ManageVehicleViewModel.SelectedVehicleType))
+            //if (e.PropertyName == nameof(ManageVehicleViewModel.SelectedVehicleType))
+            //{
+            //    this.RefreshOptions(this.SelectedWeapon);
+            //}
+
+            if (e.PropertyName == nameof(ManageVehicleViewModel.Trailers))
             {
-                this.RefreshOptions(this.SelectedWeapon);
+                this.RefreshLocation();
             }
         }
 
@@ -104,12 +202,32 @@ namespace GaslandsHQ.ViewModels2
 
             if (defaultWeapon != null)
                 this.SelectedWeapon = this.Weapons.FirstOrDefault(x => x.wtype == defaultWeapon.wtype);
+
+            this.RefreshLocation();
+        }
+
+        void RefreshLocation()
+        {
+            this.ShowLocation = this.vehicle.Trailers.Count > 0 && this.SelectedWeapon?.wtype != "Handgun";
+            this.Location = ShowLocation ? this.Locations[0] : null;
         }
 
         void OnSelectedWeaponChanged()
         {
-            if (SelectedWeapon?.crewFired == true)
-                this.Facing = "360";
+            if (this.Facings?.Count == 1)
+                this.Facing = this.Facings.First();
+        }
+
+        AddWeaponViewModel FindMostExpensiveTurret()
+        {
+            var turrets = this.vehicle.Weapons.Where(x => x.Facing == "Turret/360");
+
+            if (turrets.Any())
+            {
+                return turrets.OrderByDescending(x => x.SelectedWeapon.cost).FirstOrDefault();
+            }
+
+            return null;
         }
     }
 }

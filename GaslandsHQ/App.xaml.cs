@@ -22,11 +22,13 @@ namespace GaslandsHQ
         }
 
         protected override void OnSleep()
-        {
+        { 
+            
         }
 
         protected override void OnResume()
         {
+          
         }
     }
 }

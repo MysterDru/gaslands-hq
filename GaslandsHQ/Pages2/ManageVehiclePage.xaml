@@ -7,28 +7,30 @@
              Title="{Binding Title}"
              x:Name="Page">
     <ContentPage.Content>
-        <Grid
-            ColumnSpacing="0"
-            RowSpacing="5">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="auto" />
-                <RowDefinition Height="70" />
-                <RowDefinition Height="auto" />
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
-            <Picker
+        <StackLayout
+            Spacing="0">
+
+            <StackLayout
+                Spacing="0"
+                Orientation="Horizontal">
+
+                <Picker
 						Title="Vehicle Type"
+                HorizontalOptions="FillAndExpand"
 						ItemsSource="{Binding VehicleTypes}"
 						SelectedItem="{Binding SelectedVehicleType}"
 						ItemDisplayBinding="{Binding vtype}"
+                IsEnabled="{Binding ScanSelectVehicleType}"
 						Grid.Column="0"
 				Grid.Row="0"/>
 
-            <Entry
+                <Entry
+                HorizontalOptions="FillAndExpand"
 						Placeholder="Name"
 						Text="{Binding Name}"
 						Grid.Column="1"
 					Grid.Row="0"/>
+            </StackLayout>
             <ContentView
                 Grid.Row="1"
 				Grid.ColumnSpan="2">
@@ -77,7 +79,7 @@
                     <ContentView
 						Style="{x:StaticResource tag}">
                         <Label
-							Text="{Binding MaxGear, StringFormat='Max Gear:{0}'}"
+							Text="{Binding MaxGear, StringFormat='Max Gear: {0}'}"
 							HorizontalTextAlignment="Center"
 							VerticalTextAlignment="Center" />
                     </ContentView>
@@ -159,14 +161,9 @@
 
                                 <Label FontSize="Medium"
                                        FontAttributes="Bold"
-                                       Grid.Column="0">
-                                    <Label.Text>
-                                        <MultiBinding StringFormat="{}{0} - {1}">
-                                            <Binding Path="SelectedWeapon.wtype" />
-                                            <Binding Path="Facing" />
-                                        </MultiBinding>
-                                    </Label.Text>
-                                </Label>
+                                       Grid.Column="0"
+                                       Text="{Binding DisplayText}"/>
+
 
                                 <Label Text="{Binding Cost, StringFormat='{0} Cans'}"
                                        FontSize="Medium"
@@ -361,7 +358,7 @@
                                           Command="{Binding Source={x:Reference Page}, Path=BindingContext.DeleteTrailer}"
                                           CommandParameter="{Binding .}"/>
                             </ViewCell.ContextActions>
-                                <Grid
+                            <Grid
                                 Padding="20, 15, 15, 15">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*" />
@@ -390,12 +387,12 @@
                                             <Binding Path="SelectedCargo.ctype" />
                                         </MultiBinding>
                                     </Label.Text>
-                                    </Label>
+                                </Label>
                             </Grid>
-                            </ViewCell>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
             </ListView>
-        </Grid>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>
