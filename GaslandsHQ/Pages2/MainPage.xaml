@@ -6,14 +6,25 @@
              x:Name="Page">
     <ContentPage.ToolbarItems>
         <ToolbarItem
-            Text="Add Team"
-            Command="{Binding AddTeam}" />
+            Text="Feedback"
+            Command="{Binding Feedback}" />
     </ContentPage.ToolbarItems>
     <ListView
         x:Name="TeamList"
         HasUnevenRows="true"
         ItemsSource="{Binding Teams}"
         ItemSelected="TeamList_ItemSelected">
+        <ListView.Header>
+                <ContentView
+                        Visual="Material">
+                        <Button
+				WidthRequest="200"
+				Margin="0, 10"
+				Text="Add Team"
+				HorizontalOptions="Center"
+				Command="{Binding AddTeam}"/>
+                    </ContentView>
+        </ListView.Header>
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>

@@ -22,6 +22,8 @@ namespace GaslandsHQ.ViewModels2
 
         public ICommand DeleteTeam => new Command(ExecuteDeleteTeamAsync);
 
+        public ICommand Feedback => new Command(ExecuteFeedbackAsync);
+
         public MainViewModel()
         {
             this.Teams = new ObservableCollection<AddTeamViewModel>();
@@ -90,6 +92,11 @@ namespace GaslandsHQ.ViewModels2
             var vm = obj as AddTeamViewModel;
 
             await DependencyService.Get<INavigationService>().Navigate(vm);
+        }
+
+        async void ExecuteFeedbackAsync(object obj)
+        {
+            await Xamarin.Essentials.Email.ComposeAsync(new Xamarin.Essentials.EmailMessage("GaslandsHQ Feedback", null, "gaslandshq@drewfrisk.com"));
         }
     }
 }
