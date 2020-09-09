@@ -1725,6 +1725,8 @@ namespace GaslandsHQ.Droid
 			global::Plugin.Segmented.Control.Droid.Resource.Layout.design_navigation_menu = global::GaslandsHQ.Droid.Resource.Layout.design_navigation_menu;
 			global::Plugin.Segmented.Control.Droid.Resource.Layout.design_navigation_menu_item = global::GaslandsHQ.Droid.Resource.Layout.design_navigation_menu_item;
 			global::Plugin.Segmented.Control.Droid.Resource.Layout.design_text_input_password_icon = global::GaslandsHQ.Droid.Resource.Layout.design_text_input_password_icon;
+			global::Plugin.Segmented.Control.Droid.Resource.Layout.FallbackTabbarDoNotUse = global::GaslandsHQ.Droid.Resource.Layout.FallbackTabbarDoNotUse;
+			global::Plugin.Segmented.Control.Droid.Resource.Layout.FallbackToolbarDoNotUse = global::GaslandsHQ.Droid.Resource.Layout.FallbackToolbarDoNotUse;
 			global::Plugin.Segmented.Control.Droid.Resource.Layout.FlyoutContent = global::GaslandsHQ.Droid.Resource.Layout.FlyoutContent;
 			global::Plugin.Segmented.Control.Droid.Resource.Layout.mr_cast_dialog = global::GaslandsHQ.Droid.Resource.Layout.mr_cast_dialog;
 			global::Plugin.Segmented.Control.Droid.Resource.Layout.mr_cast_group_item = global::GaslandsHQ.Droid.Resource.Layout.mr_cast_group_item;
@@ -3213,6 +3215,39 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Essentials.Resource.Drawable.notification_template_icon_low_bg = global::GaslandsHQ.Droid.Resource.Drawable.notification_template_icon_low_bg;
 			global::Xamarin.Essentials.Resource.Drawable.notification_tile_bg = global::GaslandsHQ.Droid.Resource.Drawable.notification_tile_bg;
 			global::Xamarin.Essentials.Resource.Drawable.notify_panel_notification_icon_bg = global::GaslandsHQ.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::Xamarin.Essentials.Resource.Id.accessibility_action_clickable_span = global::GaslandsHQ.Droid.Resource.Id.accessibility_action_clickable_span;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_0 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_0;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_1 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_1;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_10 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_10;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_11 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_11;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_12 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_12;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_13 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_13;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_14 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_14;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_15 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_15;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_16 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_16;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_17 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_17;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_18 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_18;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_19 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_19;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_2 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_2;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_20 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_20;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_21 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_21;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_22 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_22;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_23 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_23;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_24 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_24;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_25 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_25;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_26 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_26;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_27 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_27;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_28 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_28;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_29 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_29;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_3 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_3;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_30 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_30;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_31 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_31;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_4 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_4;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_5 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_5;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_6 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_6;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_7 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_7;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_8 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_8;
+			global::Xamarin.Essentials.Resource.Id.accessibility_custom_action_9 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_9;
 			global::Xamarin.Essentials.Resource.Id.actions = global::GaslandsHQ.Droid.Resource.Id.actions;
 			global::Xamarin.Essentials.Resource.Id.action_container = global::GaslandsHQ.Droid.Resource.Id.action_container;
 			global::Xamarin.Essentials.Resource.Id.action_divider = global::GaslandsHQ.Droid.Resource.Id.action_divider;
@@ -3233,6 +3268,7 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Essentials.Resource.Id.chronometer = global::GaslandsHQ.Droid.Resource.Id.chronometer;
 			global::Xamarin.Essentials.Resource.Id.clip_horizontal = global::GaslandsHQ.Droid.Resource.Id.clip_horizontal;
 			global::Xamarin.Essentials.Resource.Id.clip_vertical = global::GaslandsHQ.Droid.Resource.Id.clip_vertical;
+			global::Xamarin.Essentials.Resource.Id.dialog_button = global::GaslandsHQ.Droid.Resource.Id.dialog_button;
 			global::Xamarin.Essentials.Resource.Id.end = global::GaslandsHQ.Droid.Resource.Id.end;
 			global::Xamarin.Essentials.Resource.Id.fill = global::GaslandsHQ.Droid.Resource.Id.fill;
 			global::Xamarin.Essentials.Resource.Id.fill_horizontal = global::GaslandsHQ.Droid.Resource.Id.fill_horizontal;
@@ -3254,6 +3290,11 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Essentials.Resource.Id.right_icon = global::GaslandsHQ.Droid.Resource.Id.right_icon;
 			global::Xamarin.Essentials.Resource.Id.right_side = global::GaslandsHQ.Droid.Resource.Id.right_side;
 			global::Xamarin.Essentials.Resource.Id.start = global::GaslandsHQ.Droid.Resource.Id.start;
+			global::Xamarin.Essentials.Resource.Id.tag_accessibility_actions = global::GaslandsHQ.Droid.Resource.Id.tag_accessibility_actions;
+			global::Xamarin.Essentials.Resource.Id.tag_accessibility_clickable_spans = global::GaslandsHQ.Droid.Resource.Id.tag_accessibility_clickable_spans;
+			global::Xamarin.Essentials.Resource.Id.tag_accessibility_heading = global::GaslandsHQ.Droid.Resource.Id.tag_accessibility_heading;
+			global::Xamarin.Essentials.Resource.Id.tag_accessibility_pane_title = global::GaslandsHQ.Droid.Resource.Id.tag_accessibility_pane_title;
+			global::Xamarin.Essentials.Resource.Id.tag_screen_reader_focusable = global::GaslandsHQ.Droid.Resource.Id.tag_screen_reader_focusable;
 			global::Xamarin.Essentials.Resource.Id.tag_transition_group = global::GaslandsHQ.Droid.Resource.Id.tag_transition_group;
 			global::Xamarin.Essentials.Resource.Id.tag_unhandled_key_event_manager = global::GaslandsHQ.Droid.Resource.Id.tag_unhandled_key_event_manager;
 			global::Xamarin.Essentials.Resource.Id.tag_unhandled_key_listeners = global::GaslandsHQ.Droid.Resource.Id.tag_unhandled_key_listeners;
@@ -3265,6 +3306,7 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Essentials.Resource.Integer.status_bar_notification_info_maxnum = global::GaslandsHQ.Droid.Resource.Integer.status_bar_notification_info_maxnum;
 			global::Xamarin.Essentials.Resource.Layout.browser_actions_context_menu_page = global::GaslandsHQ.Droid.Resource.Layout.browser_actions_context_menu_page;
 			global::Xamarin.Essentials.Resource.Layout.browser_actions_context_menu_row = global::GaslandsHQ.Droid.Resource.Layout.browser_actions_context_menu_row;
+			global::Xamarin.Essentials.Resource.Layout.custom_dialog = global::GaslandsHQ.Droid.Resource.Layout.custom_dialog;
 			global::Xamarin.Essentials.Resource.Layout.notification_action = global::GaslandsHQ.Droid.Resource.Layout.notification_action;
 			global::Xamarin.Essentials.Resource.Layout.notification_action_tombstone = global::GaslandsHQ.Droid.Resource.Layout.notification_action_tombstone;
 			global::Xamarin.Essentials.Resource.Layout.notification_template_custom_big = global::GaslandsHQ.Droid.Resource.Layout.notification_template_custom_big;
@@ -3342,6 +3384,18 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Material.Android.Resource.Animation.abc_slide_out_top = global::GaslandsHQ.Droid.Resource.Animation.abc_slide_out_top;
 			global::Xamarin.Forms.Material.Android.Resource.Animation.abc_tooltip_enter = global::GaslandsHQ.Droid.Resource.Animation.abc_tooltip_enter;
 			global::Xamarin.Forms.Material.Android.Resource.Animation.abc_tooltip_exit = global::GaslandsHQ.Droid.Resource.Animation.abc_tooltip_exit;
+			global::Xamarin.Forms.Material.Android.Resource.Animation.btn_checkbox_to_checked_box_inner_merged_animation = global::GaslandsHQ.Droid.Resource.Animation.btn_checkbox_to_checked_box_inner_merged_animation;
+			global::Xamarin.Forms.Material.Android.Resource.Animation.btn_checkbox_to_checked_box_outer_merged_animation = global::GaslandsHQ.Droid.Resource.Animation.btn_checkbox_to_checked_box_outer_merged_animation;
+			global::Xamarin.Forms.Material.Android.Resource.Animation.btn_checkbox_to_checked_icon_null_animation = global::GaslandsHQ.Droid.Resource.Animation.btn_checkbox_to_checked_icon_null_animation;
+			global::Xamarin.Forms.Material.Android.Resource.Animation.btn_checkbox_to_unchecked_box_inner_merged_animation = global::GaslandsHQ.Droid.Resource.Animation.btn_checkbox_to_unchecked_box_inner_merged_animation;
+			global::Xamarin.Forms.Material.Android.Resource.Animation.btn_checkbox_to_unchecked_check_path_merged_animation = global::GaslandsHQ.Droid.Resource.Animation.btn_checkbox_to_unchecked_check_path_merged_animation;
+			global::Xamarin.Forms.Material.Android.Resource.Animation.btn_checkbox_to_unchecked_icon_null_animation = global::GaslandsHQ.Droid.Resource.Animation.btn_checkbox_to_unchecked_icon_null_animation;
+			global::Xamarin.Forms.Material.Android.Resource.Animation.btn_radio_to_off_mtrl_dot_group_animation = global::GaslandsHQ.Droid.Resource.Animation.btn_radio_to_off_mtrl_dot_group_animation;
+			global::Xamarin.Forms.Material.Android.Resource.Animation.btn_radio_to_off_mtrl_ring_outer_animation = global::GaslandsHQ.Droid.Resource.Animation.btn_radio_to_off_mtrl_ring_outer_animation;
+			global::Xamarin.Forms.Material.Android.Resource.Animation.btn_radio_to_off_mtrl_ring_outer_path_animation = global::GaslandsHQ.Droid.Resource.Animation.btn_radio_to_off_mtrl_ring_outer_path_animation;
+			global::Xamarin.Forms.Material.Android.Resource.Animation.btn_radio_to_on_mtrl_dot_group_animation = global::GaslandsHQ.Droid.Resource.Animation.btn_radio_to_on_mtrl_dot_group_animation;
+			global::Xamarin.Forms.Material.Android.Resource.Animation.btn_radio_to_on_mtrl_ring_outer_animation = global::GaslandsHQ.Droid.Resource.Animation.btn_radio_to_on_mtrl_ring_outer_animation;
+			global::Xamarin.Forms.Material.Android.Resource.Animation.btn_radio_to_on_mtrl_ring_outer_path_animation = global::GaslandsHQ.Droid.Resource.Animation.btn_radio_to_on_mtrl_ring_outer_path_animation;
 			global::Xamarin.Forms.Material.Android.Resource.Animation.design_bottom_sheet_slide_in = global::GaslandsHQ.Droid.Resource.Animation.design_bottom_sheet_slide_in;
 			global::Xamarin.Forms.Material.Android.Resource.Animation.design_bottom_sheet_slide_out = global::GaslandsHQ.Droid.Resource.Animation.design_bottom_sheet_slide_out;
 			global::Xamarin.Forms.Material.Android.Resource.Animation.design_snackbar_in = global::GaslandsHQ.Droid.Resource.Animation.design_snackbar_in;
@@ -3441,6 +3495,7 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Material.Android.Resource.Attribute.buttonBarNeutralButtonStyle = global::GaslandsHQ.Droid.Resource.Attribute.buttonBarNeutralButtonStyle;
 			global::Xamarin.Forms.Material.Android.Resource.Attribute.buttonBarPositiveButtonStyle = global::GaslandsHQ.Droid.Resource.Attribute.buttonBarPositiveButtonStyle;
 			global::Xamarin.Forms.Material.Android.Resource.Attribute.buttonBarStyle = global::GaslandsHQ.Droid.Resource.Attribute.buttonBarStyle;
+			global::Xamarin.Forms.Material.Android.Resource.Attribute.buttonCompat = global::GaslandsHQ.Droid.Resource.Attribute.buttonCompat;
 			global::Xamarin.Forms.Material.Android.Resource.Attribute.buttonGravity = global::GaslandsHQ.Droid.Resource.Attribute.buttonGravity;
 			global::Xamarin.Forms.Material.Android.Resource.Attribute.buttonIconDimen = global::GaslandsHQ.Droid.Resource.Attribute.buttonIconDimen;
 			global::Xamarin.Forms.Material.Android.Resource.Attribute.buttonPanelSideLayout = global::GaslandsHQ.Droid.Resource.Attribute.buttonPanelSideLayout;
@@ -3535,7 +3590,15 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Material.Android.Resource.Attribute.dividerHorizontal = global::GaslandsHQ.Droid.Resource.Attribute.dividerHorizontal;
 			global::Xamarin.Forms.Material.Android.Resource.Attribute.dividerPadding = global::GaslandsHQ.Droid.Resource.Attribute.dividerPadding;
 			global::Xamarin.Forms.Material.Android.Resource.Attribute.dividerVertical = global::GaslandsHQ.Droid.Resource.Attribute.dividerVertical;
+			global::Xamarin.Forms.Material.Android.Resource.Attribute.drawableBottomCompat = global::GaslandsHQ.Droid.Resource.Attribute.drawableBottomCompat;
+			global::Xamarin.Forms.Material.Android.Resource.Attribute.drawableEndCompat = global::GaslandsHQ.Droid.Resource.Attribute.drawableEndCompat;
+			global::Xamarin.Forms.Material.Android.Resource.Attribute.drawableLeftCompat = global::GaslandsHQ.Droid.Resource.Attribute.drawableLeftCompat;
+			global::Xamarin.Forms.Material.Android.Resource.Attribute.drawableRightCompat = global::GaslandsHQ.Droid.Resource.Attribute.drawableRightCompat;
 			global::Xamarin.Forms.Material.Android.Resource.Attribute.drawableSize = global::GaslandsHQ.Droid.Resource.Attribute.drawableSize;
+			global::Xamarin.Forms.Material.Android.Resource.Attribute.drawableStartCompat = global::GaslandsHQ.Droid.Resource.Attribute.drawableStartCompat;
+			global::Xamarin.Forms.Material.Android.Resource.Attribute.drawableTint = global::GaslandsHQ.Droid.Resource.Attribute.drawableTint;
+			global::Xamarin.Forms.Material.Android.Resource.Attribute.drawableTintMode = global::GaslandsHQ.Droid.Resource.Attribute.drawableTintMode;
+			global::Xamarin.Forms.Material.Android.Resource.Attribute.drawableTopCompat = global::GaslandsHQ.Droid.Resource.Attribute.drawableTopCompat;
 			global::Xamarin.Forms.Material.Android.Resource.Attribute.drawerArrowStyle = global::GaslandsHQ.Droid.Resource.Attribute.drawerArrowStyle;
 			global::Xamarin.Forms.Material.Android.Resource.Attribute.dropdownListPreferredItemHeight = global::GaslandsHQ.Droid.Resource.Attribute.dropdownListPreferredItemHeight;
 			global::Xamarin.Forms.Material.Android.Resource.Attribute.dropDownListViewStyle = global::GaslandsHQ.Droid.Resource.Attribute.dropDownListViewStyle;
@@ -3642,6 +3705,8 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Material.Android.Resource.Attribute.lineHeight = global::GaslandsHQ.Droid.Resource.Attribute.lineHeight;
 			global::Xamarin.Forms.Material.Android.Resource.Attribute.lineSpacing = global::GaslandsHQ.Droid.Resource.Attribute.lineSpacing;
 			global::Xamarin.Forms.Material.Android.Resource.Attribute.listChoiceBackgroundIndicator = global::GaslandsHQ.Droid.Resource.Attribute.listChoiceBackgroundIndicator;
+			global::Xamarin.Forms.Material.Android.Resource.Attribute.listChoiceIndicatorMultipleAnimated = global::GaslandsHQ.Droid.Resource.Attribute.listChoiceIndicatorMultipleAnimated;
+			global::Xamarin.Forms.Material.Android.Resource.Attribute.listChoiceIndicatorSingleAnimated = global::GaslandsHQ.Droid.Resource.Attribute.listChoiceIndicatorSingleAnimated;
 			global::Xamarin.Forms.Material.Android.Resource.Attribute.listDividerAlertDialog = global::GaslandsHQ.Droid.Resource.Attribute.listDividerAlertDialog;
 			global::Xamarin.Forms.Material.Android.Resource.Attribute.listItemLayout = global::GaslandsHQ.Droid.Resource.Attribute.listItemLayout;
 			global::Xamarin.Forms.Material.Android.Resource.Attribute.listLayout = global::GaslandsHQ.Droid.Resource.Attribute.listLayout;
@@ -3650,8 +3715,10 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Material.Android.Resource.Attribute.listPreferredItemHeight = global::GaslandsHQ.Droid.Resource.Attribute.listPreferredItemHeight;
 			global::Xamarin.Forms.Material.Android.Resource.Attribute.listPreferredItemHeightLarge = global::GaslandsHQ.Droid.Resource.Attribute.listPreferredItemHeightLarge;
 			global::Xamarin.Forms.Material.Android.Resource.Attribute.listPreferredItemHeightSmall = global::GaslandsHQ.Droid.Resource.Attribute.listPreferredItemHeightSmall;
+			global::Xamarin.Forms.Material.Android.Resource.Attribute.listPreferredItemPaddingEnd = global::GaslandsHQ.Droid.Resource.Attribute.listPreferredItemPaddingEnd;
 			global::Xamarin.Forms.Material.Android.Resource.Attribute.listPreferredItemPaddingLeft = global::GaslandsHQ.Droid.Resource.Attribute.listPreferredItemPaddingLeft;
 			global::Xamarin.Forms.Material.Android.Resource.Attribute.listPreferredItemPaddingRight = global::GaslandsHQ.Droid.Resource.Attribute.listPreferredItemPaddingRight;
+			global::Xamarin.Forms.Material.Android.Resource.Attribute.listPreferredItemPaddingStart = global::GaslandsHQ.Droid.Resource.Attribute.listPreferredItemPaddingStart;
 			global::Xamarin.Forms.Material.Android.Resource.Attribute.logo = global::GaslandsHQ.Droid.Resource.Attribute.logo;
 			global::Xamarin.Forms.Material.Android.Resource.Attribute.logoDescription = global::GaslandsHQ.Droid.Resource.Attribute.logoDescription;
 			global::Xamarin.Forms.Material.Android.Resource.Attribute.materialButtonStyle = global::GaslandsHQ.Droid.Resource.Attribute.materialButtonStyle;
@@ -3698,6 +3765,7 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Material.Android.Resource.Attribute.ratingBarStyle = global::GaslandsHQ.Droid.Resource.Attribute.ratingBarStyle;
 			global::Xamarin.Forms.Material.Android.Resource.Attribute.ratingBarStyleIndicator = global::GaslandsHQ.Droid.Resource.Attribute.ratingBarStyleIndicator;
 			global::Xamarin.Forms.Material.Android.Resource.Attribute.ratingBarStyleSmall = global::GaslandsHQ.Droid.Resource.Attribute.ratingBarStyleSmall;
+			global::Xamarin.Forms.Material.Android.Resource.Attribute.recyclerViewStyle = global::GaslandsHQ.Droid.Resource.Attribute.recyclerViewStyle;
 			global::Xamarin.Forms.Material.Android.Resource.Attribute.reverseLayout = global::GaslandsHQ.Droid.Resource.Attribute.reverseLayout;
 			global::Xamarin.Forms.Material.Android.Resource.Attribute.rippleColor = global::GaslandsHQ.Droid.Resource.Attribute.rippleColor;
 			global::Xamarin.Forms.Material.Android.Resource.Attribute.scrimAnimationDuration = global::GaslandsHQ.Droid.Resource.Attribute.scrimAnimationDuration;
@@ -3798,6 +3866,7 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Material.Android.Resource.Attribute.textColorSearchUrl = global::GaslandsHQ.Droid.Resource.Attribute.textColorSearchUrl;
 			global::Xamarin.Forms.Material.Android.Resource.Attribute.textEndPadding = global::GaslandsHQ.Droid.Resource.Attribute.textEndPadding;
 			global::Xamarin.Forms.Material.Android.Resource.Attribute.textInputStyle = global::GaslandsHQ.Droid.Resource.Attribute.textInputStyle;
+			global::Xamarin.Forms.Material.Android.Resource.Attribute.textLocale = global::GaslandsHQ.Droid.Resource.Attribute.textLocale;
 			global::Xamarin.Forms.Material.Android.Resource.Attribute.textStartPadding = global::GaslandsHQ.Droid.Resource.Attribute.textStartPadding;
 			global::Xamarin.Forms.Material.Android.Resource.Attribute.theme = global::GaslandsHQ.Droid.Resource.Attribute.theme;
 			global::Xamarin.Forms.Material.Android.Resource.Attribute.thickness = global::GaslandsHQ.Droid.Resource.Attribute.thickness;
@@ -4023,6 +4092,9 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Material.Android.Resource.Dimension.abc_edit_text_inset_horizontal_material = global::GaslandsHQ.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material;
 			global::Xamarin.Forms.Material.Android.Resource.Dimension.abc_edit_text_inset_top_material = global::GaslandsHQ.Droid.Resource.Dimension.abc_edit_text_inset_top_material;
 			global::Xamarin.Forms.Material.Android.Resource.Dimension.abc_floating_window_z = global::GaslandsHQ.Droid.Resource.Dimension.abc_floating_window_z;
+			global::Xamarin.Forms.Material.Android.Resource.Dimension.abc_list_item_height_large_material = global::GaslandsHQ.Droid.Resource.Dimension.abc_list_item_height_large_material;
+			global::Xamarin.Forms.Material.Android.Resource.Dimension.abc_list_item_height_material = global::GaslandsHQ.Droid.Resource.Dimension.abc_list_item_height_material;
+			global::Xamarin.Forms.Material.Android.Resource.Dimension.abc_list_item_height_small_material = global::GaslandsHQ.Droid.Resource.Dimension.abc_list_item_height_small_material;
 			global::Xamarin.Forms.Material.Android.Resource.Dimension.abc_list_item_padding_horizontal_material = global::GaslandsHQ.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material;
 			global::Xamarin.Forms.Material.Android.Resource.Dimension.abc_panel_menu_list_width = global::GaslandsHQ.Droid.Resource.Dimension.abc_panel_menu_list_width;
 			global::Xamarin.Forms.Material.Android.Resource.Dimension.abc_progress_bar_height_material = global::GaslandsHQ.Droid.Resource.Dimension.abc_progress_bar_height_material;
@@ -4198,11 +4270,13 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Material.Android.Resource.Drawable.abc_action_bar_item_background_material = global::GaslandsHQ.Droid.Resource.Drawable.abc_action_bar_item_background_material;
 			global::Xamarin.Forms.Material.Android.Resource.Drawable.abc_btn_borderless_material = global::GaslandsHQ.Droid.Resource.Drawable.abc_btn_borderless_material;
 			global::Xamarin.Forms.Material.Android.Resource.Drawable.abc_btn_check_material = global::GaslandsHQ.Droid.Resource.Drawable.abc_btn_check_material;
+			global::Xamarin.Forms.Material.Android.Resource.Drawable.abc_btn_check_material_anim = global::GaslandsHQ.Droid.Resource.Drawable.abc_btn_check_material_anim;
 			global::Xamarin.Forms.Material.Android.Resource.Drawable.abc_btn_check_to_on_mtrl_000 = global::GaslandsHQ.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000;
 			global::Xamarin.Forms.Material.Android.Resource.Drawable.abc_btn_check_to_on_mtrl_015 = global::GaslandsHQ.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015;
 			global::Xamarin.Forms.Material.Android.Resource.Drawable.abc_btn_colored_material = global::GaslandsHQ.Droid.Resource.Drawable.abc_btn_colored_material;
 			global::Xamarin.Forms.Material.Android.Resource.Drawable.abc_btn_default_mtrl_shape = global::GaslandsHQ.Droid.Resource.Drawable.abc_btn_default_mtrl_shape;
 			global::Xamarin.Forms.Material.Android.Resource.Drawable.abc_btn_radio_material = global::GaslandsHQ.Droid.Resource.Drawable.abc_btn_radio_material;
+			global::Xamarin.Forms.Material.Android.Resource.Drawable.abc_btn_radio_material_anim = global::GaslandsHQ.Droid.Resource.Drawable.abc_btn_radio_material_anim;
 			global::Xamarin.Forms.Material.Android.Resource.Drawable.abc_btn_radio_to_on_mtrl_000 = global::GaslandsHQ.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000;
 			global::Xamarin.Forms.Material.Android.Resource.Drawable.abc_btn_radio_to_on_mtrl_015 = global::GaslandsHQ.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015;
 			global::Xamarin.Forms.Material.Android.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001 = global::GaslandsHQ.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001;
@@ -4280,6 +4354,14 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Material.Android.Resource.Drawable.abc_vector_test = global::GaslandsHQ.Droid.Resource.Drawable.abc_vector_test;
 			global::Xamarin.Forms.Material.Android.Resource.Drawable.avd_hide_password = global::GaslandsHQ.Droid.Resource.Drawable.avd_hide_password;
 			global::Xamarin.Forms.Material.Android.Resource.Drawable.avd_show_password = global::GaslandsHQ.Droid.Resource.Drawable.avd_show_password;
+			global::Xamarin.Forms.Material.Android.Resource.Drawable.btn_checkbox_checked_mtrl = global::GaslandsHQ.Droid.Resource.Drawable.btn_checkbox_checked_mtrl;
+			global::Xamarin.Forms.Material.Android.Resource.Drawable.btn_checkbox_checked_to_unchecked_mtrl_animation = global::GaslandsHQ.Droid.Resource.Drawable.btn_checkbox_checked_to_unchecked_mtrl_animation;
+			global::Xamarin.Forms.Material.Android.Resource.Drawable.btn_checkbox_unchecked_mtrl = global::GaslandsHQ.Droid.Resource.Drawable.btn_checkbox_unchecked_mtrl;
+			global::Xamarin.Forms.Material.Android.Resource.Drawable.btn_checkbox_unchecked_to_checked_mtrl_animation = global::GaslandsHQ.Droid.Resource.Drawable.btn_checkbox_unchecked_to_checked_mtrl_animation;
+			global::Xamarin.Forms.Material.Android.Resource.Drawable.btn_radio_off_mtrl = global::GaslandsHQ.Droid.Resource.Drawable.btn_radio_off_mtrl;
+			global::Xamarin.Forms.Material.Android.Resource.Drawable.btn_radio_off_to_on_mtrl_animation = global::GaslandsHQ.Droid.Resource.Drawable.btn_radio_off_to_on_mtrl_animation;
+			global::Xamarin.Forms.Material.Android.Resource.Drawable.btn_radio_on_mtrl = global::GaslandsHQ.Droid.Resource.Drawable.btn_radio_on_mtrl;
+			global::Xamarin.Forms.Material.Android.Resource.Drawable.btn_radio_on_to_off_mtrl_animation = global::GaslandsHQ.Droid.Resource.Drawable.btn_radio_on_to_off_mtrl_animation;
 			global::Xamarin.Forms.Material.Android.Resource.Drawable.design_bottom_navigation_item_background = global::GaslandsHQ.Droid.Resource.Drawable.design_bottom_navigation_item_background;
 			global::Xamarin.Forms.Material.Android.Resource.Drawable.design_fab_background = global::GaslandsHQ.Droid.Resource.Drawable.design_fab_background;
 			global::Xamarin.Forms.Material.Android.Resource.Drawable.design_ic_visibility = global::GaslandsHQ.Droid.Resource.Drawable.design_ic_visibility;
@@ -4308,6 +4390,39 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Material.Android.Resource.Drawable.notify_panel_notification_icon_bg = global::GaslandsHQ.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
 			global::Xamarin.Forms.Material.Android.Resource.Drawable.tooltip_frame_dark = global::GaslandsHQ.Droid.Resource.Drawable.tooltip_frame_dark;
 			global::Xamarin.Forms.Material.Android.Resource.Drawable.tooltip_frame_light = global::GaslandsHQ.Droid.Resource.Drawable.tooltip_frame_light;
+			global::Xamarin.Forms.Material.Android.Resource.Id.accessibility_action_clickable_span = global::GaslandsHQ.Droid.Resource.Id.accessibility_action_clickable_span;
+			global::Xamarin.Forms.Material.Android.Resource.Id.accessibility_custom_action_0 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_0;
+			global::Xamarin.Forms.Material.Android.Resource.Id.accessibility_custom_action_1 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_1;
+			global::Xamarin.Forms.Material.Android.Resource.Id.accessibility_custom_action_10 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_10;
+			global::Xamarin.Forms.Material.Android.Resource.Id.accessibility_custom_action_11 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_11;
+			global::Xamarin.Forms.Material.Android.Resource.Id.accessibility_custom_action_12 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_12;
+			global::Xamarin.Forms.Material.Android.Resource.Id.accessibility_custom_action_13 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_13;
+			global::Xamarin.Forms.Material.Android.Resource.Id.accessibility_custom_action_14 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_14;
+			global::Xamarin.Forms.Material.Android.Resource.Id.accessibility_custom_action_15 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_15;
+			global::Xamarin.Forms.Material.Android.Resource.Id.accessibility_custom_action_16 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_16;
+			global::Xamarin.Forms.Material.Android.Resource.Id.accessibility_custom_action_17 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_17;
+			global::Xamarin.Forms.Material.Android.Resource.Id.accessibility_custom_action_18 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_18;
+			global::Xamarin.Forms.Material.Android.Resource.Id.accessibility_custom_action_19 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_19;
+			global::Xamarin.Forms.Material.Android.Resource.Id.accessibility_custom_action_2 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_2;
+			global::Xamarin.Forms.Material.Android.Resource.Id.accessibility_custom_action_20 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_20;
+			global::Xamarin.Forms.Material.Android.Resource.Id.accessibility_custom_action_21 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_21;
+			global::Xamarin.Forms.Material.Android.Resource.Id.accessibility_custom_action_22 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_22;
+			global::Xamarin.Forms.Material.Android.Resource.Id.accessibility_custom_action_23 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_23;
+			global::Xamarin.Forms.Material.Android.Resource.Id.accessibility_custom_action_24 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_24;
+			global::Xamarin.Forms.Material.Android.Resource.Id.accessibility_custom_action_25 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_25;
+			global::Xamarin.Forms.Material.Android.Resource.Id.accessibility_custom_action_26 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_26;
+			global::Xamarin.Forms.Material.Android.Resource.Id.accessibility_custom_action_27 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_27;
+			global::Xamarin.Forms.Material.Android.Resource.Id.accessibility_custom_action_28 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_28;
+			global::Xamarin.Forms.Material.Android.Resource.Id.accessibility_custom_action_29 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_29;
+			global::Xamarin.Forms.Material.Android.Resource.Id.accessibility_custom_action_3 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_3;
+			global::Xamarin.Forms.Material.Android.Resource.Id.accessibility_custom_action_30 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_30;
+			global::Xamarin.Forms.Material.Android.Resource.Id.accessibility_custom_action_31 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_31;
+			global::Xamarin.Forms.Material.Android.Resource.Id.accessibility_custom_action_4 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_4;
+			global::Xamarin.Forms.Material.Android.Resource.Id.accessibility_custom_action_5 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_5;
+			global::Xamarin.Forms.Material.Android.Resource.Id.accessibility_custom_action_6 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_6;
+			global::Xamarin.Forms.Material.Android.Resource.Id.accessibility_custom_action_7 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_7;
+			global::Xamarin.Forms.Material.Android.Resource.Id.accessibility_custom_action_8 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_8;
+			global::Xamarin.Forms.Material.Android.Resource.Id.accessibility_custom_action_9 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_9;
 			global::Xamarin.Forms.Material.Android.Resource.Id.action0 = global::GaslandsHQ.Droid.Resource.Id.action0;
 			global::Xamarin.Forms.Material.Android.Resource.Id.actions = global::GaslandsHQ.Droid.Resource.Id.actions;
 			global::Xamarin.Forms.Material.Android.Resource.Id.action_bar = global::GaslandsHQ.Droid.Resource.Id.action_bar;
@@ -4346,6 +4461,7 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Material.Android.Resource.Id.center_horizontal = global::GaslandsHQ.Droid.Resource.Id.center_horizontal;
 			global::Xamarin.Forms.Material.Android.Resource.Id.center_vertical = global::GaslandsHQ.Droid.Resource.Id.center_vertical;
 			global::Xamarin.Forms.Material.Android.Resource.Id.checkbox = global::GaslandsHQ.Droid.Resource.Id.checkbox;
+			global::Xamarin.Forms.Material.Android.Resource.Id.@checked = global::GaslandsHQ.Droid.Resource.Id.@checked;
 			global::Xamarin.Forms.Material.Android.Resource.Id.chronometer = global::GaslandsHQ.Droid.Resource.Id.chronometer;
 			global::Xamarin.Forms.Material.Android.Resource.Id.clip_horizontal = global::GaslandsHQ.Droid.Resource.Id.clip_horizontal;
 			global::Xamarin.Forms.Material.Android.Resource.Id.clip_vertical = global::GaslandsHQ.Droid.Resource.Id.clip_vertical;
@@ -4364,6 +4480,7 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Material.Android.Resource.Id.design_menu_item_action_area_stub = global::GaslandsHQ.Droid.Resource.Id.design_menu_item_action_area_stub;
 			global::Xamarin.Forms.Material.Android.Resource.Id.design_menu_item_text = global::GaslandsHQ.Droid.Resource.Id.design_menu_item_text;
 			global::Xamarin.Forms.Material.Android.Resource.Id.design_navigation_view = global::GaslandsHQ.Droid.Resource.Id.design_navigation_view;
+			global::Xamarin.Forms.Material.Android.Resource.Id.dialog_button = global::GaslandsHQ.Droid.Resource.Id.dialog_button;
 			global::Xamarin.Forms.Material.Android.Resource.Id.disableHome = global::GaslandsHQ.Droid.Resource.Id.disableHome;
 			global::Xamarin.Forms.Material.Android.Resource.Id.edit_query = global::GaslandsHQ.Droid.Resource.Id.edit_query;
 			global::Xamarin.Forms.Material.Android.Resource.Id.end = global::GaslandsHQ.Droid.Resource.Id.end;
@@ -4383,6 +4500,7 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Material.Android.Resource.Id.forever = global::GaslandsHQ.Droid.Resource.Id.forever;
 			global::Xamarin.Forms.Material.Android.Resource.Id.FUNCTION = global::GaslandsHQ.Droid.Resource.Id.FUNCTION;
 			global::Xamarin.Forms.Material.Android.Resource.Id.ghost_view = global::GaslandsHQ.Droid.Resource.Id.ghost_view;
+			global::Xamarin.Forms.Material.Android.Resource.Id.ghost_view_holder = global::GaslandsHQ.Droid.Resource.Id.ghost_view_holder;
 			global::Xamarin.Forms.Material.Android.Resource.Id.group_divider = global::GaslandsHQ.Droid.Resource.Id.group_divider;
 			global::Xamarin.Forms.Material.Android.Resource.Id.home = global::GaslandsHQ.Droid.Resource.Id.home;
 			global::Xamarin.Forms.Material.Android.Resource.Id.homeAsUp = global::GaslandsHQ.Droid.Resource.Id.homeAsUp;
@@ -4421,6 +4539,8 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Material.Android.Resource.Id.notification_background = global::GaslandsHQ.Droid.Resource.Id.notification_background;
 			global::Xamarin.Forms.Material.Android.Resource.Id.notification_main_column = global::GaslandsHQ.Droid.Resource.Id.notification_main_column;
 			global::Xamarin.Forms.Material.Android.Resource.Id.notification_main_column_container = global::GaslandsHQ.Droid.Resource.Id.notification_main_column_container;
+			global::Xamarin.Forms.Material.Android.Resource.Id.off = global::GaslandsHQ.Droid.Resource.Id.off;
+			global::Xamarin.Forms.Material.Android.Resource.Id.on = global::GaslandsHQ.Droid.Resource.Id.on;
 			global::Xamarin.Forms.Material.Android.Resource.Id.outline = global::GaslandsHQ.Droid.Resource.Id.outline;
 			global::Xamarin.Forms.Material.Android.Resource.Id.parallax = global::GaslandsHQ.Droid.Resource.Id.parallax;
 			global::Xamarin.Forms.Material.Android.Resource.Id.parentPanel = global::GaslandsHQ.Droid.Resource.Id.parentPanel;
@@ -4433,6 +4553,7 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Material.Android.Resource.Id.right_icon = global::GaslandsHQ.Droid.Resource.Id.right_icon;
 			global::Xamarin.Forms.Material.Android.Resource.Id.right_side = global::GaslandsHQ.Droid.Resource.Id.right_side;
 			global::Xamarin.Forms.Material.Android.Resource.Id.save_non_transition_alpha = global::GaslandsHQ.Droid.Resource.Id.save_non_transition_alpha;
+			global::Xamarin.Forms.Material.Android.Resource.Id.save_overlay_view = global::GaslandsHQ.Droid.Resource.Id.save_overlay_view;
 			global::Xamarin.Forms.Material.Android.Resource.Id.screen = global::GaslandsHQ.Droid.Resource.Id.screen;
 			global::Xamarin.Forms.Material.Android.Resource.Id.scroll = global::GaslandsHQ.Droid.Resource.Id.scroll;
 			global::Xamarin.Forms.Material.Android.Resource.Id.scrollable = global::GaslandsHQ.Droid.Resource.Id.scrollable;
@@ -4458,6 +4579,7 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Material.Android.Resource.Id.showCustom = global::GaslandsHQ.Droid.Resource.Id.showCustom;
 			global::Xamarin.Forms.Material.Android.Resource.Id.showHome = global::GaslandsHQ.Droid.Resource.Id.showHome;
 			global::Xamarin.Forms.Material.Android.Resource.Id.showTitle = global::GaslandsHQ.Droid.Resource.Id.showTitle;
+			global::Xamarin.Forms.Material.Android.Resource.Id.sliding_tabs = global::GaslandsHQ.Droid.Resource.Id.sliding_tabs;
 			global::Xamarin.Forms.Material.Android.Resource.Id.smallLabel = global::GaslandsHQ.Droid.Resource.Id.smallLabel;
 			global::Xamarin.Forms.Material.Android.Resource.Id.snackbar_action = global::GaslandsHQ.Droid.Resource.Id.snackbar_action;
 			global::Xamarin.Forms.Material.Android.Resource.Id.snackbar_text = global::GaslandsHQ.Droid.Resource.Id.snackbar_text;
@@ -4475,6 +4597,11 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Material.Android.Resource.Id.submit_area = global::GaslandsHQ.Droid.Resource.Id.submit_area;
 			global::Xamarin.Forms.Material.Android.Resource.Id.SYM = global::GaslandsHQ.Droid.Resource.Id.SYM;
 			global::Xamarin.Forms.Material.Android.Resource.Id.tabMode = global::GaslandsHQ.Droid.Resource.Id.tabMode;
+			global::Xamarin.Forms.Material.Android.Resource.Id.tag_accessibility_actions = global::GaslandsHQ.Droid.Resource.Id.tag_accessibility_actions;
+			global::Xamarin.Forms.Material.Android.Resource.Id.tag_accessibility_clickable_spans = global::GaslandsHQ.Droid.Resource.Id.tag_accessibility_clickable_spans;
+			global::Xamarin.Forms.Material.Android.Resource.Id.tag_accessibility_heading = global::GaslandsHQ.Droid.Resource.Id.tag_accessibility_heading;
+			global::Xamarin.Forms.Material.Android.Resource.Id.tag_accessibility_pane_title = global::GaslandsHQ.Droid.Resource.Id.tag_accessibility_pane_title;
+			global::Xamarin.Forms.Material.Android.Resource.Id.tag_screen_reader_focusable = global::GaslandsHQ.Droid.Resource.Id.tag_screen_reader_focusable;
 			global::Xamarin.Forms.Material.Android.Resource.Id.tag_transition_group = global::GaslandsHQ.Droid.Resource.Id.tag_transition_group;
 			global::Xamarin.Forms.Material.Android.Resource.Id.tag_unhandled_key_event_manager = global::GaslandsHQ.Droid.Resource.Id.tag_unhandled_key_event_manager;
 			global::Xamarin.Forms.Material.Android.Resource.Id.tag_unhandled_key_listeners = global::GaslandsHQ.Droid.Resource.Id.tag_unhandled_key_listeners;
@@ -4491,6 +4618,7 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Material.Android.Resource.Id.title = global::GaslandsHQ.Droid.Resource.Id.title;
 			global::Xamarin.Forms.Material.Android.Resource.Id.titleDividerNoCustom = global::GaslandsHQ.Droid.Resource.Id.titleDividerNoCustom;
 			global::Xamarin.Forms.Material.Android.Resource.Id.title_template = global::GaslandsHQ.Droid.Resource.Id.title_template;
+			global::Xamarin.Forms.Material.Android.Resource.Id.toolbar = global::GaslandsHQ.Droid.Resource.Id.toolbar;
 			global::Xamarin.Forms.Material.Android.Resource.Id.top = global::GaslandsHQ.Droid.Resource.Id.top;
 			global::Xamarin.Forms.Material.Android.Resource.Id.topPanel = global::GaslandsHQ.Droid.Resource.Id.topPanel;
 			global::Xamarin.Forms.Material.Android.Resource.Id.touch_outside = global::GaslandsHQ.Droid.Resource.Id.touch_outside;
@@ -4499,6 +4627,7 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Material.Android.Resource.Id.transition_position = global::GaslandsHQ.Droid.Resource.Id.transition_position;
 			global::Xamarin.Forms.Material.Android.Resource.Id.transition_scene_layoutid_cache = global::GaslandsHQ.Droid.Resource.Id.transition_scene_layoutid_cache;
 			global::Xamarin.Forms.Material.Android.Resource.Id.transition_transform = global::GaslandsHQ.Droid.Resource.Id.transition_transform;
+			global::Xamarin.Forms.Material.Android.Resource.Id.@unchecked = global::GaslandsHQ.Droid.Resource.Id.@unchecked;
 			global::Xamarin.Forms.Material.Android.Resource.Id.uniform = global::GaslandsHQ.Droid.Resource.Id.uniform;
 			global::Xamarin.Forms.Material.Android.Resource.Id.unlabeled = global::GaslandsHQ.Droid.Resource.Id.unlabeled;
 			global::Xamarin.Forms.Material.Android.Resource.Id.up = global::GaslandsHQ.Droid.Resource.Id.up;
@@ -4522,6 +4651,13 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Material.Android.Resource.Integer.mtrl_tab_indicator_anim_duration_ms = global::GaslandsHQ.Droid.Resource.Integer.mtrl_tab_indicator_anim_duration_ms;
 			global::Xamarin.Forms.Material.Android.Resource.Integer.show_password_duration = global::GaslandsHQ.Droid.Resource.Integer.show_password_duration;
 			global::Xamarin.Forms.Material.Android.Resource.Integer.status_bar_notification_info_maxnum = global::GaslandsHQ.Droid.Resource.Integer.status_bar_notification_info_maxnum;
+			global::Xamarin.Forms.Material.Android.Resource.Interpolator.btn_checkbox_checked_mtrl_animation_interpolator_0 = global::GaslandsHQ.Droid.Resource.Interpolator.btn_checkbox_checked_mtrl_animation_interpolator_0;
+			global::Xamarin.Forms.Material.Android.Resource.Interpolator.btn_checkbox_checked_mtrl_animation_interpolator_1 = global::GaslandsHQ.Droid.Resource.Interpolator.btn_checkbox_checked_mtrl_animation_interpolator_1;
+			global::Xamarin.Forms.Material.Android.Resource.Interpolator.btn_checkbox_unchecked_mtrl_animation_interpolator_0 = global::GaslandsHQ.Droid.Resource.Interpolator.btn_checkbox_unchecked_mtrl_animation_interpolator_0;
+			global::Xamarin.Forms.Material.Android.Resource.Interpolator.btn_checkbox_unchecked_mtrl_animation_interpolator_1 = global::GaslandsHQ.Droid.Resource.Interpolator.btn_checkbox_unchecked_mtrl_animation_interpolator_1;
+			global::Xamarin.Forms.Material.Android.Resource.Interpolator.btn_radio_to_off_mtrl_animation_interpolator_0 = global::GaslandsHQ.Droid.Resource.Interpolator.btn_radio_to_off_mtrl_animation_interpolator_0;
+			global::Xamarin.Forms.Material.Android.Resource.Interpolator.btn_radio_to_on_mtrl_animation_interpolator_0 = global::GaslandsHQ.Droid.Resource.Interpolator.btn_radio_to_on_mtrl_animation_interpolator_0;
+			global::Xamarin.Forms.Material.Android.Resource.Interpolator.fast_out_slow_in = global::GaslandsHQ.Droid.Resource.Interpolator.fast_out_slow_in;
 			global::Xamarin.Forms.Material.Android.Resource.Interpolator.mtrl_fast_out_linear_in = global::GaslandsHQ.Droid.Resource.Interpolator.mtrl_fast_out_linear_in;
 			global::Xamarin.Forms.Material.Android.Resource.Interpolator.mtrl_fast_out_slow_in = global::GaslandsHQ.Droid.Resource.Interpolator.mtrl_fast_out_slow_in;
 			global::Xamarin.Forms.Material.Android.Resource.Interpolator.mtrl_linear = global::GaslandsHQ.Droid.Resource.Interpolator.mtrl_linear;
@@ -4555,6 +4691,7 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Material.Android.Resource.Layout.abc_select_dialog_material = global::GaslandsHQ.Droid.Resource.Layout.abc_select_dialog_material;
 			global::Xamarin.Forms.Material.Android.Resource.Layout.abc_tooltip = global::GaslandsHQ.Droid.Resource.Layout.abc_tooltip;
 			global::Xamarin.Forms.Material.Android.Resource.Layout.BottomTabLayout = global::GaslandsHQ.Droid.Resource.Layout.BottomTabLayout;
+			global::Xamarin.Forms.Material.Android.Resource.Layout.custom_dialog = global::GaslandsHQ.Droid.Resource.Layout.custom_dialog;
 			global::Xamarin.Forms.Material.Android.Resource.Layout.design_bottom_navigation_item = global::GaslandsHQ.Droid.Resource.Layout.design_bottom_navigation_item;
 			global::Xamarin.Forms.Material.Android.Resource.Layout.design_bottom_sheet_dialog = global::GaslandsHQ.Droid.Resource.Layout.design_bottom_sheet_dialog;
 			global::Xamarin.Forms.Material.Android.Resource.Layout.design_layout_snackbar = global::GaslandsHQ.Droid.Resource.Layout.design_layout_snackbar;
@@ -4569,6 +4706,8 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Material.Android.Resource.Layout.design_navigation_menu = global::GaslandsHQ.Droid.Resource.Layout.design_navigation_menu;
 			global::Xamarin.Forms.Material.Android.Resource.Layout.design_navigation_menu_item = global::GaslandsHQ.Droid.Resource.Layout.design_navigation_menu_item;
 			global::Xamarin.Forms.Material.Android.Resource.Layout.design_text_input_password_icon = global::GaslandsHQ.Droid.Resource.Layout.design_text_input_password_icon;
+			global::Xamarin.Forms.Material.Android.Resource.Layout.FallbackTabbarDoNotUse = global::GaslandsHQ.Droid.Resource.Layout.FallbackTabbarDoNotUse;
+			global::Xamarin.Forms.Material.Android.Resource.Layout.FallbackToolbarDoNotUse = global::GaslandsHQ.Droid.Resource.Layout.FallbackToolbarDoNotUse;
 			global::Xamarin.Forms.Material.Android.Resource.Layout.FlyoutContent = global::GaslandsHQ.Droid.Resource.Layout.FlyoutContent;
 			global::Xamarin.Forms.Material.Android.Resource.Layout.MaterialPickerTextInput = global::GaslandsHQ.Droid.Resource.Layout.MaterialPickerTextInput;
 			global::Xamarin.Forms.Material.Android.Resource.Layout.mtrl_layout_snackbar = global::GaslandsHQ.Droid.Resource.Layout.mtrl_layout_snackbar;
@@ -4594,7 +4733,9 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Material.Android.Resource.Layout.select_dialog_singlechoice_material = global::GaslandsHQ.Droid.Resource.Layout.select_dialog_singlechoice_material;
 			global::Xamarin.Forms.Material.Android.Resource.Layout.ShellContent = global::GaslandsHQ.Droid.Resource.Layout.ShellContent;
 			global::Xamarin.Forms.Material.Android.Resource.Layout.support_simple_spinner_dropdown_item = global::GaslandsHQ.Droid.Resource.Layout.support_simple_spinner_dropdown_item;
+			global::Xamarin.Forms.Material.Android.Resource.Layout.Tabbar = global::GaslandsHQ.Droid.Resource.Layout.Tabbar;
 			global::Xamarin.Forms.Material.Android.Resource.Layout.TextInputLayoutFilledBox = global::GaslandsHQ.Droid.Resource.Layout.TextInputLayoutFilledBox;
+			global::Xamarin.Forms.Material.Android.Resource.Layout.Toolbar = global::GaslandsHQ.Droid.Resource.Layout.Toolbar;
 			global::Xamarin.Forms.Material.Android.Resource.String.abc_action_bar_home_description = global::GaslandsHQ.Droid.Resource.String.abc_action_bar_home_description;
 			global::Xamarin.Forms.Material.Android.Resource.String.abc_action_bar_up_description = global::GaslandsHQ.Droid.Resource.String.abc_action_bar_up_description;
 			global::Xamarin.Forms.Material.Android.Resource.String.abc_action_menu_overflow_description = global::GaslandsHQ.Droid.Resource.String.abc_action_menu_overflow_description;
@@ -4826,6 +4967,7 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Material.Android.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete = global::GaslandsHQ.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete;
 			global::Xamarin.Forms.Material.Android.Resource.Style.Base_Widget_AppCompat_Spinner = global::GaslandsHQ.Droid.Resource.Style.Base_Widget_AppCompat_Spinner;
 			global::Xamarin.Forms.Material.Android.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined = global::GaslandsHQ.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined;
+			global::Xamarin.Forms.Material.Android.Resource.Style.Base_Widget_AppCompat_TextView = global::GaslandsHQ.Droid.Resource.Style.Base_Widget_AppCompat_TextView;
 			global::Xamarin.Forms.Material.Android.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem = global::GaslandsHQ.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem;
 			global::Xamarin.Forms.Material.Android.Resource.Style.Base_Widget_AppCompat_Toolbar = global::GaslandsHQ.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar;
 			global::Xamarin.Forms.Material.Android.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::GaslandsHQ.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
@@ -4959,6 +5101,8 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Material.Android.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::GaslandsHQ.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
 			global::Xamarin.Forms.Material.Android.Resource.Style.ThemeOverlay_AppCompat_Dark = global::GaslandsHQ.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark;
 			global::Xamarin.Forms.Material.Android.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar = global::GaslandsHQ.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::Xamarin.Forms.Material.Android.Resource.Style.ThemeOverlay_AppCompat_DayNight = global::GaslandsHQ.Droid.Resource.Style.ThemeOverlay_AppCompat_DayNight;
+			global::Xamarin.Forms.Material.Android.Resource.Style.ThemeOverlay_AppCompat_DayNight_ActionBar = global::GaslandsHQ.Droid.Resource.Style.ThemeOverlay_AppCompat_DayNight_ActionBar;
 			global::Xamarin.Forms.Material.Android.Resource.Style.ThemeOverlay_AppCompat_Dialog = global::GaslandsHQ.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog;
 			global::Xamarin.Forms.Material.Android.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert = global::GaslandsHQ.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert;
 			global::Xamarin.Forms.Material.Android.Resource.Style.ThemeOverlay_AppCompat_Light = global::GaslandsHQ.Droid.Resource.Style.ThemeOverlay_AppCompat_Light;
@@ -5091,6 +5235,7 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Material.Android.Resource.Style.Widget_AppCompat_Spinner_DropDown = global::GaslandsHQ.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown;
 			global::Xamarin.Forms.Material.Android.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar = global::GaslandsHQ.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar;
 			global::Xamarin.Forms.Material.Android.Resource.Style.Widget_AppCompat_Spinner_Underlined = global::GaslandsHQ.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined;
+			global::Xamarin.Forms.Material.Android.Resource.Style.Widget_AppCompat_TextView = global::GaslandsHQ.Droid.Resource.Style.Widget_AppCompat_TextView;
 			global::Xamarin.Forms.Material.Android.Resource.Style.Widget_AppCompat_TextView_SpinnerItem = global::GaslandsHQ.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem;
 			global::Xamarin.Forms.Material.Android.Resource.Style.Widget_AppCompat_Toolbar = global::GaslandsHQ.Droid.Resource.Style.Widget_AppCompat_Toolbar;
 			global::Xamarin.Forms.Material.Android.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::GaslandsHQ.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
@@ -5261,11 +5406,21 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Material.Android.Resource.Styleable.AppCompatTextView_autoSizePresetSizes = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTextView_autoSizePresetSizes;
 			global::Xamarin.Forms.Material.Android.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity;
 			global::Xamarin.Forms.Material.Android.Resource.Styleable.AppCompatTextView_autoSizeTextType = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTextView_autoSizeTextType;
+			global::Xamarin.Forms.Material.Android.Resource.Styleable.AppCompatTextView_drawableBottomCompat = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTextView_drawableBottomCompat;
+			global::Xamarin.Forms.Material.Android.Resource.Styleable.AppCompatTextView_drawableEndCompat = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTextView_drawableEndCompat;
+			global::Xamarin.Forms.Material.Android.Resource.Styleable.AppCompatTextView_drawableLeftCompat = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTextView_drawableLeftCompat;
+			global::Xamarin.Forms.Material.Android.Resource.Styleable.AppCompatTextView_drawableRightCompat = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTextView_drawableRightCompat;
+			global::Xamarin.Forms.Material.Android.Resource.Styleable.AppCompatTextView_drawableStartCompat = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTextView_drawableStartCompat;
+			global::Xamarin.Forms.Material.Android.Resource.Styleable.AppCompatTextView_drawableTint = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTextView_drawableTint;
+			global::Xamarin.Forms.Material.Android.Resource.Styleable.AppCompatTextView_drawableTintMode = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTextView_drawableTintMode;
+			global::Xamarin.Forms.Material.Android.Resource.Styleable.AppCompatTextView_drawableTopCompat = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTextView_drawableTopCompat;
 			global::Xamarin.Forms.Material.Android.Resource.Styleable.AppCompatTextView_firstBaselineToTopHeight = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTextView_firstBaselineToTopHeight;
 			global::Xamarin.Forms.Material.Android.Resource.Styleable.AppCompatTextView_fontFamily = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTextView_fontFamily;
+			global::Xamarin.Forms.Material.Android.Resource.Styleable.AppCompatTextView_fontVariationSettings = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTextView_fontVariationSettings;
 			global::Xamarin.Forms.Material.Android.Resource.Styleable.AppCompatTextView_lastBaselineToBottomHeight = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTextView_lastBaselineToBottomHeight;
 			global::Xamarin.Forms.Material.Android.Resource.Styleable.AppCompatTextView_lineHeight = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTextView_lineHeight;
 			global::Xamarin.Forms.Material.Android.Resource.Styleable.AppCompatTextView_textAllCaps = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTextView_textAllCaps;
+			global::Xamarin.Forms.Material.Android.Resource.Styleable.AppCompatTextView_textLocale = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTextView_textLocale;
 			global::Xamarin.Forms.Material.Android.Resource.Styleable.AppCompatTheme = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme;
 			global::Xamarin.Forms.Material.Android.Resource.Styleable.AppCompatTheme_actionBarDivider = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider;
 			global::Xamarin.Forms.Material.Android.Resource.Styleable.AppCompatTheme_actionBarItemBackground = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground;
@@ -5339,14 +5494,18 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Material.Android.Resource.Styleable.AppCompatTheme_homeAsUpIndicator = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator;
 			global::Xamarin.Forms.Material.Android.Resource.Styleable.AppCompatTheme_imageButtonStyle = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle;
 			global::Xamarin.Forms.Material.Android.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator;
+			global::Xamarin.Forms.Material.Android.Resource.Styleable.AppCompatTheme_listChoiceIndicatorMultipleAnimated = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_listChoiceIndicatorMultipleAnimated;
+			global::Xamarin.Forms.Material.Android.Resource.Styleable.AppCompatTheme_listChoiceIndicatorSingleAnimated = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_listChoiceIndicatorSingleAnimated;
 			global::Xamarin.Forms.Material.Android.Resource.Styleable.AppCompatTheme_listDividerAlertDialog = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog;
 			global::Xamarin.Forms.Material.Android.Resource.Styleable.AppCompatTheme_listMenuViewStyle = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_listMenuViewStyle;
 			global::Xamarin.Forms.Material.Android.Resource.Styleable.AppCompatTheme_listPopupWindowStyle = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle;
 			global::Xamarin.Forms.Material.Android.Resource.Styleable.AppCompatTheme_listPreferredItemHeight = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight;
 			global::Xamarin.Forms.Material.Android.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge;
 			global::Xamarin.Forms.Material.Android.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall;
+			global::Xamarin.Forms.Material.Android.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingEnd = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingEnd;
 			global::Xamarin.Forms.Material.Android.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft;
 			global::Xamarin.Forms.Material.Android.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight;
+			global::Xamarin.Forms.Material.Android.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingStart = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingStart;
 			global::Xamarin.Forms.Material.Android.Resource.Styleable.AppCompatTheme_panelBackground = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_panelBackground;
 			global::Xamarin.Forms.Material.Android.Resource.Styleable.AppCompatTheme_panelMenuListTheme = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme;
 			global::Xamarin.Forms.Material.Android.Resource.Styleable.AppCompatTheme_panelMenuListWidth = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth;
@@ -5495,6 +5654,7 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Material.Android.Resource.Styleable.ColorStateListItem_android_color = global::GaslandsHQ.Droid.Resource.Styleable.ColorStateListItem_android_color;
 			global::Xamarin.Forms.Material.Android.Resource.Styleable.CompoundButton = global::GaslandsHQ.Droid.Resource.Styleable.CompoundButton;
 			global::Xamarin.Forms.Material.Android.Resource.Styleable.CompoundButton_android_button = global::GaslandsHQ.Droid.Resource.Styleable.CompoundButton_android_button;
+			global::Xamarin.Forms.Material.Android.Resource.Styleable.CompoundButton_buttonCompat = global::GaslandsHQ.Droid.Resource.Styleable.CompoundButton_buttonCompat;
 			global::Xamarin.Forms.Material.Android.Resource.Styleable.CompoundButton_buttonTint = global::GaslandsHQ.Droid.Resource.Styleable.CompoundButton_buttonTint;
 			global::Xamarin.Forms.Material.Android.Resource.Styleable.CompoundButton_buttonTintMode = global::GaslandsHQ.Droid.Resource.Styleable.CompoundButton_buttonTintMode;
 			global::Xamarin.Forms.Material.Android.Resource.Styleable.CoordinatorLayout = global::GaslandsHQ.Droid.Resource.Styleable.CoordinatorLayout;
@@ -5714,6 +5874,7 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Material.Android.Resource.Styleable.RecycleListView_paddingBottomNoButtons = global::GaslandsHQ.Droid.Resource.Styleable.RecycleListView_paddingBottomNoButtons;
 			global::Xamarin.Forms.Material.Android.Resource.Styleable.RecycleListView_paddingTopNoTitle = global::GaslandsHQ.Droid.Resource.Styleable.RecycleListView_paddingTopNoTitle;
 			global::Xamarin.Forms.Material.Android.Resource.Styleable.RecyclerView = global::GaslandsHQ.Droid.Resource.Styleable.RecyclerView;
+			global::Xamarin.Forms.Material.Android.Resource.Styleable.RecyclerView_android_clipToPadding = global::GaslandsHQ.Droid.Resource.Styleable.RecyclerView_android_clipToPadding;
 			global::Xamarin.Forms.Material.Android.Resource.Styleable.RecyclerView_android_descendantFocusability = global::GaslandsHQ.Droid.Resource.Styleable.RecyclerView_android_descendantFocusability;
 			global::Xamarin.Forms.Material.Android.Resource.Styleable.RecyclerView_android_orientation = global::GaslandsHQ.Droid.Resource.Styleable.RecyclerView_android_orientation;
 			global::Xamarin.Forms.Material.Android.Resource.Styleable.RecyclerView_fastScrollEnabled = global::GaslandsHQ.Droid.Resource.Styleable.RecyclerView_fastScrollEnabled;
@@ -5823,11 +5984,14 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Material.Android.Resource.Styleable.TextAppearance_android_textColor = global::GaslandsHQ.Droid.Resource.Styleable.TextAppearance_android_textColor;
 			global::Xamarin.Forms.Material.Android.Resource.Styleable.TextAppearance_android_textColorHint = global::GaslandsHQ.Droid.Resource.Styleable.TextAppearance_android_textColorHint;
 			global::Xamarin.Forms.Material.Android.Resource.Styleable.TextAppearance_android_textColorLink = global::GaslandsHQ.Droid.Resource.Styleable.TextAppearance_android_textColorLink;
+			global::Xamarin.Forms.Material.Android.Resource.Styleable.TextAppearance_android_textFontWeight = global::GaslandsHQ.Droid.Resource.Styleable.TextAppearance_android_textFontWeight;
 			global::Xamarin.Forms.Material.Android.Resource.Styleable.TextAppearance_android_textSize = global::GaslandsHQ.Droid.Resource.Styleable.TextAppearance_android_textSize;
 			global::Xamarin.Forms.Material.Android.Resource.Styleable.TextAppearance_android_textStyle = global::GaslandsHQ.Droid.Resource.Styleable.TextAppearance_android_textStyle;
 			global::Xamarin.Forms.Material.Android.Resource.Styleable.TextAppearance_android_typeface = global::GaslandsHQ.Droid.Resource.Styleable.TextAppearance_android_typeface;
 			global::Xamarin.Forms.Material.Android.Resource.Styleable.TextAppearance_fontFamily = global::GaslandsHQ.Droid.Resource.Styleable.TextAppearance_fontFamily;
+			global::Xamarin.Forms.Material.Android.Resource.Styleable.TextAppearance_fontVariationSettings = global::GaslandsHQ.Droid.Resource.Styleable.TextAppearance_fontVariationSettings;
 			global::Xamarin.Forms.Material.Android.Resource.Styleable.TextAppearance_textAllCaps = global::GaslandsHQ.Droid.Resource.Styleable.TextAppearance_textAllCaps;
+			global::Xamarin.Forms.Material.Android.Resource.Styleable.TextAppearance_textLocale = global::GaslandsHQ.Droid.Resource.Styleable.TextAppearance_textLocale;
 			global::Xamarin.Forms.Material.Android.Resource.Styleable.TextInputLayout = global::GaslandsHQ.Droid.Resource.Styleable.TextInputLayout;
 			global::Xamarin.Forms.Material.Android.Resource.Styleable.TextInputLayout_android_hint = global::GaslandsHQ.Droid.Resource.Styleable.TextInputLayout_android_hint;
 			global::Xamarin.Forms.Material.Android.Resource.Styleable.TextInputLayout_android_textColorHint = global::GaslandsHQ.Droid.Resource.Styleable.TextInputLayout_android_textColorHint;
@@ -5876,6 +6040,7 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Material.Android.Resource.Styleable.Toolbar_logo = global::GaslandsHQ.Droid.Resource.Styleable.Toolbar_logo;
 			global::Xamarin.Forms.Material.Android.Resource.Styleable.Toolbar_logoDescription = global::GaslandsHQ.Droid.Resource.Styleable.Toolbar_logoDescription;
 			global::Xamarin.Forms.Material.Android.Resource.Styleable.Toolbar_maxButtonHeight = global::GaslandsHQ.Droid.Resource.Styleable.Toolbar_maxButtonHeight;
+			global::Xamarin.Forms.Material.Android.Resource.Styleable.Toolbar_menu = global::GaslandsHQ.Droid.Resource.Styleable.Toolbar_menu;
 			global::Xamarin.Forms.Material.Android.Resource.Styleable.Toolbar_navigationContentDescription = global::GaslandsHQ.Droid.Resource.Styleable.Toolbar_navigationContentDescription;
 			global::Xamarin.Forms.Material.Android.Resource.Styleable.Toolbar_navigationIcon = global::GaslandsHQ.Droid.Resource.Styleable.Toolbar_navigationIcon;
 			global::Xamarin.Forms.Material.Android.Resource.Styleable.Toolbar_popupTheme = global::GaslandsHQ.Droid.Resource.Styleable.Toolbar_popupTheme;
@@ -5917,6 +6082,18 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Animation.abc_slide_out_top = global::GaslandsHQ.Droid.Resource.Animation.abc_slide_out_top;
 			global::Xamarin.Forms.Platform.Android.Resource.Animation.abc_tooltip_enter = global::GaslandsHQ.Droid.Resource.Animation.abc_tooltip_enter;
 			global::Xamarin.Forms.Platform.Android.Resource.Animation.abc_tooltip_exit = global::GaslandsHQ.Droid.Resource.Animation.abc_tooltip_exit;
+			global::Xamarin.Forms.Platform.Android.Resource.Animation.btn_checkbox_to_checked_box_inner_merged_animation = global::GaslandsHQ.Droid.Resource.Animation.btn_checkbox_to_checked_box_inner_merged_animation;
+			global::Xamarin.Forms.Platform.Android.Resource.Animation.btn_checkbox_to_checked_box_outer_merged_animation = global::GaslandsHQ.Droid.Resource.Animation.btn_checkbox_to_checked_box_outer_merged_animation;
+			global::Xamarin.Forms.Platform.Android.Resource.Animation.btn_checkbox_to_checked_icon_null_animation = global::GaslandsHQ.Droid.Resource.Animation.btn_checkbox_to_checked_icon_null_animation;
+			global::Xamarin.Forms.Platform.Android.Resource.Animation.btn_checkbox_to_unchecked_box_inner_merged_animation = global::GaslandsHQ.Droid.Resource.Animation.btn_checkbox_to_unchecked_box_inner_merged_animation;
+			global::Xamarin.Forms.Platform.Android.Resource.Animation.btn_checkbox_to_unchecked_check_path_merged_animation = global::GaslandsHQ.Droid.Resource.Animation.btn_checkbox_to_unchecked_check_path_merged_animation;
+			global::Xamarin.Forms.Platform.Android.Resource.Animation.btn_checkbox_to_unchecked_icon_null_animation = global::GaslandsHQ.Droid.Resource.Animation.btn_checkbox_to_unchecked_icon_null_animation;
+			global::Xamarin.Forms.Platform.Android.Resource.Animation.btn_radio_to_off_mtrl_dot_group_animation = global::GaslandsHQ.Droid.Resource.Animation.btn_radio_to_off_mtrl_dot_group_animation;
+			global::Xamarin.Forms.Platform.Android.Resource.Animation.btn_radio_to_off_mtrl_ring_outer_animation = global::GaslandsHQ.Droid.Resource.Animation.btn_radio_to_off_mtrl_ring_outer_animation;
+			global::Xamarin.Forms.Platform.Android.Resource.Animation.btn_radio_to_off_mtrl_ring_outer_path_animation = global::GaslandsHQ.Droid.Resource.Animation.btn_radio_to_off_mtrl_ring_outer_path_animation;
+			global::Xamarin.Forms.Platform.Android.Resource.Animation.btn_radio_to_on_mtrl_dot_group_animation = global::GaslandsHQ.Droid.Resource.Animation.btn_radio_to_on_mtrl_dot_group_animation;
+			global::Xamarin.Forms.Platform.Android.Resource.Animation.btn_radio_to_on_mtrl_ring_outer_animation = global::GaslandsHQ.Droid.Resource.Animation.btn_radio_to_on_mtrl_ring_outer_animation;
+			global::Xamarin.Forms.Platform.Android.Resource.Animation.btn_radio_to_on_mtrl_ring_outer_path_animation = global::GaslandsHQ.Droid.Resource.Animation.btn_radio_to_on_mtrl_ring_outer_path_animation;
 			global::Xamarin.Forms.Platform.Android.Resource.Animation.design_bottom_sheet_slide_in = global::GaslandsHQ.Droid.Resource.Animation.design_bottom_sheet_slide_in;
 			global::Xamarin.Forms.Platform.Android.Resource.Animation.design_bottom_sheet_slide_out = global::GaslandsHQ.Droid.Resource.Animation.design_bottom_sheet_slide_out;
 			global::Xamarin.Forms.Platform.Android.Resource.Animation.design_snackbar_in = global::GaslandsHQ.Droid.Resource.Animation.design_snackbar_in;
@@ -6016,6 +6193,7 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.buttonBarNeutralButtonStyle = global::GaslandsHQ.Droid.Resource.Attribute.buttonBarNeutralButtonStyle;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.buttonBarPositiveButtonStyle = global::GaslandsHQ.Droid.Resource.Attribute.buttonBarPositiveButtonStyle;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.buttonBarStyle = global::GaslandsHQ.Droid.Resource.Attribute.buttonBarStyle;
+			global::Xamarin.Forms.Platform.Android.Resource.Attribute.buttonCompat = global::GaslandsHQ.Droid.Resource.Attribute.buttonCompat;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.buttonGravity = global::GaslandsHQ.Droid.Resource.Attribute.buttonGravity;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.buttonIconDimen = global::GaslandsHQ.Droid.Resource.Attribute.buttonIconDimen;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.buttonPanelSideLayout = global::GaslandsHQ.Droid.Resource.Attribute.buttonPanelSideLayout;
@@ -6110,7 +6288,15 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.dividerHorizontal = global::GaslandsHQ.Droid.Resource.Attribute.dividerHorizontal;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.dividerPadding = global::GaslandsHQ.Droid.Resource.Attribute.dividerPadding;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.dividerVertical = global::GaslandsHQ.Droid.Resource.Attribute.dividerVertical;
+			global::Xamarin.Forms.Platform.Android.Resource.Attribute.drawableBottomCompat = global::GaslandsHQ.Droid.Resource.Attribute.drawableBottomCompat;
+			global::Xamarin.Forms.Platform.Android.Resource.Attribute.drawableEndCompat = global::GaslandsHQ.Droid.Resource.Attribute.drawableEndCompat;
+			global::Xamarin.Forms.Platform.Android.Resource.Attribute.drawableLeftCompat = global::GaslandsHQ.Droid.Resource.Attribute.drawableLeftCompat;
+			global::Xamarin.Forms.Platform.Android.Resource.Attribute.drawableRightCompat = global::GaslandsHQ.Droid.Resource.Attribute.drawableRightCompat;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.drawableSize = global::GaslandsHQ.Droid.Resource.Attribute.drawableSize;
+			global::Xamarin.Forms.Platform.Android.Resource.Attribute.drawableStartCompat = global::GaslandsHQ.Droid.Resource.Attribute.drawableStartCompat;
+			global::Xamarin.Forms.Platform.Android.Resource.Attribute.drawableTint = global::GaslandsHQ.Droid.Resource.Attribute.drawableTint;
+			global::Xamarin.Forms.Platform.Android.Resource.Attribute.drawableTintMode = global::GaslandsHQ.Droid.Resource.Attribute.drawableTintMode;
+			global::Xamarin.Forms.Platform.Android.Resource.Attribute.drawableTopCompat = global::GaslandsHQ.Droid.Resource.Attribute.drawableTopCompat;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.drawerArrowStyle = global::GaslandsHQ.Droid.Resource.Attribute.drawerArrowStyle;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.dropdownListPreferredItemHeight = global::GaslandsHQ.Droid.Resource.Attribute.dropdownListPreferredItemHeight;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.dropDownListViewStyle = global::GaslandsHQ.Droid.Resource.Attribute.dropDownListViewStyle;
@@ -6217,6 +6403,8 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.lineHeight = global::GaslandsHQ.Droid.Resource.Attribute.lineHeight;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.lineSpacing = global::GaslandsHQ.Droid.Resource.Attribute.lineSpacing;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.listChoiceBackgroundIndicator = global::GaslandsHQ.Droid.Resource.Attribute.listChoiceBackgroundIndicator;
+			global::Xamarin.Forms.Platform.Android.Resource.Attribute.listChoiceIndicatorMultipleAnimated = global::GaslandsHQ.Droid.Resource.Attribute.listChoiceIndicatorMultipleAnimated;
+			global::Xamarin.Forms.Platform.Android.Resource.Attribute.listChoiceIndicatorSingleAnimated = global::GaslandsHQ.Droid.Resource.Attribute.listChoiceIndicatorSingleAnimated;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.listDividerAlertDialog = global::GaslandsHQ.Droid.Resource.Attribute.listDividerAlertDialog;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.listItemLayout = global::GaslandsHQ.Droid.Resource.Attribute.listItemLayout;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.listLayout = global::GaslandsHQ.Droid.Resource.Attribute.listLayout;
@@ -6225,8 +6413,10 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.listPreferredItemHeight = global::GaslandsHQ.Droid.Resource.Attribute.listPreferredItemHeight;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.listPreferredItemHeightLarge = global::GaslandsHQ.Droid.Resource.Attribute.listPreferredItemHeightLarge;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.listPreferredItemHeightSmall = global::GaslandsHQ.Droid.Resource.Attribute.listPreferredItemHeightSmall;
+			global::Xamarin.Forms.Platform.Android.Resource.Attribute.listPreferredItemPaddingEnd = global::GaslandsHQ.Droid.Resource.Attribute.listPreferredItemPaddingEnd;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.listPreferredItemPaddingLeft = global::GaslandsHQ.Droid.Resource.Attribute.listPreferredItemPaddingLeft;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.listPreferredItemPaddingRight = global::GaslandsHQ.Droid.Resource.Attribute.listPreferredItemPaddingRight;
+			global::Xamarin.Forms.Platform.Android.Resource.Attribute.listPreferredItemPaddingStart = global::GaslandsHQ.Droid.Resource.Attribute.listPreferredItemPaddingStart;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.logo = global::GaslandsHQ.Droid.Resource.Attribute.logo;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.logoDescription = global::GaslandsHQ.Droid.Resource.Attribute.logoDescription;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.materialButtonStyle = global::GaslandsHQ.Droid.Resource.Attribute.materialButtonStyle;
@@ -6268,6 +6458,7 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.ratingBarStyle = global::GaslandsHQ.Droid.Resource.Attribute.ratingBarStyle;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.ratingBarStyleIndicator = global::GaslandsHQ.Droid.Resource.Attribute.ratingBarStyleIndicator;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.ratingBarStyleSmall = global::GaslandsHQ.Droid.Resource.Attribute.ratingBarStyleSmall;
+			global::Xamarin.Forms.Platform.Android.Resource.Attribute.recyclerViewStyle = global::GaslandsHQ.Droid.Resource.Attribute.recyclerViewStyle;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.reverseLayout = global::GaslandsHQ.Droid.Resource.Attribute.reverseLayout;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.rippleColor = global::GaslandsHQ.Droid.Resource.Attribute.rippleColor;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.scrimAnimationDuration = global::GaslandsHQ.Droid.Resource.Attribute.scrimAnimationDuration;
@@ -6368,6 +6559,7 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.textColorSearchUrl = global::GaslandsHQ.Droid.Resource.Attribute.textColorSearchUrl;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.textEndPadding = global::GaslandsHQ.Droid.Resource.Attribute.textEndPadding;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.textInputStyle = global::GaslandsHQ.Droid.Resource.Attribute.textInputStyle;
+			global::Xamarin.Forms.Platform.Android.Resource.Attribute.textLocale = global::GaslandsHQ.Droid.Resource.Attribute.textLocale;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.textStartPadding = global::GaslandsHQ.Droid.Resource.Attribute.textStartPadding;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.theme = global::GaslandsHQ.Droid.Resource.Attribute.theme;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.thickness = global::GaslandsHQ.Droid.Resource.Attribute.thickness;
@@ -6592,6 +6784,9 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Dimension.abc_edit_text_inset_horizontal_material = global::GaslandsHQ.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material;
 			global::Xamarin.Forms.Platform.Android.Resource.Dimension.abc_edit_text_inset_top_material = global::GaslandsHQ.Droid.Resource.Dimension.abc_edit_text_inset_top_material;
 			global::Xamarin.Forms.Platform.Android.Resource.Dimension.abc_floating_window_z = global::GaslandsHQ.Droid.Resource.Dimension.abc_floating_window_z;
+			global::Xamarin.Forms.Platform.Android.Resource.Dimension.abc_list_item_height_large_material = global::GaslandsHQ.Droid.Resource.Dimension.abc_list_item_height_large_material;
+			global::Xamarin.Forms.Platform.Android.Resource.Dimension.abc_list_item_height_material = global::GaslandsHQ.Droid.Resource.Dimension.abc_list_item_height_material;
+			global::Xamarin.Forms.Platform.Android.Resource.Dimension.abc_list_item_height_small_material = global::GaslandsHQ.Droid.Resource.Dimension.abc_list_item_height_small_material;
 			global::Xamarin.Forms.Platform.Android.Resource.Dimension.abc_list_item_padding_horizontal_material = global::GaslandsHQ.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material;
 			global::Xamarin.Forms.Platform.Android.Resource.Dimension.abc_panel_menu_list_width = global::GaslandsHQ.Droid.Resource.Dimension.abc_panel_menu_list_width;
 			global::Xamarin.Forms.Platform.Android.Resource.Dimension.abc_progress_bar_height_material = global::GaslandsHQ.Droid.Resource.Dimension.abc_progress_bar_height_material;
@@ -6767,11 +6962,13 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Drawable.abc_action_bar_item_background_material = global::GaslandsHQ.Droid.Resource.Drawable.abc_action_bar_item_background_material;
 			global::Xamarin.Forms.Platform.Android.Resource.Drawable.abc_btn_borderless_material = global::GaslandsHQ.Droid.Resource.Drawable.abc_btn_borderless_material;
 			global::Xamarin.Forms.Platform.Android.Resource.Drawable.abc_btn_check_material = global::GaslandsHQ.Droid.Resource.Drawable.abc_btn_check_material;
+			global::Xamarin.Forms.Platform.Android.Resource.Drawable.abc_btn_check_material_anim = global::GaslandsHQ.Droid.Resource.Drawable.abc_btn_check_material_anim;
 			global::Xamarin.Forms.Platform.Android.Resource.Drawable.abc_btn_check_to_on_mtrl_000 = global::GaslandsHQ.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000;
 			global::Xamarin.Forms.Platform.Android.Resource.Drawable.abc_btn_check_to_on_mtrl_015 = global::GaslandsHQ.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015;
 			global::Xamarin.Forms.Platform.Android.Resource.Drawable.abc_btn_colored_material = global::GaslandsHQ.Droid.Resource.Drawable.abc_btn_colored_material;
 			global::Xamarin.Forms.Platform.Android.Resource.Drawable.abc_btn_default_mtrl_shape = global::GaslandsHQ.Droid.Resource.Drawable.abc_btn_default_mtrl_shape;
 			global::Xamarin.Forms.Platform.Android.Resource.Drawable.abc_btn_radio_material = global::GaslandsHQ.Droid.Resource.Drawable.abc_btn_radio_material;
+			global::Xamarin.Forms.Platform.Android.Resource.Drawable.abc_btn_radio_material_anim = global::GaslandsHQ.Droid.Resource.Drawable.abc_btn_radio_material_anim;
 			global::Xamarin.Forms.Platform.Android.Resource.Drawable.abc_btn_radio_to_on_mtrl_000 = global::GaslandsHQ.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000;
 			global::Xamarin.Forms.Platform.Android.Resource.Drawable.abc_btn_radio_to_on_mtrl_015 = global::GaslandsHQ.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015;
 			global::Xamarin.Forms.Platform.Android.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001 = global::GaslandsHQ.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001;
@@ -6849,6 +7046,14 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Drawable.abc_vector_test = global::GaslandsHQ.Droid.Resource.Drawable.abc_vector_test;
 			global::Xamarin.Forms.Platform.Android.Resource.Drawable.avd_hide_password = global::GaslandsHQ.Droid.Resource.Drawable.avd_hide_password;
 			global::Xamarin.Forms.Platform.Android.Resource.Drawable.avd_show_password = global::GaslandsHQ.Droid.Resource.Drawable.avd_show_password;
+			global::Xamarin.Forms.Platform.Android.Resource.Drawable.btn_checkbox_checked_mtrl = global::GaslandsHQ.Droid.Resource.Drawable.btn_checkbox_checked_mtrl;
+			global::Xamarin.Forms.Platform.Android.Resource.Drawable.btn_checkbox_checked_to_unchecked_mtrl_animation = global::GaslandsHQ.Droid.Resource.Drawable.btn_checkbox_checked_to_unchecked_mtrl_animation;
+			global::Xamarin.Forms.Platform.Android.Resource.Drawable.btn_checkbox_unchecked_mtrl = global::GaslandsHQ.Droid.Resource.Drawable.btn_checkbox_unchecked_mtrl;
+			global::Xamarin.Forms.Platform.Android.Resource.Drawable.btn_checkbox_unchecked_to_checked_mtrl_animation = global::GaslandsHQ.Droid.Resource.Drawable.btn_checkbox_unchecked_to_checked_mtrl_animation;
+			global::Xamarin.Forms.Platform.Android.Resource.Drawable.btn_radio_off_mtrl = global::GaslandsHQ.Droid.Resource.Drawable.btn_radio_off_mtrl;
+			global::Xamarin.Forms.Platform.Android.Resource.Drawable.btn_radio_off_to_on_mtrl_animation = global::GaslandsHQ.Droid.Resource.Drawable.btn_radio_off_to_on_mtrl_animation;
+			global::Xamarin.Forms.Platform.Android.Resource.Drawable.btn_radio_on_mtrl = global::GaslandsHQ.Droid.Resource.Drawable.btn_radio_on_mtrl;
+			global::Xamarin.Forms.Platform.Android.Resource.Drawable.btn_radio_on_to_off_mtrl_animation = global::GaslandsHQ.Droid.Resource.Drawable.btn_radio_on_to_off_mtrl_animation;
 			global::Xamarin.Forms.Platform.Android.Resource.Drawable.design_bottom_navigation_item_background = global::GaslandsHQ.Droid.Resource.Drawable.design_bottom_navigation_item_background;
 			global::Xamarin.Forms.Platform.Android.Resource.Drawable.design_fab_background = global::GaslandsHQ.Droid.Resource.Drawable.design_fab_background;
 			global::Xamarin.Forms.Platform.Android.Resource.Drawable.design_ic_visibility = global::GaslandsHQ.Droid.Resource.Drawable.design_ic_visibility;
@@ -6875,6 +7080,39 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Drawable.notify_panel_notification_icon_bg = global::GaslandsHQ.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
 			global::Xamarin.Forms.Platform.Android.Resource.Drawable.tooltip_frame_dark = global::GaslandsHQ.Droid.Resource.Drawable.tooltip_frame_dark;
 			global::Xamarin.Forms.Platform.Android.Resource.Drawable.tooltip_frame_light = global::GaslandsHQ.Droid.Resource.Drawable.tooltip_frame_light;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_action_clickable_span = global::GaslandsHQ.Droid.Resource.Id.accessibility_action_clickable_span;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_0 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_0;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_1 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_1;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_10 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_10;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_11 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_11;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_12 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_12;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_13 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_13;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_14 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_14;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_15 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_15;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_16 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_16;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_17 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_17;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_18 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_18;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_19 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_19;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_2 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_2;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_20 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_20;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_21 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_21;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_22 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_22;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_23 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_23;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_24 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_24;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_25 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_25;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_26 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_26;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_27 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_27;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_28 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_28;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_29 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_29;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_3 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_3;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_30 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_30;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_31 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_31;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_4 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_4;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_5 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_5;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_6 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_6;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_7 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_7;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_8 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_8;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.accessibility_custom_action_9 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_9;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.action0 = global::GaslandsHQ.Droid.Resource.Id.action0;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.actions = global::GaslandsHQ.Droid.Resource.Id.actions;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.action_bar = global::GaslandsHQ.Droid.Resource.Id.action_bar;
@@ -6913,6 +7151,7 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Id.center_horizontal = global::GaslandsHQ.Droid.Resource.Id.center_horizontal;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.center_vertical = global::GaslandsHQ.Droid.Resource.Id.center_vertical;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.checkbox = global::GaslandsHQ.Droid.Resource.Id.checkbox;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.@checked = global::GaslandsHQ.Droid.Resource.Id.@checked;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.chronometer = global::GaslandsHQ.Droid.Resource.Id.chronometer;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.clip_horizontal = global::GaslandsHQ.Droid.Resource.Id.clip_horizontal;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.clip_vertical = global::GaslandsHQ.Droid.Resource.Id.clip_vertical;
@@ -6931,6 +7170,7 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Id.design_menu_item_action_area_stub = global::GaslandsHQ.Droid.Resource.Id.design_menu_item_action_area_stub;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.design_menu_item_text = global::GaslandsHQ.Droid.Resource.Id.design_menu_item_text;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.design_navigation_view = global::GaslandsHQ.Droid.Resource.Id.design_navigation_view;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.dialog_button = global::GaslandsHQ.Droid.Resource.Id.dialog_button;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.disableHome = global::GaslandsHQ.Droid.Resource.Id.disableHome;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.edit_query = global::GaslandsHQ.Droid.Resource.Id.edit_query;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.end = global::GaslandsHQ.Droid.Resource.Id.end;
@@ -6950,6 +7190,7 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Id.forever = global::GaslandsHQ.Droid.Resource.Id.forever;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.FUNCTION = global::GaslandsHQ.Droid.Resource.Id.FUNCTION;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.ghost_view = global::GaslandsHQ.Droid.Resource.Id.ghost_view;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.ghost_view_holder = global::GaslandsHQ.Droid.Resource.Id.ghost_view_holder;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.group_divider = global::GaslandsHQ.Droid.Resource.Id.group_divider;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.home = global::GaslandsHQ.Droid.Resource.Id.home;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.homeAsUp = global::GaslandsHQ.Droid.Resource.Id.homeAsUp;
@@ -6987,6 +7228,8 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Id.notification_background = global::GaslandsHQ.Droid.Resource.Id.notification_background;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.notification_main_column = global::GaslandsHQ.Droid.Resource.Id.notification_main_column;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.notification_main_column_container = global::GaslandsHQ.Droid.Resource.Id.notification_main_column_container;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.off = global::GaslandsHQ.Droid.Resource.Id.off;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.on = global::GaslandsHQ.Droid.Resource.Id.on;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.outline = global::GaslandsHQ.Droid.Resource.Id.outline;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.parallax = global::GaslandsHQ.Droid.Resource.Id.parallax;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.parentPanel = global::GaslandsHQ.Droid.Resource.Id.parentPanel;
@@ -6999,6 +7242,7 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Id.right_icon = global::GaslandsHQ.Droid.Resource.Id.right_icon;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.right_side = global::GaslandsHQ.Droid.Resource.Id.right_side;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.save_non_transition_alpha = global::GaslandsHQ.Droid.Resource.Id.save_non_transition_alpha;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.save_overlay_view = global::GaslandsHQ.Droid.Resource.Id.save_overlay_view;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.screen = global::GaslandsHQ.Droid.Resource.Id.screen;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.scroll = global::GaslandsHQ.Droid.Resource.Id.scroll;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.scrollable = global::GaslandsHQ.Droid.Resource.Id.scrollable;
@@ -7024,6 +7268,7 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Id.showCustom = global::GaslandsHQ.Droid.Resource.Id.showCustom;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.showHome = global::GaslandsHQ.Droid.Resource.Id.showHome;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.showTitle = global::GaslandsHQ.Droid.Resource.Id.showTitle;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.sliding_tabs = global::GaslandsHQ.Droid.Resource.Id.sliding_tabs;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.smallLabel = global::GaslandsHQ.Droid.Resource.Id.smallLabel;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.snackbar_action = global::GaslandsHQ.Droid.Resource.Id.snackbar_action;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.snackbar_text = global::GaslandsHQ.Droid.Resource.Id.snackbar_text;
@@ -7041,6 +7286,11 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Id.submit_area = global::GaslandsHQ.Droid.Resource.Id.submit_area;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.SYM = global::GaslandsHQ.Droid.Resource.Id.SYM;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.tabMode = global::GaslandsHQ.Droid.Resource.Id.tabMode;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.tag_accessibility_actions = global::GaslandsHQ.Droid.Resource.Id.tag_accessibility_actions;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.tag_accessibility_clickable_spans = global::GaslandsHQ.Droid.Resource.Id.tag_accessibility_clickable_spans;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.tag_accessibility_heading = global::GaslandsHQ.Droid.Resource.Id.tag_accessibility_heading;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.tag_accessibility_pane_title = global::GaslandsHQ.Droid.Resource.Id.tag_accessibility_pane_title;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.tag_screen_reader_focusable = global::GaslandsHQ.Droid.Resource.Id.tag_screen_reader_focusable;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.tag_transition_group = global::GaslandsHQ.Droid.Resource.Id.tag_transition_group;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.tag_unhandled_key_event_manager = global::GaslandsHQ.Droid.Resource.Id.tag_unhandled_key_event_manager;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.tag_unhandled_key_listeners = global::GaslandsHQ.Droid.Resource.Id.tag_unhandled_key_listeners;
@@ -7057,6 +7307,7 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Id.title = global::GaslandsHQ.Droid.Resource.Id.title;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.titleDividerNoCustom = global::GaslandsHQ.Droid.Resource.Id.titleDividerNoCustom;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.title_template = global::GaslandsHQ.Droid.Resource.Id.title_template;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.toolbar = global::GaslandsHQ.Droid.Resource.Id.toolbar;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.top = global::GaslandsHQ.Droid.Resource.Id.top;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.topPanel = global::GaslandsHQ.Droid.Resource.Id.topPanel;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.touch_outside = global::GaslandsHQ.Droid.Resource.Id.touch_outside;
@@ -7065,6 +7316,7 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Id.transition_position = global::GaslandsHQ.Droid.Resource.Id.transition_position;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.transition_scene_layoutid_cache = global::GaslandsHQ.Droid.Resource.Id.transition_scene_layoutid_cache;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.transition_transform = global::GaslandsHQ.Droid.Resource.Id.transition_transform;
+			global::Xamarin.Forms.Platform.Android.Resource.Id.@unchecked = global::GaslandsHQ.Droid.Resource.Id.@unchecked;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.uniform = global::GaslandsHQ.Droid.Resource.Id.uniform;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.unlabeled = global::GaslandsHQ.Droid.Resource.Id.unlabeled;
 			global::Xamarin.Forms.Platform.Android.Resource.Id.up = global::GaslandsHQ.Droid.Resource.Id.up;
@@ -7088,6 +7340,13 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Integer.mtrl_tab_indicator_anim_duration_ms = global::GaslandsHQ.Droid.Resource.Integer.mtrl_tab_indicator_anim_duration_ms;
 			global::Xamarin.Forms.Platform.Android.Resource.Integer.show_password_duration = global::GaslandsHQ.Droid.Resource.Integer.show_password_duration;
 			global::Xamarin.Forms.Platform.Android.Resource.Integer.status_bar_notification_info_maxnum = global::GaslandsHQ.Droid.Resource.Integer.status_bar_notification_info_maxnum;
+			global::Xamarin.Forms.Platform.Android.Resource.Interpolator.btn_checkbox_checked_mtrl_animation_interpolator_0 = global::GaslandsHQ.Droid.Resource.Interpolator.btn_checkbox_checked_mtrl_animation_interpolator_0;
+			global::Xamarin.Forms.Platform.Android.Resource.Interpolator.btn_checkbox_checked_mtrl_animation_interpolator_1 = global::GaslandsHQ.Droid.Resource.Interpolator.btn_checkbox_checked_mtrl_animation_interpolator_1;
+			global::Xamarin.Forms.Platform.Android.Resource.Interpolator.btn_checkbox_unchecked_mtrl_animation_interpolator_0 = global::GaslandsHQ.Droid.Resource.Interpolator.btn_checkbox_unchecked_mtrl_animation_interpolator_0;
+			global::Xamarin.Forms.Platform.Android.Resource.Interpolator.btn_checkbox_unchecked_mtrl_animation_interpolator_1 = global::GaslandsHQ.Droid.Resource.Interpolator.btn_checkbox_unchecked_mtrl_animation_interpolator_1;
+			global::Xamarin.Forms.Platform.Android.Resource.Interpolator.btn_radio_to_off_mtrl_animation_interpolator_0 = global::GaslandsHQ.Droid.Resource.Interpolator.btn_radio_to_off_mtrl_animation_interpolator_0;
+			global::Xamarin.Forms.Platform.Android.Resource.Interpolator.btn_radio_to_on_mtrl_animation_interpolator_0 = global::GaslandsHQ.Droid.Resource.Interpolator.btn_radio_to_on_mtrl_animation_interpolator_0;
+			global::Xamarin.Forms.Platform.Android.Resource.Interpolator.fast_out_slow_in = global::GaslandsHQ.Droid.Resource.Interpolator.fast_out_slow_in;
 			global::Xamarin.Forms.Platform.Android.Resource.Interpolator.mtrl_fast_out_linear_in = global::GaslandsHQ.Droid.Resource.Interpolator.mtrl_fast_out_linear_in;
 			global::Xamarin.Forms.Platform.Android.Resource.Interpolator.mtrl_fast_out_slow_in = global::GaslandsHQ.Droid.Resource.Interpolator.mtrl_fast_out_slow_in;
 			global::Xamarin.Forms.Platform.Android.Resource.Interpolator.mtrl_linear = global::GaslandsHQ.Droid.Resource.Interpolator.mtrl_linear;
@@ -7121,6 +7380,7 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Layout.abc_select_dialog_material = global::GaslandsHQ.Droid.Resource.Layout.abc_select_dialog_material;
 			global::Xamarin.Forms.Platform.Android.Resource.Layout.abc_tooltip = global::GaslandsHQ.Droid.Resource.Layout.abc_tooltip;
 			global::Xamarin.Forms.Platform.Android.Resource.Layout.BottomTabLayout = global::GaslandsHQ.Droid.Resource.Layout.BottomTabLayout;
+			global::Xamarin.Forms.Platform.Android.Resource.Layout.custom_dialog = global::GaslandsHQ.Droid.Resource.Layout.custom_dialog;
 			global::Xamarin.Forms.Platform.Android.Resource.Layout.design_bottom_navigation_item = global::GaslandsHQ.Droid.Resource.Layout.design_bottom_navigation_item;
 			global::Xamarin.Forms.Platform.Android.Resource.Layout.design_bottom_sheet_dialog = global::GaslandsHQ.Droid.Resource.Layout.design_bottom_sheet_dialog;
 			global::Xamarin.Forms.Platform.Android.Resource.Layout.design_layout_snackbar = global::GaslandsHQ.Droid.Resource.Layout.design_layout_snackbar;
@@ -7135,6 +7395,8 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Layout.design_navigation_menu = global::GaslandsHQ.Droid.Resource.Layout.design_navigation_menu;
 			global::Xamarin.Forms.Platform.Android.Resource.Layout.design_navigation_menu_item = global::GaslandsHQ.Droid.Resource.Layout.design_navigation_menu_item;
 			global::Xamarin.Forms.Platform.Android.Resource.Layout.design_text_input_password_icon = global::GaslandsHQ.Droid.Resource.Layout.design_text_input_password_icon;
+			global::Xamarin.Forms.Platform.Android.Resource.Layout.FallbackTabbarDoNotUse = global::GaslandsHQ.Droid.Resource.Layout.FallbackTabbarDoNotUse;
+			global::Xamarin.Forms.Platform.Android.Resource.Layout.FallbackToolbarDoNotUse = global::GaslandsHQ.Droid.Resource.Layout.FallbackToolbarDoNotUse;
 			global::Xamarin.Forms.Platform.Android.Resource.Layout.FlyoutContent = global::GaslandsHQ.Droid.Resource.Layout.FlyoutContent;
 			global::Xamarin.Forms.Platform.Android.Resource.Layout.mtrl_layout_snackbar = global::GaslandsHQ.Droid.Resource.Layout.mtrl_layout_snackbar;
 			global::Xamarin.Forms.Platform.Android.Resource.Layout.mtrl_layout_snackbar_include = global::GaslandsHQ.Droid.Resource.Layout.mtrl_layout_snackbar_include;
@@ -7159,6 +7421,8 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Layout.select_dialog_singlechoice_material = global::GaslandsHQ.Droid.Resource.Layout.select_dialog_singlechoice_material;
 			global::Xamarin.Forms.Platform.Android.Resource.Layout.ShellContent = global::GaslandsHQ.Droid.Resource.Layout.ShellContent;
 			global::Xamarin.Forms.Platform.Android.Resource.Layout.support_simple_spinner_dropdown_item = global::GaslandsHQ.Droid.Resource.Layout.support_simple_spinner_dropdown_item;
+			global::Xamarin.Forms.Platform.Android.Resource.Layout.Tabbar = global::GaslandsHQ.Droid.Resource.Layout.Tabbar;
+			global::Xamarin.Forms.Platform.Android.Resource.Layout.Toolbar = global::GaslandsHQ.Droid.Resource.Layout.Toolbar;
 			global::Xamarin.Forms.Platform.Android.Resource.String.abc_action_bar_home_description = global::GaslandsHQ.Droid.Resource.String.abc_action_bar_home_description;
 			global::Xamarin.Forms.Platform.Android.Resource.String.abc_action_bar_up_description = global::GaslandsHQ.Droid.Resource.String.abc_action_bar_up_description;
 			global::Xamarin.Forms.Platform.Android.Resource.String.abc_action_menu_overflow_description = global::GaslandsHQ.Droid.Resource.String.abc_action_menu_overflow_description;
@@ -7390,6 +7654,7 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete = global::GaslandsHQ.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.Base_Widget_AppCompat_Spinner = global::GaslandsHQ.Droid.Resource.Style.Base_Widget_AppCompat_Spinner;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined = global::GaslandsHQ.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined;
+			global::Xamarin.Forms.Platform.Android.Resource.Style.Base_Widget_AppCompat_TextView = global::GaslandsHQ.Droid.Resource.Style.Base_Widget_AppCompat_TextView;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem = global::GaslandsHQ.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.Base_Widget_AppCompat_Toolbar = global::GaslandsHQ.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::GaslandsHQ.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
@@ -7523,6 +7788,8 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::GaslandsHQ.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.ThemeOverlay_AppCompat_Dark = global::GaslandsHQ.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar = global::GaslandsHQ.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::Xamarin.Forms.Platform.Android.Resource.Style.ThemeOverlay_AppCompat_DayNight = global::GaslandsHQ.Droid.Resource.Style.ThemeOverlay_AppCompat_DayNight;
+			global::Xamarin.Forms.Platform.Android.Resource.Style.ThemeOverlay_AppCompat_DayNight_ActionBar = global::GaslandsHQ.Droid.Resource.Style.ThemeOverlay_AppCompat_DayNight_ActionBar;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.ThemeOverlay_AppCompat_Dialog = global::GaslandsHQ.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert = global::GaslandsHQ.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.ThemeOverlay_AppCompat_Light = global::GaslandsHQ.Droid.Resource.Style.ThemeOverlay_AppCompat_Light;
@@ -7655,6 +7922,7 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Style.Widget_AppCompat_Spinner_DropDown = global::GaslandsHQ.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar = global::GaslandsHQ.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.Widget_AppCompat_Spinner_Underlined = global::GaslandsHQ.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined;
+			global::Xamarin.Forms.Platform.Android.Resource.Style.Widget_AppCompat_TextView = global::GaslandsHQ.Droid.Resource.Style.Widget_AppCompat_TextView;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.Widget_AppCompat_TextView_SpinnerItem = global::GaslandsHQ.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.Widget_AppCompat_Toolbar = global::GaslandsHQ.Droid.Resource.Style.Widget_AppCompat_Toolbar;
 			global::Xamarin.Forms.Platform.Android.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::GaslandsHQ.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
@@ -7816,11 +8084,21 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTextView_autoSizePresetSizes = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTextView_autoSizePresetSizes;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTextView_autoSizeTextType = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTextView_autoSizeTextType;
+			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTextView_drawableBottomCompat = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTextView_drawableBottomCompat;
+			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTextView_drawableEndCompat = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTextView_drawableEndCompat;
+			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTextView_drawableLeftCompat = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTextView_drawableLeftCompat;
+			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTextView_drawableRightCompat = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTextView_drawableRightCompat;
+			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTextView_drawableStartCompat = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTextView_drawableStartCompat;
+			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTextView_drawableTint = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTextView_drawableTint;
+			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTextView_drawableTintMode = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTextView_drawableTintMode;
+			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTextView_drawableTopCompat = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTextView_drawableTopCompat;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTextView_firstBaselineToTopHeight = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTextView_firstBaselineToTopHeight;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTextView_fontFamily = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTextView_fontFamily;
+			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTextView_fontVariationSettings = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTextView_fontVariationSettings;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTextView_lastBaselineToBottomHeight = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTextView_lastBaselineToBottomHeight;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTextView_lineHeight = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTextView_lineHeight;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTextView_textAllCaps = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTextView_textAllCaps;
+			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTextView_textLocale = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTextView_textLocale;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTheme = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTheme_actionBarDivider = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTheme_actionBarItemBackground = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground;
@@ -7894,14 +8172,18 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTheme_homeAsUpIndicator = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTheme_imageButtonStyle = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator;
+			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTheme_listChoiceIndicatorMultipleAnimated = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_listChoiceIndicatorMultipleAnimated;
+			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTheme_listChoiceIndicatorSingleAnimated = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_listChoiceIndicatorSingleAnimated;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTheme_listDividerAlertDialog = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTheme_listMenuViewStyle = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_listMenuViewStyle;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTheme_listPopupWindowStyle = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTheme_listPreferredItemHeight = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall;
+			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingEnd = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingEnd;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight;
+			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingStart = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingStart;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTheme_panelBackground = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_panelBackground;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTheme_panelMenuListTheme = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.AppCompatTheme_panelMenuListWidth = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth;
@@ -8050,6 +8332,7 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.ColorStateListItem_android_color = global::GaslandsHQ.Droid.Resource.Styleable.ColorStateListItem_android_color;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.CompoundButton = global::GaslandsHQ.Droid.Resource.Styleable.CompoundButton;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.CompoundButton_android_button = global::GaslandsHQ.Droid.Resource.Styleable.CompoundButton_android_button;
+			global::Xamarin.Forms.Platform.Android.Resource.Styleable.CompoundButton_buttonCompat = global::GaslandsHQ.Droid.Resource.Styleable.CompoundButton_buttonCompat;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.CompoundButton_buttonTint = global::GaslandsHQ.Droid.Resource.Styleable.CompoundButton_buttonTint;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.CompoundButton_buttonTintMode = global::GaslandsHQ.Droid.Resource.Styleable.CompoundButton_buttonTintMode;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.CoordinatorLayout = global::GaslandsHQ.Droid.Resource.Styleable.CoordinatorLayout;
@@ -8269,6 +8552,7 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.RecycleListView_paddingBottomNoButtons = global::GaslandsHQ.Droid.Resource.Styleable.RecycleListView_paddingBottomNoButtons;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.RecycleListView_paddingTopNoTitle = global::GaslandsHQ.Droid.Resource.Styleable.RecycleListView_paddingTopNoTitle;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.RecyclerView = global::GaslandsHQ.Droid.Resource.Styleable.RecyclerView;
+			global::Xamarin.Forms.Platform.Android.Resource.Styleable.RecyclerView_android_clipToPadding = global::GaslandsHQ.Droid.Resource.Styleable.RecyclerView_android_clipToPadding;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.RecyclerView_android_descendantFocusability = global::GaslandsHQ.Droid.Resource.Styleable.RecyclerView_android_descendantFocusability;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.RecyclerView_android_orientation = global::GaslandsHQ.Droid.Resource.Styleable.RecyclerView_android_orientation;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.RecyclerView_fastScrollEnabled = global::GaslandsHQ.Droid.Resource.Styleable.RecyclerView_fastScrollEnabled;
@@ -8378,11 +8662,14 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.TextAppearance_android_textColor = global::GaslandsHQ.Droid.Resource.Styleable.TextAppearance_android_textColor;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.TextAppearance_android_textColorHint = global::GaslandsHQ.Droid.Resource.Styleable.TextAppearance_android_textColorHint;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.TextAppearance_android_textColorLink = global::GaslandsHQ.Droid.Resource.Styleable.TextAppearance_android_textColorLink;
+			global::Xamarin.Forms.Platform.Android.Resource.Styleable.TextAppearance_android_textFontWeight = global::GaslandsHQ.Droid.Resource.Styleable.TextAppearance_android_textFontWeight;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.TextAppearance_android_textSize = global::GaslandsHQ.Droid.Resource.Styleable.TextAppearance_android_textSize;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.TextAppearance_android_textStyle = global::GaslandsHQ.Droid.Resource.Styleable.TextAppearance_android_textStyle;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.TextAppearance_android_typeface = global::GaslandsHQ.Droid.Resource.Styleable.TextAppearance_android_typeface;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.TextAppearance_fontFamily = global::GaslandsHQ.Droid.Resource.Styleable.TextAppearance_fontFamily;
+			global::Xamarin.Forms.Platform.Android.Resource.Styleable.TextAppearance_fontVariationSettings = global::GaslandsHQ.Droid.Resource.Styleable.TextAppearance_fontVariationSettings;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.TextAppearance_textAllCaps = global::GaslandsHQ.Droid.Resource.Styleable.TextAppearance_textAllCaps;
+			global::Xamarin.Forms.Platform.Android.Resource.Styleable.TextAppearance_textLocale = global::GaslandsHQ.Droid.Resource.Styleable.TextAppearance_textLocale;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.TextInputLayout = global::GaslandsHQ.Droid.Resource.Styleable.TextInputLayout;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.TextInputLayout_android_hint = global::GaslandsHQ.Droid.Resource.Styleable.TextInputLayout_android_hint;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.TextInputLayout_android_textColorHint = global::GaslandsHQ.Droid.Resource.Styleable.TextInputLayout_android_textColorHint;
@@ -8431,6 +8718,7 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.Toolbar_logo = global::GaslandsHQ.Droid.Resource.Styleable.Toolbar_logo;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.Toolbar_logoDescription = global::GaslandsHQ.Droid.Resource.Styleable.Toolbar_logoDescription;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.Toolbar_maxButtonHeight = global::GaslandsHQ.Droid.Resource.Styleable.Toolbar_maxButtonHeight;
+			global::Xamarin.Forms.Platform.Android.Resource.Styleable.Toolbar_menu = global::GaslandsHQ.Droid.Resource.Styleable.Toolbar_menu;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.Toolbar_navigationContentDescription = global::GaslandsHQ.Droid.Resource.Styleable.Toolbar_navigationContentDescription;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.Toolbar_navigationIcon = global::GaslandsHQ.Droid.Resource.Styleable.Toolbar_navigationIcon;
 			global::Xamarin.Forms.Platform.Android.Resource.Styleable.Toolbar_popupTheme = global::GaslandsHQ.Droid.Resource.Styleable.Toolbar_popupTheme;
@@ -8472,6 +8760,18 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Resource.Animation.abc_slide_out_top = global::GaslandsHQ.Droid.Resource.Animation.abc_slide_out_top;
 			global::Xamarin.Forms.Platform.Resource.Animation.abc_tooltip_enter = global::GaslandsHQ.Droid.Resource.Animation.abc_tooltip_enter;
 			global::Xamarin.Forms.Platform.Resource.Animation.abc_tooltip_exit = global::GaslandsHQ.Droid.Resource.Animation.abc_tooltip_exit;
+			global::Xamarin.Forms.Platform.Resource.Animation.btn_checkbox_to_checked_box_inner_merged_animation = global::GaslandsHQ.Droid.Resource.Animation.btn_checkbox_to_checked_box_inner_merged_animation;
+			global::Xamarin.Forms.Platform.Resource.Animation.btn_checkbox_to_checked_box_outer_merged_animation = global::GaslandsHQ.Droid.Resource.Animation.btn_checkbox_to_checked_box_outer_merged_animation;
+			global::Xamarin.Forms.Platform.Resource.Animation.btn_checkbox_to_checked_icon_null_animation = global::GaslandsHQ.Droid.Resource.Animation.btn_checkbox_to_checked_icon_null_animation;
+			global::Xamarin.Forms.Platform.Resource.Animation.btn_checkbox_to_unchecked_box_inner_merged_animation = global::GaslandsHQ.Droid.Resource.Animation.btn_checkbox_to_unchecked_box_inner_merged_animation;
+			global::Xamarin.Forms.Platform.Resource.Animation.btn_checkbox_to_unchecked_check_path_merged_animation = global::GaslandsHQ.Droid.Resource.Animation.btn_checkbox_to_unchecked_check_path_merged_animation;
+			global::Xamarin.Forms.Platform.Resource.Animation.btn_checkbox_to_unchecked_icon_null_animation = global::GaslandsHQ.Droid.Resource.Animation.btn_checkbox_to_unchecked_icon_null_animation;
+			global::Xamarin.Forms.Platform.Resource.Animation.btn_radio_to_off_mtrl_dot_group_animation = global::GaslandsHQ.Droid.Resource.Animation.btn_radio_to_off_mtrl_dot_group_animation;
+			global::Xamarin.Forms.Platform.Resource.Animation.btn_radio_to_off_mtrl_ring_outer_animation = global::GaslandsHQ.Droid.Resource.Animation.btn_radio_to_off_mtrl_ring_outer_animation;
+			global::Xamarin.Forms.Platform.Resource.Animation.btn_radio_to_off_mtrl_ring_outer_path_animation = global::GaslandsHQ.Droid.Resource.Animation.btn_radio_to_off_mtrl_ring_outer_path_animation;
+			global::Xamarin.Forms.Platform.Resource.Animation.btn_radio_to_on_mtrl_dot_group_animation = global::GaslandsHQ.Droid.Resource.Animation.btn_radio_to_on_mtrl_dot_group_animation;
+			global::Xamarin.Forms.Platform.Resource.Animation.btn_radio_to_on_mtrl_ring_outer_animation = global::GaslandsHQ.Droid.Resource.Animation.btn_radio_to_on_mtrl_ring_outer_animation;
+			global::Xamarin.Forms.Platform.Resource.Animation.btn_radio_to_on_mtrl_ring_outer_path_animation = global::GaslandsHQ.Droid.Resource.Animation.btn_radio_to_on_mtrl_ring_outer_path_animation;
 			global::Xamarin.Forms.Platform.Resource.Animation.design_bottom_sheet_slide_in = global::GaslandsHQ.Droid.Resource.Animation.design_bottom_sheet_slide_in;
 			global::Xamarin.Forms.Platform.Resource.Animation.design_bottom_sheet_slide_out = global::GaslandsHQ.Droid.Resource.Animation.design_bottom_sheet_slide_out;
 			global::Xamarin.Forms.Platform.Resource.Animation.design_snackbar_in = global::GaslandsHQ.Droid.Resource.Animation.design_snackbar_in;
@@ -8571,6 +8871,7 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Resource.Attribute.buttonBarNeutralButtonStyle = global::GaslandsHQ.Droid.Resource.Attribute.buttonBarNeutralButtonStyle;
 			global::Xamarin.Forms.Platform.Resource.Attribute.buttonBarPositiveButtonStyle = global::GaslandsHQ.Droid.Resource.Attribute.buttonBarPositiveButtonStyle;
 			global::Xamarin.Forms.Platform.Resource.Attribute.buttonBarStyle = global::GaslandsHQ.Droid.Resource.Attribute.buttonBarStyle;
+			global::Xamarin.Forms.Platform.Resource.Attribute.buttonCompat = global::GaslandsHQ.Droid.Resource.Attribute.buttonCompat;
 			global::Xamarin.Forms.Platform.Resource.Attribute.buttonGravity = global::GaslandsHQ.Droid.Resource.Attribute.buttonGravity;
 			global::Xamarin.Forms.Platform.Resource.Attribute.buttonIconDimen = global::GaslandsHQ.Droid.Resource.Attribute.buttonIconDimen;
 			global::Xamarin.Forms.Platform.Resource.Attribute.buttonPanelSideLayout = global::GaslandsHQ.Droid.Resource.Attribute.buttonPanelSideLayout;
@@ -8665,7 +8966,15 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Resource.Attribute.dividerHorizontal = global::GaslandsHQ.Droid.Resource.Attribute.dividerHorizontal;
 			global::Xamarin.Forms.Platform.Resource.Attribute.dividerPadding = global::GaslandsHQ.Droid.Resource.Attribute.dividerPadding;
 			global::Xamarin.Forms.Platform.Resource.Attribute.dividerVertical = global::GaslandsHQ.Droid.Resource.Attribute.dividerVertical;
+			global::Xamarin.Forms.Platform.Resource.Attribute.drawableBottomCompat = global::GaslandsHQ.Droid.Resource.Attribute.drawableBottomCompat;
+			global::Xamarin.Forms.Platform.Resource.Attribute.drawableEndCompat = global::GaslandsHQ.Droid.Resource.Attribute.drawableEndCompat;
+			global::Xamarin.Forms.Platform.Resource.Attribute.drawableLeftCompat = global::GaslandsHQ.Droid.Resource.Attribute.drawableLeftCompat;
+			global::Xamarin.Forms.Platform.Resource.Attribute.drawableRightCompat = global::GaslandsHQ.Droid.Resource.Attribute.drawableRightCompat;
 			global::Xamarin.Forms.Platform.Resource.Attribute.drawableSize = global::GaslandsHQ.Droid.Resource.Attribute.drawableSize;
+			global::Xamarin.Forms.Platform.Resource.Attribute.drawableStartCompat = global::GaslandsHQ.Droid.Resource.Attribute.drawableStartCompat;
+			global::Xamarin.Forms.Platform.Resource.Attribute.drawableTint = global::GaslandsHQ.Droid.Resource.Attribute.drawableTint;
+			global::Xamarin.Forms.Platform.Resource.Attribute.drawableTintMode = global::GaslandsHQ.Droid.Resource.Attribute.drawableTintMode;
+			global::Xamarin.Forms.Platform.Resource.Attribute.drawableTopCompat = global::GaslandsHQ.Droid.Resource.Attribute.drawableTopCompat;
 			global::Xamarin.Forms.Platform.Resource.Attribute.drawerArrowStyle = global::GaslandsHQ.Droid.Resource.Attribute.drawerArrowStyle;
 			global::Xamarin.Forms.Platform.Resource.Attribute.dropdownListPreferredItemHeight = global::GaslandsHQ.Droid.Resource.Attribute.dropdownListPreferredItemHeight;
 			global::Xamarin.Forms.Platform.Resource.Attribute.dropDownListViewStyle = global::GaslandsHQ.Droid.Resource.Attribute.dropDownListViewStyle;
@@ -8772,6 +9081,8 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Resource.Attribute.lineHeight = global::GaslandsHQ.Droid.Resource.Attribute.lineHeight;
 			global::Xamarin.Forms.Platform.Resource.Attribute.lineSpacing = global::GaslandsHQ.Droid.Resource.Attribute.lineSpacing;
 			global::Xamarin.Forms.Platform.Resource.Attribute.listChoiceBackgroundIndicator = global::GaslandsHQ.Droid.Resource.Attribute.listChoiceBackgroundIndicator;
+			global::Xamarin.Forms.Platform.Resource.Attribute.listChoiceIndicatorMultipleAnimated = global::GaslandsHQ.Droid.Resource.Attribute.listChoiceIndicatorMultipleAnimated;
+			global::Xamarin.Forms.Platform.Resource.Attribute.listChoiceIndicatorSingleAnimated = global::GaslandsHQ.Droid.Resource.Attribute.listChoiceIndicatorSingleAnimated;
 			global::Xamarin.Forms.Platform.Resource.Attribute.listDividerAlertDialog = global::GaslandsHQ.Droid.Resource.Attribute.listDividerAlertDialog;
 			global::Xamarin.Forms.Platform.Resource.Attribute.listItemLayout = global::GaslandsHQ.Droid.Resource.Attribute.listItemLayout;
 			global::Xamarin.Forms.Platform.Resource.Attribute.listLayout = global::GaslandsHQ.Droid.Resource.Attribute.listLayout;
@@ -8780,8 +9091,10 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Resource.Attribute.listPreferredItemHeight = global::GaslandsHQ.Droid.Resource.Attribute.listPreferredItemHeight;
 			global::Xamarin.Forms.Platform.Resource.Attribute.listPreferredItemHeightLarge = global::GaslandsHQ.Droid.Resource.Attribute.listPreferredItemHeightLarge;
 			global::Xamarin.Forms.Platform.Resource.Attribute.listPreferredItemHeightSmall = global::GaslandsHQ.Droid.Resource.Attribute.listPreferredItemHeightSmall;
+			global::Xamarin.Forms.Platform.Resource.Attribute.listPreferredItemPaddingEnd = global::GaslandsHQ.Droid.Resource.Attribute.listPreferredItemPaddingEnd;
 			global::Xamarin.Forms.Platform.Resource.Attribute.listPreferredItemPaddingLeft = global::GaslandsHQ.Droid.Resource.Attribute.listPreferredItemPaddingLeft;
 			global::Xamarin.Forms.Platform.Resource.Attribute.listPreferredItemPaddingRight = global::GaslandsHQ.Droid.Resource.Attribute.listPreferredItemPaddingRight;
+			global::Xamarin.Forms.Platform.Resource.Attribute.listPreferredItemPaddingStart = global::GaslandsHQ.Droid.Resource.Attribute.listPreferredItemPaddingStart;
 			global::Xamarin.Forms.Platform.Resource.Attribute.logo = global::GaslandsHQ.Droid.Resource.Attribute.logo;
 			global::Xamarin.Forms.Platform.Resource.Attribute.logoDescription = global::GaslandsHQ.Droid.Resource.Attribute.logoDescription;
 			global::Xamarin.Forms.Platform.Resource.Attribute.materialButtonStyle = global::GaslandsHQ.Droid.Resource.Attribute.materialButtonStyle;
@@ -8823,6 +9136,7 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Resource.Attribute.ratingBarStyle = global::GaslandsHQ.Droid.Resource.Attribute.ratingBarStyle;
 			global::Xamarin.Forms.Platform.Resource.Attribute.ratingBarStyleIndicator = global::GaslandsHQ.Droid.Resource.Attribute.ratingBarStyleIndicator;
 			global::Xamarin.Forms.Platform.Resource.Attribute.ratingBarStyleSmall = global::GaslandsHQ.Droid.Resource.Attribute.ratingBarStyleSmall;
+			global::Xamarin.Forms.Platform.Resource.Attribute.recyclerViewStyle = global::GaslandsHQ.Droid.Resource.Attribute.recyclerViewStyle;
 			global::Xamarin.Forms.Platform.Resource.Attribute.reverseLayout = global::GaslandsHQ.Droid.Resource.Attribute.reverseLayout;
 			global::Xamarin.Forms.Platform.Resource.Attribute.rippleColor = global::GaslandsHQ.Droid.Resource.Attribute.rippleColor;
 			global::Xamarin.Forms.Platform.Resource.Attribute.scrimAnimationDuration = global::GaslandsHQ.Droid.Resource.Attribute.scrimAnimationDuration;
@@ -8923,6 +9237,7 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Resource.Attribute.textColorSearchUrl = global::GaslandsHQ.Droid.Resource.Attribute.textColorSearchUrl;
 			global::Xamarin.Forms.Platform.Resource.Attribute.textEndPadding = global::GaslandsHQ.Droid.Resource.Attribute.textEndPadding;
 			global::Xamarin.Forms.Platform.Resource.Attribute.textInputStyle = global::GaslandsHQ.Droid.Resource.Attribute.textInputStyle;
+			global::Xamarin.Forms.Platform.Resource.Attribute.textLocale = global::GaslandsHQ.Droid.Resource.Attribute.textLocale;
 			global::Xamarin.Forms.Platform.Resource.Attribute.textStartPadding = global::GaslandsHQ.Droid.Resource.Attribute.textStartPadding;
 			global::Xamarin.Forms.Platform.Resource.Attribute.theme = global::GaslandsHQ.Droid.Resource.Attribute.theme;
 			global::Xamarin.Forms.Platform.Resource.Attribute.thickness = global::GaslandsHQ.Droid.Resource.Attribute.thickness;
@@ -9147,6 +9462,9 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Resource.Dimension.abc_edit_text_inset_horizontal_material = global::GaslandsHQ.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material;
 			global::Xamarin.Forms.Platform.Resource.Dimension.abc_edit_text_inset_top_material = global::GaslandsHQ.Droid.Resource.Dimension.abc_edit_text_inset_top_material;
 			global::Xamarin.Forms.Platform.Resource.Dimension.abc_floating_window_z = global::GaslandsHQ.Droid.Resource.Dimension.abc_floating_window_z;
+			global::Xamarin.Forms.Platform.Resource.Dimension.abc_list_item_height_large_material = global::GaslandsHQ.Droid.Resource.Dimension.abc_list_item_height_large_material;
+			global::Xamarin.Forms.Platform.Resource.Dimension.abc_list_item_height_material = global::GaslandsHQ.Droid.Resource.Dimension.abc_list_item_height_material;
+			global::Xamarin.Forms.Platform.Resource.Dimension.abc_list_item_height_small_material = global::GaslandsHQ.Droid.Resource.Dimension.abc_list_item_height_small_material;
 			global::Xamarin.Forms.Platform.Resource.Dimension.abc_list_item_padding_horizontal_material = global::GaslandsHQ.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material;
 			global::Xamarin.Forms.Platform.Resource.Dimension.abc_panel_menu_list_width = global::GaslandsHQ.Droid.Resource.Dimension.abc_panel_menu_list_width;
 			global::Xamarin.Forms.Platform.Resource.Dimension.abc_progress_bar_height_material = global::GaslandsHQ.Droid.Resource.Dimension.abc_progress_bar_height_material;
@@ -9322,11 +9640,13 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Resource.Drawable.abc_action_bar_item_background_material = global::GaslandsHQ.Droid.Resource.Drawable.abc_action_bar_item_background_material;
 			global::Xamarin.Forms.Platform.Resource.Drawable.abc_btn_borderless_material = global::GaslandsHQ.Droid.Resource.Drawable.abc_btn_borderless_material;
 			global::Xamarin.Forms.Platform.Resource.Drawable.abc_btn_check_material = global::GaslandsHQ.Droid.Resource.Drawable.abc_btn_check_material;
+			global::Xamarin.Forms.Platform.Resource.Drawable.abc_btn_check_material_anim = global::GaslandsHQ.Droid.Resource.Drawable.abc_btn_check_material_anim;
 			global::Xamarin.Forms.Platform.Resource.Drawable.abc_btn_check_to_on_mtrl_000 = global::GaslandsHQ.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000;
 			global::Xamarin.Forms.Platform.Resource.Drawable.abc_btn_check_to_on_mtrl_015 = global::GaslandsHQ.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015;
 			global::Xamarin.Forms.Platform.Resource.Drawable.abc_btn_colored_material = global::GaslandsHQ.Droid.Resource.Drawable.abc_btn_colored_material;
 			global::Xamarin.Forms.Platform.Resource.Drawable.abc_btn_default_mtrl_shape = global::GaslandsHQ.Droid.Resource.Drawable.abc_btn_default_mtrl_shape;
 			global::Xamarin.Forms.Platform.Resource.Drawable.abc_btn_radio_material = global::GaslandsHQ.Droid.Resource.Drawable.abc_btn_radio_material;
+			global::Xamarin.Forms.Platform.Resource.Drawable.abc_btn_radio_material_anim = global::GaslandsHQ.Droid.Resource.Drawable.abc_btn_radio_material_anim;
 			global::Xamarin.Forms.Platform.Resource.Drawable.abc_btn_radio_to_on_mtrl_000 = global::GaslandsHQ.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000;
 			global::Xamarin.Forms.Platform.Resource.Drawable.abc_btn_radio_to_on_mtrl_015 = global::GaslandsHQ.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015;
 			global::Xamarin.Forms.Platform.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001 = global::GaslandsHQ.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001;
@@ -9404,6 +9724,14 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Resource.Drawable.abc_vector_test = global::GaslandsHQ.Droid.Resource.Drawable.abc_vector_test;
 			global::Xamarin.Forms.Platform.Resource.Drawable.avd_hide_password = global::GaslandsHQ.Droid.Resource.Drawable.avd_hide_password;
 			global::Xamarin.Forms.Platform.Resource.Drawable.avd_show_password = global::GaslandsHQ.Droid.Resource.Drawable.avd_show_password;
+			global::Xamarin.Forms.Platform.Resource.Drawable.btn_checkbox_checked_mtrl = global::GaslandsHQ.Droid.Resource.Drawable.btn_checkbox_checked_mtrl;
+			global::Xamarin.Forms.Platform.Resource.Drawable.btn_checkbox_checked_to_unchecked_mtrl_animation = global::GaslandsHQ.Droid.Resource.Drawable.btn_checkbox_checked_to_unchecked_mtrl_animation;
+			global::Xamarin.Forms.Platform.Resource.Drawable.btn_checkbox_unchecked_mtrl = global::GaslandsHQ.Droid.Resource.Drawable.btn_checkbox_unchecked_mtrl;
+			global::Xamarin.Forms.Platform.Resource.Drawable.btn_checkbox_unchecked_to_checked_mtrl_animation = global::GaslandsHQ.Droid.Resource.Drawable.btn_checkbox_unchecked_to_checked_mtrl_animation;
+			global::Xamarin.Forms.Platform.Resource.Drawable.btn_radio_off_mtrl = global::GaslandsHQ.Droid.Resource.Drawable.btn_radio_off_mtrl;
+			global::Xamarin.Forms.Platform.Resource.Drawable.btn_radio_off_to_on_mtrl_animation = global::GaslandsHQ.Droid.Resource.Drawable.btn_radio_off_to_on_mtrl_animation;
+			global::Xamarin.Forms.Platform.Resource.Drawable.btn_radio_on_mtrl = global::GaslandsHQ.Droid.Resource.Drawable.btn_radio_on_mtrl;
+			global::Xamarin.Forms.Platform.Resource.Drawable.btn_radio_on_to_off_mtrl_animation = global::GaslandsHQ.Droid.Resource.Drawable.btn_radio_on_to_off_mtrl_animation;
 			global::Xamarin.Forms.Platform.Resource.Drawable.design_bottom_navigation_item_background = global::GaslandsHQ.Droid.Resource.Drawable.design_bottom_navigation_item_background;
 			global::Xamarin.Forms.Platform.Resource.Drawable.design_fab_background = global::GaslandsHQ.Droid.Resource.Drawable.design_fab_background;
 			global::Xamarin.Forms.Platform.Resource.Drawable.design_ic_visibility = global::GaslandsHQ.Droid.Resource.Drawable.design_ic_visibility;
@@ -9430,6 +9758,39 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Resource.Drawable.notify_panel_notification_icon_bg = global::GaslandsHQ.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
 			global::Xamarin.Forms.Platform.Resource.Drawable.tooltip_frame_dark = global::GaslandsHQ.Droid.Resource.Drawable.tooltip_frame_dark;
 			global::Xamarin.Forms.Platform.Resource.Drawable.tooltip_frame_light = global::GaslandsHQ.Droid.Resource.Drawable.tooltip_frame_light;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_action_clickable_span = global::GaslandsHQ.Droid.Resource.Id.accessibility_action_clickable_span;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_0 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_0;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_1 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_1;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_10 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_10;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_11 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_11;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_12 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_12;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_13 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_13;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_14 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_14;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_15 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_15;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_16 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_16;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_17 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_17;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_18 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_18;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_19 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_19;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_2 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_2;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_20 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_20;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_21 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_21;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_22 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_22;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_23 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_23;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_24 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_24;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_25 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_25;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_26 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_26;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_27 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_27;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_28 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_28;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_29 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_29;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_3 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_3;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_30 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_30;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_31 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_31;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_4 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_4;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_5 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_5;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_6 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_6;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_7 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_7;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_8 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_8;
+			global::Xamarin.Forms.Platform.Resource.Id.accessibility_custom_action_9 = global::GaslandsHQ.Droid.Resource.Id.accessibility_custom_action_9;
 			global::Xamarin.Forms.Platform.Resource.Id.action0 = global::GaslandsHQ.Droid.Resource.Id.action0;
 			global::Xamarin.Forms.Platform.Resource.Id.actions = global::GaslandsHQ.Droid.Resource.Id.actions;
 			global::Xamarin.Forms.Platform.Resource.Id.action_bar = global::GaslandsHQ.Droid.Resource.Id.action_bar;
@@ -9468,6 +9829,7 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Resource.Id.center_horizontal = global::GaslandsHQ.Droid.Resource.Id.center_horizontal;
 			global::Xamarin.Forms.Platform.Resource.Id.center_vertical = global::GaslandsHQ.Droid.Resource.Id.center_vertical;
 			global::Xamarin.Forms.Platform.Resource.Id.checkbox = global::GaslandsHQ.Droid.Resource.Id.checkbox;
+			global::Xamarin.Forms.Platform.Resource.Id.@checked = global::GaslandsHQ.Droid.Resource.Id.@checked;
 			global::Xamarin.Forms.Platform.Resource.Id.chronometer = global::GaslandsHQ.Droid.Resource.Id.chronometer;
 			global::Xamarin.Forms.Platform.Resource.Id.clip_horizontal = global::GaslandsHQ.Droid.Resource.Id.clip_horizontal;
 			global::Xamarin.Forms.Platform.Resource.Id.clip_vertical = global::GaslandsHQ.Droid.Resource.Id.clip_vertical;
@@ -9486,6 +9848,7 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Resource.Id.design_menu_item_action_area_stub = global::GaslandsHQ.Droid.Resource.Id.design_menu_item_action_area_stub;
 			global::Xamarin.Forms.Platform.Resource.Id.design_menu_item_text = global::GaslandsHQ.Droid.Resource.Id.design_menu_item_text;
 			global::Xamarin.Forms.Platform.Resource.Id.design_navigation_view = global::GaslandsHQ.Droid.Resource.Id.design_navigation_view;
+			global::Xamarin.Forms.Platform.Resource.Id.dialog_button = global::GaslandsHQ.Droid.Resource.Id.dialog_button;
 			global::Xamarin.Forms.Platform.Resource.Id.disableHome = global::GaslandsHQ.Droid.Resource.Id.disableHome;
 			global::Xamarin.Forms.Platform.Resource.Id.edit_query = global::GaslandsHQ.Droid.Resource.Id.edit_query;
 			global::Xamarin.Forms.Platform.Resource.Id.end = global::GaslandsHQ.Droid.Resource.Id.end;
@@ -9505,6 +9868,7 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Resource.Id.forever = global::GaslandsHQ.Droid.Resource.Id.forever;
 			global::Xamarin.Forms.Platform.Resource.Id.FUNCTION = global::GaslandsHQ.Droid.Resource.Id.FUNCTION;
 			global::Xamarin.Forms.Platform.Resource.Id.ghost_view = global::GaslandsHQ.Droid.Resource.Id.ghost_view;
+			global::Xamarin.Forms.Platform.Resource.Id.ghost_view_holder = global::GaslandsHQ.Droid.Resource.Id.ghost_view_holder;
 			global::Xamarin.Forms.Platform.Resource.Id.group_divider = global::GaslandsHQ.Droid.Resource.Id.group_divider;
 			global::Xamarin.Forms.Platform.Resource.Id.home = global::GaslandsHQ.Droid.Resource.Id.home;
 			global::Xamarin.Forms.Platform.Resource.Id.homeAsUp = global::GaslandsHQ.Droid.Resource.Id.homeAsUp;
@@ -9542,6 +9906,8 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Resource.Id.notification_background = global::GaslandsHQ.Droid.Resource.Id.notification_background;
 			global::Xamarin.Forms.Platform.Resource.Id.notification_main_column = global::GaslandsHQ.Droid.Resource.Id.notification_main_column;
 			global::Xamarin.Forms.Platform.Resource.Id.notification_main_column_container = global::GaslandsHQ.Droid.Resource.Id.notification_main_column_container;
+			global::Xamarin.Forms.Platform.Resource.Id.off = global::GaslandsHQ.Droid.Resource.Id.off;
+			global::Xamarin.Forms.Platform.Resource.Id.on = global::GaslandsHQ.Droid.Resource.Id.on;
 			global::Xamarin.Forms.Platform.Resource.Id.outline = global::GaslandsHQ.Droid.Resource.Id.outline;
 			global::Xamarin.Forms.Platform.Resource.Id.parallax = global::GaslandsHQ.Droid.Resource.Id.parallax;
 			global::Xamarin.Forms.Platform.Resource.Id.parentPanel = global::GaslandsHQ.Droid.Resource.Id.parentPanel;
@@ -9554,6 +9920,7 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Resource.Id.right_icon = global::GaslandsHQ.Droid.Resource.Id.right_icon;
 			global::Xamarin.Forms.Platform.Resource.Id.right_side = global::GaslandsHQ.Droid.Resource.Id.right_side;
 			global::Xamarin.Forms.Platform.Resource.Id.save_non_transition_alpha = global::GaslandsHQ.Droid.Resource.Id.save_non_transition_alpha;
+			global::Xamarin.Forms.Platform.Resource.Id.save_overlay_view = global::GaslandsHQ.Droid.Resource.Id.save_overlay_view;
 			global::Xamarin.Forms.Platform.Resource.Id.screen = global::GaslandsHQ.Droid.Resource.Id.screen;
 			global::Xamarin.Forms.Platform.Resource.Id.scroll = global::GaslandsHQ.Droid.Resource.Id.scroll;
 			global::Xamarin.Forms.Platform.Resource.Id.scrollable = global::GaslandsHQ.Droid.Resource.Id.scrollable;
@@ -9579,6 +9946,7 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Resource.Id.showCustom = global::GaslandsHQ.Droid.Resource.Id.showCustom;
 			global::Xamarin.Forms.Platform.Resource.Id.showHome = global::GaslandsHQ.Droid.Resource.Id.showHome;
 			global::Xamarin.Forms.Platform.Resource.Id.showTitle = global::GaslandsHQ.Droid.Resource.Id.showTitle;
+			global::Xamarin.Forms.Platform.Resource.Id.sliding_tabs = global::GaslandsHQ.Droid.Resource.Id.sliding_tabs;
 			global::Xamarin.Forms.Platform.Resource.Id.smallLabel = global::GaslandsHQ.Droid.Resource.Id.smallLabel;
 			global::Xamarin.Forms.Platform.Resource.Id.snackbar_action = global::GaslandsHQ.Droid.Resource.Id.snackbar_action;
 			global::Xamarin.Forms.Platform.Resource.Id.snackbar_text = global::GaslandsHQ.Droid.Resource.Id.snackbar_text;
@@ -9596,6 +9964,11 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Resource.Id.submit_area = global::GaslandsHQ.Droid.Resource.Id.submit_area;
 			global::Xamarin.Forms.Platform.Resource.Id.SYM = global::GaslandsHQ.Droid.Resource.Id.SYM;
 			global::Xamarin.Forms.Platform.Resource.Id.tabMode = global::GaslandsHQ.Droid.Resource.Id.tabMode;
+			global::Xamarin.Forms.Platform.Resource.Id.tag_accessibility_actions = global::GaslandsHQ.Droid.Resource.Id.tag_accessibility_actions;
+			global::Xamarin.Forms.Platform.Resource.Id.tag_accessibility_clickable_spans = global::GaslandsHQ.Droid.Resource.Id.tag_accessibility_clickable_spans;
+			global::Xamarin.Forms.Platform.Resource.Id.tag_accessibility_heading = global::GaslandsHQ.Droid.Resource.Id.tag_accessibility_heading;
+			global::Xamarin.Forms.Platform.Resource.Id.tag_accessibility_pane_title = global::GaslandsHQ.Droid.Resource.Id.tag_accessibility_pane_title;
+			global::Xamarin.Forms.Platform.Resource.Id.tag_screen_reader_focusable = global::GaslandsHQ.Droid.Resource.Id.tag_screen_reader_focusable;
 			global::Xamarin.Forms.Platform.Resource.Id.tag_transition_group = global::GaslandsHQ.Droid.Resource.Id.tag_transition_group;
 			global::Xamarin.Forms.Platform.Resource.Id.tag_unhandled_key_event_manager = global::GaslandsHQ.Droid.Resource.Id.tag_unhandled_key_event_manager;
 			global::Xamarin.Forms.Platform.Resource.Id.tag_unhandled_key_listeners = global::GaslandsHQ.Droid.Resource.Id.tag_unhandled_key_listeners;
@@ -9612,6 +9985,7 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Resource.Id.title = global::GaslandsHQ.Droid.Resource.Id.title;
 			global::Xamarin.Forms.Platform.Resource.Id.titleDividerNoCustom = global::GaslandsHQ.Droid.Resource.Id.titleDividerNoCustom;
 			global::Xamarin.Forms.Platform.Resource.Id.title_template = global::GaslandsHQ.Droid.Resource.Id.title_template;
+			global::Xamarin.Forms.Platform.Resource.Id.toolbar = global::GaslandsHQ.Droid.Resource.Id.toolbar;
 			global::Xamarin.Forms.Platform.Resource.Id.top = global::GaslandsHQ.Droid.Resource.Id.top;
 			global::Xamarin.Forms.Platform.Resource.Id.topPanel = global::GaslandsHQ.Droid.Resource.Id.topPanel;
 			global::Xamarin.Forms.Platform.Resource.Id.touch_outside = global::GaslandsHQ.Droid.Resource.Id.touch_outside;
@@ -9620,6 +9994,7 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Resource.Id.transition_position = global::GaslandsHQ.Droid.Resource.Id.transition_position;
 			global::Xamarin.Forms.Platform.Resource.Id.transition_scene_layoutid_cache = global::GaslandsHQ.Droid.Resource.Id.transition_scene_layoutid_cache;
 			global::Xamarin.Forms.Platform.Resource.Id.transition_transform = global::GaslandsHQ.Droid.Resource.Id.transition_transform;
+			global::Xamarin.Forms.Platform.Resource.Id.@unchecked = global::GaslandsHQ.Droid.Resource.Id.@unchecked;
 			global::Xamarin.Forms.Platform.Resource.Id.uniform = global::GaslandsHQ.Droid.Resource.Id.uniform;
 			global::Xamarin.Forms.Platform.Resource.Id.unlabeled = global::GaslandsHQ.Droid.Resource.Id.unlabeled;
 			global::Xamarin.Forms.Platform.Resource.Id.up = global::GaslandsHQ.Droid.Resource.Id.up;
@@ -9643,6 +10018,13 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Resource.Integer.mtrl_tab_indicator_anim_duration_ms = global::GaslandsHQ.Droid.Resource.Integer.mtrl_tab_indicator_anim_duration_ms;
 			global::Xamarin.Forms.Platform.Resource.Integer.show_password_duration = global::GaslandsHQ.Droid.Resource.Integer.show_password_duration;
 			global::Xamarin.Forms.Platform.Resource.Integer.status_bar_notification_info_maxnum = global::GaslandsHQ.Droid.Resource.Integer.status_bar_notification_info_maxnum;
+			global::Xamarin.Forms.Platform.Resource.Interpolator.btn_checkbox_checked_mtrl_animation_interpolator_0 = global::GaslandsHQ.Droid.Resource.Interpolator.btn_checkbox_checked_mtrl_animation_interpolator_0;
+			global::Xamarin.Forms.Platform.Resource.Interpolator.btn_checkbox_checked_mtrl_animation_interpolator_1 = global::GaslandsHQ.Droid.Resource.Interpolator.btn_checkbox_checked_mtrl_animation_interpolator_1;
+			global::Xamarin.Forms.Platform.Resource.Interpolator.btn_checkbox_unchecked_mtrl_animation_interpolator_0 = global::GaslandsHQ.Droid.Resource.Interpolator.btn_checkbox_unchecked_mtrl_animation_interpolator_0;
+			global::Xamarin.Forms.Platform.Resource.Interpolator.btn_checkbox_unchecked_mtrl_animation_interpolator_1 = global::GaslandsHQ.Droid.Resource.Interpolator.btn_checkbox_unchecked_mtrl_animation_interpolator_1;
+			global::Xamarin.Forms.Platform.Resource.Interpolator.btn_radio_to_off_mtrl_animation_interpolator_0 = global::GaslandsHQ.Droid.Resource.Interpolator.btn_radio_to_off_mtrl_animation_interpolator_0;
+			global::Xamarin.Forms.Platform.Resource.Interpolator.btn_radio_to_on_mtrl_animation_interpolator_0 = global::GaslandsHQ.Droid.Resource.Interpolator.btn_radio_to_on_mtrl_animation_interpolator_0;
+			global::Xamarin.Forms.Platform.Resource.Interpolator.fast_out_slow_in = global::GaslandsHQ.Droid.Resource.Interpolator.fast_out_slow_in;
 			global::Xamarin.Forms.Platform.Resource.Interpolator.mtrl_fast_out_linear_in = global::GaslandsHQ.Droid.Resource.Interpolator.mtrl_fast_out_linear_in;
 			global::Xamarin.Forms.Platform.Resource.Interpolator.mtrl_fast_out_slow_in = global::GaslandsHQ.Droid.Resource.Interpolator.mtrl_fast_out_slow_in;
 			global::Xamarin.Forms.Platform.Resource.Interpolator.mtrl_linear = global::GaslandsHQ.Droid.Resource.Interpolator.mtrl_linear;
@@ -9676,6 +10058,7 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Resource.Layout.abc_select_dialog_material = global::GaslandsHQ.Droid.Resource.Layout.abc_select_dialog_material;
 			global::Xamarin.Forms.Platform.Resource.Layout.abc_tooltip = global::GaslandsHQ.Droid.Resource.Layout.abc_tooltip;
 			global::Xamarin.Forms.Platform.Resource.Layout.BottomTabLayout = global::GaslandsHQ.Droid.Resource.Layout.BottomTabLayout;
+			global::Xamarin.Forms.Platform.Resource.Layout.custom_dialog = global::GaslandsHQ.Droid.Resource.Layout.custom_dialog;
 			global::Xamarin.Forms.Platform.Resource.Layout.design_bottom_navigation_item = global::GaslandsHQ.Droid.Resource.Layout.design_bottom_navigation_item;
 			global::Xamarin.Forms.Platform.Resource.Layout.design_bottom_sheet_dialog = global::GaslandsHQ.Droid.Resource.Layout.design_bottom_sheet_dialog;
 			global::Xamarin.Forms.Platform.Resource.Layout.design_layout_snackbar = global::GaslandsHQ.Droid.Resource.Layout.design_layout_snackbar;
@@ -9690,6 +10073,8 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Resource.Layout.design_navigation_menu = global::GaslandsHQ.Droid.Resource.Layout.design_navigation_menu;
 			global::Xamarin.Forms.Platform.Resource.Layout.design_navigation_menu_item = global::GaslandsHQ.Droid.Resource.Layout.design_navigation_menu_item;
 			global::Xamarin.Forms.Platform.Resource.Layout.design_text_input_password_icon = global::GaslandsHQ.Droid.Resource.Layout.design_text_input_password_icon;
+			global::Xamarin.Forms.Platform.Resource.Layout.FallbackTabbarDoNotUse = global::GaslandsHQ.Droid.Resource.Layout.FallbackTabbarDoNotUse;
+			global::Xamarin.Forms.Platform.Resource.Layout.FallbackToolbarDoNotUse = global::GaslandsHQ.Droid.Resource.Layout.FallbackToolbarDoNotUse;
 			global::Xamarin.Forms.Platform.Resource.Layout.FlyoutContent = global::GaslandsHQ.Droid.Resource.Layout.FlyoutContent;
 			global::Xamarin.Forms.Platform.Resource.Layout.mtrl_layout_snackbar = global::GaslandsHQ.Droid.Resource.Layout.mtrl_layout_snackbar;
 			global::Xamarin.Forms.Platform.Resource.Layout.mtrl_layout_snackbar_include = global::GaslandsHQ.Droid.Resource.Layout.mtrl_layout_snackbar_include;
@@ -9714,6 +10099,8 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Resource.Layout.select_dialog_singlechoice_material = global::GaslandsHQ.Droid.Resource.Layout.select_dialog_singlechoice_material;
 			global::Xamarin.Forms.Platform.Resource.Layout.ShellContent = global::GaslandsHQ.Droid.Resource.Layout.ShellContent;
 			global::Xamarin.Forms.Platform.Resource.Layout.support_simple_spinner_dropdown_item = global::GaslandsHQ.Droid.Resource.Layout.support_simple_spinner_dropdown_item;
+			global::Xamarin.Forms.Platform.Resource.Layout.Tabbar = global::GaslandsHQ.Droid.Resource.Layout.Tabbar;
+			global::Xamarin.Forms.Platform.Resource.Layout.Toolbar = global::GaslandsHQ.Droid.Resource.Layout.Toolbar;
 			global::Xamarin.Forms.Platform.Resource.String.abc_action_bar_home_description = global::GaslandsHQ.Droid.Resource.String.abc_action_bar_home_description;
 			global::Xamarin.Forms.Platform.Resource.String.abc_action_bar_up_description = global::GaslandsHQ.Droid.Resource.String.abc_action_bar_up_description;
 			global::Xamarin.Forms.Platform.Resource.String.abc_action_menu_overflow_description = global::GaslandsHQ.Droid.Resource.String.abc_action_menu_overflow_description;
@@ -9945,6 +10332,7 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete = global::GaslandsHQ.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete;
 			global::Xamarin.Forms.Platform.Resource.Style.Base_Widget_AppCompat_Spinner = global::GaslandsHQ.Droid.Resource.Style.Base_Widget_AppCompat_Spinner;
 			global::Xamarin.Forms.Platform.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined = global::GaslandsHQ.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined;
+			global::Xamarin.Forms.Platform.Resource.Style.Base_Widget_AppCompat_TextView = global::GaslandsHQ.Droid.Resource.Style.Base_Widget_AppCompat_TextView;
 			global::Xamarin.Forms.Platform.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem = global::GaslandsHQ.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem;
 			global::Xamarin.Forms.Platform.Resource.Style.Base_Widget_AppCompat_Toolbar = global::GaslandsHQ.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar;
 			global::Xamarin.Forms.Platform.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::GaslandsHQ.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
@@ -10078,6 +10466,8 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::GaslandsHQ.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
 			global::Xamarin.Forms.Platform.Resource.Style.ThemeOverlay_AppCompat_Dark = global::GaslandsHQ.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark;
 			global::Xamarin.Forms.Platform.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar = global::GaslandsHQ.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::Xamarin.Forms.Platform.Resource.Style.ThemeOverlay_AppCompat_DayNight = global::GaslandsHQ.Droid.Resource.Style.ThemeOverlay_AppCompat_DayNight;
+			global::Xamarin.Forms.Platform.Resource.Style.ThemeOverlay_AppCompat_DayNight_ActionBar = global::GaslandsHQ.Droid.Resource.Style.ThemeOverlay_AppCompat_DayNight_ActionBar;
 			global::Xamarin.Forms.Platform.Resource.Style.ThemeOverlay_AppCompat_Dialog = global::GaslandsHQ.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog;
 			global::Xamarin.Forms.Platform.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert = global::GaslandsHQ.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert;
 			global::Xamarin.Forms.Platform.Resource.Style.ThemeOverlay_AppCompat_Light = global::GaslandsHQ.Droid.Resource.Style.ThemeOverlay_AppCompat_Light;
@@ -10210,6 +10600,7 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Resource.Style.Widget_AppCompat_Spinner_DropDown = global::GaslandsHQ.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown;
 			global::Xamarin.Forms.Platform.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar = global::GaslandsHQ.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar;
 			global::Xamarin.Forms.Platform.Resource.Style.Widget_AppCompat_Spinner_Underlined = global::GaslandsHQ.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined;
+			global::Xamarin.Forms.Platform.Resource.Style.Widget_AppCompat_TextView = global::GaslandsHQ.Droid.Resource.Style.Widget_AppCompat_TextView;
 			global::Xamarin.Forms.Platform.Resource.Style.Widget_AppCompat_TextView_SpinnerItem = global::GaslandsHQ.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem;
 			global::Xamarin.Forms.Platform.Resource.Style.Widget_AppCompat_Toolbar = global::GaslandsHQ.Droid.Resource.Style.Widget_AppCompat_Toolbar;
 			global::Xamarin.Forms.Platform.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::GaslandsHQ.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
@@ -10371,11 +10762,21 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTextView_autoSizePresetSizes = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTextView_autoSizePresetSizes;
 			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity;
 			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTextView_autoSizeTextType = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTextView_autoSizeTextType;
+			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTextView_drawableBottomCompat = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTextView_drawableBottomCompat;
+			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTextView_drawableEndCompat = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTextView_drawableEndCompat;
+			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTextView_drawableLeftCompat = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTextView_drawableLeftCompat;
+			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTextView_drawableRightCompat = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTextView_drawableRightCompat;
+			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTextView_drawableStartCompat = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTextView_drawableStartCompat;
+			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTextView_drawableTint = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTextView_drawableTint;
+			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTextView_drawableTintMode = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTextView_drawableTintMode;
+			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTextView_drawableTopCompat = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTextView_drawableTopCompat;
 			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTextView_firstBaselineToTopHeight = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTextView_firstBaselineToTopHeight;
 			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTextView_fontFamily = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTextView_fontFamily;
+			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTextView_fontVariationSettings = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTextView_fontVariationSettings;
 			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTextView_lastBaselineToBottomHeight = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTextView_lastBaselineToBottomHeight;
 			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTextView_lineHeight = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTextView_lineHeight;
 			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTextView_textAllCaps = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTextView_textAllCaps;
+			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTextView_textLocale = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTextView_textLocale;
 			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTheme = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme;
 			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTheme_actionBarDivider = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider;
 			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTheme_actionBarItemBackground = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground;
@@ -10449,14 +10850,18 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTheme_homeAsUpIndicator = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator;
 			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTheme_imageButtonStyle = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle;
 			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator;
+			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTheme_listChoiceIndicatorMultipleAnimated = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_listChoiceIndicatorMultipleAnimated;
+			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTheme_listChoiceIndicatorSingleAnimated = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_listChoiceIndicatorSingleAnimated;
 			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTheme_listDividerAlertDialog = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog;
 			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTheme_listMenuViewStyle = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_listMenuViewStyle;
 			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTheme_listPopupWindowStyle = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle;
 			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTheme_listPreferredItemHeight = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight;
 			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge;
 			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall;
+			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingEnd = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingEnd;
 			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft;
 			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight;
+			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingStart = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingStart;
 			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTheme_panelBackground = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_panelBackground;
 			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTheme_panelMenuListTheme = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme;
 			global::Xamarin.Forms.Platform.Resource.Styleable.AppCompatTheme_panelMenuListWidth = global::GaslandsHQ.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth;
@@ -10605,6 +11010,7 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Resource.Styleable.ColorStateListItem_android_color = global::GaslandsHQ.Droid.Resource.Styleable.ColorStateListItem_android_color;
 			global::Xamarin.Forms.Platform.Resource.Styleable.CompoundButton = global::GaslandsHQ.Droid.Resource.Styleable.CompoundButton;
 			global::Xamarin.Forms.Platform.Resource.Styleable.CompoundButton_android_button = global::GaslandsHQ.Droid.Resource.Styleable.CompoundButton_android_button;
+			global::Xamarin.Forms.Platform.Resource.Styleable.CompoundButton_buttonCompat = global::GaslandsHQ.Droid.Resource.Styleable.CompoundButton_buttonCompat;
 			global::Xamarin.Forms.Platform.Resource.Styleable.CompoundButton_buttonTint = global::GaslandsHQ.Droid.Resource.Styleable.CompoundButton_buttonTint;
 			global::Xamarin.Forms.Platform.Resource.Styleable.CompoundButton_buttonTintMode = global::GaslandsHQ.Droid.Resource.Styleable.CompoundButton_buttonTintMode;
 			global::Xamarin.Forms.Platform.Resource.Styleable.CoordinatorLayout = global::GaslandsHQ.Droid.Resource.Styleable.CoordinatorLayout;
@@ -10824,6 +11230,7 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Resource.Styleable.RecycleListView_paddingBottomNoButtons = global::GaslandsHQ.Droid.Resource.Styleable.RecycleListView_paddingBottomNoButtons;
 			global::Xamarin.Forms.Platform.Resource.Styleable.RecycleListView_paddingTopNoTitle = global::GaslandsHQ.Droid.Resource.Styleable.RecycleListView_paddingTopNoTitle;
 			global::Xamarin.Forms.Platform.Resource.Styleable.RecyclerView = global::GaslandsHQ.Droid.Resource.Styleable.RecyclerView;
+			global::Xamarin.Forms.Platform.Resource.Styleable.RecyclerView_android_clipToPadding = global::GaslandsHQ.Droid.Resource.Styleable.RecyclerView_android_clipToPadding;
 			global::Xamarin.Forms.Platform.Resource.Styleable.RecyclerView_android_descendantFocusability = global::GaslandsHQ.Droid.Resource.Styleable.RecyclerView_android_descendantFocusability;
 			global::Xamarin.Forms.Platform.Resource.Styleable.RecyclerView_android_orientation = global::GaslandsHQ.Droid.Resource.Styleable.RecyclerView_android_orientation;
 			global::Xamarin.Forms.Platform.Resource.Styleable.RecyclerView_fastScrollEnabled = global::GaslandsHQ.Droid.Resource.Styleable.RecyclerView_fastScrollEnabled;
@@ -10933,11 +11340,14 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Resource.Styleable.TextAppearance_android_textColor = global::GaslandsHQ.Droid.Resource.Styleable.TextAppearance_android_textColor;
 			global::Xamarin.Forms.Platform.Resource.Styleable.TextAppearance_android_textColorHint = global::GaslandsHQ.Droid.Resource.Styleable.TextAppearance_android_textColorHint;
 			global::Xamarin.Forms.Platform.Resource.Styleable.TextAppearance_android_textColorLink = global::GaslandsHQ.Droid.Resource.Styleable.TextAppearance_android_textColorLink;
+			global::Xamarin.Forms.Platform.Resource.Styleable.TextAppearance_android_textFontWeight = global::GaslandsHQ.Droid.Resource.Styleable.TextAppearance_android_textFontWeight;
 			global::Xamarin.Forms.Platform.Resource.Styleable.TextAppearance_android_textSize = global::GaslandsHQ.Droid.Resource.Styleable.TextAppearance_android_textSize;
 			global::Xamarin.Forms.Platform.Resource.Styleable.TextAppearance_android_textStyle = global::GaslandsHQ.Droid.Resource.Styleable.TextAppearance_android_textStyle;
 			global::Xamarin.Forms.Platform.Resource.Styleable.TextAppearance_android_typeface = global::GaslandsHQ.Droid.Resource.Styleable.TextAppearance_android_typeface;
 			global::Xamarin.Forms.Platform.Resource.Styleable.TextAppearance_fontFamily = global::GaslandsHQ.Droid.Resource.Styleable.TextAppearance_fontFamily;
+			global::Xamarin.Forms.Platform.Resource.Styleable.TextAppearance_fontVariationSettings = global::GaslandsHQ.Droid.Resource.Styleable.TextAppearance_fontVariationSettings;
 			global::Xamarin.Forms.Platform.Resource.Styleable.TextAppearance_textAllCaps = global::GaslandsHQ.Droid.Resource.Styleable.TextAppearance_textAllCaps;
+			global::Xamarin.Forms.Platform.Resource.Styleable.TextAppearance_textLocale = global::GaslandsHQ.Droid.Resource.Styleable.TextAppearance_textLocale;
 			global::Xamarin.Forms.Platform.Resource.Styleable.TextInputLayout = global::GaslandsHQ.Droid.Resource.Styleable.TextInputLayout;
 			global::Xamarin.Forms.Platform.Resource.Styleable.TextInputLayout_android_hint = global::GaslandsHQ.Droid.Resource.Styleable.TextInputLayout_android_hint;
 			global::Xamarin.Forms.Platform.Resource.Styleable.TextInputLayout_android_textColorHint = global::GaslandsHQ.Droid.Resource.Styleable.TextInputLayout_android_textColorHint;
@@ -10986,6 +11396,7 @@ namespace GaslandsHQ.Droid
 			global::Xamarin.Forms.Platform.Resource.Styleable.Toolbar_logo = global::GaslandsHQ.Droid.Resource.Styleable.Toolbar_logo;
 			global::Xamarin.Forms.Platform.Resource.Styleable.Toolbar_logoDescription = global::GaslandsHQ.Droid.Resource.Styleable.Toolbar_logoDescription;
 			global::Xamarin.Forms.Platform.Resource.Styleable.Toolbar_maxButtonHeight = global::GaslandsHQ.Droid.Resource.Styleable.Toolbar_maxButtonHeight;
+			global::Xamarin.Forms.Platform.Resource.Styleable.Toolbar_menu = global::GaslandsHQ.Droid.Resource.Styleable.Toolbar_menu;
 			global::Xamarin.Forms.Platform.Resource.Styleable.Toolbar_navigationContentDescription = global::GaslandsHQ.Droid.Resource.Styleable.Toolbar_navigationContentDescription;
 			global::Xamarin.Forms.Platform.Resource.Styleable.Toolbar_navigationIcon = global::GaslandsHQ.Droid.Resource.Styleable.Toolbar_navigationIcon;
 			global::Xamarin.Forms.Platform.Resource.Styleable.Toolbar_popupTheme = global::GaslandsHQ.Droid.Resource.Styleable.Toolbar_popupTheme;
@@ -13008,259 +13419,262 @@ namespace GaslandsHQ.Droid
 			public const int highlighted_text_material_light = 2131034186;
 			
 			// aapt resource value: 0x7F05004B
-			public const int launcher_background = 2131034187;
+			public const int ic_launcher_background = 2131034187;
 			
 			// aapt resource value: 0x7F05004C
-			public const int material_blue_grey_800 = 2131034188;
+			public const int launcher_background = 2131034188;
 			
 			// aapt resource value: 0x7F05004D
-			public const int material_blue_grey_900 = 2131034189;
+			public const int material_blue_grey_800 = 2131034189;
 			
 			// aapt resource value: 0x7F05004E
-			public const int material_blue_grey_950 = 2131034190;
+			public const int material_blue_grey_900 = 2131034190;
 			
 			// aapt resource value: 0x7F05004F
-			public const int material_deep_teal_200 = 2131034191;
+			public const int material_blue_grey_950 = 2131034191;
 			
 			// aapt resource value: 0x7F050050
-			public const int material_deep_teal_500 = 2131034192;
+			public const int material_deep_teal_200 = 2131034192;
 			
 			// aapt resource value: 0x7F050051
-			public const int material_grey_100 = 2131034193;
+			public const int material_deep_teal_500 = 2131034193;
 			
 			// aapt resource value: 0x7F050052
-			public const int material_grey_300 = 2131034194;
+			public const int material_grey_100 = 2131034194;
 			
 			// aapt resource value: 0x7F050053
-			public const int material_grey_50 = 2131034195;
+			public const int material_grey_300 = 2131034195;
 			
 			// aapt resource value: 0x7F050054
-			public const int material_grey_600 = 2131034196;
+			public const int material_grey_50 = 2131034196;
 			
 			// aapt resource value: 0x7F050055
-			public const int material_grey_800 = 2131034197;
+			public const int material_grey_600 = 2131034197;
 			
 			// aapt resource value: 0x7F050056
-			public const int material_grey_850 = 2131034198;
+			public const int material_grey_800 = 2131034198;
 			
 			// aapt resource value: 0x7F050057
-			public const int material_grey_900 = 2131034199;
+			public const int material_grey_850 = 2131034199;
 			
 			// aapt resource value: 0x7F050058
-			public const int mr_cast_meta_black_scrim = 2131034200;
+			public const int material_grey_900 = 2131034200;
 			
 			// aapt resource value: 0x7F050059
-			public const int mr_cast_meta_default_background = 2131034201;
+			public const int mr_cast_meta_black_scrim = 2131034201;
 			
 			// aapt resource value: 0x7F05005A
-			public const int mr_cast_meta_default_text_color = 2131034202;
+			public const int mr_cast_meta_default_background = 2131034202;
 			
 			// aapt resource value: 0x7F05005B
-			public const int mr_cast_progressbar_background_dark = 2131034203;
+			public const int mr_cast_meta_default_text_color = 2131034203;
 			
 			// aapt resource value: 0x7F05005C
-			public const int mr_cast_progressbar_background_light = 2131034204;
+			public const int mr_cast_progressbar_background_dark = 2131034204;
 			
 			// aapt resource value: 0x7F05005D
-			public const int mr_cast_progressbar_progress_and_thumb_dark = 2131034205;
+			public const int mr_cast_progressbar_background_light = 2131034205;
 			
 			// aapt resource value: 0x7F05005E
-			public const int mr_cast_progressbar_progress_and_thumb_light = 2131034206;
+			public const int mr_cast_progressbar_progress_and_thumb_dark = 2131034206;
 			
 			// aapt resource value: 0x7F05005F
-			public const int mr_cast_route_divider_dark = 2131034207;
+			public const int mr_cast_progressbar_progress_and_thumb_light = 2131034207;
 			
 			// aapt resource value: 0x7F050060
-			public const int mr_cast_route_divider_light = 2131034208;
+			public const int mr_cast_route_divider_dark = 2131034208;
 			
 			// aapt resource value: 0x7F050061
-			public const int mr_dynamic_dialog_background_dark = 2131034209;
+			public const int mr_cast_route_divider_light = 2131034209;
 			
 			// aapt resource value: 0x7F050062
-			public const int mr_dynamic_dialog_background_light = 2131034210;
+			public const int mr_dynamic_dialog_background_dark = 2131034210;
 			
 			// aapt resource value: 0x7F050063
-			public const int mr_dynamic_dialog_header_text_color_dark = 2131034211;
+			public const int mr_dynamic_dialog_background_light = 2131034211;
 			
 			// aapt resource value: 0x7F050064
-			public const int mr_dynamic_dialog_header_text_color_light = 2131034212;
+			public const int mr_dynamic_dialog_header_text_color_dark = 2131034212;
 			
 			// aapt resource value: 0x7F050065
-			public const int mr_dynamic_dialog_icon_dark = 2131034213;
+			public const int mr_dynamic_dialog_header_text_color_light = 2131034213;
 			
 			// aapt resource value: 0x7F050066
-			public const int mr_dynamic_dialog_icon_light = 2131034214;
+			public const int mr_dynamic_dialog_icon_dark = 2131034214;
 			
 			// aapt resource value: 0x7F050067
-			public const int mr_dynamic_dialog_route_text_color_dark = 2131034215;
+			public const int mr_dynamic_dialog_icon_light = 2131034215;
 			
 			// aapt resource value: 0x7F050068
-			public const int mr_dynamic_dialog_route_text_color_light = 2131034216;
+			public const int mr_dynamic_dialog_route_text_color_dark = 2131034216;
 			
 			// aapt resource value: 0x7F050069
-			public const int mtrl_bottom_nav_colored_item_tint = 2131034217;
+			public const int mr_dynamic_dialog_route_text_color_light = 2131034217;
 			
 			// aapt resource value: 0x7F05006A
-			public const int mtrl_bottom_nav_item_tint = 2131034218;
+			public const int mtrl_bottom_nav_colored_item_tint = 2131034218;
 			
 			// aapt resource value: 0x7F05006B
-			public const int mtrl_btn_bg_color_disabled = 2131034219;
+			public const int mtrl_bottom_nav_item_tint = 2131034219;
 			
 			// aapt resource value: 0x7F05006C
-			public const int mtrl_btn_bg_color_selector = 2131034220;
+			public const int mtrl_btn_bg_color_disabled = 2131034220;
 			
 			// aapt resource value: 0x7F05006D
-			public const int mtrl_btn_ripple_color = 2131034221;
+			public const int mtrl_btn_bg_color_selector = 2131034221;
 			
 			// aapt resource value: 0x7F05006E
-			public const int mtrl_btn_stroke_color_selector = 2131034222;
+			public const int mtrl_btn_ripple_color = 2131034222;
 			
 			// aapt resource value: 0x7F05006F
-			public const int mtrl_btn_text_btn_ripple_color = 2131034223;
+			public const int mtrl_btn_stroke_color_selector = 2131034223;
 			
 			// aapt resource value: 0x7F050070
-			public const int mtrl_btn_text_color_disabled = 2131034224;
+			public const int mtrl_btn_text_btn_ripple_color = 2131034224;
 			
 			// aapt resource value: 0x7F050071
-			public const int mtrl_btn_text_color_selector = 2131034225;
+			public const int mtrl_btn_text_color_disabled = 2131034225;
 			
 			// aapt resource value: 0x7F050072
-			public const int mtrl_btn_transparent_bg_color = 2131034226;
+			public const int mtrl_btn_text_color_selector = 2131034226;
 			
 			// aapt resource value: 0x7F050073
-			public const int mtrl_chip_background_color = 2131034227;
+			public const int mtrl_btn_transparent_bg_color = 2131034227;
 			
 			// aapt resource value: 0x7F050074
-			public const int mtrl_chip_close_icon_tint = 2131034228;
+			public const int mtrl_chip_background_color = 2131034228;
 			
 			// aapt resource value: 0x7F050075
-			public const int mtrl_chip_ripple_color = 2131034229;
+			public const int mtrl_chip_close_icon_tint = 2131034229;
 			
 			// aapt resource value: 0x7F050076
-			public const int mtrl_chip_text_color = 2131034230;
+			public const int mtrl_chip_ripple_color = 2131034230;
 			
 			// aapt resource value: 0x7F050077
-			public const int mtrl_fab_ripple_color = 2131034231;
+			public const int mtrl_chip_text_color = 2131034231;
 			
 			// aapt resource value: 0x7F050078
-			public const int mtrl_scrim_color = 2131034232;
+			public const int mtrl_fab_ripple_color = 2131034232;
 			
 			// aapt resource value: 0x7F050079
-			public const int mtrl_tabs_colored_ripple_color = 2131034233;
+			public const int mtrl_scrim_color = 2131034233;
 			
 			// aapt resource value: 0x7F05007A
-			public const int mtrl_tabs_icon_color_selector = 2131034234;
+			public const int mtrl_tabs_colored_ripple_color = 2131034234;
 			
 			// aapt resource value: 0x7F05007B
-			public const int mtrl_tabs_icon_color_selector_colored = 2131034235;
+			public const int mtrl_tabs_icon_color_selector = 2131034235;
 			
 			// aapt resource value: 0x7F05007C
-			public const int mtrl_tabs_legacy_text_color_selector = 2131034236;
+			public const int mtrl_tabs_icon_color_selector_colored = 2131034236;
 			
 			// aapt resource value: 0x7F05007D
-			public const int mtrl_tabs_ripple_color = 2131034237;
-			
-			// aapt resource value: 0x7F05007F
-			public const int mtrl_textinput_default_box_stroke_color = 2131034239;
-			
-			// aapt resource value: 0x7F050080
-			public const int mtrl_textinput_disabled_color = 2131034240;
-			
-			// aapt resource value: 0x7F050081
-			public const int mtrl_textinput_filled_box_default_background_color = 2131034241;
-			
-			// aapt resource value: 0x7F050082
-			public const int mtrl_textinput_hovered_box_stroke_color = 2131034242;
+			public const int mtrl_tabs_legacy_text_color_selector = 2131034237;
 			
 			// aapt resource value: 0x7F05007E
-			public const int mtrl_text_btn_text_color_selector = 2131034238;
+			public const int mtrl_tabs_ripple_color = 2131034238;
+			
+			// aapt resource value: 0x7F050080
+			public const int mtrl_textinput_default_box_stroke_color = 2131034240;
+			
+			// aapt resource value: 0x7F050081
+			public const int mtrl_textinput_disabled_color = 2131034241;
+			
+			// aapt resource value: 0x7F050082
+			public const int mtrl_textinput_filled_box_default_background_color = 2131034242;
 			
 			// aapt resource value: 0x7F050083
-			public const int normal = 2131034243;
+			public const int mtrl_textinput_hovered_box_stroke_color = 2131034243;
+			
+			// aapt resource value: 0x7F05007F
+			public const int mtrl_text_btn_text_color_selector = 2131034239;
 			
 			// aapt resource value: 0x7F050084
-			public const int notification_action_color_filter = 2131034244;
+			public const int normal = 2131034244;
 			
 			// aapt resource value: 0x7F050085
-			public const int notification_icon_bg_color = 2131034245;
+			public const int notification_action_color_filter = 2131034245;
 			
 			// aapt resource value: 0x7F050086
-			public const int notification_material_background_media_default_color = 2131034246;
+			public const int notification_icon_bg_color = 2131034246;
 			
 			// aapt resource value: 0x7F050087
-			public const int primary_dark_material_dark = 2131034247;
+			public const int notification_material_background_media_default_color = 2131034247;
 			
 			// aapt resource value: 0x7F050088
-			public const int primary_dark_material_light = 2131034248;
+			public const int primary_dark_material_dark = 2131034248;
 			
 			// aapt resource value: 0x7F050089
-			public const int primary_material_dark = 2131034249;
+			public const int primary_dark_material_light = 2131034249;
 			
 			// aapt resource value: 0x7F05008A
-			public const int primary_material_light = 2131034250;
+			public const int primary_material_dark = 2131034250;
 			
 			// aapt resource value: 0x7F05008B
-			public const int primary_text_default_material_dark = 2131034251;
+			public const int primary_material_light = 2131034251;
 			
 			// aapt resource value: 0x7F05008C
-			public const int primary_text_default_material_light = 2131034252;
+			public const int primary_text_default_material_dark = 2131034252;
 			
 			// aapt resource value: 0x7F05008D
-			public const int primary_text_disabled_material_dark = 2131034253;
+			public const int primary_text_default_material_light = 2131034253;
 			
 			// aapt resource value: 0x7F05008E
-			public const int primary_text_disabled_material_light = 2131034254;
+			public const int primary_text_disabled_material_dark = 2131034254;
 			
 			// aapt resource value: 0x7F05008F
-			public const int ripple_material_dark = 2131034255;
+			public const int primary_text_disabled_material_light = 2131034255;
 			
 			// aapt resource value: 0x7F050090
-			public const int ripple_material_light = 2131034256;
+			public const int ripple_material_dark = 2131034256;
 			
 			// aapt resource value: 0x7F050091
-			public const int secondary_text_default_material_dark = 2131034257;
+			public const int ripple_material_light = 2131034257;
 			
 			// aapt resource value: 0x7F050092
-			public const int secondary_text_default_material_light = 2131034258;
+			public const int secondary_text_default_material_dark = 2131034258;
 			
 			// aapt resource value: 0x7F050093
-			public const int secondary_text_disabled_material_dark = 2131034259;
+			public const int secondary_text_default_material_light = 2131034259;
 			
 			// aapt resource value: 0x7F050094
-			public const int secondary_text_disabled_material_light = 2131034260;
+			public const int secondary_text_disabled_material_dark = 2131034260;
 			
 			// aapt resource value: 0x7F050095
-			public const int segmented_control_text = 2131034261;
+			public const int secondary_text_disabled_material_light = 2131034261;
 			
 			// aapt resource value: 0x7F050096
-			public const int selected = 2131034262;
+			public const int segmented_control_text = 2131034262;
 			
 			// aapt resource value: 0x7F050097
-			public const int switch_thumb_disabled_material_dark = 2131034263;
+			public const int selected = 2131034263;
 			
 			// aapt resource value: 0x7F050098
-			public const int switch_thumb_disabled_material_light = 2131034264;
+			public const int switch_thumb_disabled_material_dark = 2131034264;
 			
 			// aapt resource value: 0x7F050099
-			public const int switch_thumb_material_dark = 2131034265;
+			public const int switch_thumb_disabled_material_light = 2131034265;
 			
 			// aapt resource value: 0x7F05009A
-			public const int switch_thumb_material_light = 2131034266;
+			public const int switch_thumb_material_dark = 2131034266;
 			
 			// aapt resource value: 0x7F05009B
-			public const int switch_thumb_normal_material_dark = 2131034267;
+			public const int switch_thumb_material_light = 2131034267;
 			
 			// aapt resource value: 0x7F05009C
-			public const int switch_thumb_normal_material_light = 2131034268;
+			public const int switch_thumb_normal_material_dark = 2131034268;
 			
 			// aapt resource value: 0x7F05009D
-			public const int tooltip_background_dark = 2131034269;
+			public const int switch_thumb_normal_material_light = 2131034269;
 			
 			// aapt resource value: 0x7F05009E
-			public const int tooltip_background_light = 2131034270;
+			public const int tooltip_background_dark = 2131034270;
 			
 			// aapt resource value: 0x7F05009F
-			public const int white_disabled_material = 2131034271;
+			public const int tooltip_background_light = 2131034271;
+			
+			// aapt resource value: 0x7F0500A0
+			public const int white_disabled_material = 2131034272;
 			
 			static Color()
 			{
@@ -16227,139 +16641,145 @@ namespace GaslandsHQ.Droid
 			public const int design_text_input_password_icon = 2131427373;
 			
 			// aapt resource value: 0x7F0B002E
-			public const int FlyoutContent = 2131427374;
+			public const int FallbackTabbarDoNotUse = 2131427374;
 			
 			// aapt resource value: 0x7F0B002F
-			public const int MaterialPickerTextInput = 2131427375;
+			public const int FallbackToolbarDoNotUse = 2131427375;
 			
 			// aapt resource value: 0x7F0B0030
-			public const int mr_cast_dialog = 2131427376;
+			public const int FlyoutContent = 2131427376;
 			
 			// aapt resource value: 0x7F0B0031
-			public const int mr_cast_group_item = 2131427377;
+			public const int MaterialPickerTextInput = 2131427377;
 			
 			// aapt resource value: 0x7F0B0032
-			public const int mr_cast_group_volume_item = 2131427378;
+			public const int mr_cast_dialog = 2131427378;
 			
 			// aapt resource value: 0x7F0B0033
-			public const int mr_cast_header_item = 2131427379;
+			public const int mr_cast_group_item = 2131427379;
 			
 			// aapt resource value: 0x7F0B0034
-			public const int mr_cast_media_metadata = 2131427380;
+			public const int mr_cast_group_volume_item = 2131427380;
 			
 			// aapt resource value: 0x7F0B0035
-			public const int mr_cast_route_item = 2131427381;
+			public const int mr_cast_header_item = 2131427381;
 			
 			// aapt resource value: 0x7F0B0036
-			public const int mr_chooser_dialog = 2131427382;
+			public const int mr_cast_media_metadata = 2131427382;
 			
 			// aapt resource value: 0x7F0B0037
-			public const int mr_chooser_list_item = 2131427383;
+			public const int mr_cast_route_item = 2131427383;
 			
 			// aapt resource value: 0x7F0B0038
-			public const int mr_controller_material_dialog_b = 2131427384;
+			public const int mr_chooser_dialog = 2131427384;
 			
 			// aapt resource value: 0x7F0B0039
-			public const int mr_controller_volume_item = 2131427385;
+			public const int mr_chooser_list_item = 2131427385;
 			
 			// aapt resource value: 0x7F0B003A
-			public const int mr_picker_dialog = 2131427386;
+			public const int mr_controller_material_dialog_b = 2131427386;
 			
 			// aapt resource value: 0x7F0B003B
-			public const int mr_picker_header_item = 2131427387;
+			public const int mr_controller_volume_item = 2131427387;
 			
 			// aapt resource value: 0x7F0B003C
-			public const int mr_picker_route_item = 2131427388;
+			public const int mr_picker_dialog = 2131427388;
 			
 			// aapt resource value: 0x7F0B003D
-			public const int mr_playback_control = 2131427389;
+			public const int mr_picker_header_item = 2131427389;
 			
 			// aapt resource value: 0x7F0B003E
-			public const int mr_volume_control = 2131427390;
+			public const int mr_picker_route_item = 2131427390;
 			
 			// aapt resource value: 0x7F0B003F
-			public const int mtrl_layout_snackbar = 2131427391;
+			public const int mr_playback_control = 2131427391;
 			
 			// aapt resource value: 0x7F0B0040
-			public const int mtrl_layout_snackbar_include = 2131427392;
+			public const int mr_volume_control = 2131427392;
 			
 			// aapt resource value: 0x7F0B0041
-			public const int notification_action = 2131427393;
+			public const int mtrl_layout_snackbar = 2131427393;
 			
 			// aapt resource value: 0x7F0B0042
-			public const int notification_action_tombstone = 2131427394;
+			public const int mtrl_layout_snackbar_include = 2131427394;
 			
 			// aapt resource value: 0x7F0B0043
-			public const int notification_media_action = 2131427395;
+			public const int notification_action = 2131427395;
 			
 			// aapt resource value: 0x7F0B0044
-			public const int notification_media_cancel_action = 2131427396;
+			public const int notification_action_tombstone = 2131427396;
 			
 			// aapt resource value: 0x7F0B0045
-			public const int notification_template_big_media = 2131427397;
+			public const int notification_media_action = 2131427397;
 			
 			// aapt resource value: 0x7F0B0046
-			public const int notification_template_big_media_custom = 2131427398;
+			public const int notification_media_cancel_action = 2131427398;
 			
 			// aapt resource value: 0x7F0B0047
-			public const int notification_template_big_media_narrow = 2131427399;
+			public const int notification_template_big_media = 2131427399;
 			
 			// aapt resource value: 0x7F0B0048
-			public const int notification_template_big_media_narrow_custom = 2131427400;
+			public const int notification_template_big_media_custom = 2131427400;
 			
 			// aapt resource value: 0x7F0B0049
-			public const int notification_template_custom_big = 2131427401;
+			public const int notification_template_big_media_narrow = 2131427401;
 			
 			// aapt resource value: 0x7F0B004A
-			public const int notification_template_icon_group = 2131427402;
+			public const int notification_template_big_media_narrow_custom = 2131427402;
 			
 			// aapt resource value: 0x7F0B004B
-			public const int notification_template_lines_media = 2131427403;
+			public const int notification_template_custom_big = 2131427403;
 			
 			// aapt resource value: 0x7F0B004C
-			public const int notification_template_media = 2131427404;
+			public const int notification_template_icon_group = 2131427404;
 			
 			// aapt resource value: 0x7F0B004D
-			public const int notification_template_media_custom = 2131427405;
+			public const int notification_template_lines_media = 2131427405;
 			
 			// aapt resource value: 0x7F0B004E
-			public const int notification_template_part_chronometer = 2131427406;
+			public const int notification_template_media = 2131427406;
 			
 			// aapt resource value: 0x7F0B004F
-			public const int notification_template_part_time = 2131427407;
+			public const int notification_template_media_custom = 2131427407;
 			
 			// aapt resource value: 0x7F0B0050
-			public const int RadioButton = 2131427408;
+			public const int notification_template_part_chronometer = 2131427408;
 			
 			// aapt resource value: 0x7F0B0051
-			public const int RadioGroup = 2131427409;
+			public const int notification_template_part_time = 2131427409;
 			
 			// aapt resource value: 0x7F0B0052
-			public const int RootLayout = 2131427410;
+			public const int RadioButton = 2131427410;
 			
 			// aapt resource value: 0x7F0B0053
-			public const int select_dialog_item_material = 2131427411;
+			public const int RadioGroup = 2131427411;
 			
 			// aapt resource value: 0x7F0B0054
-			public const int select_dialog_multichoice_material = 2131427412;
+			public const int RootLayout = 2131427412;
 			
 			// aapt resource value: 0x7F0B0055
-			public const int select_dialog_singlechoice_material = 2131427413;
+			public const int select_dialog_item_material = 2131427413;
 			
 			// aapt resource value: 0x7F0B0056
-			public const int ShellContent = 2131427414;
+			public const int select_dialog_multichoice_material = 2131427414;
 			
 			// aapt resource value: 0x7F0B0057
-			public const int support_simple_spinner_dropdown_item = 2131427415;
+			public const int select_dialog_singlechoice_material = 2131427415;
 			
 			// aapt resource value: 0x7F0B0058
-			public const int Tabbar = 2131427416;
+			public const int ShellContent = 2131427416;
 			
 			// aapt resource value: 0x7F0B0059
-			public const int TextInputLayoutFilledBox = 2131427417;
+			public const int support_simple_spinner_dropdown_item = 2131427417;
 			
 			// aapt resource value: 0x7F0B005A
-			public const int Toolbar = 2131427418;
+			public const int Tabbar = 2131427418;
+			
+			// aapt resource value: 0x7F0B005B
+			public const int TextInputLayoutFilledBox = 2131427419;
+			
+			// aapt resource value: 0x7F0B005C
+			public const int Toolbar = 2131427420;
 			
 			static Layout()
 			{
