@@ -9,6 +9,8 @@ namespace GaslandsHQ
     {
         public static string AppCenterAndroidKey => GetJson()["AppCenter_Android_Secret"]?.ToString();
 
+        public static string AppCenteriOSKey => GetJson()["AppCenter_iOS_Secret"]?.ToString();
+
         private static JObject GetJson()
         {
             var assembly = Assembly.GetExecutingAssembly();

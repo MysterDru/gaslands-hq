@@ -1,6 +1,7 @@
 ﻿using System;
 using GaslandsHQ.ViewModels2;
 using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
 using Microsoft.AppCenter.Distribute;
 using Xamarin.Forms;
@@ -14,19 +15,15 @@ namespace GaslandsHQ
         {
             InitializeComponent();
 
-            string droidAppCenterKey = Config.AppCenterAndroidKey;
 #if RELEASE
-            AppCenter.Start($"android={droidAppCenterKey}", typeof(Distribute), typeof(Crashes));
+            string iosAppCenterKey = Config.AppCenteriOSKey;
+            string droidAppCenterKey = Config.AppCenterAndroidKey;
+            AppCenter.Start($"ios={iosAppCenterKey};android={droidAppCenterKey}", typeof(Analytics), typeof(Crashes));
 #endif
 
-            //MainPage = new NavigationPage(new Pages.MainPage());
             DependencyService.Get<INavigationService>()
                 .Navigate(new MainViewModel())
                 .Wait();
-
-#if RELEASE
-            Distribute.CheckForUpdate();
-#endif
         }
 
         protected override void OnStart()
