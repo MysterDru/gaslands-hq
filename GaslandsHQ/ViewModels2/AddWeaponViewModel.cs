@@ -202,6 +202,9 @@ namespace GaslandsHQ.ViewModels2
 
             if (defaultWeapon != null)
                 this.SelectedWeapon = this.Weapons.FirstOrDefault(x => x.wtype == defaultWeapon.wtype);
+            else
+                this.SelectedWeapon = this.Weapons.FirstOrDefault(x => x.wtype == "Heavy Machine Gun");
+
 
             this.RefreshLocation();
         }

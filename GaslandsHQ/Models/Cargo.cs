@@ -12,5 +12,7 @@ namespace GaslandsHQ.Models
         public string ruleset { get; set; }
 
         public string optionText => ctype + (ruleset != "BASE" ? ("(" + ruleset + ")") : string.Empty);
+
+        public override string ToString() => ctype;
     }
 }

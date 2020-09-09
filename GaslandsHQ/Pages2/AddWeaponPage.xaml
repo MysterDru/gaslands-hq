@@ -16,19 +16,11 @@
 
                 <Picker
                     Title="Facing"
+                    ItemsSource="{Binding  Facings}"
 					SelectedItem="{Binding Facing}"
                     IsEnabled="{Binding CanEditFacing}"
-					Grid.Column="1"
-                    Grid.Row="0">
-                    <Picker.ItemsSource>
-                        <x:Array Type="{x:Type x:String}">
-                            <x:String>Front</x:String>
-                            <x:String>Sides</x:String>
-                            <x:String>Rear</x:String>
-                            <x:String>360</x:String>
-                        </x:Array>
-                    </Picker.ItemsSource>
-                </Picker>
+					Grid.Column="1"/>
+                    
 
              <Picker
 						Title="Location"

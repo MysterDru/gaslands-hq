@@ -17,5 +17,7 @@ namespace GaslandsHQ.Models
         public string shortRules { get; set; }
 
         public string ruleset { get; set; }
+
+        public override string ToString() => ptype;
     }
 }

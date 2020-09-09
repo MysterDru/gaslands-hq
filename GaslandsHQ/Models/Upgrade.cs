@@ -30,6 +30,8 @@ namespace GaslandsHQ.Models
         public int maxGear { get; set; }
 
         public string optionText => utype + (ruleset != "BASE" ? ("(" + ruleset + ")") : string.Empty);
+
+        public override string ToString() => utype;
     }
 }
 

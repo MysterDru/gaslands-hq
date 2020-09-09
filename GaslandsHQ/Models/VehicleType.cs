@@ -23,5 +23,7 @@ namespace GaslandsHQ.Models
         public string[] Keywords { get; set; }
 
         public string ruleset { get; set; }
+
+        public override string ToString() => vtype;
     }
 }

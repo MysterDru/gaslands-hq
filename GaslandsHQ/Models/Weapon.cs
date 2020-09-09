@@ -30,5 +30,7 @@ namespace GaslandsHQ.Models
         public string optionText => wtype + (ruleset != "BASE" ? ("(" + ruleset + ")") : string.Empty);
 
         public bool always { get; set; }
+
+        public override string ToString() => wtype;
     }
 }

@@ -8,56 +8,53 @@ namespace GaslandsHQ.ViewModels2
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
-		private bool suppress;
+        private bool suppress;
 
-		public event PropertyChangedEventHandler PropertyChanged;
+        public event PropertyChangedEventHandler PropertyChanged;
 
 
 
-		public void RaisePropertyChanged([CallerMemberName] string whichProperty = "")
-		{
-			var changedArgs = new PropertyChangedEventArgs(whichProperty);
-			RaisePropertyChanged(changedArgs);
-		}
+        public void RaisePropertyChanged([CallerMemberName] string whichProperty = "")
+        {
+            var changedArgs = new PropertyChangedEventArgs(whichProperty);
+            RaisePropertyChanged(changedArgs);
+        }
 
-		public virtual void RaiseAllPropertiesChanged()
-		{
-			var allProperties = this.GetType().GetRuntimeProperties();
-			foreach (var property in allProperties)
-				RaisePropertyChanged(property.Name);
-		}
+        public virtual void RaiseAllPropertiesChanged()
+        {
+            var allProperties = this.GetType().GetRuntimeProperties();
+            foreach (var property in allProperties)
+                RaisePropertyChanged(property.Name);
+        }
 
-		public virtual void RaisePropertyChanged(PropertyChangedEventArgs changedArgs)
-		{
-			if (!InterceptRaisePropertyChanged(changedArgs) && !this.suppress)
-			{
-				Xamarin.Essentials.MainThread.BeginInvokeOnMainThread(() =>
-				{
-					PropertyChanged?.Invoke(this, changedArgs);
-				});
-			}
-		}
+        public virtual void RaisePropertyChanged(PropertyChangedEventArgs changedArgs)
+        {
+            if (!InterceptRaisePropertyChanged(changedArgs) && !this.suppress)
+            {
+                PropertyChanged?.Invoke(this, changedArgs);
+            }
+        }
 
-		protected virtual bool SetProperty<T>(ref T storage, T value, [CallerMemberName] string propertyName = null)
-		{
-			if (EqualityComparer<T>.Default.Equals(storage, value))
-			{
-				return false;
-			}
+        protected virtual bool SetProperty<T>(ref T storage, T value, [CallerMemberName] string propertyName = null)
+        {
+            if (EqualityComparer<T>.Default.Equals(storage, value))
+            {
+                return false;
+            }
 
-			storage = value;
-			RaisePropertyChanged(propertyName);
-			return true;
-		}
+            storage = value;
+            RaisePropertyChanged(propertyName);
+            return true;
+        }
 
-		protected virtual bool InterceptRaisePropertyChanged(PropertyChangedEventArgs changedArgs)
-		{
-			return false;
-		}
+        protected virtual bool InterceptRaisePropertyChanged(PropertyChangedEventArgs changedArgs)
+        {
+            return false;
+        }
 
-		public void SuppressPropertyChanged(bool suppress)
-		{
-			this.suppress = suppress;
-		}
-	}
+        public void SuppressPropertyChanged(bool suppress)
+        {
+            this.suppress = suppress;
+        }
+    }
 }

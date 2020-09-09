@@ -38,8 +38,16 @@
                         <Label Grid.Column="0" Text="{Binding TeamName}"
                                VerticalTextAlignment="Center"
                                 FontAttributes="Bold"/>
-                        <Label Grid.Column="1" Text="{Binding TotalCans, StringFormat='{0} Cans'}"
-                               VerticalTextAlignment="Center"/>
+                        <Label Grid.Column="1"
+                               VerticalTextAlignment="Center">
+                            <Label.Text>
+                                <MultiBinding StringFormat="{}{0}/{1} Cans">
+                                    <Binding Path="CurrentCans" />
+                                    <Binding Path="TotalCans" />
+                                </MultiBinding>
+                            </Label.Text>
+                        </Label>
+
 
                         <Label Text="{Binding SelectedSponsor.name, StringFormat='Sponsor: {0}'}"
                                FontSize="Small"

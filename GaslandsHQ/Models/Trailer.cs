@@ -8,5 +8,7 @@ namespace GaslandsHQ.Models
         public int slots { get; set; }
 
         public int cost { get; set; }
+
+        public override string ToString() => ttype;
     }
 }

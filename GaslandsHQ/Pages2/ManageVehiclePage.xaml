@@ -250,7 +250,7 @@
                                             <Binding Path="Slots" />
                                             <Binding Path="Ammo" />
                                         </MultiBinding>
-                                    </Label.Text>
+                                     </Label.Text>
                                 </Label>
 
                                 <Label FontSize="Small"
