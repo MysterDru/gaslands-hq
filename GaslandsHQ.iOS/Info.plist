@@ -25,7 +25,7 @@
 	<key>CFBundleDisplayName</key>
 	<string>Gaslands HQ</string>
 	<key>CFBundleIdentifier</key>
-	<string>dev.drewfrisk.Gaslands-HQ</string>
+	<string>dev.drewfrisk.gaslandshq</string>
 	<key>CFBundleVersion</key>
 	<string>0.1</string>
 	<key>UILaunchStoryboardName</key>
