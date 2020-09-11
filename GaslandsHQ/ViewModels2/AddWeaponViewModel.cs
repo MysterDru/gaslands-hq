@@ -71,7 +71,7 @@ namespace GaslandsHQ.ViewModels2
 
                 var cost = SelectedWeapon.cost;
 
-                if (this.Facing == "Turret/360" && (!this.vehicle.SelectedVehicleType.Keywords.Any(k => k == "Turret")
+                if (this.Facing == "Turret/360" && (!this.vehicle.SelectedVehicleType.keywords.Any(k => k == "Turret")
                     || this.FindMostExpensiveTurret() != this))
                     multiplier = 3;
 
@@ -119,7 +119,7 @@ namespace GaslandsHQ.ViewModels2
         {
             get
             {
-                if(this.vehicle.SelectedVehicleType?.Keywords?.Contains("Bombs Away") ==  true &&  this.AttackType ==  "Dropped")
+                if(this.vehicle.SelectedVehicleType?.keywords?.Contains("Bombs Away") ==  true &&  this.AttackType ==  "Dropped")
                     return 0;
 
                 if (this.SelectedWeapon?.wtype == "Ram" && this.vehicle.Team.SelectedSponsor?.keywords?.Contains("Spiked Fist") == true)

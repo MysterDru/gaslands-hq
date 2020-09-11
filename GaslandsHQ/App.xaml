@@ -9,6 +9,7 @@
     x:Class="GaslandsHQ.App">
     <Application.Resources>
         <help:NullableIntConverter x:Key="NullableInt" />
+        <help:InverseBoolConverter x:Key="InverseBool" />
 
         <Style x:Key="tag" TargetType="ContentView">
             <Setter Property="BackgroundColor"

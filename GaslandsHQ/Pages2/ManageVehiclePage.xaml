@@ -101,6 +101,43 @@
                 </FlexLayout>
             </ContentView>
 
+              <StackLayout
+                Padding="10, 0, 10, 10"
+                BindableLayout.ItemsSource="{Binding VehicleRules}"
+                IsVisible="{Binding HideVehicleRules, Converter={StaticResource InverseBool}}">
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding ToggleVehicleRules}"/>
+                </StackLayout.GestureRecognizers>
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <Label>
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <FormattedString.Spans>
+                                        <Span Text="{Binding ktype}"
+                                              FontAttributes="Bold"
+                                              TextColor="DarkGray"/>
+                                        <Span Text=": "
+                                              FontAttributes="Bold"
+                                              TextColor="DarkGray"/>
+                                        <Span Text="{Binding rules}" TextColor="DarkGray" />
+                                    </FormattedString.Spans>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </StackLayout>
+
+            <ContentView 
+                Padding="10"
+                IsVisible="{Binding HideVehicleRules}">
+                <Label Text="Show Vehicle Rules"/>
+                <ContentView.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding ToggleVehicleRules}"/>
+                </ContentView.GestureRecognizers>
+            </ContentView>
+
             <ContentView
                 IsVisible="{Binding CanAddAddons}"
 				Grid.Row="2"
@@ -273,7 +310,7 @@
                 ItemsSource="{Binding Perks}"
                 Grid.Row="3"
                 Grid.ColumnSpan="2"
-                RowHeight="55"
+                HasUnevenRows="true"
                 ItemSelected="ListView_ItemSelected_2">
                 <ListView.Header>
                     <ContentView
@@ -301,10 +338,10 @@
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="auto" />
                                 </Grid.ColumnDefinitions>
-                                <Grid.RowDefinitions>
+                                <!--<Grid.RowDefinitions>
                                     <RowDefinition Height="auto"/>
-                                    <RowDefinition Height="auto"/>
-                                </Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>-->
                                 <Label FontSize="Medium"
                                        FontAttributes="Bold"
                                        Grid.Column="0"

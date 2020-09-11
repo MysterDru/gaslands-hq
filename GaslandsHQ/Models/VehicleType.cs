@@ -20,7 +20,7 @@ namespace GaslandsHQ.Models
 
         public int cost { get; set; }
 
-        public string[] Keywords { get; set; }
+        public string[] keywords { get; set; }
 
         public string ruleset { get; set; }
 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Text;
 using System.Windows.Input;
 using GaslandsHQ.Models;
 using Newtonsoft.Json;
@@ -23,6 +24,20 @@ namespace GaslandsHQ.ViewModels2
 
         public Sponsor SelectedSponsor { get; set; }
 
+        public bool HideSponsorRules { get; private set; }
+
+        public IEnumerable<KeywordData> SponsorRules
+        {
+            get
+            {
+                if (SelectedSponsor == null) return null;
+
+                var k = Constants.AllKeywords.Where(x => SelectedSponsor.keywords.Contains(x.ktype));
+
+                return k?.ToArray();
+            }
+        }
+
         public bool CanSelectSponsor => SelectedSponsor == null || this.Vehicles.Count == 0;
 
         public int TotalCans { get; set; }
@@ -42,6 +57,8 @@ namespace GaslandsHQ.ViewModels2
 
         public ICommand Dismiss => new Command(ExecuteDismissAsync);
 
+        public ICommand ToggleSponsorRules => new Command(() => this.HideSponsorRules = !this.HideSponsorRules);
+
         public AddTeamViewModel()
         {
             this.Id = Guid.NewGuid();
@@ -53,7 +70,7 @@ namespace GaslandsHQ.ViewModels2
 
             this.TotalCans = 50;
 
-            //this.SelectedSponsor = Sponsors.First(x => x.name == "None");
+            this.HideSponsorRules = true;
         }
 
         public AddTeamViewModel(UserTeam userTeamToRestore) : this()
@@ -123,7 +140,7 @@ namespace GaslandsHQ.ViewModels2
             var t = this;
             var team = new UserTeam
             {
-                Id  = t.Id,
+                Id = t.Id,
                 TeamName = t.TeamName,
                 Cans = t.TotalCans,
                 Sponsor = t.SelectedSponsor,

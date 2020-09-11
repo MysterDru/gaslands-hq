@@ -21,6 +21,20 @@ namespace GaslandsHQ.ViewModels2
 
         public VehicleType SelectedVehicleType { get; set; }
 
+        public IEnumerable<KeywordData> VehicleRules
+        {
+            get
+            {
+                if (SelectedVehicleType == null) return null;
+
+                var k = Constants.AllKeywords.Where(x => SelectedVehicleType.keywords.Contains(x.ktype));
+
+                return k?.ToArray();
+            }
+        }
+
+        public bool HideVehicleRules { get; private set; }
+
         public bool ScanSelectVehicleType
         {
             get
@@ -42,13 +56,20 @@ namespace GaslandsHQ.ViewModels2
 
         public bool ShowWeapons => CanAddAddons && SelectedAddonIndex == 0;
         public bool ShowUpgrades => CanAddAddons && SelectedAddonIndex == 1;
-        public bool ShowPerks => CanAddAddons && SelectedAddonIndex == 2;
-        public bool ShowTrailers => CanAddAddons && ((!AllowedAddons.Contains("Perks") && SelectedAddonIndex == 2) || (!AllowedAddons.Contains("Perks") && SelectedAddonIndex == 3));
+        public bool ShowPerks => CanAddAddons && AllowedAddons.Contains("Perks") && SelectedAddonIndex == 2;
+        public bool ShowTrailers
+        {
+            get
+            {
+                return CanAddAddons && ((!AllowedAddons.Contains("Perks") && SelectedAddonIndex == 2) || (AllowedAddons.Contains("Perks") && SelectedAddonIndex == 3));
+            }
+        }
 
         public string Name { get; set; }
 
         public bool CanAddAddons => SelectedVehicleType != null;
 
+        [DependsOn(nameof(SelectedVehicleType))]
         public int TotalCost
         {
             get
@@ -67,9 +88,9 @@ namespace GaslandsHQ.ViewModels2
         {
             get
             {
-                if (this.SelectedVehicleType?.Keywords != null && this.SelectedVehicleType.Keywords.Length > 0)
+                if (this.SelectedVehicleType?.keywords != null && this.SelectedVehicleType.keywords.Length > 0)
                 {
-                    var matchingKeywords = Constants.AllKeywords.Where(x => SelectedVehicleType.Keywords.Contains(x.ktype));
+                    var matchingKeywords = Constants.AllKeywords.Where(x => SelectedVehicleType.keywords.Contains(x.ktype));
 
                     var sb = new StringBuilder();
                     foreach (var k in matchingKeywords)
@@ -84,26 +105,35 @@ namespace GaslandsHQ.ViewModels2
             }
         }
 
+        [DependsOn(nameof(SelectedVehicleType))]
         public int UsedSlots => (this.Weapons?.Sum(x => x.Slots) ?? 0)
             + (this.Upgrades?.Sum(x => x.Slots) ?? 0)
             + (this.Trailers?.Sum(x => x.Slots) ?? 0);
 
+        [DependsOn(nameof(SelectedVehicleType))]
         public int AvailableSlots => SelectedVehicleType?.slots ?? 0;
 
+        [DependsOn(nameof(SelectedVehicleType))]
         public int Handling => (SelectedVehicleType?.handling ?? 0)
              + (this.Upgrades?.Sum(x => x.Handling) ?? 0)
             + (this.Perks?.Sum(x => x.Handling) ?? 0);
 
+        [DependsOn(nameof(SelectedVehicleType))]
         public int Hull => (SelectedVehicleType?.hull ?? 0)
             + (this.Upgrades?.Sum(x => x.Hull) ?? 0);// todo: calculate
 
+        [DependsOn(nameof(SelectedVehicleType))]
         public int Crew => (SelectedVehicleType?.crew ?? 0)
              + (this.Upgrades?.Sum(x => x.Crew) ?? 0); // todo: calculate
 
+        [DependsOn(nameof(SelectedVehicleType))]
         public int MaxGear => (SelectedVehicleType?.maxGear ?? 0)
              + (this.Upgrades?.Sum(x => x.MaxGear) ?? 0); // todo: calculate
 
+        [DependsOn(nameof(SelectedVehicleType))]
         public string WeightClass => SelectedVehicleType?.weight ?? "N/A";
+
+        public ICommand ToggleVehicleRules => new Command(() => this.HideVehicleRules = !this.HideVehicleRules);
 
         #region Weapons
 
@@ -236,6 +266,10 @@ namespace GaslandsHQ.ViewModels2
             {
                 AllowedAddons.Add("Perks");
             }
+
+            // set default vehicle
+
+            this.HideVehicleRules = true;
         }
 
         // restore data

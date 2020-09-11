@@ -19,7 +19,7 @@ namespace GaslandsHQ.ViewModels2
 
         public string Rules => SelectedPerk?.rules;
 
-        public string ShortRules => SelectedPerk?.shortRules;
+        public string ShortRules => SelectedPerk?.shortRules ?? Rules;
 
         public int Handling => this.SelectedPerk?.ptype == "Expertise" ? 1 : 0;
 

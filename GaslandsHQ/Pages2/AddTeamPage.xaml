@@ -27,6 +27,7 @@
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
@@ -66,11 +67,55 @@
                         Grid.Row="2"
                 Grid.Column="1"/>
 
+            <ScrollView
+                Grid.Row="3"
+                Grid.ColumnSpan="2"
+                HeightRequest="200"
+                IsVisible="{Binding HideSponsorRules, Converter={StaticResource InverseBool}}">
+            <StackLayout                
+                Padding="10"
+                BindableLayout.ItemsSource="{Binding SponsorRules}"
+                >
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding ToggleSponsorRules}"/>
+                </StackLayout.GestureRecognizers>
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <Label>
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <FormattedString.Spans>
+                                        <Span Text="{Binding ktype}"
+                                              FontAttributes="Bold"
+                                              TextColor="DarkGray"/>
+                                        <Span Text=": "
+                                              FontAttributes="Bold"
+                                              TextColor="DarkGray"/>
+                                        <Span Text="{Binding rules}" TextColor="DarkGray" />
+                                    </FormattedString.Spans>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </StackLayout>
+            </ScrollView>
 
+
+            <ContentView 
+                Grid.Row="3"
+                Grid.ColumnSpan="2"
+                Padding="10"
+                IsVisible="{Binding HideSponsorRules}">
+                <Label Text="Show Sponsor Rules"/>
+                <ContentView.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding ToggleSponsorRules}"/>
+                </ContentView.GestureRecognizers>
+            </ContentView>
             <ListView
                 x:Name="VehicleList"
 				ItemsSource="{Binding Vehicles}"
-                Grid.Row="3"
+                Grid.Row="4"
                 Grid.ColumnSpan="2"
                 HasUnevenRows="True"
                 ItemSelected="ListView_ItemSelected">
