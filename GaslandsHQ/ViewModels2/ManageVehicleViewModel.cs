@@ -43,7 +43,7 @@ namespace GaslandsHQ.ViewModels2
         public bool ShowWeapons => CanAddAddons && SelectedAddonIndex == 0;
         public bool ShowUpgrades => CanAddAddons && SelectedAddonIndex == 1;
         public bool ShowPerks => CanAddAddons && SelectedAddonIndex == 2;
-        public bool ShowTrailers => CanAddAddons && ((!AllowedAddons.Contains("Perks") && SelectedAddonIndex == 2) || (!AllowedAddons.Contains("Perks") && SelectedAddonIndex == 3));
+        public bool ShowTrailers => CanAddAddons && ((!AllowedAddons.Contains("Perks") && SelectedAddonIndex == 2) || (AllowedAddons.Contains("Perks") && SelectedAddonIndex == 3));
 
         public string Name { get; set; }
 
@@ -85,10 +85,9 @@ namespace GaslandsHQ.ViewModels2
         }
 
         public int UsedSlots => (this.Weapons?.Sum(x => x.Slots) ?? 0)
-            + (this.Upgrades?.Sum(x => x.Slots) ?? 0)
-            + (this.Trailers?.Sum(x => x.Slots) ?? 0);
+            + (this.Upgrades?.Sum(x => x.Slots) ?? 0);
 
-        public int AvailableSlots => SelectedVehicleType?.slots ?? 0;
+        public int AvailableSlots => (SelectedVehicleType?.slots ?? 0) + (this.Trailers?.Sum(x => x.Slots) ?? 0);
 
         public int Handling => (SelectedVehicleType?.handling ?? 0)
              + (this.Upgrades?.Sum(x => x.Handling) ?? 0)
