@@ -126,7 +126,7 @@ namespace GaslandsHQ.ViewModels2
 
         public ICommand EditUpgrade => new Command(ExecuteEditUpgradeAsync);
 
-        public ICommand DeleteUpgrade => new Command(ExecuteDeleteUpgrade);
+        public ICommand DeleteUpgrade => new Command(ExecuteDeleteUpgrade, (w) => (w as AddWeaponViewModel)?.CanSelect == true);
 
         public string UpgradesDisplayText => string.Join(", ", this.Upgrades?.Select(x => x.SelectedUpgrade?.utype)?.ToArray() ?? new string[0]);
 
@@ -364,10 +364,12 @@ namespace GaslandsHQ.ViewModels2
         {
             var vm = obj as AddWeaponViewModel;
 
-            if (vm != null)
+            if (vm != null && vm.CanSelect)
             {
                 vm.PropertyChanged -= this.OnWeaponPropertyChanged;
                 this.Weapons.Remove(vm);
+
+                this.RaiseAllPropertiesChanged();
             }
         }
 
@@ -503,6 +505,8 @@ namespace GaslandsHQ.ViewModels2
             vm.PropertyChanged -= TrailerPropertyChanged;
 
             this.CanAddAdditionalTrailers = true;
+
+            this.RaiseAllPropertiesChanged();
         }
 
         private void TrailerPropertyChanged(object sender, PropertyChangedEventArgs e)

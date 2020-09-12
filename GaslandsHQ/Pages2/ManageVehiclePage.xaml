@@ -143,7 +143,7 @@
                             <ViewCell.ContextActions>
                                 <MenuItem IsDestructive="true"
                                           Text="Delete"
-                                          Command="{Binding Source={x:Reference Page}, Path=BindingContext.DeleteUpgrade}"
+                                          Command="{Binding Source={x:Reference Page}, Path=BindingContext.DeleteWeapon}"
                                           CommandParameter="{Binding .}"
                                           IsEnabled="{Binding CanSelect}"/>
                             </ViewCell.ContextActions>

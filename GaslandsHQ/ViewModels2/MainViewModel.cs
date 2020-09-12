@@ -96,7 +96,7 @@ namespace GaslandsHQ.ViewModels2
 
         async void ExecuteFeedbackAsync(object obj)
         {
-            await Xamarin.Essentials.Email.ComposeAsync(new Xamarin.Essentials.EmailMessage("GaslandsHQ Feedback", null, "gaslandshq@drewfrisk.com"));
+            await Xamarin.Essentials.Email.ComposeAsync(new Xamarin.Essentials.EmailMessage("GaslandsHQ Feedback", null, "gaslandshq@drewfrisk.dev"));
         }
     }
 }

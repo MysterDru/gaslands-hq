@@ -102,7 +102,7 @@
     "allowedSponsors": [ "Warden" ],
     "allowedVehicles": [ "Car", "Performance Car", "Truck", "Ice Cream Truck", "Gyrocopter", "Ambulance" ],
     "ruleset": "BASE",
-    "hull":  2
+    "hull":  -2
   },
   {
     "utype": "Louder Siren",
