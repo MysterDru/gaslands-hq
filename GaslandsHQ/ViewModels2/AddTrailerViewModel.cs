@@ -7,7 +7,7 @@ namespace GaslandsHQ.ViewModels2
 {
     public class AddTrailerViewModel : BaseViewModel
     {
-        private ManageVehicleViewModel vehicle;
+        private AddVehicleViewModel vehicle;
 
         public string Title { get; }
 
@@ -25,7 +25,7 @@ namespace GaslandsHQ.ViewModels2
 
         public int Slots => SelectedTrailer?.slots ?? 0;
 
-        public AddTrailerViewModel(ManageVehicleViewModel vehicle, Trailer defaultTrailer = null, Cargo defaultCargo = null)
+        public AddTrailerViewModel(AddVehicleViewModel vehicle, Trailer defaultTrailer = null, Cargo defaultCargo = null)
         {
             this.vehicle = vehicle;
 

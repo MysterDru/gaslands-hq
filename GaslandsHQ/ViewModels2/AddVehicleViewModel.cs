@@ -11,7 +11,7 @@ using Xamarin.Forms;
 
 namespace GaslandsHQ.ViewModels2
 {
-    public class ManageVehicleViewModel : BaseViewModel
+    public class AddVehicleViewModel : BaseViewModel
     {
         public string Title => "Vehicle";
 
@@ -27,7 +27,8 @@ namespace GaslandsHQ.ViewModels2
             {
                 if (SelectedVehicleType == null) return true;
 
-                if(this.Weapons.Count > 1) return true;
+                if(this.Weapons.Count == 1 && this.Weapons[0].SelectedWeapon?.wtype == "Handgun")
+                    return true;
 
                 if (Weapons.Count > 1 || Upgrades.Count > 0 || Perks.Count > 0 || Trailers.Count > 0)
                     return false;
@@ -185,7 +186,7 @@ namespace GaslandsHQ.ViewModels2
 
         #endregion
 
-        public ManageVehicleViewModel(AddTeamViewModel team)
+        public AddVehicleViewModel(AddTeamViewModel team)
         {
             this.Weapons = new ObservableCollection<AddWeaponViewModel>();
             this.Upgrades = new ObservableCollection<AddUpgradeViewModel>();
@@ -238,7 +239,7 @@ namespace GaslandsHQ.ViewModels2
         }
 
         // restore data
-        public ManageVehicleViewModel(AddTeamViewModel team, UserVehicle userVehicle) : this(team)
+        public AddVehicleViewModel(AddTeamViewModel team, UserVehicle userVehicle) : this(team)
         {
             this.Name = userVehicle.VehicleName;
             this.SelectedVehicleType = this.VehicleTypes.FirstOrDefault(x => x.vtype == userVehicle.VehicleType?.vtype);

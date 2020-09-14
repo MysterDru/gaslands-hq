@@ -5,9 +5,9 @@ using Xamarin.Forms;
 
 namespace GaslandsHQ.Pages2
 {
-    public partial class ManageVehiclePage : ContentPage
+    public partial class AddVehiclePage : ContentPage
     {
-        public ManageVehiclePage()
+        public AddVehiclePage()
         {
             InitializeComponent();
         }
@@ -16,7 +16,7 @@ namespace GaslandsHQ.Pages2
         {
             if(e.SelectedItem != null)
             {
-                (this.BindingContext as ManageVehicleViewModel).EditWeapon.Execute(e.SelectedItem);
+                (this.BindingContext as AddVehicleViewModel).EditWeapon.Execute(e.SelectedItem);
             }
 
             weaponsList.SelectedItem = null;
@@ -26,7 +26,7 @@ namespace GaslandsHQ.Pages2
         {
             if (e.SelectedItem != null)
             {
-                (this.BindingContext as ManageVehicleViewModel).EditUpgrade.Execute(e.SelectedItem);
+                (this.BindingContext as AddVehicleViewModel).EditUpgrade.Execute(e.SelectedItem);
             }
 
             this.upgradesList.SelectedItem = null;
@@ -36,7 +36,7 @@ namespace GaslandsHQ.Pages2
         {
             if (e.SelectedItem != null)
             {
-                (this.BindingContext as ManageVehicleViewModel).EditPerk.Execute(e.SelectedItem);
+                (this.BindingContext as AddVehicleViewModel).EditPerk.Execute(e.SelectedItem);
             }
 
             perksList.SelectedItem = null;
@@ -46,7 +46,7 @@ namespace GaslandsHQ.Pages2
         {
             if (e.SelectedItem != null)
             {
-                (this.BindingContext as ManageVehicleViewModel).EditTrailer.Execute(e.SelectedItem);
+                (this.BindingContext as AddVehicleViewModel).EditTrailer.Execute(e.SelectedItem);
             }
 
             trailerList.SelectedItem = null;

@@ -9,6 +9,7 @@
         <ToolbarItem
             Text="Save"
             Command="{Binding SaveTeam}"
+            IconImageSource="save_white.png"
             Priority="0"
             Order="Primary"/>
         <ToolbarItem

@@ -62,9 +62,9 @@ namespace GaslandsHQ
             }
             else if (typeof(TViewModel) == typeof(MainViewModel))
                 page = new MainPage();
-            else if (typeof(TViewModel) == typeof(ManageVehicleViewModel))
+            else if (typeof(TViewModel) == typeof(AddVehicleViewModel))
             {
-                page = new ManageVehiclePage();
+                page = new AddVehiclePage();
                 modal = true;
             }
             else if (typeof(TViewModel) == typeof(AddWeaponViewModel))
@@ -93,11 +93,15 @@ namespace GaslandsHQ
 
             page.BindingContext = viewModel;
 
-            var nav = Xamarin.Forms.Application.Current.MainPage as NavigationPage;
+            var nav = Application.Current.MainPage as NavigationPage;
             var current = nav?.CurrentPage;
             if (page is MainPage)
             {
-                nav = new NavigationPage(page);
+                nav = new NavigationPage(page)
+                {
+                    BarBackgroundColor = Color.FromHex("#2196F3"),
+                    BarTextColor = Color.White
+                };
                 Application.Current.MainPage = nav;
             }
             else
@@ -106,7 +110,11 @@ namespace GaslandsHQ
                 if(modalNav == null)
                 
                 {
-                    modalNav = new NavigationPage(page);
+                    modalNav = new NavigationPage(page)
+                    {
+                        BarBackgroundColor = Color.FromHex("#2196F3"),
+                        BarTextColor = Color.White
+                    };
                     await nav.Navigation.PushModalAsync(modalNav);
                 }
                 else

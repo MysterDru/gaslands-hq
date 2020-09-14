@@ -5,28 +5,27 @@
     <ContentPage.Content>
         <StackLayout
 				Spacing="5">
-                <Picker
-						Title="Weapon Type"
-						ItemsSource="{Binding Weapons}"
-						SelectedItem="{Binding SelectedWeapon}"
-						ItemDisplayBinding="{Binding wtype}"
-                    IsEnabled="{Binding CanSelect}"
-						Grid.Column="0"
-                    Grid.Row="0"/>
+            <Picker
+                Title="Weapon Type"
+                ItemsSource="{Binding Weapons}"
+                SelectedItem="{Binding SelectedWeapon}"
+                ItemDisplayBinding="{Binding wtype}"
+                IsEnabled="{Binding CanSelect}"
+                Grid.Column="0"
+                Grid.Row="0"/>
 
-                <Picker
-                    Title="Facing"
-                    ItemsSource="{Binding  Facings}"
-					SelectedItem="{Binding Facing}"
-                    IsEnabled="{Binding CanEditFacing}"
-					Grid.Column="1"/>
-                    
+            <Picker
+                Title="Facing"
+                ItemsSource="{Binding  Facings}"
+				SelectedItem="{Binding Facing}"
+                IsEnabled="{Binding CanEditFacing}"/>
 
-             <Picker
-						Title="Location"
-						ItemsSource="{Binding Locations}"
-						SelectedItem="{Binding Location}"
-                    IsVisible="{Binding ShowLocation}"/>
+
+            <Picker
+                Title="Location"
+                ItemsSource="{Binding Locations}"
+                SelectedItem="{Binding Location}"
+                IsVisible="{Binding ShowLocation}"/>
 
             <ContentView>
                 <FlexLayout

@@ -9,7 +9,7 @@ namespace GaslandsHQ.ViewModels2
     {
         public string Title => "Perk";
 
-        private ManageVehicleViewModel vehicle;
+        private AddVehicleViewModel vehicle;
 
         public List<Perk> Perks { get; }
 
@@ -23,7 +23,7 @@ namespace GaslandsHQ.ViewModels2
 
         public int Handling => this.SelectedPerk?.ptype == "Expertise" ? 1 : 0;
 
-        public AddPerkViewModel(ManageVehicleViewModel vehicle, Perk defaultPerk = null)
+        public AddPerkViewModel(AddVehicleViewModel vehicle, Perk defaultPerk = null)
         {
             this.vehicle = vehicle;
 

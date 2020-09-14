@@ -36,7 +36,7 @@ namespace GaslandsHQ.ViewModels2
 
         public ICommand DeleteVehicle => new Command(ExecuteDeleteVehicleAsync);
 
-        public ObservableCollection<ManageVehicleViewModel> Vehicles { get; }
+        public ObservableCollection<AddVehicleViewModel> Vehicles { get; }
 
         public ICommand SaveTeam => new Command(ExecuteSaveTeamAsync);
 
@@ -49,7 +49,7 @@ namespace GaslandsHQ.ViewModels2
             this.TeamName = "New Team";
 
             this.Sponsors = Constants.AllSponsors;
-            this.Vehicles = new ObservableCollection<ManageVehicleViewModel>();
+            this.Vehicles = new ObservableCollection<AddVehicleViewModel>();
 
             this.TotalCans = 50;
 
@@ -65,7 +65,7 @@ namespace GaslandsHQ.ViewModels2
 
             foreach (var v in userTeamToRestore.Vehicles)
             {
-                var vm = new ManageVehicleViewModel(this, v);
+                var vm = new AddVehicleViewModel(this, v);
                 vm.PropertyChanged += OnVehiclePropertyChanged;
 
                 this.Vehicles.Add(vm);
@@ -76,7 +76,7 @@ namespace GaslandsHQ.ViewModels2
         {
             var nav = DependencyService.Get<INavigationService>();
 
-            var vm = new ManageVehicleViewModel(this);
+            var vm = new AddVehicleViewModel(this);
 
             vm.PropertyChanged += OnVehiclePropertyChanged;
 
@@ -91,7 +91,7 @@ namespace GaslandsHQ.ViewModels2
         {
             var nav = DependencyService.Get<INavigationService>();
 
-            var vm = obj as ManageVehicleViewModel;
+            var vm = obj as AddVehicleViewModel;
 
             if (vm == null) return;
 
@@ -102,7 +102,7 @@ namespace GaslandsHQ.ViewModels2
         {
             var nav = DependencyService.Get<INavigationService>();
 
-            var vm = obj as ManageVehicleViewModel;
+            var vm = obj as AddVehicleViewModel;
             this.Vehicles.Remove(vm);
             vm.PropertyChanged -= OnVehiclePropertyChanged;
 
@@ -111,7 +111,7 @@ namespace GaslandsHQ.ViewModels2
 
         private void OnVehiclePropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
-            if (e.PropertyName == nameof(ManageVehicleViewModel.TotalCost))
+            if (e.PropertyName == nameof(AddVehicleViewModel.TotalCost))
                 this.RaisePropertyChanged(nameof(CurrentCans));
         }
 

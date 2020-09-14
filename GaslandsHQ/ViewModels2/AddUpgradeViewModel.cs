@@ -9,7 +9,7 @@ namespace GaslandsHQ.ViewModels2
     {
         public string Title => "Upgrade";
 
-        private ManageVehicleViewModel vehicle;
+        private AddVehicleViewModel vehicle;
 
         public List<Upgrade> Upgrades { get; }
 
@@ -57,7 +57,7 @@ namespace GaslandsHQ.ViewModels2
 
         public string SpecialRules => SelectedUpgrade?.specialRules;
 
-        public AddUpgradeViewModel(ManageVehicleViewModel vehicle, Upgrade defaultUpgrade = null)
+        public AddUpgradeViewModel(AddVehicleViewModel vehicle, Upgrade defaultUpgrade = null)
         {
             this.vehicle = vehicle;
 

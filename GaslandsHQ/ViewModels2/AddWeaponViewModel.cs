@@ -10,7 +10,7 @@ namespace GaslandsHQ.ViewModels2
     {
         public string Title => "Weapon";
 
-        private ManageVehicleViewModel vehicle;
+        private AddVehicleViewModel vehicle;
 
         public List<Weapon> Weapons { get; private set; }
 
@@ -89,7 +89,7 @@ namespace GaslandsHQ.ViewModels2
 
             }
         }
-
+         
         public string Attack
         {
             get
@@ -143,7 +143,7 @@ namespace GaslandsHQ.ViewModels2
             }
         }
 
-        public AddWeaponViewModel(ManageVehicleViewModel vehicle, Weapon defaultWeapon = null)
+        public AddWeaponViewModel(AddVehicleViewModel vehicle, Weapon defaultWeapon = null)
         {
             this.vehicle = vehicle;
 
@@ -154,7 +154,7 @@ namespace GaslandsHQ.ViewModels2
             this.RefreshOptions(defaultWeapon);
         }
 
-        public AddWeaponViewModel(ManageVehicleViewModel vehicle, UserWeapon userWeapon)
+        public AddWeaponViewModel(AddVehicleViewModel vehicle, UserWeapon userWeapon)
             : this(vehicle, userWeapon?.Weapon)
         {
             this.Facing = userWeapon?.Facing;
@@ -168,7 +168,7 @@ namespace GaslandsHQ.ViewModels2
             //    this.RefreshOptions(this.SelectedWeapon);
             //}
 
-            if (e.PropertyName == nameof(ManageVehicleViewModel.Trailers))
+            if (e.PropertyName == nameof(AddVehicleViewModel.Trailers))
             {
                 this.RefreshLocation();
             }
@@ -212,7 +212,11 @@ namespace GaslandsHQ.ViewModels2
         void RefreshLocation()
         {
             this.ShowLocation = this.vehicle.Trailers.Count > 0 && this.SelectedWeapon?.wtype != "Handgun";
-            this.Location = ShowLocation ? this.Locations[0] : null;
+
+            bool hasTrailer = this.vehicle.TrailersSupported && this.vehicle.Trailers.Count > 0;
+
+            if (!ShowLocation && !string.IsNullOrWhiteSpace(this.Location))
+                this.Location = null;
         }
 
         void OnSelectedWeaponChanged()

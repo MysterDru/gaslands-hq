@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:seg="clr-namespace:Plugin.Segmented.Control;assembly=Plugin.Segmented"
-             x:Class="GaslandsHQ.Pages2.ManageVehiclePage"
+             x:Class="GaslandsHQ.Pages2.AddVehiclePage"
 			 Visual="Material"
              Title="{Binding Title}"
              x:Name="Page">

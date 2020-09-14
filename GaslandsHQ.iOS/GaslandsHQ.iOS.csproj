@@ -114,6 +114,14 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
       <Visible>false</Visible>
     </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\save_white.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\save_white.imageset\baseline_save_white_24pt_1x.png" />
+    <ImageAsset Include="Assets.xcassets\save_white.imageset\baseline_save_white_24pt_2x.png" />
+    <ImageAsset Include="Assets.xcassets\save_white.imageset\baseline_save_white_24pt_3x.png" />
+    <ImageAsset Include="Assets.xcassets\delete_white.imageset\Contents.json" />
+    <ImageAsset Include="Assets.xcassets\delete_white.imageset\baseline_delete_white_24pt_1x.png" />
+    <ImageAsset Include="Assets.xcassets\delete_white.imageset\baseline_delete_white_24pt_2x.png" />
+    <ImageAsset Include="Assets.xcassets\delete_white.imageset\baseline_delete_white_24pt_3x.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -156,5 +164,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Renderers\" />
+    <Folder Include="Assets.xcassets\save_white.imageset\" />
+    <Folder Include="Assets.xcassets\delete_white.imageset\" />
   </ItemGroup>
 </Project>
