@@ -38,7 +38,9 @@ namespace GaslandsHQ.ViewModels2
 
         public ObservableCollection<AddVehicleViewModel> Vehicles { get; }
 
-        public ICommand SaveTeam => new Command(ExecuteSaveTeamAsync);
+        public ICommand Save => new Command(ExecuteSaveAsync);
+
+        public ICommand Delete => new Command(ExecuteDeleteAsync);
 
         public ICommand Dismiss => new Command(ExecuteDismissAsync);
 
@@ -53,7 +55,8 @@ namespace GaslandsHQ.ViewModels2
 
             this.TotalCans = 50;
 
-            //this.SelectedSponsor = Sponsors.First(x => x.name == "None");
+            MessagingCenter.Subscribe<AddVehicleViewModel>(this, "VEHICLESAVED", OnVehicleSaved);
+            MessagingCenter.Subscribe<AddVehicleViewModel>(this, "VEHICLEDELETED", (i) => this.ExecuteDeleteVehicleAsync(i));
         }
 
         public AddTeamViewModel(UserTeam userTeamToRestore) : this()
@@ -66,7 +69,6 @@ namespace GaslandsHQ.ViewModels2
             foreach (var v in userTeamToRestore.Vehicles)
             {
                 var vm = new AddVehicleViewModel(this, v);
-                vm.PropertyChanged += OnVehiclePropertyChanged;
 
                 this.Vehicles.Add(vm);
             }
@@ -78,13 +80,7 @@ namespace GaslandsHQ.ViewModels2
 
             var vm = new AddVehicleViewModel(this);
 
-            vm.PropertyChanged += OnVehiclePropertyChanged;
-
             await nav.Navigate(vm);
-
-            this.Vehicles.Add(vm);
-
-            RaisePropertyChanged(nameof(CanSelectSponsor));
         }
 
         async void ExecuteEditVehicleAsync(object obj)
@@ -100,25 +96,38 @@ namespace GaslandsHQ.ViewModels2
 
         void ExecuteDeleteVehicleAsync(object obj)
         {
-            var nav = DependencyService.Get<INavigationService>();
-
             var vm = obj as AddVehicleViewModel;
-            this.Vehicles.Remove(vm);
-            vm.PropertyChanged -= OnVehiclePropertyChanged;
+            var match = this.Vehicles.FirstOrDefault(x => x.Id == vm.Id);
 
-            RaisePropertyChanged(nameof(CanSelectSponsor));
+            if (match != null)
+            {
+                this.Vehicles.Remove(match);
+
+                this.RaiseAllPropertiesChanged();
+            }
         }
 
-        private void OnVehiclePropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        void OnVehicleSaved(AddVehicleViewModel obj)
         {
-            if (e.PropertyName == nameof(AddVehicleViewModel.TotalCost))
-                this.RaisePropertyChanged(nameof(CurrentCans));
+            var match = this.Vehicles.FirstOrDefault(x => x.Id == obj.Id);
+
+            if (match != null)
+            {
+                var idx = this.Vehicles.IndexOf(match);
+
+                this.Vehicles.RemoveAt(idx);
+                this.Vehicles.Insert(idx, obj);
+            }
+            else if(obj.Team == this)
+                this.Vehicles.Add(obj);
+
+            this.RaiseAllPropertiesChanged();
         }
 
         void OnSelectedSponsorChanged()
             => (this.AddVehicle as Command).ChangeCanExecute();
 
-        void ExecuteSaveTeamAsync()
+        void ExecuteSaveAsync()
         {
             var t = this;
             var team = new UserTeam
@@ -131,19 +140,10 @@ namespace GaslandsHQ.ViewModels2
                 {
                     VehicleName = v.Name,
                     VehicleType = v.SelectedVehicleType,
-                    Trailers = v.Trailers.Select(tr => new UserTrailer
-                    {
-                        Trailer = tr.SelectedTrailer,
-                        Cargo = tr.SelectedCargo
-                    }).ToList(),
-                    Weaposn = v.Weapons.Select(x => new UserWeapon
-                    {
-                        Weapon = x.SelectedWeapon,
-                        Facing = x.Facing,
-                        Location = x.Location
-                    }).ToList(),
-                    Perks = v.Perks.Select(x => x.SelectedPerk).ToList(),
-                    Upgrades = v.Upgrades.Select(x => x.SelectedUpgrade).ToList()
+                    Trailers = v.Trailers.Select(tr => tr.GetModel()).ToList(),
+                    Weaposn = v.Weapons.Select(x => x.GetModel()).ToList(),
+                    Perks = v.Perks.Select(x => x.GetModel()).ToList(),
+                    Upgrades = v.Upgrades.Select(x => x.GetModel()).ToList()
                 }).ToList()
             };
 
@@ -162,14 +162,30 @@ namespace GaslandsHQ.ViewModels2
 
             Xamarin.Essentials.Preferences.Set("TEAMDATA", newjson);
 
-            MessagingCenter.Send(this, "SAVETEAM");
+            MessagingCenter.Send(this, "TEAMSAVED");
 
             DependencyService.Get<INavigationService>().Dismiss(this);
         }
 
-        void ExecuteDismissAsync(object obj)
+        async void ExecuteDeleteAsync(object obj)
         {
-            DependencyService.Get<INavigationService>().Dismiss(this);
+            var dialogs = DependencyService.Get<IDialogsService>();
+            if (await dialogs
+                .ConfirmAsync("Are you sure you want to delete this team?", "Delete", "Cancel", true))
+            {
+                MessagingCenter.Send(this, "TEAMDELETED");
+                await DependencyService.Get<INavigationService>().Dismiss(this);
+            }
+        }
+
+        async void ExecuteDismissAsync(object obj)
+        {
+            var dialogs = DependencyService.Get<IDialogsService>();
+            if (await dialogs
+                .ConfirmAsync("Are you sure you want to cancel? You must save this team to keep any changes.", "Close", "Stay Here", true))
+            {
+                await DependencyService.Get<INavigationService>().Dismiss(this);
+            }
         }
     }
 }

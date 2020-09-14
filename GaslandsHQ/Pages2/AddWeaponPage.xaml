@@ -2,6 +2,20 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="GaslandsHQ.Pages2.AddWeaponPage"
              Visual="Material"
              Title="{Binding Title}">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Text="Delete"
+            Command="{Binding Delete}"
+            IconImageSource="delete_white.png"
+            Priority="0"
+            Order="Primary"/>
+        <ToolbarItem
+            Text="Save"
+            Command="{Binding Save}"
+            IconImageSource="save_white.png"
+            Priority="0"
+            Order="Primary"/>
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout
 				Spacing="5">

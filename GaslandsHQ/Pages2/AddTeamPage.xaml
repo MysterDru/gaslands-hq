@@ -7,8 +7,14 @@
              x:Name="Page">
     <ContentPage.ToolbarItems>
         <ToolbarItem
+            Text="Delete"
+            Command="{Binding Delete}"
+            IconImageSource="delete_white.png"
+            Priority="0"
+            Order="Primary"/>
+        <ToolbarItem
             Text="Save"
-            Command="{Binding SaveTeam}"
+            Command="{Binding Save}"
             IconImageSource="save_white.png"
             Priority="0"
             Order="Primary"/>
@@ -90,12 +96,6 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <ViewCell.ContextActions>
-                                <MenuItem IsDestructive="true"
-                                          Text="Delete"
-                                          Command="{Binding Source={x:Reference Page}, Path=BindingContext.DeleteVehicle}"
-                                          CommandParameter="{Binding .}"/>
-                            </ViewCell.ContextActions>
                             <Grid
                                 Padding="15">
                                 <Grid.RowDefinitions>

@@ -15,6 +15,8 @@ namespace GaslandsHQ.ViewModels2
     {
         public string Title => "Vehicle";
 
+        public Guid Id { get; set; }
+
         public AddTeamViewModel Team { get; }
 
         public List<VehicleType> VehicleTypes { get; }
@@ -27,7 +29,7 @@ namespace GaslandsHQ.ViewModels2
             {
                 if (SelectedVehicleType == null) return true;
 
-                if(this.Weapons.Count == 1 && this.Weapons[0].SelectedWeapon?.wtype == "Handgun")
+                if (this.Weapons.Count == 1 && this.Weapons[0].SelectedWeapon?.wtype == "Handgun")
                     return true;
 
                 if (Weapons.Count > 1 || Upgrades.Count > 0 || Perks.Count > 0 || Trailers.Count > 0)
@@ -56,11 +58,9 @@ namespace GaslandsHQ.ViewModels2
             {
                 if (SelectedVehicleType == null) return 0;
 
-                return SelectedVehicleType.cost
-                     + (this.Weapons?.Sum(x => x.Cost) ?? 0)
-                     + (this.Upgrades?.Sum(x => x.Cost) ?? 0)
-                     + (this.Perks?.Sum(x => x.Cost) ?? 0)
-                     + (this.Trailers?.Sum(x => x.Cost) ?? 0);
+                var cst = SelectedVehicleType.cost + this.Weapons.Sum(x => x.Cost) + this.Upgrades.Sum(x => x.Cost) + this.Perks.Sum(x => x.Cost) + this.Trailers.Sum(x => x.Cost);
+
+                return cst;
             }
         }
 
@@ -85,23 +85,17 @@ namespace GaslandsHQ.ViewModels2
             }
         }
 
-        public int UsedSlots => (this.Weapons?.Sum(x => x.Slots) ?? 0)
-            + (this.Upgrades?.Sum(x => x.Slots) ?? 0);
+        public int UsedSlots => this.Weapons.Sum(x => x.Slots)+ this.Upgrades.Sum(x => x.Slots);
 
-        public int AvailableSlots => (SelectedVehicleType?.slots ?? 0) + (this.Trailers?.Sum(x => x.Slots) ?? 0);
+        public int AvailableSlots => (SelectedVehicleType?.slots ?? 0) + this.Trailers.Sum(x => x.Slots);
 
-        public int Handling => (SelectedVehicleType?.handling ?? 0)
-             + (this.Upgrades?.Sum(x => x.Handling) ?? 0)
-            + (this.Perks?.Sum(x => x.Handling) ?? 0);
+        public int Handling => (SelectedVehicleType?.handling ?? 0) + this.Upgrades.Sum(x => x.Handling) + this.Perks.Sum(x => x.Handling);
 
-        public int Hull => (SelectedVehicleType?.hull ?? 0)
-            + (this.Upgrades?.Sum(x => x.Hull) ?? 0);// todo: calculate
+        public int Hull => (SelectedVehicleType?.hull ?? 0) + (this.Upgrades.Sum(x => x.Hull));// todo: calculate
 
-        public int Crew => (SelectedVehicleType?.crew ?? 0)
-             + (this.Upgrades?.Sum(x => x.Crew) ?? 0); // todo: calculate
+        public int Crew => (SelectedVehicleType?.crew ?? 0) + this.Upgrades.Sum(x => x.Crew); // todo: calculate
 
-        public int MaxGear => (SelectedVehicleType?.maxGear ?? 0)
-             + (this.Upgrades?.Sum(x => x.MaxGear) ?? 0); // todo: calculate
+        public int MaxGear => (SelectedVehicleType?.maxGear ?? 0) + this.Upgrades.Sum(x => x.MaxGear); // todo: calculate
 
         public string WeightClass => SelectedVehicleType?.weight ?? "N/A";
 
@@ -127,7 +121,7 @@ namespace GaslandsHQ.ViewModels2
 
         public ICommand EditUpgrade => new Command(ExecuteEditUpgradeAsync);
 
-        public ICommand DeleteUpgrade => new Command(ExecuteDeleteUpgrade, (w) => (w as AddWeaponViewModel)?.CanSelect == true);
+        public ICommand DeleteUpgrade => new Command(ExecuteDeleteUpgrade);
 
         public string UpgradesDisplayText => string.Join(", ", this.Upgrades?.Select(x => x.SelectedUpgrade?.utype)?.ToArray() ?? new string[0]);
 
@@ -186,6 +180,10 @@ namespace GaslandsHQ.ViewModels2
 
         #endregion
 
+        public ICommand Save => new Command(OnSaveAsync);
+
+        public ICommand Delete => new Command(OnDeleteAsync);
+
         public AddVehicleViewModel(AddTeamViewModel team)
         {
             this.Weapons = new ObservableCollection<AddWeaponViewModel>();
@@ -236,19 +234,33 @@ namespace GaslandsHQ.ViewModels2
             {
                 AllowedAddons.Add("Perks");
             }
+
+            this.Id = Guid.NewGuid();
+
+            MessagingCenter.Subscribe<AddWeaponViewModel>(this, "WEAPONSAVED", OnWeaponSaved);
+            MessagingCenter.Subscribe<AddWeaponViewModel>(this, "WEAPONDELETED", (i) => this.ExecuteDeleteWeapon(i));
+
+            MessagingCenter.Subscribe<AddUpgradeViewModel>(this, "UPGRADESAVED", OnUpgradeSaved);
+            MessagingCenter.Subscribe<AddUpgradeViewModel>(this, "UPGRADEDELETED", (i) => this.ExecuteDeleteUpgrade(i));
+
+            MessagingCenter.Subscribe<AddPerkViewModel>(this, "PERKSAVED", OnPerkSaved);
+            MessagingCenter.Subscribe<AddPerkViewModel>(this, "PERKDELETED", (i) => this.ExecuteDeletePerk(i));
+
+            MessagingCenter.Subscribe<AddTrailerViewModel>(this, "TRAILERSAVED", OnTrailerSaved);
+            MessagingCenter.Subscribe<AddTrailerViewModel>(this, "TRAILERDELETED", (i) => this.ExecuteDeleteTrailer(i));
         }
 
         // restore data
         public AddVehicleViewModel(AddTeamViewModel team, UserVehicle userVehicle) : this(team)
         {
+            this.Id = userVehicle.Id;
             this.Name = userVehicle.VehicleName;
             this.SelectedVehicleType = this.VehicleTypes.FirstOrDefault(x => x.vtype == userVehicle.VehicleType?.vtype);
 
             this.Weapons.Clear();
-            foreach(var w in userVehicle.Weaposn)
+            foreach (var w in userVehicle.Weaposn)
             {
                 var vm = new AddWeaponViewModel(this, w);
-                vm.PropertyChanged += OnWeaponPropertyChanged;
                 this.Weapons.Add(vm);
             }
 
@@ -256,7 +268,6 @@ namespace GaslandsHQ.ViewModels2
             foreach (var p in userVehicle.Perks)
             {
                 var vm = new AddPerkViewModel(this, p);
-                vm.PropertyChanged += OnPerkPropertyChanged;
                 this.Perks.Add(vm);
             }
 
@@ -264,15 +275,13 @@ namespace GaslandsHQ.ViewModels2
             foreach (var u in userVehicle.Upgrades)
             {
                 var vm = new AddUpgradeViewModel(this, u);
-                vm.PropertyChanged += OnUpgradePropertyChanged;
                 this.Upgrades.Add(vm);
             }
 
             this.Trailers.Clear();
-            foreach(var t in userVehicle.Trailers)
+            foreach (var t in userVehicle.Trailers)
             {
                 var vm = new AddTrailerViewModel(this, t.Trailer, t.Cargo);
-                vm.PropertyChanged += TrailerPropertyChanged;
                 this.Trailers.Add(vm);
 
                 // run trailer support logic
@@ -299,8 +308,9 @@ namespace GaslandsHQ.ViewModels2
             // if not  buggy, and roll cage is free, remove it
             else if (rollCage != null)
                 this.Upgrades.Remove(rollCage);
-        }
 
+            this.RaiseAllPropertiesChanged();
+        }
 
         void AddTrailerSupport()
         {
@@ -313,10 +323,10 @@ namespace GaslandsHQ.ViewModels2
 
                 this.AllowedAddons = addons;
 
-                if(this.SelectedVehicleType?.vtype == "War Rig")
+                if (this.SelectedVehicleType?.vtype == "War Rig")
                 {
                     // default add a trailer. user can customize
-                    this.Trailers.Add(new AddTrailerViewModel(this));
+                    this.Trailers.Add(new AddTrailerViewModel(this, null, null));
                     CanAddAdditionalTrailers = false;
                 }
             }
@@ -342,12 +352,7 @@ namespace GaslandsHQ.ViewModels2
             var nav = DependencyService.Get<INavigationService>();
 
             var vm = new AddWeaponViewModel(this);
-
-            vm.PropertyChanged += OnWeaponPropertyChanged;
-
             await nav.Navigate(vm);
-
-            this.Weapons.Add(vm);
         }
 
         async void ExecuteEditWeaponAsync(object obj)
@@ -356,8 +361,11 @@ namespace GaslandsHQ.ViewModels2
 
             if (vm != null)
             {
+                var model = vm.GetModel();
+
+                var editVm = new AddWeaponViewModel(this, model);
                 var nav = DependencyService.Get<INavigationService>();
-                await nav.Navigate(vm);
+                await nav.Navigate(editVm);
             }
         }
 
@@ -365,17 +373,30 @@ namespace GaslandsHQ.ViewModels2
         {
             var vm = obj as AddWeaponViewModel;
 
-            if (vm != null && vm.CanSelect)
+            var match = this.Weapons.FirstOrDefault(x => x.Id == vm.Id);
+
+            if (match != null && match.CanSelect)
             {
-                vm.PropertyChanged -= this.OnWeaponPropertyChanged;
-                this.Weapons.Remove(vm);
+                this.Weapons.Remove(match);
 
                 this.RaiseAllPropertiesChanged();
             }
         }
 
-        private void OnWeaponPropertyChanged(object sender, PropertyChangedEventArgs e)
+        void OnWeaponSaved(AddWeaponViewModel obj)
         {
+            var match = this.Weapons.FirstOrDefault(x => x.Id == obj.Id);
+
+            if (match != null)
+            {
+                var idx = this.Weapons.IndexOf(match);
+
+                this.Weapons.RemoveAt(idx);
+                this.Weapons.Insert(idx, obj);
+            }
+            else if (obj.Vehicle == this)
+                this.Weapons.Add(obj);
+
             this.RaiseAllPropertiesChanged();
         }
 
@@ -389,11 +410,7 @@ namespace GaslandsHQ.ViewModels2
 
             var vm = new AddUpgradeViewModel(this);
 
-            vm.PropertyChanged += OnUpgradePropertyChanged;
-
             await nav.Navigate(vm);
-
-            this.Upgrades.Add(vm);
         }
 
         async void ExecuteEditUpgradeAsync(object obj)
@@ -402,10 +419,9 @@ namespace GaslandsHQ.ViewModels2
 
             if (vm != null)
             {
+                var edit = new AddUpgradeViewModel(this, vm.GetModel());
                 var nav = DependencyService.Get<INavigationService>();
-                await nav.Navigate(vm);
-
-                this.RaiseAllPropertiesChanged();
+                await nav.Navigate(edit);
             }
         }
 
@@ -413,17 +429,30 @@ namespace GaslandsHQ.ViewModels2
         {
             var vm = obj as AddUpgradeViewModel;
 
-            if (vm != null)
+            var match = this.Upgrades.FirstOrDefault(x => x.Id == vm.Id);
+
+            if (match != null && match.CanSelect)
             {
-                vm.PropertyChanged -= this.OnUpgradePropertyChanged;
-                this.Upgrades.Remove(vm);
+                this.Upgrades.Remove(match);
 
                 this.RaiseAllPropertiesChanged();
             }
         }
 
-        private void OnUpgradePropertyChanged(object sender, PropertyChangedEventArgs e)
+        void OnUpgradeSaved(AddUpgradeViewModel obj)
         {
+            var match = this.Upgrades.FirstOrDefault(x => x.Id == obj.Id);
+
+            if (match != null)
+            {
+                var idx = this.Upgrades.IndexOf(match);
+
+                this.Upgrades.RemoveAt(idx);
+                this.Upgrades.Insert(idx, obj);
+            }
+            else if (obj.Vehicle == this)
+                this.Upgrades.Add(obj);
+
             this.RaiseAllPropertiesChanged();
         }
 
@@ -437,11 +466,7 @@ namespace GaslandsHQ.ViewModels2
 
             var vm = new AddPerkViewModel(this);
 
-            vm.PropertyChanged += OnPerkPropertyChanged;
-
             await nav.Navigate(vm);
-
-            this.Perks.Add(vm);
         }
 
         async void ExecuteEditPerkAsync(object obj)
@@ -450,8 +475,9 @@ namespace GaslandsHQ.ViewModels2
 
             if (vm != null)
             {
+                var edit = new AddPerkViewModel(this, vm.GetModel());
                 var nav = DependencyService.Get<INavigationService>();
-                await nav.Navigate(vm);
+                await nav.Navigate(edit);
             }
         }
 
@@ -459,17 +485,30 @@ namespace GaslandsHQ.ViewModels2
         {
             var vm = obj as AddPerkViewModel;
 
-            if (vm != null)
+            var match = this.Perks.FirstOrDefault(x => x.Id == vm.Id);
+
+            if (match != null)
             {
-                vm.PropertyChanged -= this.OnPerkPropertyChanged;
-                this.Perks.Remove(vm);
+                this.Perks.Remove(match);
 
                 this.RaiseAllPropertiesChanged();
             }
         }
 
-        void OnPerkPropertyChanged(object sender, PropertyChangedEventArgs e)
+        void OnPerkSaved(AddPerkViewModel obj)
         {
+            var match = this.Perks.FirstOrDefault(x => x.Id == obj.Id);
+
+            if (match != null)
+            {
+                var idx = this.Perks.IndexOf(match);
+
+                this.Perks.RemoveAt(idx);
+                this.Perks.Insert(idx, obj);
+            }
+            else if(obj.Vehicle == this)
+                this.Perks.Add(obj);
+
             this.RaiseAllPropertiesChanged();
         }
 
@@ -480,19 +519,18 @@ namespace GaslandsHQ.ViewModels2
         void ExecuteAddTrailer(object obj)
         {
             var vm = new AddTrailerViewModel(this);
-            vm.PropertyChanged += TrailerPropertyChanged;
-            this.Trailers.Add(vm);
 
             this.CanAddAdditionalTrailers = false;
             ExecuteEditTrailer(this.Trailers[0]);
         }
-            
+
         async void ExecuteEditTrailer(object obj)
         {
             var vm = obj as AddTrailerViewModel;
 
             if (vm != null)
             {
+                var edit = new AddTrailerViewModel(this, vm.GetModel());
                 var nav = DependencyService.Get<INavigationService>();
                 await nav.Navigate(vm);
             }
@@ -501,21 +539,36 @@ namespace GaslandsHQ.ViewModels2
         void ExecuteDeleteTrailer(object obj)
         {
             var vm = obj as AddTrailerViewModel;
-            this.Trailers.Remove(vm);
 
-            vm.PropertyChanged -= TrailerPropertyChanged;
+            var match = this.Trailers.FirstOrDefault(x => x.Id == vm.Id);
 
-            this.CanAddAdditionalTrailers = true;
+            if (match != null && match.CanSelectTrailer)
+            {
+                this.Trailers.Remove(match);
 
-            this.RaiseAllPropertiesChanged();
+                this.CanAddAdditionalTrailers = true;
+                this.RaiseAllPropertiesChanged();
+            }
         }
 
-        private void TrailerPropertyChanged(object sender, PropertyChangedEventArgs e)
+        void OnTrailerSaved(AddTrailerViewModel obj)
         {
-            this.RaiseAllPropertiesChanged();
+            var match = this.Trailers.FirstOrDefault(x => x.Id == obj.Id);
+
+            if (match != null)
+            {
+                var idx = this.Trailers.IndexOf(match);
+
+                this.Trailers.RemoveAt(idx);
+                this.Trailers.Insert(idx, obj);
+            }
+            else if (obj.Vehicle == this)
+                this.Trailers.Add(obj);
 
             (this.AddTrailer as Command).ChangeCanExecute();
             (this.DeleteTrailer as Command).ChangeCanExecute();
+
+            this.RaiseAllPropertiesChanged();
         }
 
         #endregion
@@ -527,12 +580,29 @@ namespace GaslandsHQ.ViewModels2
             if (changedArgs.PropertyName == nameof(CanAddAdditionalTrailers))
                 (this.AddTrailer as Command).ChangeCanExecute();
 
-            if(changedArgs.PropertyName == nameof(SelectedVehicleType))
+            if (changedArgs.PropertyName == nameof(SelectedVehicleType))
             {
                 if (TrailersSupported == true)
                     AddTrailerSupport();
                 else
                     RemoveTrailerSupport();
+            }
+        }
+
+        async void OnSaveAsync(object arg)
+        {
+            MessagingCenter.Send(this, "VEHICLESAVED");
+            await DependencyService.Get<INavigationService>().Dismiss(this);
+        }
+
+        async void OnDeleteAsync(object obj)
+        {
+            var dialogs =  DependencyService.Get<IDialogsService>();
+            if (await  dialogs
+                .ConfirmAsync("Are you sure you want to delete this vehicle?", "Delete", "Cancel", true))
+            {
+                MessagingCenter.Send(this, "VEHICLEDELETED");
+                await DependencyService.Get<INavigationService>().Dismiss(this);
             }
         }
     }

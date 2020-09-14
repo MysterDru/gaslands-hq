@@ -45,51 +45,22 @@ namespace GaslandsHQ.ViewModels2
                 }
             }
 
-            MessagingCenter.Subscribe(this, "SAVETEAM", (AddTeamViewModel t) =>
-            {
-                var exisiting = this.Teams.FirstOrDefault(x => x.Id == t.Id);
-                if (exisiting == null)
-                {
-                    this.Teams.Add(t);
-                }
-            });
+            MessagingCenter.Subscribe<AddTeamViewModel>(this, "TEAMSAVED", OnTeamSaved);
+            MessagingCenter.Subscribe<AddTeamViewModel>(this, "TEAMDELETED", (i) => this.ExecuteDeleteTeamAsync(i));
         }
 
         async void ExecuteAddTeamAsync(object obj)
         {
             var vm = new AddTeamViewModel();
-            //Teams.Add(vm);
 
             await DependencyService.Get<INavigationService>().Navigate(vm);
-        }
-
-        private void ExecuteDeleteTeamAsync(object obj)
-        {
-            var vm = obj as AddTeamViewModel;
-            this.Teams.Remove(vm);
-
-            List<UserTeam> teamList = null;
-            var currentJson = Xamarin.Essentials.Preferences.Get("TEAMDATA", (string)null);
-            if (!string.IsNullOrEmpty(currentJson))
-            {
-                teamList = JsonConvert.DeserializeObject<List<UserTeam>>(currentJson);
-            }
-            else
-                teamList = new List<UserTeam>();
-
-            var match = teamList.FirstOrDefault(x => x.Id == vm.Id);
-            if (match != null)
-            {
-                teamList.Remove(match);
-                var newjson = JsonConvert.SerializeObject(teamList);
-
-                Xamarin.Essentials.Preferences.Set("TEAMDATA", newjson);
-            }
         }
 
         async void ExecuteEditTeamAsync(object obj)
         {
             var vm = obj as AddTeamViewModel;
+
+
 
             await DependencyService.Get<INavigationService>().Navigate(vm);
         }
@@ -97,6 +68,55 @@ namespace GaslandsHQ.ViewModels2
         async void ExecuteFeedbackAsync(object obj)
         {
             await Xamarin.Essentials.Email.ComposeAsync(new Xamarin.Essentials.EmailMessage("GaslandsHQ Feedback", null, "gaslandshq@drewfrisk.dev"));
+        }
+
+        void OnTeamSaved(AddTeamViewModel obj)
+        {
+            var match = this.Teams.FirstOrDefault(x => x.Id == obj.Id);
+
+            if (match != null)
+            {
+                var idx = this.Teams.IndexOf(match);
+
+                this.Teams.RemoveAt(idx);
+                this.Teams.Insert(idx, obj);
+            }
+            else
+                this.Teams.Add(obj);
+
+            this.RaiseAllPropertiesChanged();
+        }
+
+        void ExecuteDeleteTeamAsync(object obj)
+        {
+            var vm = obj as AddTeamViewModel;
+
+            var match = this.Teams.FirstOrDefault(x => x.Id == vm.Id);
+
+            if (match != null)
+            {
+                this.Teams.Remove(match);
+
+                this.RaiseAllPropertiesChanged();
+
+                List<UserTeam> teamList = null;
+                var currentJson = Xamarin.Essentials.Preferences.Get("TEAMDATA", (string)null);
+                if (!string.IsNullOrEmpty(currentJson))
+                {
+                    teamList = JsonConvert.DeserializeObject<List<UserTeam>>(currentJson);
+                }
+                else
+                    teamList = new List<UserTeam>();
+
+                var userTeam = teamList.FirstOrDefault(x => x.Id == vm.Id);
+                if (userTeam != null)
+                {
+                    teamList.Remove(userTeam);
+                    var newjson = JsonConvert.SerializeObject(teamList);
+
+                    Xamarin.Essentials.Preferences.Set("TEAMDATA", newjson);
+                }
+            }
         }
     }
 }

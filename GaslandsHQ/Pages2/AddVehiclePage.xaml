@@ -6,6 +6,20 @@
 			 Visual="Material"
              Title="{Binding Title}"
              x:Name="Page">
+        <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Text="Delete"
+            Command="{Binding Delete}"
+            IconImageSource="delete_white.png"
+            Priority="0"
+            Order="Primary"/>
+        <ToolbarItem
+            Text="Save"
+            Command="{Binding Save}"
+            IconImageSource="save_white.png"
+            Priority="0"
+            Order="Primary"/>
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout
             Spacing="0">
@@ -140,13 +154,6 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <ViewCell.ContextActions>
-                                <MenuItem IsDestructive="true"
-                                          Text="Delete"
-                                          Command="{Binding Source={x:Reference Page}, Path=BindingContext.DeleteWeapon}"
-                                          CommandParameter="{Binding .}"
-                                          IsEnabled="{Binding CanSelect}"/>
-                            </ViewCell.ContextActions>
                             <Grid
                                 Padding="20, 15, 15, 15">
                                 <Grid.RowDefinitions>
@@ -212,12 +219,6 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <ViewCell.ContextActions>
-                                <MenuItem IsDestructive="true"
-                                          Text="Delete"
-                                          Command="{Binding Source={x:Reference Page}, Path=BindingContext.DeleteUpgrade}"
-                                          CommandParameter="{Binding .}"/>
-                            </ViewCell.ContextActions>
                             <Grid
                                 Padding="20, 15, 15, 15">
                                 <Grid.RowDefinitions>
@@ -289,12 +290,6 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <ViewCell.ContextActions>
-                                <MenuItem IsDestructive="true"
-                                          Text="Delete"
-                                          Command="{Binding Source={x:Reference Page}, Path=BindingContext.DeletePerk}"
-                                          CommandParameter="{Binding .}"/>
-                            </ViewCell.ContextActions>
                             <Grid
                                 Padding="20, 15, 15, 15">
                                 <Grid.ColumnDefinitions>
@@ -352,12 +347,6 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <ViewCell.ContextActions>
-                                <MenuItem IsDestructive="true"
-                                          Text="Delete"
-                                          Command="{Binding Source={x:Reference Page}, Path=BindingContext.DeleteTrailer}"
-                                          CommandParameter="{Binding .}"/>
-                            </ViewCell.ContextActions>
                             <Grid
                                 Padding="20, 15, 15, 15">
                                 <Grid.ColumnDefinitions>

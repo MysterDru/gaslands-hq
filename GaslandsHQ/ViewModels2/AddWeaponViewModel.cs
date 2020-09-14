@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Windows.Input;
 using GaslandsHQ.Models;
 using PropertyChanged;
+using Xamarin.Forms;
 
 namespace GaslandsHQ.ViewModels2
 {
@@ -10,15 +12,19 @@ namespace GaslandsHQ.ViewModels2
     {
         public string Title => "Weapon";
 
-        private AddVehicleViewModel vehicle;
+        public AddVehicleViewModel Vehicle { get; }
 
         public List<Weapon> Weapons { get; private set; }
 
         public Weapon SelectedWeapon { get; set; }
 
         public bool CanSelect { get; }
-
+        public Guid Id { get; }
         public string Facing { get; set; } = "Front";
+
+        public ICommand Save => new Command(OnSaveAsync);
+
+        public ICommand Delete => new Command(OnDeleteAsync);
 
         public List<string> Facings
         {
@@ -29,7 +35,7 @@ namespace GaslandsHQ.ViewModels2
                     return new List<string> { "360" };
                 else if (this.SelectedWeapon?.attackType == "Dropped")
                 {
-                    if (this.vehicle.Upgrades.Any(x => x.SelectedUpgrade?.utype == "Improvised Sludge Thrower"))
+                    if (this.Vehicle.Upgrades.Any(x => x.SelectedUpgrade?.utype == "Improvised Sludge Thrower"))
                         return new List<string> { "360" };
                     else
                         return new List<string> { "Rear", "Sides" };
@@ -71,7 +77,7 @@ namespace GaslandsHQ.ViewModels2
 
                 var cost = SelectedWeapon.cost;
 
-                if (this.Facing == "Turret/360" && (!this.vehicle.SelectedVehicleType.Keywords.Any(k => k == "Turret")
+                if (this.Facing == "Turret/360" && (!this.Vehicle.SelectedVehicleType.Keywords.Any(k => k == "Turret")
                     || this.FindMostExpensiveTurret() != this))
                     multiplier = 3;
 
@@ -82,19 +88,19 @@ namespace GaslandsHQ.ViewModels2
         public string Range {
             get
             {
-                if (this.AttackType == "Dropped" && this.vehicle.Upgrades.Any(x => x.SelectedUpgrade?.utype == "Improvised Sludge Thrower"))
+                if (this.AttackType == "Dropped" && this.Vehicle.Upgrades.Any(x => x.SelectedUpgrade?.utype == "Improvised Sludge Thrower"))
                     return "Medium/" + SelectedWeapon?.range;
                 else
                     return SelectedWeapon?.range;
 
             }
         }
-         
+
         public string Attack
         {
             get
             {
-                if (SelectedWeapon?.wtype == "Mortar" && this.vehicle.Upgrades.Any(x => x.SelectedUpgrade?.utype == "Cluster Bombs"))
+                if (SelectedWeapon?.wtype == "Mortar" && this.Vehicle.Upgrades.Any(x => x.SelectedUpgrade?.utype == "Cluster Bombs"))
                     return SelectedWeapon?.attack + "/2D6";
                 else
                     return SelectedWeapon?.attack;
@@ -107,7 +113,7 @@ namespace GaslandsHQ.ViewModels2
         {
             get
             {
-                if (vehicle.Team.SponsorMode && vehicle.Team.SelectedSponsor.name == "Rutherford"
+                if (Vehicle.Team.SponsorMode && Vehicle.Team.SelectedSponsor.name == "Rutherford"
                     && SelectedWeapon?.ammo == 3)
                     return 4;
 
@@ -119,10 +125,10 @@ namespace GaslandsHQ.ViewModels2
         {
             get
             {
-                if(this.vehicle.SelectedVehicleType?.Keywords?.Contains("Bombs Away") ==  true &&  this.AttackType ==  "Dropped")
+                if (this.Vehicle.SelectedVehicleType?.Keywords?.Contains("Bombs Away") == true && this.AttackType == "Dropped")
                     return 0;
 
-                if (this.SelectedWeapon?.wtype == "Ram" && this.vehicle.Team.SelectedSponsor?.keywords?.Contains("Spiked Fist") == true)
+                if (this.SelectedWeapon?.wtype == "Ram" && this.Vehicle.Team.SelectedSponsor?.keywords?.Contains("Spiked Fist") == true)
                     return 0;
 
                 return SelectedWeapon?.slots ?? 0;
@@ -145,20 +151,34 @@ namespace GaslandsHQ.ViewModels2
 
         public AddWeaponViewModel(AddVehicleViewModel vehicle, Weapon defaultWeapon = null)
         {
-            this.vehicle = vehicle;
+            this.Vehicle = vehicle;
 
             vehicle.PropertyChanged += Vehicle_PropertyChanged;
 
             CanSelect = defaultWeapon != null && defaultWeapon.always ? false : true;
 
             this.RefreshOptions(defaultWeapon);
+
+            this.Id = Guid.NewGuid();
         }
 
         public AddWeaponViewModel(AddVehicleViewModel vehicle, UserWeapon userWeapon)
             : this(vehicle, userWeapon?.Weapon)
         {
+            this.Id = userWeapon?.Id ?? Guid.NewGuid();
             this.Facing = userWeapon?.Facing;
             this.Location = userWeapon?.Location;
+        }
+
+        public UserWeapon GetModel()
+        {
+            return new UserWeapon
+            {
+                Weapon = this.SelectedWeapon,
+                Facing = this.Facing,
+                Location = this.Location,
+                Id = this.Id
+            };
         }
 
         private void Vehicle_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
@@ -180,21 +200,21 @@ namespace GaslandsHQ.ViewModels2
 
             this.Weapons = Constants.AllWeapons.Where(w =>
             {
-                var matchingTypes = vehicle.Weapons.Where(x => x.SelectedWeapon?.wtype == w.wtype);
+                var matchingTypes = Vehicle.Weapons.Where(x => x.SelectedWeapon?.wtype == w.wtype);
 
                 if (w.limit.HasValue && w.limit >= matchingTypes.Count())
                     return false;
 
                 // light vehicles can't take exploding rams
-                if (vehicle.SelectedVehicleType?.weight == "Light" && w.wtype == "Exploding Ram")
+                if (Vehicle.SelectedVehicleType?.weight == "Light" && w.wtype == "Exploding Ram")
                     return false;
 
-                if (vehicle.Team.SponsorMode)
+                if (Vehicle.Team.SponsorMode)
                 {
                     if (w.allowedSponsors == null || w.allowedSponsors.Length == 0)
                         return true;
 
-                    return w.allowedSponsors.Contains(vehicle.Team.SelectedSponsor.name);
+                    return w.allowedSponsors.Contains(Vehicle.Team.SelectedSponsor.name);
                 }
 
                 return true;
@@ -211,9 +231,9 @@ namespace GaslandsHQ.ViewModels2
 
         void RefreshLocation()
         {
-            this.ShowLocation = this.vehicle.Trailers.Count > 0 && this.SelectedWeapon?.wtype != "Handgun";
+            this.ShowLocation = this.Vehicle.Trailers.Count > 0 && this.SelectedWeapon?.wtype != "Handgun";
 
-            bool hasTrailer = this.vehicle.TrailersSupported && this.vehicle.Trailers.Count > 0;
+            bool hasTrailer = this.Vehicle.TrailersSupported && this.Vehicle.Trailers.Count > 0;
 
             if (!ShowLocation && !string.IsNullOrWhiteSpace(this.Location))
                 this.Location = null;
@@ -227,7 +247,7 @@ namespace GaslandsHQ.ViewModels2
 
         AddWeaponViewModel FindMostExpensiveTurret()
         {
-            var turrets = this.vehicle.Weapons.Where(x => x.Facing == "Turret/360");
+            var turrets = this.Vehicle.Weapons.Where(x => x.Facing == "Turret/360");
 
             if (turrets.Any())
             {
@@ -235,6 +255,23 @@ namespace GaslandsHQ.ViewModels2
             }
 
             return null;
+        }
+
+        async void OnSaveAsync(object arg)
+        {
+            MessagingCenter.Send(this, "WEAPONSAVED");
+            await DependencyService.Get<INavigationService>().Dismiss(this);
+        }
+
+        async void OnDeleteAsync(object obj)
+        {
+            var dialogs = DependencyService.Get<IDialogsService>();
+            if (await dialogs
+                .ConfirmAsync("Are you sure you want to delete this weapon?", "Delete", "Cancel", true))
+            {
+                MessagingCenter.Send(this, "WEAPONDELETED");
+                await DependencyService.Get<INavigationService>().Dismiss(this);
+            }
         }
     }
 }

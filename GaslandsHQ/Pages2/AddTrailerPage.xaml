@@ -5,6 +5,20 @@
     x:Class="GaslandsHQ.Pages2.AddTrailerPage"
     Visual="Material"
     Title="{Binding Title}">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Text="Delete"
+            Command="{Binding Delete}"
+            IconImageSource="delete_white.png"
+            Priority="0"
+            Order="Primary"/>
+        <ToolbarItem
+            Text="Save"
+            Command="{Binding Save}"
+            IconImageSource="save_white.png"
+            Priority="0"
+            Order="Primary"/>
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout
 				Spacing="5">

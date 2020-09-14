@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Windows.Input;
 using GaslandsHQ.Models;
+using Xamarin.Forms;
 
 namespace GaslandsHQ.ViewModels2
 {
@@ -9,7 +11,9 @@ namespace GaslandsHQ.ViewModels2
     {
         public string Title => "Upgrade";
 
-        private AddVehicleViewModel vehicle;
+        public AddVehicleViewModel Vehicle { get; }
+
+        public Guid Id { get; set; }
 
         public List<Upgrade> Upgrades { get; }
 
@@ -21,7 +25,7 @@ namespace GaslandsHQ.ViewModels2
         {
             get
             {
-                if (this.SelectedUpgrade?.utype == "Roll Cage" && this.vehicle.SelectedVehicleType.vtype == "Buggy")
+                if (this.SelectedUpgrade?.utype == "Roll Cage" && this.Vehicle.SelectedVehicleType.vtype == "Buggy")
                     return 0;
 
                 return this.SelectedUpgrade?.slots ?? 0;
@@ -32,11 +36,11 @@ namespace GaslandsHQ.ViewModels2
         {
             get
             {
-                if (this.SelectedUpgrade?.utype == "Roll Cage" && this.vehicle.SelectedVehicleType.vtype == "Buggy")
+                if (this.SelectedUpgrade?.utype == "Roll Cage" && this.Vehicle.SelectedVehicleType.vtype == "Buggy")
                     return 0;
-                else if (this.SelectedUpgrade?.utype == "Nitro Booster" && this.vehicle?.Team?.SelectedSponsor?.name == "Idris")
+                else if (this.SelectedUpgrade?.utype == "Nitro Booster" && this.Vehicle?.Team?.SelectedSponsor?.name == "Idris")
                     return this.SelectedUpgrade.cost / 2;
-                else if (this.SelectedUpgrade?.utype == "Extra Crewmember" && this.vehicle?.Team?.SelectedSponsor?.name == "Scarlett Annie")
+                else if (this.SelectedUpgrade?.utype == "Extra Crewmember" && this.Vehicle?.Team?.SelectedSponsor?.name == "Scarlett Annie")
                     return this.SelectedUpgrade.cost / 2;
                 else
                     return this.SelectedUpgrade?.cost ?? 0;
@@ -57,11 +61,15 @@ namespace GaslandsHQ.ViewModels2
 
         public string SpecialRules => SelectedUpgrade?.specialRules;
 
+        public ICommand Save => new Command(OnSaveAsync);
+
+        public ICommand Delete => new Command(OnDeleteAsync);
+
         public AddUpgradeViewModel(AddVehicleViewModel vehicle, Upgrade defaultUpgrade = null)
         {
-            this.vehicle = vehicle;
+            this.Vehicle = vehicle;
 
-            if (this.vehicle.SelectedVehicleType.vtype == "Buggy"
+            if (this.Vehicle.SelectedVehicleType.vtype == "Buggy"
                 && defaultUpgrade?.utype == "Roll Cage")
                 CanSelect = false;
             else
@@ -74,13 +82,23 @@ namespace GaslandsHQ.ViewModels2
 
                 bool allowed = u.allowedSponsors == null
                 || u.allowedSponsors.Length == 0
-                || u.allowedSponsors.Contains(this.vehicle.Team.SelectedSponsor.name);
+                || u.allowedSponsors.Contains(this.Vehicle.Team.SelectedSponsor.name);
 
                 if (allowed)
                 {
                     allowed = u.allowedVehicles == null
                     || u.allowedVehicles.Length == 0
-                    || u.allowedVehicles.Contains(this.vehicle.SelectedVehicleType.vtype);
+                    || u.allowedVehicles.Contains(this.Vehicle.SelectedVehicleType.vtype);
+                }
+
+                // allow up to double of the original crew amount
+                if(u.utype == "Extra Crewmember")
+                {
+                    var crew = vehicle.SelectedVehicleType?.crew ?? 0;
+                    var extraCrewCount = vehicle.Upgrades.Where(x => x.SelectedUpgrade?.utype == "Extra Crewmember").Count();
+
+                    if (extraCrewCount < crew)
+                        return true;
                 }
 
                 return allowed;
@@ -88,6 +106,39 @@ namespace GaslandsHQ.ViewModels2
 
             if (defaultUpgrade != null)
                 this.SelectedUpgrade = defaultUpgrade;
+
+            this.Id = Guid.NewGuid();
+        }
+
+        public AddUpgradeViewModel(AddVehicleViewModel vehicle, UserUpgrade defaultUpgrade) : this(vehicle, defaultUpgrade?.Upgrade)
+        {
+            this.Id = defaultUpgrade?.Id ?? Guid.NewGuid();
+        }
+
+        internal UserUpgrade GetModel()
+        {
+            return new UserUpgrade
+            {
+                Upgrade = this.SelectedUpgrade,
+                Id = this.Id
+            };
+        }
+
+        async void OnSaveAsync(object arg)
+        {
+            MessagingCenter.Send(this, "UPGRADESAVED");
+            await DependencyService.Get<INavigationService>().Dismiss(this);
+        }
+
+        async void OnDeleteAsync(object obj)
+        {
+            var dialogs = DependencyService.Get<IDialogsService>();
+            if (await dialogs
+                .ConfirmAsync("Are you sure you want to delete this upgrade?", "Delete", "Cancel", true))
+            {
+                MessagingCenter.Send(this, "UPGRADEDELETED");
+                await DependencyService.Get<INavigationService>().Dismiss(this);
+            }
         }
     }
 }
