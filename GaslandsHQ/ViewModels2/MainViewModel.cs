@@ -37,10 +37,42 @@ namespace GaslandsHQ.ViewModels2
                     this.Teams.Clear();
                     if (teamList != null)
                     {
-                        foreach (var team in teamList)
+                        teamList.ForEach(team =>
                         {
+                            // fix teams
+                            // older update, ids could have been empty when ids were added to all of the objects.
+                            if (team.Id == Guid.Empty)
+                                team.Id = Guid.NewGuid();
+
+                            team.Vehicles.ForEach(v =>
+                            {
+                                if (v.Id == Guid.Empty)
+                                    v.Id = Guid.NewGuid();
+
+                                v.Weaposn.ForEach(w =>
+                                {
+                                    if (w.Id == Guid.Empty)
+                                        w.Id = Guid.NewGuid();
+                                });
+                                v.Upgrades.ForEach(u =>
+                                {
+                                    if (u.Id == Guid.Empty)
+                                        u.Id = Guid.NewGuid();
+                                });
+                                v.Perks.ForEach(p =>
+                                {
+                                    if (p.Id == Guid.Empty)
+                                        p.Id = Guid.NewGuid();
+                                });
+                                v.Trailers.ForEach(t =>
+                                {
+                                    if (t.Id == Guid.Empty)
+                                        t.Id = Guid.NewGuid();
+                                });
+                            });
+
                             this.Teams.Add(new AddTeamViewModel(team));
-                        }
+                        });
                     }
                 }
             }
