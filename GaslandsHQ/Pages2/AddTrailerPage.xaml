@@ -50,20 +50,12 @@
 					Wrap="Wrap"
                     VerticalOptions="Center"
                         Padding="10">
-                        <ContentView
-						Style="{x:StaticResource tag}">
-                            <Label
-							Text="{Binding Cost, StringFormat='Cost: {0}'}"
-							HorizontalTextAlignment="Center"
-							VerticalTextAlignment="Center" />
-                        </ContentView>
-                        <ContentView
-						Style="{x:StaticResource tag}">
-                            <Label
-							Text="{Binding Slots, StringFormat='Slots: {0}'}"
-							HorizontalTextAlignment="Center"
-							VerticalTextAlignment="Center" />
-                        </ContentView>
+                        <Label
+                            Style="{StaticResource tag}"
+							Text="{Binding Cost, StringFormat='Cost: {0}'}"/>
+                        <Label
+                            Style="{StaticResource tag}"
+							Text="{Binding Slots, StringFormat='Slots: {0}'}"/>
                     </FlexLayout>
                 </ContentView>
             </Grid>

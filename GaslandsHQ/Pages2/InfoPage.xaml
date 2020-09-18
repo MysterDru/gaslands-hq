@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GaslandsHQ.Pages2.InfoPage"
+             Title="{Binding Title}"
+             Padding="20">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            x:Name="cancelItem"
+            Text="Close"
+            Command="{Binding Dismiss}"
+            Priority="1"
+            Order="Primary"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+
+            <StackLayout>
+                <Label VerticalOptions="Start"
+           
+            Text="Thanks for installing and testing out Gaslands HQ! This is a passion project of mine because I couldn't find an app or website that worked the way  I wanted to for managing teams &amp; vehicles. I hope this is useful for you. If it is, and you'd like to help me out I have a 'Ko-Fi' link on my github page. &#10; &#10;This app is open source, so if you have development chops and want to assist that way as well, I'd happily take contributions.&#10;&#10;-Drew Frisk"
+               LineBreakMode="WordWrap"></Label>
+
+                <Button Text="View on Github" VerticalOptions="End" Command="{Binding ViewOnGithub}"/>
+            </StackLayout>
+
+            <Label Text="{Binding AppVersion, StringFormat='App Version: {0}'}"
+                   Grid.Row="1" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

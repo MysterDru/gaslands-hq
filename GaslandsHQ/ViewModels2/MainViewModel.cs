@@ -12,7 +12,7 @@ namespace GaslandsHQ.ViewModels2
 {
     public class MainViewModel : BaseViewModel
     {
-        public string Title => "Gaslands HQ";
+        public string Title => "Gaslands HQ (Beta)";
 
         public ICommand AddTeam => new Command(ExecuteAddTeamAsync);
 
@@ -23,6 +23,8 @@ namespace GaslandsHQ.ViewModels2
         public ICommand DeleteTeam => new Command(ExecuteDeleteTeamAsync);
 
         public ICommand Feedback => new Command(ExecuteFeedbackAsync);
+
+        public ICommand ShowInfo => new Command(ExecuteShowInfoAsync);
 
         public MainViewModel()
         {
@@ -92,14 +94,17 @@ namespace GaslandsHQ.ViewModels2
         {
             var vm = obj as AddTeamViewModel;
 
-
-
             await DependencyService.Get<INavigationService>().Navigate(vm);
         }
 
         async void ExecuteFeedbackAsync(object obj)
         {
             await Xamarin.Essentials.Email.ComposeAsync(new Xamarin.Essentials.EmailMessage("GaslandsHQ Feedback", null, "gaslandshq@drewfrisk.dev"));
+        }
+
+        async void ExecuteShowInfoAsync(object obj)
+        {
+            await DependencyService.Get<INavigationService>().Navigate<InfoViewModel>();
         }
 
         void OnTeamSaved(AddTeamViewModel obj)

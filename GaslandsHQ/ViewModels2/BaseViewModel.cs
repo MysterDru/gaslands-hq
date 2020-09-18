@@ -12,8 +12,6 @@ namespace GaslandsHQ.ViewModels2
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-
-
         public void RaisePropertyChanged([CallerMemberName] string whichProperty = "")
         {
             var changedArgs = new PropertyChangedEventArgs(whichProperty);

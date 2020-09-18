@@ -521,7 +521,8 @@ namespace GaslandsHQ.ViewModels2
             var vm = new AddTrailerViewModel(this);
 
             this.CanAddAdditionalTrailers = false;
-            ExecuteEditTrailer(this.Trailers[0]);
+
+            DependencyService.Get<INavigationService>().Navigate(vm);
         }
 
         async void ExecuteEditTrailer(object obj)

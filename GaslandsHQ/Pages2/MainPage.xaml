@@ -7,7 +7,21 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem
             Text="Feedback"
-            Command="{Binding Feedback}" />
+            Command="{Binding Feedback}"
+            Priority="0"
+            Order="Primary"/>
+        <ToolbarItem
+            Text="Info"
+            IconImageSource="info_white.png"
+            Command="{Binding ShowInfo}">
+            <ToolbarItem.Priority>
+                <OnPlatform x:TypeArguments="x:Int32">
+                    <On Platform="iOS" Value="1" />
+                    <On Platform="Android" Value="0" />
+                    <On Platform="UWP" Value="0" />
+                </OnPlatform>
+            </ToolbarItem.Priority>
+            </ToolbarItem>
     </ContentPage.ToolbarItems>
     <ListView
         x:Name="TeamList"
@@ -44,6 +58,7 @@
                         <Grid.RowDefinitions>
                             <RowDefinition Height="auto"/>
                             <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
                         </Grid.RowDefinitions>
 
                         <Label Grid.Column="0" Text="{Binding TeamName}"
@@ -66,6 +81,14 @@
                                Grid.Column="0"
                                Grid.ColumnSpan="2"
                                Grid.Row="1"/>
+
+                        <Label Text="{Binding VehiclesDisplayText}"
+                               FontSize="Small"
+                               LineBreakMode="WordWrap"
+                               TextColor="DarkGray"
+                               Grid.Column="0"
+                               Grid.ColumnSpan="2"
+                               Grid.Row="2"/>
 
                     </Grid>
                 </ViewCell>

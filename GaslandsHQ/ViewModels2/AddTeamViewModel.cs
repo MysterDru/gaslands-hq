@@ -38,6 +38,21 @@ namespace GaslandsHQ.ViewModels2
 
         public ObservableCollection<AddVehicleViewModel> Vehicles { get; }
 
+        public string VehiclesDisplayText
+        {
+            get
+            {
+                var count = Vehicles?.Count ?? 0;
+                var st =  count != 1 ? "Vehicles: " : "Vehicle: ";
+                if (Vehicles != null)
+                {
+                    st += string.Join(", ", this.Vehicles.Select(x => $"{x.Name} ({x.SelectedVehicleType?.vtype})"));
+                }
+
+                return st;
+            }
+        }
+
         public ICommand Save => new Command(ExecuteSaveAsync);
 
         public ICommand Delete => new Command(ExecuteDeleteAsync);

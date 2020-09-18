@@ -6,7 +6,7 @@
 			 Visual="Material"
              Title="{Binding Title}"
              x:Name="Page">
-        <ContentPage.ToolbarItems>
+    <ContentPage.ToolbarItems>
         <ToolbarItem
             Text="Delete"
             Command="{Binding Delete}"
@@ -53,65 +53,36 @@
 				    Wrap="Wrap"
                     VerticalOptions="Center"
                     Padding="10">
-                    <ContentView
-						Style="{x:StaticResource tag}">
-                        <Label
-							Text="{Binding TotalCost, StringFormat='Cost: {0}'}"
-							HorizontalTextAlignment="Center"
-							VerticalTextAlignment="Center" />
-                    </ContentView>
-                    <ContentView
-						Style="{x:StaticResource tag}">
-                        <Label
-							HorizontalTextAlignment="Center"
-							VerticalTextAlignment="Center">
-                            <Label.Text>
-                                <MultiBinding
+                    <Label
+                        Style="{StaticResource tag}"
+						Text="{Binding TotalCost, StringFormat='Cost: {0}'}" />
+                    <Label
+                        Style="{StaticResource tag}">
+                        <Label.Text>
+                            <MultiBinding
 									StringFormat="Build Slots: {0}/{1}">
-                                    <Binding
+                                <Binding
 										Path="UsedSlots" />
-                                    <Binding
+                                <Binding
 										Path="AvailableSlots" />
-                                </MultiBinding>
-                            </Label.Text>
-                        </Label>
-                    </ContentView>
-                    <ContentView
-						Style="{x:StaticResource tag}">
-                        <Label
-							Text="{Binding Hull, StringFormat='Hull: {0}'}"
-							HorizontalTextAlignment="Center"
-							VerticalTextAlignment="Center" />
-                    </ContentView>
-                    <ContentView
-						Style="{x:StaticResource tag}">
-                        <Label
-							Text="{Binding Handling, StringFormat='Handling: {0}'}"
-							HorizontalTextAlignment="Center"
-							VerticalTextAlignment="Center" />
-                    </ContentView>
-                    <ContentView
-						Style="{x:StaticResource tag}">
-                        <Label
-							Text="{Binding MaxGear, StringFormat='Max Gear: {0}'}"
-							HorizontalTextAlignment="Center"
-							VerticalTextAlignment="Center" />
-                    </ContentView>
-                    <ContentView
-						Style="{x:StaticResource tag}">
-                        <Label
-							Text="{Binding Crew, StringFormat='Crew: {0}'}"
-							HorizontalTextAlignment="Center"
-							VerticalTextAlignment="Center" />
-                    </ContentView>
-                    <ContentView
-						Style="{x:StaticResource tag}">
-                        <Label
-							Text="{Binding WeightClass, StringFormat='{0} Weight'}"
-							HorizontalTextAlignment="Center"
-							VerticalTextAlignment="Center" />
-                    </ContentView>
-
+                            </MultiBinding>
+                        </Label.Text>
+                    </Label>
+                    <Label
+                        Style="{StaticResource tag}"
+							Text="{Binding Hull, StringFormat='Hull: {0}'}" />
+                    <Label
+                        Style="{StaticResource tag}"
+							Text="{Binding Handling, StringFormat='Handling: {0}'}"/>
+                    <Label
+                        Style="{StaticResource tag}"
+							Text="{Binding MaxGear, StringFormat='Max Gear: {0}'}"/>
+                    <Label
+                        Style="{StaticResource tag}"
+							Text="{Binding Crew, StringFormat='Crew: {0}'}"/>
+                    <Label
+                        Style="{StaticResource tag}"
+							Text="{Binding WeightClass, StringFormat='{0} Weight'}" />
                 </FlexLayout>
             </ContentView>
 
@@ -251,7 +222,7 @@
                                             <Binding Path="Slots" />
                                             <Binding Path="Ammo" />
                                         </MultiBinding>
-                                     </Label.Text>
+                                    </Label.Text>
                                 </Label>
 
                                 <Label FontSize="Small"

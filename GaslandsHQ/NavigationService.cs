@@ -87,7 +87,11 @@ namespace GaslandsHQ
                 page = new AddTrailerPage();
                 modal = true;
             }
-
+            else if (typeof(TViewModel) == typeof(InfoViewModel))
+            {
+                page = new InfoPage();
+                modal = true;
+            }
             else
                 return;
 
@@ -107,8 +111,7 @@ namespace GaslandsHQ
             else
             {
                 var modalNav = nav.Navigation.ModalStack.FirstOrDefault() as NavigationPage;
-                if(modalNav == null)
-                
+                if(modalNav == null)                
                 {
                     modalNav = new NavigationPage(page)
                     {
