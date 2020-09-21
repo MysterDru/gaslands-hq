@@ -290,7 +290,7 @@
     "specialRules": "See rules, Low-loader, Dumper",
     "crewFired": false,
     "cost": 4,
-    "allowedSponsors": [ "" ],
+    "allowedSponsors": [],
     "ruleset": "BASE",
     "limit": null
   },
