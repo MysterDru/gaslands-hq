@@ -12,8 +12,18 @@ namespace GaslandsHQ.ViewModels2
 
         public ICommand Dismiss => new Command(ExecuteDismissAsync);
 
-        public string AppVersion => $"{Xamarin.Essentials.AppInfo.VersionString} ({Xamarin.Essentials.AppInfo.BuildString})";
+        public string AppVersion
+        {
+            get
+            {
+                var val = $"{Xamarin.Essentials.AppInfo.VersionString} ({Xamarin.Essentials.AppInfo.BuildString})";
+#if DEBUG
+                val += " -- DEBUG";
+#endif
+                return val;
+            }
 
+        }
         async void ExecuteViewOnGithub(object obj)
         {
             await Xamarin.Essentials.Browser.OpenAsync("https://github.com/MysterDru/gaslands-hq", Xamarin.Essentials.BrowserLaunchMode.External);

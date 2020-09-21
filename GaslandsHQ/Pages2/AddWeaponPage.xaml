@@ -44,6 +44,7 @@
             <ContentView>
                 <FlexLayout
 					JustifyContent="SpaceAround"
+                    AlignItems="Center"
 					Wrap="Wrap"
                     VerticalOptions="Center"
                         Padding="10">
@@ -65,7 +66,9 @@
                 </FlexLayout>
             </ContentView>
 
-            <Label Text="{Binding SpecialRules}" Padding="10"/>
+            <ScrollView>
+                    <Label Text="{Binding Rules}" Padding="20, 10" TextColor="SlateGray"/>
+            </ScrollView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

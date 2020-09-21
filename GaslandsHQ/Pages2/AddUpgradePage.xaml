@@ -17,12 +17,14 @@
             Order="Primary"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <StackLayout
-				Spacing="5">
-            <Grid
-				ColumnSpacing="0"
-                RowSpacing="0">
-                <Picker
+        <Grid
+				ColumnSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Picker
 						Title="Upgrade Type"
 						ItemsSource="{Binding Upgrades}"
 						SelectedItem="{Binding SelectedUpgrade}"
@@ -31,27 +33,22 @@
 						Grid.Column="0"
                         Grid.Row="0"/>
 
-                <!--<Entry
-                    Grid.Row="1"
-                    Placeholder="Cost"
-                    IsEnabled="False"
-                    Text="{Binding Cost}"/>-->
-
-                <ContentView
+            <ContentView
                     Grid.Row="1">
-                    <FlexLayout
-					JustifyContent="SpaceAround"
-					Wrap="Wrap"
-                    VerticalOptions="Center"
-                        Padding="10">
-                        <Label
+                <Label
+                    HorizontalOptions="Center"
                             Style="{StaticResource tag}"
 							Text="{Binding Cost, StringFormat='Cost: {0}'}"/>
-                    </FlexLayout>
-                </ContentView>
+            </ContentView>
 
-                <Label Text="{Binding SpecialRules}" Padding="5" Grid.Row="2" TextColor="DarkGray"/>
-            </Grid>
-        </StackLayout>
+            <ScrollView
+                Grid.Row="2">
+                <Label
+                    Padding="20, 10"
+                    LineBreakMode="WordWrap"
+                    Text="{Binding SpecialRules}"
+                    TextColor="SlateGray"/>
+            </ScrollView>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

@@ -104,8 +104,7 @@ namespace GaslandsHQ.ViewModels2
                 return allowed;
             }).ToList();
 
-            if (defaultUpgrade != null)
-                this.SelectedUpgrade = defaultUpgrade;
+            this.SelectedUpgrade = this.Upgrades.FirstOrDefault(x => x.utype == defaultUpgrade?.utype) ?? this.Upgrades.FirstOrDefault();
 
             this.Id = Guid.NewGuid();
         }

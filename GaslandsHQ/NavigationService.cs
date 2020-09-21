@@ -82,6 +82,16 @@ namespace GaslandsHQ
                 page = new AddPerkPage();
                 modal = true;
             }
+            else if (typeof(TViewModel) == typeof(SelectSponsorViewModel))
+            {
+                page = new SelectSponsorPage();
+                modal = true;
+            }
+            else if (typeof(TViewModel) == typeof(SelectVehicleViewModel))
+            {
+                page = new SelectVehiclePage();
+                modal = true;
+            }
             else if (typeof(TViewModel) == typeof(AddTrailerViewModel))
             {
                 page = new AddTrailerPage();

@@ -55,7 +55,7 @@
 							Text="{Binding Cost, StringFormat='Cost: {0}'}"/>
                         <Label
                             Style="{StaticResource tag}"
-							Text="{Binding Slots, StringFormat='Slots: {0}'}"/>
+							Text="{Binding Slots, StringFormat='Slots: +{0}'}"/>
                     </FlexLayout>
                 </ContentView>
             </Grid>

@@ -241,7 +241,7 @@ namespace GaslandsHQ.ViewModels2
 
         void OnSelectedWeaponChanged()
         {
-            if (this.Facings?.Count == 1)
+            if (this.Facings?.Count == 1 || this.Facing == null)
                 this.Facing = this.Facings.First();
         }
 

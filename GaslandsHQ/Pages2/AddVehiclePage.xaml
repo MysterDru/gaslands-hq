@@ -28,15 +28,22 @@
                 Spacing="0"
                 Orientation="Horizontal">
 
-                <Picker
-						Title="Vehicle Type"
-                HorizontalOptions="FillAndExpand"
-						ItemsSource="{Binding VehicleTypes}"
-						SelectedItem="{Binding SelectedVehicleType}"
-						ItemDisplayBinding="{Binding vtype}"
-                IsEnabled="{Binding ScanSelectVehicleType}"
-						Grid.Column="0"
-				Grid.Row="0"/>
+                <Grid
+                Padding="0"
+                Margin="0"
+                    HorizontalOptions="FillAndExpand">
+                    <Picker
+						Title="Vehicle Type"                
+						ItemsSource="{Binding VehicleType.VehicleTypes}"
+						SelectedItem="{Binding VehicleType.SelectedVehicleType}"
+						ItemDisplayBinding="{Binding vtype}" />
+
+                    <BoxView Color="Transparent">
+                        <BoxView.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding SelectVehicle}" />
+                        </BoxView.GestureRecognizers>
+                    </BoxView>
+                </Grid>
 
                 <Entry
                 HorizontalOptions="FillAndExpand"
@@ -147,7 +154,7 @@
                                        FontSize="Medium"
                                        Grid.Column="1" />
 
-                                <Label FontSize="Small"                       TextColor="DarkGray"
+                                <Label FontSize="Small"                       TextColor="SlateGray"
                                        Grid.Row="1"
                                        Grid.Column="0"
                                        Grid.ColumnSpan="2">
@@ -213,7 +220,7 @@
                                        Grid.Column="1" />
 
                                 <Label FontSize="Small"
-                                       TextColor="DarkGray"
+                                       TextColor="SlateGray"
                                        Grid.Row="1"
                                        Grid.Column="0"
                                        Grid.ColumnSpan="2">
@@ -226,7 +233,7 @@
                                 </Label>
 
                                 <Label FontSize="Small"
-                                       TextColor="DarkGray"
+                                       TextColor="SlateGray"
                                        Grid.Row="2"
                                        Grid.Column="0"
                                        Grid.ColumnSpan="2"
@@ -245,7 +252,7 @@
                 ItemsSource="{Binding Perks}"
                 Grid.Row="3"
                 Grid.ColumnSpan="2"
-                RowHeight="55"
+                HasUnevenRows="true"
                 ItemSelected="ListView_ItemSelected_2">
                 <ListView.Header>
                     <ContentView
@@ -269,7 +276,7 @@
                                 </Grid.ColumnDefinitions>
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="auto"/>
-                                    <RowDefinition Height="auto"/>
+                                    <!--<RowDefinition Height="auto"/>-->
                                 </Grid.RowDefinitions>
                                 <Label FontSize="Medium"
                                        FontAttributes="Bold"
@@ -280,12 +287,12 @@
                                        FontSize="Medium"
                                        Grid.Column="1" />
 
-                                <Label Text="{Binding ShortRules}"
+                                <!--<Label Text="{Binding ShortRules}"
                                        FontSize="Small"
-                                       TextColor="DarkGray"
+                                       TextColor="SlateGray"
                                        Grid.Row="1"
                                        Grid.ColumnSpan="2"
-                                       />
+                                       />-->
                             </Grid>
                         </ViewCell>
 
@@ -338,11 +345,11 @@
                                        Grid.Column="1" />
 
                                 <Label FontSize="Small"
-                                       TextColor="DarkGray"
+                                       TextColor="SlateGray"
                                        Grid.Row="1"
                                        Grid.ColumnSpan="2">
                                     <Label.Text>
-                                        <MultiBinding StringFormat="{}Slots: {0} | Cargo: {1}">
+                                        <MultiBinding StringFormat="{}Slots: +{0} | Cargo: {1}">
                                             <Binding Path="Slots" />
                                             <Binding Path="SelectedCargo.ctype" />
                                         </MultiBinding>

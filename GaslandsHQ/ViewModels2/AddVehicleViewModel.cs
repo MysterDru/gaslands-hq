@@ -19,21 +19,23 @@ namespace GaslandsHQ.ViewModels2
 
         public AddTeamViewModel Team { get; }
 
-        public List<VehicleType> VehicleTypes { get; }
+        public SelectVehicleViewModel VehicleType { get; }
 
-        public VehicleType SelectedVehicleType { get; set; }
+        public VehicleType SelectedVehicleType => VehicleType?.SelectedVehicleType;
 
-        public bool ScanSelectVehicleType
+        public bool CanSelectVehicleType
         {
             get
             {
                 if (SelectedVehicleType == null) return true;
 
+                if (Weapons.Count > 1 || Perks.Count > 0 || Trailers.Count > 0
+                    // for upgrades, buggy gets the rollcage automatically
+                    || ((this.SelectedVehicleType.vtype == "Buggy" && Upgrades.Count == 1) ? false : Upgrades.Count > 0))
+                    return false;
+
                 if (this.Weapons.Count == 1 && this.Weapons[0].SelectedWeapon?.wtype == "Handgun")
                     return true;
-
-                if (Weapons.Count > 1 || Upgrades.Count > 0 || Perks.Count > 0 || Trailers.Count > 0)
-                    return false;
 
                 return true;
             }
@@ -98,6 +100,8 @@ namespace GaslandsHQ.ViewModels2
         public int MaxGear => (SelectedVehicleType?.maxGear ?? 0) + this.Upgrades.Sum(x => x.MaxGear); // todo: calculate
 
         public string WeightClass => SelectedVehicleType?.weight ?? "N/A";
+
+        public ICommand SelectVehicle => new Command(ExecuteSelectVehicleTypeAsync);
 
         #region Weapons
 
@@ -195,31 +199,7 @@ namespace GaslandsHQ.ViewModels2
 
             this.Name = $"Vehicle {team.Vehicles.Count + 1}";
 
-            this.VehicleTypes = Constants.AllVehicletypes.Where(v =>
-            {
-                if (team.SponsorMode == false)
-                    return true;
-                else if (team.SelectedSponsor.name == "Rutherford")
-                    return v.weight != "Light";
-                else if (team.SelectedSponsor.name != "Rutherford" && new string[] { "Tank", "Helicopter" }.Contains(v.vtype))
-                    return false;
-                else if (team.SelectedSponsor.name == "Miyazaki")
-                    return v.handling > 2;
-                else if (team.SelectedSponsor.name == "Idris")
-                    return !new string[] { "Gryrocopter" }.Contains(v.vtype);
-
-                //// only 1 tank or helicopter allowed in sponsor mode
-                //else if (v.vtype == "Tank" && team.Vehicles.Count(x => x.SelectedVehicleType?.vtype == "Tank") == 0)
-                //    return true;
-                //// only 1 tank or helicopter allowed in sponsor mode
-                //else if (v.vtype == "Helicopter" && team.Vehicles.Count(x => x.SelectedVehicleType?.vtype == "Helicopter") == 0)
-                //    return true;
-
-                else
-                    return !new string[] { "Tank", "Helicopter" }.Contains(v.vtype);
-
-                //
-            }).ToList();
+            this.VehicleType = new SelectVehicleViewModel(this);
 
             // add default handgun
             this.Weapons.Add(new AddWeaponViewModel(this, Constants.AllWeapons.First(x => x.wtype == "Handgun")));
@@ -237,6 +217,8 @@ namespace GaslandsHQ.ViewModels2
 
             this.Id = Guid.NewGuid();
 
+            MessagingCenter.Subscribe<SelectVehicleViewModel>(this, "VEHICLETYPESAVED", OnVehicleTypeSaved);
+
             MessagingCenter.Subscribe<AddWeaponViewModel>(this, "WEAPONSAVED", OnWeaponSaved);
             MessagingCenter.Subscribe<AddWeaponViewModel>(this, "WEAPONDELETED", (i) => this.ExecuteDeleteWeapon(i));
 
@@ -248,6 +230,9 @@ namespace GaslandsHQ.ViewModels2
 
             MessagingCenter.Subscribe<AddTrailerViewModel>(this, "TRAILERSAVED", OnTrailerSaved);
             MessagingCenter.Subscribe<AddTrailerViewModel>(this, "TRAILERDELETED", (i) => this.ExecuteDeleteTrailer(i));
+
+            // trigger vehicle tyep save logic
+            this.OnVehicleTypeSaved(this.VehicleType);
         }
 
         // restore data
@@ -255,7 +240,10 @@ namespace GaslandsHQ.ViewModels2
         {
             this.Id = userVehicle.Id;
             this.Name = userVehicle.VehicleName;
-            this.SelectedVehicleType = this.VehicleTypes.FirstOrDefault(x => x.vtype == userVehicle.VehicleType?.vtype);
+
+            this.VehicleType = new SelectVehicleViewModel(this, userVehicle.VehicleType);
+
+            //this.SelectedVehicleType = this.VehicleTypes.FirstOrDefault(x => x.vtype == userVehicle.VehicleType?.vtype);
 
             this.Weapons.Clear();
             foreach (var w in userVehicle.Weaposn)
@@ -291,27 +279,6 @@ namespace GaslandsHQ.ViewModels2
             // todo: restore
         }
 
-        void OnSelectedVehicleTypeChanged()
-        {
-            // need  to add or remoe free roll  cage based on being a buggy
-            var rollCage = this.Upgrades.FirstOrDefault(x => x.SelectedUpgrade?.utype == "Roll Cage");
-            var rcModel = Constants.AllUpgrades.First(x => x.utype == "Roll Cage");
-
-            if (this.SelectedVehicleType?.vtype == "Buggy")
-            {
-                if (rollCage == null)
-                {
-                    this.Upgrades.Add(new AddUpgradeViewModel(this, rcModel));
-                }
-            }
-
-            // if not  buggy, and roll cage is free, remove it
-            else if (rollCage != null)
-                this.Upgrades.Remove(rollCage);
-
-            this.RaiseAllPropertiesChanged();
-        }
-
         void AddTrailerSupport()
         {
             this.CanAddAdditionalTrailers = true;
@@ -343,6 +310,37 @@ namespace GaslandsHQ.ViewModels2
                 this.AllowedAddons = addons;
             }
             this.Trailers.Clear();
+        }
+
+        async void ExecuteSelectVehicleTypeAsync(object obj)
+        {
+            var nav = DependencyService.Get<INavigationService>();
+
+            await nav.Navigate(this.VehicleType);
+        }
+
+        void OnVehicleTypeSaved(SelectVehicleViewModel obj)
+        {
+            if (this.VehicleType == obj)
+            {
+                // need  to add or remoe free roll  cage based on being a buggy
+                var rollCage = this.Upgrades.FirstOrDefault(x => x.SelectedUpgrade?.utype == "Roll Cage");
+                var rcModel = Constants.AllUpgrades.First(x => x.utype == "Roll Cage");
+
+                if (this.SelectedVehicleType?.vtype == "Buggy")
+                {
+                    if (rollCage == null)
+                    {
+                        this.Upgrades.Add(new AddUpgradeViewModel(this, rcModel));
+                    }
+                }
+
+                // if not  buggy, and roll cage is free, remove it
+                else if (rollCage != null)
+                    this.Upgrades.Remove(rollCage);
+
+                this.RaiseAllPropertiesChanged();
+            }
         }
 
         #region Weapons

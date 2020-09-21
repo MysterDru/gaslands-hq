@@ -77,7 +77,7 @@
 
                         <Label Text="{Binding SelectedSponsor.name, StringFormat='Sponsor: {0}'}"
                                FontSize="Small"
-                               TextColor="DarkGray"
+                               TextColor="SlateGray"
                                Grid.Column="0"
                                Grid.ColumnSpan="2"
                                Grid.Row="1"/>
@@ -85,7 +85,7 @@
                         <Label Text="{Binding VehiclesDisplayText}"
                                FontSize="Small"
                                LineBreakMode="WordWrap"
-                               TextColor="DarkGray"
+                               TextColor="SlateGray"
                                Grid.Column="0"
                                Grid.ColumnSpan="2"
                                Grid.Row="2"/>

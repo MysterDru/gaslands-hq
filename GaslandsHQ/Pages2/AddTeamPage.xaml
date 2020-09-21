@@ -47,14 +47,23 @@
                 Grid.Row="0"
                 Grid.ColumnSpan="2"/>
 
-            <Picker
-				Title="Sponsor"
-				ItemsSource="{Binding Sponsors}"
-				SelectedItem="{Binding SelectedSponsor}"
-                IsEnabled="{Binding CanSelectSponsor}"
-				ItemDisplayBinding="{Binding name}"
+            <Grid
+                Padding="0"
+                Margin="0"
                 Grid.Row="1"
-                Grid.ColumnSpan="2"/>
+                Grid.ColumnSpan="2">
+                <Picker
+				    Title="Sponsor"
+				    ItemsSource="{Binding Sponsor.Sponsors}"
+				    SelectedItem="{Binding Sponsor.SelectedSponsor}"
+				    ItemDisplayBinding="{Binding name}" />
+
+                <BoxView Color="Transparent">
+                    <BoxView.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding SelectSponsor}"/>
+                    </BoxView.GestureRecognizers>
+                </BoxView>
+            </Grid>
 
             <Entry
 					Placeholder="Total Cans"
@@ -125,7 +134,7 @@
                                        FontSize="Medium"
                                        Grid.Column="1" />
 
-                                <Label FontSize="Small"  TextColor="DarkGray" Grid.Row="1"
+                                <Label FontSize="Small"  TextColor="SlateGray" Grid.Row="1"
                                        Grid.Column="0"
                                        Grid.ColumnSpan="2">
                                     <Label.Text>
@@ -140,19 +149,19 @@
                                     </Label.Text>
                                 </Label>
 
-                                <Label FontSize="Small"  TextColor="DarkGray" Grid.Row="2" Text="{Binding WeaponsDisplayText, StringFormat='Weapons: {0}'}"
+                                <Label FontSize="Small"  TextColor="SlateGray" Grid.Row="2" Text="{Binding WeaponsDisplayText, StringFormat='Weapons: {0}'}"
                                        Grid.Column="0"
                                        Grid.ColumnSpan="2"/>
 
-                                <Label FontSize="Small"  TextColor="DarkGray" Grid.Row="3" Text="{Binding UpgradesDisplayText, StringFormat='Upgrades: {0}'}"
+                                <Label FontSize="Small"  TextColor="SlateGray" Grid.Row="3" Text="{Binding UpgradesDisplayText, StringFormat='Upgrades: {0}'}"
                                        Grid.Column="0"
                                        Grid.ColumnSpan="2"/>
 
-                                <Label FontSize="Small"  TextColor="DarkGray" Grid.Row="4" Text="{Binding PerksDisplayText, StringFormat='Perks: {0}'}"
+                                <Label FontSize="Small"  TextColor="SlateGray" Grid.Row="4" Text="{Binding PerksDisplayText, StringFormat='Perks: {0}'}"
                                        Grid.Column="0"
                                        Grid.ColumnSpan="2"/>
 
-                                <Label FontSize="Small"  TextColor="DarkGray" Grid.Row="5" Text="{Binding TrailerDisplayText}"
+                                <Label FontSize="Small"  TextColor="SlateGray" Grid.Row="5" Text="{Binding TrailerDisplayText}"
                                        Grid.Column="0"
                                        Grid.ColumnSpan="2"/>
                             </Grid>

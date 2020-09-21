@@ -9,6 +9,7 @@
     x:Class="GaslandsHQ.App">
     <Application.Resources>
         <help:NullableIntConverter x:Key="NullableInt" />
+        <help:InverseBooleanConverter x:Key="InverseBool" />
 
         <Style x:Key="tag" TargetType="Label">
             <!--<Setter Property="BackgroundColor"

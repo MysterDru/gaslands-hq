@@ -17,20 +17,25 @@ namespace GaslandsHQ.ViewModels2
 
         public string TeamName { get; set; }
 
-        public List<Sponsor> Sponsors { get; }
+        public SelectSponsorViewModel Sponsor { get; }
+
+        //public List<Sponsor> Sponsors { get; }
 
         public bool SponsorMode => this.SelectedSponsor?.name != null && this.SelectedSponsor?.name != "None";
 
-        public Sponsor SelectedSponsor { get; set; }
+        [Obsolete]
+        public Sponsor SelectedSponsor => Sponsor?.SelectedSponsor;
 
         public bool CanSelectSponsor => SelectedSponsor == null || this.Vehicles.Count == 0;
+
+        public ICommand SelectSponsor => new Command(ExecuteSelectSponsorAsync);
 
         public int TotalCans { get; set; }
 
         // todo: build summation logic
         public int CurrentCans => this.Vehicles?.Sum(x => x.TotalCost) ?? 0;
 
-        public ICommand AddVehicle => new Command(ExecuteAddVehicleAsync, (v) => SelectedSponsor != null);
+        public ICommand AddVehicle => new Command(ExecuteAddVehicleAsync, (v) => Sponsor?.SelectedSponsor != null);
 
         public ICommand EditVehicle => new Command(ExecuteEditVehicleAsync);
 
@@ -43,7 +48,7 @@ namespace GaslandsHQ.ViewModels2
             get
             {
                 var count = Vehicles?.Count ?? 0;
-                var st =  count != 1 ? "Vehicles: " : "Vehicle: ";
+                var st = count != 1 ? "Vehicles: " : "Vehicle: ";
                 if (Vehicles != null)
                 {
                     st += string.Join(", ", this.Vehicles.Select(x => $"{x.Name} ({x.SelectedVehicleType?.vtype})"));
@@ -65,13 +70,16 @@ namespace GaslandsHQ.ViewModels2
 
             this.TeamName = "New Team";
 
-            this.Sponsors = Constants.AllSponsors;
+            this.Sponsor = new SelectSponsorViewModel(this);
+
             this.Vehicles = new ObservableCollection<AddVehicleViewModel>();
 
             this.TotalCans = 50;
 
             MessagingCenter.Subscribe<AddVehicleViewModel>(this, "VEHICLESAVED", OnVehicleSaved);
             MessagingCenter.Subscribe<AddVehicleViewModel>(this, "VEHICLEDELETED", (i) => this.ExecuteDeleteVehicleAsync(i));
+
+            MessagingCenter.Subscribe<AddVehicleViewModel>(this, "SPONSORSAVED", OnSponsorSaved);
         }
 
         public AddTeamViewModel(UserTeam userTeamToRestore) : this()
@@ -79,7 +87,8 @@ namespace GaslandsHQ.ViewModels2
             this.Id = userTeamToRestore.Id;
             this.TeamName = userTeamToRestore.TeamName;
             this.TotalCans = userTeamToRestore.Cans;
-            this.SelectedSponsor = this.Sponsors.FirstOrDefault(x => x.name == userTeamToRestore.Sponsor?.name);
+
+            this.Sponsor = new SelectSponsorViewModel(this, userTeamToRestore.Sponsor);
 
             foreach (var v in userTeamToRestore.Vehicles)
             {
@@ -133,24 +142,35 @@ namespace GaslandsHQ.ViewModels2
                 this.Vehicles.RemoveAt(idx);
                 this.Vehicles.Insert(idx, obj);
             }
-            else if(obj.Team == this)
+            else if (obj.Team == this)
                 this.Vehicles.Add(obj);
 
             this.RaiseAllPropertiesChanged();
         }
 
-        void OnSelectedSponsorChanged()
-            => (this.AddVehicle as Command).ChangeCanExecute();
+        async void ExecuteSelectSponsorAsync(object obj)
+        {
+            var nav = DependencyService.Get<INavigationService>();
+
+            await nav.Navigate(this.Sponsor);
+        }
+
+        void OnSponsorSaved(AddVehicleViewModel obj)
+        {
+            this.RaiseAllPropertiesChanged();
+
+            (this.AddVehicle as Command).ChangeCanExecute();
+        }
 
         void ExecuteSaveAsync()
         {
             var t = this;
             var team = new UserTeam
             {
-                Id  = t.Id,
+                Id = t.Id,
                 TeamName = t.TeamName,
                 Cans = t.TotalCans,
-                Sponsor = t.SelectedSponsor,
+                Sponsor = t.Sponsor.SelectedSponsor,
                 Vehicles = t.Vehicles.Select(v => new UserVehicle
                 {
                     VehicleName = v.Name,

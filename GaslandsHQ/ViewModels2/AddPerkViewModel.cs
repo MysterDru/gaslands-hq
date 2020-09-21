@@ -43,8 +43,7 @@ namespace GaslandsHQ.ViewModels2
                 return vehicle.Team.SelectedSponsor.perkClasses.Contains(p.@class);
             }).ToList();
 
-            if (defaultPerk != null)
-                this.SelectedPerk = defaultPerk;
+            this.SelectedPerk = this.Perks.FirstOrDefault(x => x.ptype == defaultPerk?.ptype) ?? this.Perks.FirstOrDefault();
 
             this.Id = Guid.NewGuid();
         }
