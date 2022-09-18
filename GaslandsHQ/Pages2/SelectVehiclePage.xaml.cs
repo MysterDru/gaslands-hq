@@ -5,7 +5,7 @@ using Xamarin.Forms;
 
 namespace GaslandsHQ.Pages2
 {
-    public partial class SelectVehiclePage : ContentPage
+    public partial class SelectVehiclePage : BasePopupPage
     {
         public SelectVehiclePage()
         {

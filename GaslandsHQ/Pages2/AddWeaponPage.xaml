@@ -1,74 +1,93 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="GaslandsHQ.Pages2.AddWeaponPage"
-             Visual="Material"
-             Title="{Binding Title}">
-    <ContentPage.ToolbarItems>
-        <ToolbarItem
-            Text="Delete"
-            Command="{Binding Delete}"
-            IconImageSource="delete_white.png"
-            Priority="0"
-            Order="Primary"/>
-        <ToolbarItem
-            Text="Save"
-            Command="{Binding Save}"
-            IconImageSource="save_white.png"
-            Priority="0"
-            Order="Primary"/>
-    </ContentPage.ToolbarItems>
-    <ContentPage.Content>
-        <StackLayout
-				Spacing="5">
-            <Picker
-                Title="Weapon Type"
-                ItemsSource="{Binding Weapons}"
-                SelectedItem="{Binding SelectedWeapon}"
-                ItemDisplayBinding="{Binding wtype}"
-                IsEnabled="{Binding CanSelect}"
-                Grid.Column="0"
-                Grid.Row="0"/>
+<local:BasePopupPage
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	x:Class="GaslandsHQ.Pages2.AddWeaponPage"
+	xmlns:local="clr-namespace:GaslandsHQ.Pages2"
+	Visual="Material"
+	Title="{Binding Title}">
+	<local:BasePopupPage.ChildContent>
+		<StackLayout
+			Spacing="5">
+			<Grid
+				Grid.Row="0"
+				Margin="0, 0, 0, 10"
+			IsVisible="{Binding CanSelect}">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition
+						Width="125" />
+					<ColumnDefinition
+						Width="*" />
+					<ColumnDefinition
+						Width="130" />
+				</Grid.ColumnDefinitions>
+				<Button
+					Text="Select"
+					Command="{Binding Save}"
+					ImageSource="save_white.png"
+					HorizontalOptions="End"
+					Grid.Column="0" />
+				<Button
+					Text="Remove"
+					Command="{Binding Delete}"
+					ImageSource="delete_white.png"
+					HorizontalOptions="Start"
+					Grid.Column="2" />
+			</Grid>
 
-            <Picker
-                Title="Facing"
-                ItemsSource="{Binding  Facings}"
+			<Picker
+				Title="Weapon Type"
+				ItemsSource="{Binding Weapons}"
+				SelectedItem="{Binding SelectedWeapon}"
+				ItemDisplayBinding="{Binding wtype}"
+				IsEnabled="{Binding CanSelect}"
+				Grid.Column="0"
+				Grid.Row="0" />
+
+			<Picker
+				Title="Facing"
+				ItemsSource="{Binding  Facings}"
 				SelectedItem="{Binding Facing}"
-                IsEnabled="{Binding CanEditFacing}"/>
+				IsEnabled="{Binding CanEditFacing}" />
 
 
-            <Picker
-                Title="Location"
-                ItemsSource="{Binding Locations}"
-                SelectedItem="{Binding Location}"
-                IsVisible="{Binding ShowLocation}"/>
+			<Picker
+				Title="Location"
+				ItemsSource="{Binding Locations}"
+				SelectedItem="{Binding Location}"
+				IsVisible="{Binding ShowLocation}" />
 
-            <ContentView>
-                <FlexLayout
+			<ContentView>
+				<FlexLayout
 					JustifyContent="SpaceAround"
-                    AlignItems="Center"
+					AlignItems="Center"
 					Wrap="Wrap"
-                    VerticalOptions="Center"
-                        Padding="10">
-                    <Label
-                        Style="{StaticResource tag}"
-							Text="{Binding Cost, StringFormat='Cost: {0}'}"/>
-                    <Label
-                        Style="{StaticResource tag}"
-							Text="{Binding Range, StringFormat='Range: {0}'}"/>
-                    <Label
-                        Style="{StaticResource tag}"
-							Text="{Binding Attack, StringFormat='Attack: {0}'}"/>
-                    <Label
-                        Style="{StaticResource tag}"
-							Text="{Binding Ammo, StringFormat='Ammo: {0}'}"/>
-                    <Label
-                        Style="{StaticResource tag}"
-							Text="{Binding Slots, StringFormat='Slots: {0}'}"/>
-                </FlexLayout>
-            </ContentView>
+					VerticalOptions="Center"
+					Padding="10">
+					<Label
+						Style="{StaticResource tag}"
+						Text="{Binding Cost, StringFormat='Cost: {0}'}" />
+					<Label
+						Style="{StaticResource tag}"
+						Text="{Binding Range, StringFormat='Range: {0}'}" />
+					<Label
+						Style="{StaticResource tag}"
+						Text="{Binding Attack, StringFormat='Attack: {0}'}" />
+					<Label
+						Style="{StaticResource tag}"
+						Text="{Binding Ammo, StringFormat='Ammo: {0}'}" />
+					<Label
+						Style="{StaticResource tag}"
+						Text="{Binding Slots, StringFormat='Slots: {0}'}" />
+				</FlexLayout>
+			</ContentView>
 
-            <ScrollView>
-                    <Label Text="{Binding Rules}" Padding="20, 10" TextColor="SlateGray"/>
-            </ScrollView>
-        </StackLayout>
-    </ContentPage.Content>
-</ContentPage>
+			<ScrollView>
+				<Label
+					Text="{Binding Rules}"
+					Padding="20, 10"
+					TextColor="SlateGray" />
+			</ScrollView>
+		</StackLayout>
+	</local:BasePopupPage.ChildContent>
+</local:BasePopupPage>

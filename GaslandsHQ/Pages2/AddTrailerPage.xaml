@@ -1,64 +1,77 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage
-    xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="GaslandsHQ.Pages2.AddTrailerPage"
-    Visual="Material"
-    Title="{Binding Title}">
-    <ContentPage.ToolbarItems>
-        <ToolbarItem
-            Text="Delete"
-            Command="{Binding Delete}"
-            IconImageSource="delete_white.png"
-            Priority="0"
-            Order="Primary"/>
-        <ToolbarItem
-            Text="Save"
-            Command="{Binding Save}"
-            IconImageSource="save_white.png"
-            Priority="0"
-            Order="Primary"/>
-    </ContentPage.ToolbarItems>
-    <ContentPage.Content>
-        <StackLayout
-				Spacing="5">
-            <Grid
+<local:BasePopupPage
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	x:Class="GaslandsHQ.Pages2.AddTrailerPage"
+	xmlns:local="clr-namespace:GaslandsHQ.Pages2"
+	Visual="Material"
+	Title="{Binding Title}">
+	<local:BasePopupPage.ChildContent>
+		<StackLayout
+			Spacing="5">
+			<Grid
 				ColumnSpacing="0"
-                RowSpacing="0">
-                <Picker
+				RowSpacing="0">
+
+				<Grid
+					Grid.Row="0"
+					Margin="0, 0, 0, 10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition
+							Width="125" />
+						<ColumnDefinition
+							Width="*" />
+						<ColumnDefinition
+							Width="130" />
+					</Grid.ColumnDefinitions>
+					<Button
+						Text="Select"
+						Command="{Binding Save}"
+						ImageSource="save_white.png"
+						HorizontalOptions="End"
+						Grid.Column="0" />
+					<Button
+						Text="Remove"
+						Command="{Binding Delete}"
+						ImageSource="delete_white.png"
+						HorizontalOptions="Start"
+						Grid.Column="2" />
+				</Grid>
+
+				<Picker
 					Title="Trailer Type"
 					ItemsSource="{Binding Trailers}"
 					SelectedItem="{Binding SelectedTrailer}"
 					ItemDisplayBinding="{Binding ttype}"
-                    IsEnabled="{Binding CanSelectTrailer}"
+					IsEnabled="{Binding CanSelectTrailer}"
 					Grid.Column="0"
-                    Grid.Row="0"/>
+					Grid.Row="1" />
 
-                <Picker
-                    Title="Cargo"
-                    ItemsSource="{Binding Cargos}"
+				<Picker
+					Title="Cargo"
+					ItemsSource="{Binding Cargos}"
 					SelectedItem="{Binding SelectedCargo}"
-                    ItemDisplayBinding="{Binding ctype}"
-                    IsEnabled="{Binding CanEditFacing}"
+					ItemDisplayBinding="{Binding ctype}"
+					IsEnabled="{Binding CanEditFacing}"
 					Grid.Column="1"
-                    Grid.Row="0"/>
+					Grid.Row="1" />
 
-                <ContentView
-                    Grid.Row="1">
-                    <FlexLayout
-					JustifyContent="SpaceAround"
-					Wrap="Wrap"
-                    VerticalOptions="Center"
-                        Padding="10">
-                        <Label
-                            Style="{StaticResource tag}"
-							Text="{Binding Cost, StringFormat='Cost: {0}'}"/>
-                        <Label
-                            Style="{StaticResource tag}"
-							Text="{Binding Slots, StringFormat='Slots: +{0}'}"/>
-                    </FlexLayout>
-                </ContentView>
-            </Grid>
-        </StackLayout>
-    </ContentPage.Content>
-</ContentPage>
+				<ContentView
+					Grid.Row="2">
+					<FlexLayout
+						JustifyContent="SpaceAround"
+						Wrap="Wrap"
+						VerticalOptions="Center"
+						Padding="10">
+						<Label
+							Style="{StaticResource tag}"
+							Text="{Binding Cost, StringFormat='Cost: {0}'}" />
+						<Label
+							Style="{StaticResource tag}"
+							Text="{Binding Slots, StringFormat='Slots: +{0}'}" />
+					</FlexLayout>
+				</ContentView>
+			</Grid>
+		</StackLayout>
+	</local:BasePopupPage.ChildContent>
+</local:BasePopupPage>

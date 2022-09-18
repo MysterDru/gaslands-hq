@@ -5,7 +5,7 @@ using Xamarin.Forms;
 
 namespace GaslandsHQ.Pages2
 {
-    public partial class AddUpgradePage : ContentPage
+    public partial class AddUpgradePage : BasePopupPage
     {
         public AddUpgradePage()
         {
