@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using GaslandsHQ.ViewModels2;
-using Rg.Plugins.Popup.Pages;
+
 using Xamarin.Forms;
 
 namespace GaslandsHQ.Pages2
 {
-    public partial class AddPerkPage : BasePopupPage
+    public partial class SelectUpgradePage : BasePopupPage
     {
-        public AddPerkPage()
+        public SelectUpgradePage()
         {
             InitializeComponent();
         }
-	}
+    }
 }

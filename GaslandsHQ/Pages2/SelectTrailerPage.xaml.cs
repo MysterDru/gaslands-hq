@@ -5,9 +5,9 @@ using Xamarin.Forms;
 
 namespace GaslandsHQ.Pages2
 {
-    public partial class AddUpgradePage : BasePopupPage
+    public partial class SelectTrailerPage : BasePopupPage
     {
-        public AddUpgradePage()
+        public SelectTrailerPage()
         {
             InitializeComponent();
         }

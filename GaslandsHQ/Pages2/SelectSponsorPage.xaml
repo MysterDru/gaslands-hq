@@ -24,7 +24,7 @@
 					Grid.Row="0"
 					Margin="0, 0, 0, 10">
 					<Button
-						Text="Select"
+						Text="Save"
 						Command="{Binding Save}"
 						ImageSource="save_white.png"
 						WidthRequest="125"

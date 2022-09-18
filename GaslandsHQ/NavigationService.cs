@@ -82,19 +82,19 @@ namespace GaslandsHQ
 				page = new AddVehiclePage();
 				modal = true;
 			}
-			else if (typeof(TViewModel) == typeof(AddWeaponViewModel))
+			else if (typeof(TViewModel) == typeof(SelectWeaponViewModel))
 			{
-				page = new AddWeaponPage();
+				page = new SelectWeaponPage();
 				modal = true;
 			}
-			else if (typeof(TViewModel) == typeof(AddUpgradeViewModel))
+			else if (typeof(TViewModel) == typeof(SelectUpgradeViewModel))
 			{
-				page = new AddUpgradePage();
+				page = new SelectUpgradePage();
 				modal = true;
 			}
-			else if (typeof(TViewModel) == typeof(AddPerkViewModel))
+			else if (typeof(TViewModel) == typeof(SelectPerkViewModel))
 			{
-				page = new AddPerkPage();
+				page = new SelectPerkPage();
 				modal = true;
 			}
 			else if (typeof(TViewModel) == typeof(SelectSponsorViewModel))
@@ -107,9 +107,9 @@ namespace GaslandsHQ
 				page = new SelectVehiclePage();
 				modal = true;
 			}
-			else if (typeof(TViewModel) == typeof(AddTrailerViewModel))
+			else if (typeof(TViewModel) == typeof(SelectTrailerViewModel))
 			{
-				page = new AddTrailerPage();
+				page = new SelectTrailerPage();
 				modal = true;
 			}
 			else if (typeof(TViewModel) == typeof(InfoViewModel))

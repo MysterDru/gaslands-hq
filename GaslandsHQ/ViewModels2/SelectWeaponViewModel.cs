@@ -8,7 +8,7 @@ using Xamarin.Forms;
 
 namespace GaslandsHQ.ViewModels2
 {
-    public class AddWeaponViewModel : BaseViewModel
+    public class SelectWeaponViewModel : BaseViewModel
     {
         public string Title => "Weapon";
 
@@ -149,7 +149,7 @@ namespace GaslandsHQ.ViewModels2
             }
         }
 
-        public AddWeaponViewModel(AddVehicleViewModel vehicle, Weapon defaultWeapon = null)
+        public SelectWeaponViewModel(AddVehicleViewModel vehicle, Weapon defaultWeapon = null)
         {
             this.Vehicle = vehicle;
 
@@ -162,7 +162,7 @@ namespace GaslandsHQ.ViewModels2
             this.Id = Guid.NewGuid();
         }
 
-        public AddWeaponViewModel(AddVehicleViewModel vehicle, UserWeapon userWeapon)
+        public SelectWeaponViewModel(AddVehicleViewModel vehicle, UserWeapon userWeapon)
             : this(vehicle, userWeapon?.Weapon)
         {
             this.Id = userWeapon?.Id ?? Guid.NewGuid();
@@ -198,7 +198,9 @@ namespace GaslandsHQ.ViewModels2
         {
             var currentWeaponType = this.SelectedWeapon?.wtype;
 
-            this.Weapons = Constants.AllWeapons.Where(w =>
+            this.Weapons = Constants.AllWeapons
+	            .OrderBy(w => w.optionText)
+	            .Where(w =>
             {
                 var matchingTypes = Vehicle.Weapons.Where(x => x.SelectedWeapon?.wtype == w.wtype);
 
@@ -245,7 +247,7 @@ namespace GaslandsHQ.ViewModels2
                 this.Facing = this.Facings.First();
         }
 
-        AddWeaponViewModel FindMostExpensiveTurret()
+        SelectWeaponViewModel FindMostExpensiveTurret()
         {
             var turrets = this.Vehicle.Weapons.Where(x => x.Facing == "Turret/360");
 

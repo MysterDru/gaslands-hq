@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using GaslandsHQ.ViewModels2;
+using Rg.Plugins.Popup.Pages;
 using Xamarin.Forms;
 
 namespace GaslandsHQ.Pages2
 {
-    public partial class AddWeaponPage : BasePopupPage
+    public partial class SelectPerkPage : BasePopupPage
     {
-        public AddWeaponPage()
+        public SelectPerkPage()
         {
             InitializeComponent();
         }
-    }
+	}
 }

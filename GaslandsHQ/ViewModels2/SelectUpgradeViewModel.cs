@@ -7,7 +7,7 @@ using Xamarin.Forms;
 
 namespace GaslandsHQ.ViewModels2
 {
-    public class AddUpgradeViewModel : BaseViewModel
+    public class SelectUpgradeViewModel : BaseViewModel
     {
         public string Title => "Upgrade";
 
@@ -65,7 +65,7 @@ namespace GaslandsHQ.ViewModels2
 
         public ICommand Delete => new Command(OnDeleteAsync);
 
-        public AddUpgradeViewModel(AddVehicleViewModel vehicle, Upgrade defaultUpgrade = null)
+        public SelectUpgradeViewModel(AddVehicleViewModel vehicle, Upgrade defaultUpgrade = null)
         {
             this.Vehicle = vehicle;
 
@@ -109,7 +109,7 @@ namespace GaslandsHQ.ViewModels2
             this.Id = Guid.NewGuid();
         }
 
-        public AddUpgradeViewModel(AddVehicleViewModel vehicle, UserUpgrade defaultUpgrade) : this(vehicle, defaultUpgrade?.Upgrade)
+        public SelectUpgradeViewModel(AddVehicleViewModel vehicle, UserUpgrade defaultUpgrade) : this(vehicle, defaultUpgrade?.Upgrade)
         {
             this.Id = defaultUpgrade?.Id ?? Guid.NewGuid();
         }

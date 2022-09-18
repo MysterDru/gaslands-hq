@@ -2,7 +2,7 @@
 <local:BasePopupPage
 	xmlns="http://xamarin.com/schemas/2014/forms"
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-	x:Class="GaslandsHQ.Pages2.AddTrailerPage"
+	x:Class="GaslandsHQ.Pages2.SelectTrailerPage"
 	xmlns:local="clr-namespace:GaslandsHQ.Pages2"
 	Visual="Material"
 	Title="{Binding Title}">
@@ -25,7 +25,7 @@
 							Width="130" />
 					</Grid.ColumnDefinitions>
 					<Button
-						Text="Select"
+						Text="Save"
 						Command="{Binding Save}"
 						ImageSource="save_white.png"
 						HorizontalOptions="End"
