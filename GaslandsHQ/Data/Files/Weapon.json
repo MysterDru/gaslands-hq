@@ -247,7 +247,7 @@
     "ammo": 3,
     "specialRules": "",
     "crewFired": false,
-    "cost": 6,
+    "cost": 5,
     "allowedSponsors": [],
     "ruleset": "BASE",
     "limit": null

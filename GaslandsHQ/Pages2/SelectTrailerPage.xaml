@@ -53,11 +53,11 @@
 					SelectedItem="{Binding SelectedCargo}"
 					ItemDisplayBinding="{Binding ctype}"
 					IsEnabled="{Binding CanEditFacing}"
-					Grid.Column="1"
-					Grid.Row="1" />
+					Grid.Column="0"
+					Grid.Row="2" />
 
 				<ContentView
-					Grid.Row="2">
+					Grid.Row="3">
 					<FlexLayout
 						JustifyContent="SpaceAround"
 						Wrap="Wrap"

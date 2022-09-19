@@ -20,7 +20,8 @@
     "keywords": [],
     "limit": 1,
     "allowedSponsors": [ "Mishkin" ],
-    "ruleset": "BASE"
+    "ruleset": "BASE",
+	"maxGear": 2
   },
   {
     "utype": "Experimental Teleporter",

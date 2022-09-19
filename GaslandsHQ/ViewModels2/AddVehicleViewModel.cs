@@ -539,9 +539,16 @@ namespace GaslandsHQ.ViewModels2
         {
             var vm = obj as SelectTrailerViewModel;
 
+            bool hasTrailers = this.Trailers.Any();
+
             var match = this.Trailers.FirstOrDefault(x => x.Id == vm.Id);
 
-            if (match != null && match.CanSelectTrailer)
+            if (!hasTrailers)
+            {
+	            this.CanAddAdditionalTrailers = true;
+            }
+
+            if ( match != null && match.CanSelectTrailer)
             {
                 this.Trailers.Remove(match);
 
