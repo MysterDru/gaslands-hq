@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<local:BasePopupPage
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	x:Class="GaslandsHQ.Pages2.SelectTrailerPage"
+	xmlns:local="clr-namespace:GaslandsHQ.Pages2"
+	Visual="Material"
+	Title="{Binding Title}">
+	<local:BasePopupPage.ChildContent>
+		<StackLayout
+			Spacing="5">
+			<Grid
+				ColumnSpacing="0"
+				RowSpacing="0">
+
+				<Grid
+					Grid.Row="0"
+					Margin="0, 0, 0, 10">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition
+							Width="125" />
+						<ColumnDefinition
+							Width="*" />
+						<ColumnDefinition
+							Width="130" />
+					</Grid.ColumnDefinitions>
+					<Button
+						Text="Save"
+						Command="{Binding Save}"
+						ImageSource="save_white.png"
+						HorizontalOptions="End"
+						Grid.Column="0" />
+					<Button
+						Text="Remove"
+						Command="{Binding Delete}"
+						ImageSource="delete_white.png"
+						HorizontalOptions="Start"
+						Grid.Column="2" />
+				</Grid>
+
+				<Picker
+					Title="Trailer Type"
+					ItemsSource="{Binding Trailers}"
+					SelectedItem="{Binding SelectedTrailer}"
+					ItemDisplayBinding="{Binding ttype}"
+					IsEnabled="{Binding CanSelectTrailer}"
+					Grid.Column="0"
+					Grid.Row="1" />
+
+				<Picker
+					Title="Cargo"
+					ItemsSource="{Binding Cargos}"
+					SelectedItem="{Binding SelectedCargo}"
+					ItemDisplayBinding="{Binding ctype}"
+					IsEnabled="{Binding CanEditFacing}"
+					Grid.Column="0"
+					Grid.Row="2" />
+
+				<ContentView
+					Grid.Row="3">
+					<FlexLayout
+						JustifyContent="SpaceAround"
+						Wrap="Wrap"
+						VerticalOptions="Center"
+						Padding="10">
+						<Label
+							Style="{StaticResource tag}"
+							Text="{Binding Cost, StringFormat='Cost: {0}'}" />
+						<Label
+							Style="{StaticResource tag}"
+							Text="{Binding Slots, StringFormat='Slots: +{0}'}" />
+					</FlexLayout>
+				</ContentView>
+			</Grid>
+		</StackLayout>
+	</local:BasePopupPage.ChildContent>
+</local:BasePopupPage>

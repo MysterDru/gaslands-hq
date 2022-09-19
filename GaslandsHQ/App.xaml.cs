@@ -3,7 +3,6 @@ using GaslandsHQ.ViewModels2;
 using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
-using Microsoft.AppCenter.Distribute;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -31,13 +30,13 @@ namespace GaslandsHQ
         }
 
         protected override void OnSleep()
-        { 
-            
+        {
+
         }
 
         protected override void OnResume()
         {
-          
+
         }
     }
 }

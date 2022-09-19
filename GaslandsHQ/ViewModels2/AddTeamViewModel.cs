@@ -17,9 +17,7 @@ namespace GaslandsHQ.ViewModels2
 
         public string TeamName { get; set; }
 
-        public SelectSponsorViewModel Sponsor { get; }
-
-        //public List<Sponsor> Sponsors { get; }
+        public SelectSponsorViewModel Sponsor { get; private set; }
 
         public bool SponsorMode => this.SelectedSponsor?.name != null && this.SelectedSponsor?.name != "None";
 
@@ -79,7 +77,7 @@ namespace GaslandsHQ.ViewModels2
             MessagingCenter.Subscribe<AddVehicleViewModel>(this, "VEHICLESAVED", OnVehicleSaved);
             MessagingCenter.Subscribe<AddVehicleViewModel>(this, "VEHICLEDELETED", (i) => this.ExecuteDeleteVehicleAsync(i));
 
-            MessagingCenter.Subscribe<AddVehicleViewModel>(this, "SPONSORSAVED", OnSponsorSaved);
+            MessagingCenter.Subscribe<SelectSponsorViewModel>(this, "SPONSORSAVED", OnSponsorSaved);
         }
 
         public AddTeamViewModel(UserTeam userTeamToRestore) : this()
@@ -152,11 +150,14 @@ namespace GaslandsHQ.ViewModels2
         {
             var nav = DependencyService.Get<INavigationService>();
 
-            await nav.Navigate(this.Sponsor);
+            var edit = new SelectSponsorViewModel(this, this.Sponsor.SelectedSponsor);
+
+            await nav.Navigate(edit);
         }
 
-        void OnSponsorSaved(AddVehicleViewModel obj)
+        void OnSponsorSaved(SelectSponsorViewModel obj)
         {
+            this.Sponsor = obj;
             this.RaiseAllPropertiesChanged();
 
             (this.AddVehicle as Command).ChangeCanExecute();

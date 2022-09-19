@@ -5,51 +5,61 @@ using Xamarin.Forms;
 
 namespace GaslandsHQ.Pages2
 {
-    public partial class AddVehiclePage : ContentPage
-    {
-        public AddVehiclePage()
-        {
-            InitializeComponent();
-        }
+	public partial class AddVehiclePage : ContentPage
+	{
+		public AddVehiclePage()
+		{
+			InitializeComponent();
 
-        void ListView_ItemSelected(System.Object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
-        {
-            if(e.SelectedItem != null)
-            {
-                (this.BindingContext as AddVehicleViewModel).EditWeapon.Execute(e.SelectedItem);
-            }
+			NavigationPage.SetHasBackButton(this, false);
+		}
 
-            weaponsList.SelectedItem = null;
-        }
+		protected override bool OnBackButtonPressed()
+		{
+			DependencyService.Get<IDialogsService>()
+				.Toast("Back button is disabled. Please select save or delete.");
+			// handled
+			return true;
+		}
 
-        void ListView_ItemSelected_1(System.Object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
-        {
-            if (e.SelectedItem != null)
-            {
-                (this.BindingContext as AddVehicleViewModel).EditUpgrade.Execute(e.SelectedItem);
-            }
+		void ListView_ItemSelected(System.Object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
+		{
+			if (e.SelectedItem != null)
+			{
+				(this.BindingContext as AddVehicleViewModel).EditWeapon.Execute(e.SelectedItem);
+			}
 
-            this.upgradesList.SelectedItem = null;
-        }
+			weaponsList.SelectedItem = null;
+		}
 
-        void ListView_ItemSelected_2(System.Object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
-        {
-            if (e.SelectedItem != null)
-            {
-                (this.BindingContext as AddVehicleViewModel).EditPerk.Execute(e.SelectedItem);
-            }
+		void ListView_ItemSelected_1(System.Object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
+		{
+			if (e.SelectedItem != null)
+			{
+				(this.BindingContext as AddVehicleViewModel).EditUpgrade.Execute(e.SelectedItem);
+			}
 
-            perksList.SelectedItem = null;
-        }
+			this.upgradesList.SelectedItem = null;
+		}
 
-        void trailerList_ItemSelected(System.Object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
-        {
-            if (e.SelectedItem != null)
-            {
-                (this.BindingContext as AddVehicleViewModel).EditTrailer.Execute(e.SelectedItem);
-            }
+		void ListView_ItemSelected_2(System.Object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
+		{
+			if (e.SelectedItem != null)
+			{
+				(this.BindingContext as AddVehicleViewModel).EditPerk.Execute(e.SelectedItem);
+			}
 
-            trailerList.SelectedItem = null;
-        }
-    }
+			perksList.SelectedItem = null;
+		}
+
+		void trailerList_ItemSelected(System.Object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)
+		{
+			if (e.SelectedItem != null)
+			{
+				(this.BindingContext as AddVehicleViewModel).EditTrailer.Execute(e.SelectedItem);
+			}
+
+			trailerList.SelectedItem = null;
+		}
+	}
 }

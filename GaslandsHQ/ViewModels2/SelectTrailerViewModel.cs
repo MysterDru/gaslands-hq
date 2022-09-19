@@ -7,7 +7,7 @@ using Xamarin.Forms;
 
 namespace GaslandsHQ.ViewModels2
 {
-    public class AddTrailerViewModel : BaseViewModel
+    public class SelectTrailerViewModel : BaseViewModel
     {
         public AddVehicleViewModel Vehicle { get; }
 
@@ -33,7 +33,7 @@ namespace GaslandsHQ.ViewModels2
 
         public ICommand Delete => new Command(OnDeleteAsync);
 
-        public AddTrailerViewModel(AddVehicleViewModel vehicle, Trailer defaultTrailer = null, Cargo defaultCargo = null)
+        public SelectTrailerViewModel(AddVehicleViewModel vehicle, Trailer defaultTrailer = null, Cargo defaultCargo = null)
         {
             this.Vehicle = vehicle;
 
@@ -66,7 +66,7 @@ namespace GaslandsHQ.ViewModels2
             this.Id = Guid.NewGuid();
         }
 
-        public AddTrailerViewModel(AddVehicleViewModel vehicle, UserTrailer defaultTrailer) : this(vehicle, defaultTrailer?.Trailer, defaultTrailer?.Cargo)
+        public SelectTrailerViewModel(AddVehicleViewModel vehicle, UserTrailer defaultTrailer) : this(vehicle, defaultTrailer?.Trailer, defaultTrailer?.Cargo)
         {
             this.Id = defaultTrailer?.Id ?? Guid.NewGuid();
         }

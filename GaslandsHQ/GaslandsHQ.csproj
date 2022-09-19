@@ -16,13 +16,13 @@
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="PropertyChanged.Fody" Version="3.2.9" />
     <PackageReference Include="Plugin.SegmentedControl.Netstandard" Version="5.4.1" />
-    <PackageReference Include="Microsoft.AppCenter.Distribute" Version="3.4.1" />
     <PackageReference Include="Microsoft.AppCenter.Crashes" Version="3.4.1" />
     <PackageReference Include="Mobile.BuildTools" Version="1.4.0.638">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.AppCenter.Analytics" Version="3.4.1" />
+    <PackageReference Include="Rg.Plugins.Popup" Version="2.0.0.6" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Data\Files\Keyword.json" />
@@ -35,6 +35,7 @@
     <None Remove="Data\Files\Trailer.json" />
     <None Remove="Config.json" />
     <None Remove="secrets.json" />
+    <None Remove="Resources\close_circle_button.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Data\Files\Keyword.json">
@@ -63,6 +64,7 @@
       <LogicalName>Trailer.json</LogicalName>
     </EmbeddedResource>
     <EmbeddedResource Include="secrets.json" />
+    <EmbeddedResource Include="Resources\close_circle_button.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\" />
@@ -71,6 +73,7 @@
     <Folder Include="Helpers\" />
     <Folder Include="ViewModels2\" />
     <Folder Include="Pages2\" />
+    <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
     <None Update="Data\Files\Trailer.json">

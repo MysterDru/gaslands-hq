@@ -7,7 +7,7 @@ using Xamarin.Forms;
 
 namespace GaslandsHQ.ViewModels2
 {
-    public class AddPerkViewModel : BaseViewModel
+    public class SelectPerkViewModel : BaseViewModel
     {
         public string Title => "Perk";
 
@@ -31,7 +31,7 @@ namespace GaslandsHQ.ViewModels2
 
         public ICommand Delete => new Command(OnDeleteAsync);
 
-        public AddPerkViewModel(AddVehicleViewModel vehicle, Perk defaultPerk = null)
+        public SelectPerkViewModel(AddVehicleViewModel vehicle, Perk defaultPerk = null)
         {
             this.Vehicle = vehicle;
 
@@ -48,7 +48,7 @@ namespace GaslandsHQ.ViewModels2
             this.Id = Guid.NewGuid();
         }
 
-        public AddPerkViewModel(AddVehicleViewModel vehicle, UserPerk defaultPerk)
+        public SelectPerkViewModel(AddVehicleViewModel vehicle, UserPerk defaultPerk)
             : this(vehicle, defaultPerk?.Perk)
         {
             this.Id = defaultPerk?.Id ?? Guid.NewGuid();

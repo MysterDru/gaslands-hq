@@ -1,64 +1,80 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="GaslandsHQ.Pages2.SelectSponsorPage"
-             Visual="Material"
-             Title="{Binding Title}">
-    <ContentPage.ToolbarItems>
-        <ToolbarItem
-            Text="Save"
-            Command="{Binding Save}"
-            IconImageSource="save_white.png"
-            Priority="0"
-            Order="Primary"/>
-    </ContentPage.ToolbarItems>
-    <ContentPage.Content>
-        <Grid
-				ColumnSpacing="0"
-                RowSpacing="0">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="auto" />
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
-            <Picker
-						Title="Sponsor"
-						ItemsSource="{Binding Sponsors}"
-						SelectedItem="{Binding SelectedSponsor}"
-						ItemDisplayBinding="{Binding name}"
-                        IsEnabled="{Binding CanSelect}"
-						Grid.Column="0"
-                        Grid.Row="0"/>
+<local:BasePopupPage
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	x:Class="GaslandsHQ.Pages2.SelectSponsorPage"
+	xmlns:local="clr-namespace:GaslandsHQ.Pages2"
+	Visual="Material"
+	Title="{Binding Title}">
+	<local:BasePopupPage.ChildContent>
+		<Grid
+			ColumnSpacing="0"
+			RowSpacing="0">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="auto"/>
+				<RowDefinition
+					Height="auto" />
+				<RowDefinition
+					Height="auto" />
+				<RowDefinition
+					Height="*" />
+			</Grid.RowDefinitions>
+				<StackLayout
+					Orientation="Horizontal"
+					Grid.Row="0"
+					Margin="0, 0, 0, 10">
+					<Button
+						Text="Save"
+						Command="{Binding Save}"
+						ImageSource="save_white.png"
+						WidthRequest="125"
+						HorizontalOptions="Start" />
+				</StackLayout>
 
-            <Label
-                Grid.Row="1"
-                Padding="20, 5"
-                IsVisible="{Binding CanSelect, Converter={StaticResource InverseBool}}"
-                Text="Remove all vehicles to change sponsor."
-                FontAttributes="Bold"
-                TextColor="DarkGray" />
+			<Picker
+				Title="Sponsor"
+				ItemsSource="{Binding Sponsors}"
+				SelectedItem="{Binding SelectedSponsor}"
+				ItemDisplayBinding="{Binding name}"
+				IsEnabled="{Binding CanSelect}"
+				Grid.Column="0"
+				Grid.Row="1" />
 
-            <ScrollView
-                Grid.Row="2">
-                <StackLayout
-                    
-                    BindableLayout.ItemsSource="{Binding Keywords}">
-                    <BindableLayout.ItemTemplate>
-                        <DataTemplate>
-                            <Label LineBreakMode="WordWrap"
-                                       Padding="20, 10" TextColor="SlateGray">
-                                <Label.FormattedText>
-                                    <FormattedString>
-                                        <Span Text="{Binding  ktype}" FontAttributes="Bold"/>
-                                        <Span Text=": " FontAttributes="Bold"/>
-                                        <Span Text="{Binding rules}" />
-                                    </FormattedString>
-                                </Label.FormattedText>
-                            </Label>
-                        </DataTemplate>
-                    </BindableLayout.ItemTemplate>
-                </StackLayout>
-            </ScrollView>
-        </Grid>
-    </ContentPage.Content>
-</ContentPage>
+			<Label
+				Grid.Row="2"
+				Padding="20, 5"
+				IsVisible="{Binding CanSelect, Converter={StaticResource InverseBool}}"
+				Text="Remove all vehicles to change sponsor."
+				FontAttributes="Bold"
+				TextColor="DarkGray" />
+
+			<ScrollView
+				Grid.Row="3">
+				<StackLayout
+					BindableLayout.ItemsSource="{Binding Keywords}">
+					<BindableLayout.ItemTemplate>
+						<DataTemplate>
+							<Label
+								LineBreakMode="WordWrap"
+								Padding="20, 10"
+								TextColor="SlateGray">
+								<Label.FormattedText>
+									<FormattedString>
+										<Span
+											Text="{Binding  ktype}"
+											FontAttributes="Bold" />
+										<Span
+											Text=": "
+											FontAttributes="Bold" />
+										<Span
+											Text="{Binding rules}" />
+									</FormattedString>
+								</Label.FormattedText>
+							</Label>
+						</DataTemplate>
+					</BindableLayout.ItemTemplate>
+				</StackLayout>
+			</ScrollView>
+		</Grid>
+	</local:BasePopupPage.ChildContent>
+</local:BasePopupPage>

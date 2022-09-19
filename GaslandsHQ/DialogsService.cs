@@ -8,6 +8,8 @@ namespace GaslandsHQ
 {
     public interface IDialogsService
     {
+        void Toast(string message);
+
         Task AlertAsync(string title, string message, string cancelText);
 
         Task<bool> ConfirmAsync(string message, string okay = "Okay", string cancel = "Cancel", bool asDestructive = false);
@@ -15,6 +17,8 @@ namespace GaslandsHQ
 
     public class DialogsService :  IDialogsService
     {
+        public static Action<string> PlatformToast { get; set; }
+
         public async Task AlertAsync(string title, string message, string cancelText)
         {
             await Xamarin.Forms.Application.Current.MainPage.DisplayAlert(title, message, cancelText);
@@ -30,5 +34,10 @@ namespace GaslandsHQ
 
             return result == okay;
         }
-    }
+
+		public void Toast(string message)
+		{
+            PlatformToast?.Invoke(message);
+		}
+	}
 }

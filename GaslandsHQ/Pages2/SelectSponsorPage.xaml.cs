@@ -5,7 +5,7 @@ using Xamarin.Forms;
 
 namespace GaslandsHQ.Pages2
 {
-    public partial class SelectSponsorPage : ContentPage
+    public partial class SelectSponsorPage : BasePopupPage
     {
         public SelectSponsorPage()
         {

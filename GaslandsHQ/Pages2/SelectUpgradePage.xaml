@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<local:BasePopupPage
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	x:Class="GaslandsHQ.Pages2.SelectUpgradePage"
+	xmlns:local="clr-namespace:GaslandsHQ.Pages2"
+	Visual="Material"
+	Title="{Binding Title}">
+	<local:BasePopupPage.ChildContent>
+		<Grid
+			ColumnSpacing="0">
+			<Grid.RowDefinitions>
+				<RowDefinition
+					Height="auto" />
+				<RowDefinition
+					Height="auto" />
+				<RowDefinition
+					Height="auto" />
+				<RowDefinition
+					Height="*" />
+			</Grid.RowDefinitions>
+			<Grid
+				Grid.Row="0"
+				Margin="0, 0, 0, 10">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition
+						Width="125" />
+					<ColumnDefinition
+						Width="*" />
+					<ColumnDefinition
+						Width="130" />
+				</Grid.ColumnDefinitions>
+				<Button
+					Text="Save"
+					Command="{Binding Save}"
+					ImageSource="save_white.png"
+					HorizontalOptions="End"
+					Grid.Column="0" />
+				<Button
+					Text="Remove"
+					Command="{Binding Delete}"
+					ImageSource="delete_white.png"
+					HorizontalOptions="Start"
+					Grid.Column="2" />
+			</Grid>
+
+			<Picker
+				Title="Upgrade Type"
+				ItemsSource="{Binding Upgrades}"
+				SelectedItem="{Binding SelectedUpgrade}"
+				ItemDisplayBinding="{Binding utype}"
+				IsEnabled="{Binding CanSelect}"
+				Grid.Column="0"
+				Grid.Row="1" />
+
+			<ContentView
+				Grid.Row="2">
+				<Label
+					HorizontalOptions="Center"
+					Style="{StaticResource tag}"
+					Text="{Binding Cost, StringFormat='Cost: {0}'}" />
+			</ContentView>
+
+			<ScrollView
+				Grid.Row="3">
+				<Label
+					Padding="20, 10"
+					LineBreakMode="WordWrap"
+					Text="{Binding SpecialRules}"
+					TextColor="SlateGray" />
+			</ScrollView>
+		</Grid>
+	</local:BasePopupPage.ChildContent>
+</local:BasePopupPage>

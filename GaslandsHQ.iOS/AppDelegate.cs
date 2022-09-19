@@ -22,13 +22,42 @@ namespace GaslandsHQ.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            Rg.Plugins.Popup.Popup.Init();
+
             global::Xamarin.Forms.Forms.Init();
             global::Xamarin.Forms.FormsMaterial.Init();
             Plugin.Segmented.Control.iOS.SegmentedControlRenderer.Initialize();
 
+            DialogsService.PlatformToast = this.ShowAlert;
+
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);
+        }
+
+        void ShowAlert(string message)
+        {
+            var alert = UIAlertController.Create(null, message, UIAlertControllerStyle.Alert);
+
+            var alertDelay = NSTimer.CreateScheduledTimer(3.5, obj =>
+            {
+                DismissMessage(alert, obj);
+            });
+
+            UIApplication.SharedApplication.KeyWindow.RootViewController.PresentViewController(alert, true, null);
+        }
+
+        void DismissMessage(UIAlertController alert, NSTimer alertDelay)
+        {
+            if (alert != null)
+            {
+                alert.DismissViewController(true, null);
+            }
+
+            if (alertDelay != null)
+            {
+                alertDelay.Dispose();
+            }
         }
     }
 }

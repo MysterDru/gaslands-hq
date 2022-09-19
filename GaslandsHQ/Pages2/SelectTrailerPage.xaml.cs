@@ -5,9 +5,9 @@ using Xamarin.Forms;
 
 namespace GaslandsHQ.Pages2
 {
-    public partial class AddWeaponPage : ContentPage
+    public partial class SelectTrailerPage : BasePopupPage
     {
-        public AddWeaponPage()
+        public SelectTrailerPage()
         {
             InitializeComponent();
         }
